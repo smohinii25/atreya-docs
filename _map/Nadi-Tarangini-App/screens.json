@@ -1,0 +1,1545 @@
+{
+  "repo": "Nadi-Tarangini-App",
+  "commit": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+  "kind": "flutter",
+  "router": "lib/route/router.dart",
+  "counts": {
+    "screens": 60,
+    "go_routes": 61,
+    "routes_without_screen_class": 8,
+    "screen_classes_without_route": 7,
+    "screens_file_not_found": 0
+  },
+  "go_routes": [
+    {
+      "path": "/languageScreen",
+      "name": "languageScreen",
+      "class": "LanguageScreen",
+      "line": 144
+    },
+    {
+      "path": "/",
+      "name": "splash",
+      "class": "SplashScreen",
+      "line": 150
+    },
+    {
+      "path": "/loginScreen",
+      "name": "loginScreen",
+      "class": "LoginScreen",
+      "line": 156
+    },
+    {
+      "path": "/chatRegistration",
+      "name": "chatRegistration",
+      "class": "ChatRegistrationScreen",
+      "line": 169
+    },
+    {
+      "path": "/chatScreen",
+      "name": "chatScreen",
+      "class": "ChatScreen",
+      "line": 185
+    },
+    {
+      "path": "/dashboardScreen",
+      "name": "dashboardScreen",
+      "class": "DashboardScreen",
+      "line": 204
+    },
+    {
+      "path": "/patientScreen",
+      "name": "patientScreen",
+      "class": "PatientScreen",
+      "line": 214
+    },
+    {
+      "path": "/appointmentListScreen",
+      "name": "appointmentListScreen",
+      "class": "AppointmentScreen",
+      "line": 228
+    },
+    {
+      "path": "/viewPatientScreen",
+      "name": "viewPatientScreen",
+      "class": "ViewPatientScreen",
+      "line": 242
+    },
+    {
+      "path": "/addPatientScreen",
+      "name": "addPatientScreen",
+      "class": "AddPatientScreen",
+      "line": 256
+    },
+    {
+      "path": "/editPatientScreen",
+      "name": "editPatientScreen",
+      "class": "EditPatientScreen",
+      "line": 266
+    },
+    {
+      "path": "/signupScreen",
+      "name": "signupScreen",
+      "class": "SignUpScreen",
+      "line": 279
+    },
+    {
+      "path": "/assessmentScreen",
+      "name": "assessmentScreen",
+      "class": "MainAssessmentScreen",
+      "line": 299
+    },
+    {
+      "path": "/liveNadiScreen1",
+      "name": "liveNadiScreen1",
+      "class": null,
+      "line": 316
+    },
+    {
+      "path": "/fillPrakrutiScreen",
+      "name": "fillPrakrutiScreen",
+      "class": "FillPrakrutiScreen",
+      "line": 333
+    },
+    {
+      "path": "/drawerMenu",
+      "name": "drawerMenu",
+      "class": null,
+      "line": 349
+    },
+    {
+      "path": "/forgotPasswordScreen",
+      "name": "forgotPasswordScreen",
+      "class": "ForgotPasswordScreen",
+      "line": 358
+    },
+    {
+      "path": "/webViewScreen",
+      "name": "webViewScreen",
+      "class": "WebViewScreen",
+      "line": 368
+    },
+    {
+      "path": "/myAccountScreen/:tabId",
+      "name": "myAccountScreen",
+      "class": "MyAccountScreen",
+      "line": 388
+    },
+    {
+      "path": "/inventoryScreen",
+      "name": "inventoryScreen",
+      "class": "InventoryScreen",
+      "line": 409
+    },
+    {
+      "path": "/medicineListScreen",
+      "name": "medicineListScreen",
+      "class": "MedicineListScreen",
+      "line": 424
+    },
+    {
+      "path": "/companyListScreen",
+      "name": "companyListScreen",
+      "class": "CompanyListScreen",
+      "line": 439
+    },
+    {
+      "path": "/medicineTypeListScreen",
+      "name": "medicineTypeListScreen",
+      "class": "MedicineTypeListScreen",
+      "line": 454
+    },
+    {
+      "path": "/supplementListScreen",
+      "name": "supplementListScreen",
+      "class": "SupplementListScreen",
+      "line": 469
+    },
+    {
+      "path": "/addSupplementScreen",
+      "name": "addSupplementScreen",
+      "class": "AddSupplementScreen",
+      "line": 484
+    },
+    {
+      "path": "/editSupplementScreen",
+      "name": "editSupplementScreen",
+      "class": "EditSupplementScreen",
+      "line": 499
+    },
+    {
+      "path": "/ingredientListScreen",
+      "name": "ingredientListScreen",
+      "class": "IngredientListScreen",
+      "line": 515
+    },
+    {
+      "path": "/addMedicineScreen",
+      "name": "addMedicineScreen",
+      "class": "AddMedicineScreen",
+      "line": 530
+    },
+    {
+      "path": "/editMedicineScreen",
+      "name": "editMedicineScreen",
+      "class": "EditMedicineScreen",
+      "line": 545
+    },
+    {
+      "path": "/addCompanyScreen",
+      "name": "addCompanyScreen",
+      "class": "AddCompanyScreen",
+      "line": 561
+    },
+    {
+      "path": "/editCompanyScreen",
+      "name": "editCompanyScreen",
+      "class": "EditCompanyScreen",
+      "line": 576
+    },
+    {
+      "path": "/addMedicineTypeScreen",
+      "name": "addMedicineTypeScreen",
+      "class": "AddMedicineTypeScreen",
+      "line": 593
+    },
+    {
+      "path": "/addIngredientScreen",
+      "name": "addIngredientScreen",
+      "class": "AddIngredientScreen",
+      "line": 608
+    },
+    {
+      "path": "/editIngredientScreen",
+      "name": "editIngredientScreen",
+      "class": "EditIngredientScreen",
+      "line": 623
+    },
+    {
+      "path": "/addClinicScreen",
+      "name": "addClinicScreen",
+      "class": "AddClinicScreen",
+      "line": 639
+    },
+    {
+      "path": "/editClinicScreen",
+      "name": "editClinicScreen",
+      "class": "EditClinicScreen",
+      "line": 655
+    },
+    {
+      "path": "/onBoardingScreen",
+      "name": "onBoardingScreen",
+      "class": "OnboardingScreen",
+      "line": 673
+    },
+    {
+      "path": "/editDoctorAccount",
+      "name": "editDoctorAccount",
+      "class": null,
+      "line": 681
+    },
+    {
+      "path": "/kycScreen",
+      "name": "kycScreen",
+      "class": "KycScreen",
+      "line": 698
+    },
+    {
+      "path": "/rutucharyaScreen",
+      "name": "rutucharyaScreen",
+      "class": "RutucharyaScreen",
+      "line": 714
+    },
+    {
+      "path": "/addAppointmentScreen",
+      "name": "addAppointmentScreen",
+      "class": "AddAppointmentScreen",
+      "line": 726
+    },
+    {
+      "path": "/editAppointmentScreen",
+      "name": "editAppointmentScreen",
+      "class": "EditAppointmentScreen",
+      "line": 740
+    },
+    {
+      "path": "/viewAppointmentScreen",
+      "name": "viewAppointmentScreen",
+      "class": "ViewAppointmentScreen",
+      "line": 753
+    },
+    {
+      "path": "/invoiceScreen",
+      "name": "invoiceScreen",
+      "class": "InvoicePdfScreen",
+      "line": 767
+    },
+    {
+      "path": "/pricingPlanScreen",
+      "name": "pricingPlanScreen",
+      "class": "PricingPlanScreen",
+      "line": 778
+    },
+    {
+      "path": "/checkoutScreen",
+      "name": "checkoutScreen",
+      "class": "CheckOutScreen",
+      "line": 793
+    },
+    {
+      "path": "/reportScreen",
+      "name": "reportScreen",
+      "class": "VisitReportListScreen",
+      "line": 814
+    },
+    {
+      "path": "/visitReportScreen",
+      "name": "visitReportScreen",
+      "class": "VisitReportScreen",
+      "line": 835
+    },
+    {
+      "path": "/nadiReportScreen",
+      "name": "nadiReportScreen",
+      "class": "NadiReportScreen",
+      "line": 855
+    },
+    {
+      "path": "/notificationScreen",
+      "name": "notificationScreen",
+      "class": "NotificationScreen",
+      "line": 875
+    },
+    {
+      "path": "/helpCenterScreen",
+      "name": "helpCenterScreen",
+      "class": "HelpCenterScreen",
+      "line": 891
+    },
+    {
+      "path": "/addPrescriptionScreen",
+      "name": "addPrescriptionScreen",
+      "class": null,
+      "line": 905
+    },
+    {
+      "path": "/editPrescriptionScreen",
+      "name": "editPrescriptionScreen",
+      "class": null,
+      "line": 919
+    },
+    {
+      "path": "/patientDashboard",
+      "name": "patientDashboard",
+      "class": null,
+      "line": 942
+    },
+    {
+      "path": "/drawerMenuPatient",
+      "name": "drawerMenuPatient",
+      "class": null,
+      "line": 954
+    },
+    {
+      "path": "/changePasswordPatient",
+      "name": "changePasswordPatient",
+      "class": null,
+      "line": 964
+    },
+    {
+      "path": "/updateDataConsentScreen",
+      "name": "updateDataConsentScreen",
+      "class": "UpdateDataConsentScreen",
+      "line": 974
+    },
+    {
+      "path": "/editPatientProfile",
+      "name": "editPatientProfile",
+      "class": "EditPatientProfileScreen",
+      "line": 985
+    },
+    {
+      "path": "/dietScreen",
+      "name": "dietScreen",
+      "class": "DietScreen",
+      "line": 996
+    },
+    {
+      "path": "/reportScreenPatient",
+      "name": "reportScreenPatient",
+      "class": "ReportScreen",
+      "line": 1008
+    },
+    {
+      "path": "/geoRestrictedScreen",
+      "name": "geoRestrictedScreen",
+      "class": "GeoRestrictedScreen",
+      "line": 1020
+    }
+  ],
+  "screens": [
+    {
+      "id": "AddAppointmentScreen",
+      "file": "lib/doctor_dashboard/appointments/view/add_appointment.dart",
+      "routes": [
+        {
+          "path": "/addAppointmentScreen",
+          "name": "addAppointmentScreen",
+          "line": 726
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/addPatientScreen",
+          "line": 265
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "AddClinicScreen",
+      "file": "lib/doctor_dashboard/my_account/view/my_clinic/add_clinic.dart",
+      "routes": [
+        {
+          "path": "/addClinicScreen",
+          "name": "addClinicScreen",
+          "line": 639
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "AddCompanyScreen",
+      "file": "lib/doctor_dashboard/inventory/view/company/add_company_screen.dart",
+      "routes": [
+        {
+          "path": "/addCompanyScreen",
+          "name": "addCompanyScreen",
+          "line": 561
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/companyListScreen",
+          "name": "companyListScreen",
+          "line": 80
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "AddIngredientScreen",
+      "file": "lib/doctor_dashboard/inventory/view/ingredient/add_ingredient_screen.dart",
+      "routes": [
+        {
+          "path": "/addIngredientScreen",
+          "name": "addIngredientScreen",
+          "line": 608
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/ingredientListScreen",
+          "name": "ingredientListScreen",
+          "line": 133
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "AddMedicineScreen",
+      "file": "lib/doctor_dashboard/inventory/view/medicine/add_medicine_screen.dart",
+      "routes": [
+        {
+          "path": "/addMedicineScreen",
+          "name": "addMedicineScreen",
+          "line": 530
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/medicineListScreen",
+          "name": "medicineListScreen",
+          "line": 137
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "AddMedicineTypeScreen",
+      "file": "lib/doctor_dashboard/inventory/view/medicine_type/add_medicine_type_screen.dart",
+      "routes": [
+        {
+          "path": "/addMedicineTypeScreen",
+          "name": "addMedicineTypeScreen",
+          "line": 593
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/medicineTypeListScreen",
+          "name": "medicineTypeListScreen",
+          "line": 88
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "AddPatientFromAppointmentScreen",
+      "file": "lib/doctor_dashboard/patient/view/add_patient/add_patient_from_appointment_screen.dart",
+      "routes": [],
+      "navigates_to": [
+        {
+          "path": "/addAppointmentScreen",
+          "line": 168
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "AddPatientScreen",
+      "file": "lib/doctor_dashboard/patient/view/add_patient/add_patient_screen.dart",
+      "routes": [
+        {
+          "path": "/addPatientScreen",
+          "name": "addPatientScreen",
+          "line": 256
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/addAppointmentScreen",
+          "line": 90
+        },
+        {
+          "path": "/dashboardScreen",
+          "line": 106
+        },
+        {
+          "path": "/patientScreen",
+          "line": 104
+        }
+      ],
+      "embeds": [
+        {
+          "screen": "AddPatientFromAppointmentScreen",
+          "line": 321
+        }
+      ]
+    },
+    {
+      "id": "AddSupplementScreen",
+      "file": "lib/doctor_dashboard/inventory/view/supplements/add_supplement_screen.dart",
+      "routes": [
+        {
+          "path": "/addSupplementScreen",
+          "name": "addSupplementScreen",
+          "line": 484
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/supplementListScreen",
+          "name": "supplementListScreen",
+          "line": 137
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "AllReportScreen",
+      "file": "lib/patient_module/view/all_report_screen.dart",
+      "routes": [],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "AppointmentScreen",
+      "file": "lib/doctor_dashboard/appointments/view/appointment_screen.dart",
+      "routes": [
+        {
+          "path": "/appointmentListScreen",
+          "name": "appointmentListScreen",
+          "line": 228
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/addAppointmentScreen",
+          "line": 426
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "ChatRegistrationScreen",
+      "file": "lib/doctor_dashboard/chotbot/view/chat_registration_screen.dart",
+      "routes": [
+        {
+          "path": "/chatRegistration",
+          "name": "chatRegistration",
+          "line": 169
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "ChatScreen",
+      "file": "lib/doctor_dashboard/chotbot/view/chat_screen.dart",
+      "routes": [
+        {
+          "path": "/chatScreen",
+          "name": "chatScreen",
+          "line": 185
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "CheckOutScreen",
+      "file": "lib/doctor_dashboard/subscription/view/checkout_screen.dart",
+      "routes": [
+        {
+          "path": "/checkoutScreen",
+          "name": "checkoutScreen",
+          "line": 793
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "ComingSoonPage",
+      "file": "lib/patient_module/view/comming_soon_page.dart",
+      "routes": [],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "CompanyListScreen",
+      "file": "lib/doctor_dashboard/inventory/view/company/company_list_screen.dart",
+      "routes": [
+        {
+          "path": "/companyListScreen",
+          "name": "companyListScreen",
+          "line": 439
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/addCompanyScreen",
+          "name": "addCompanyScreen",
+          "line": 122
+        },
+        {
+          "path": "/editCompanyScreen",
+          "name": "editCompanyScreen",
+          "line": 210
+        },
+        {
+          "path": "/inventoryScreen",
+          "name": "inventoryScreen",
+          "line": 45
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "ContactScreen",
+      "file": "lib/patient_module/view/contact_screen.dart",
+      "routes": [],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "DashboardScreen",
+      "file": "lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+      "routes": [
+        {
+          "path": "/dashboardScreen",
+          "name": "dashboardScreen",
+          "line": 204
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/addAppointmentScreen",
+          "line": 907
+        },
+        {
+          "path": "/addPatientScreen",
+          "line": 1164
+        },
+        {
+          "path": "/appointmentListScreen",
+          "line": 764
+        },
+        {
+          "path": "/assessmentScreen",
+          "line": 1118
+        },
+        {
+          "path": "/drawerMenu",
+          "line": 371
+        },
+        {
+          "path": "/notificationScreen",
+          "line": 446
+        },
+        {
+          "path": "/patientScreen",
+          "line": 952
+        },
+        {
+          "path": "/reportScreen",
+          "name": "reportScreen",
+          "line": 1024
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "DietScreen",
+      "file": "lib/patient_module/view/diet_screen.dart",
+      "routes": [
+        {
+          "path": "/dietScreen",
+          "name": "dietScreen",
+          "line": 996
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/patientDashboard",
+          "line": 179
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "EditAppointmentScreen",
+      "file": "lib/doctor_dashboard/appointments/view/edit_appointment.dart",
+      "routes": [
+        {
+          "path": "/editAppointmentScreen",
+          "name": "editAppointmentScreen",
+          "line": 740
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/appointmentListScreen",
+          "name": "appointmentListScreen",
+          "line": 143
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "EditClinicScreen",
+      "file": "lib/doctor_dashboard/my_account/view/my_clinic/edit_clinic.dart",
+      "routes": [
+        {
+          "path": "/editClinicScreen",
+          "name": "editClinicScreen",
+          "line": 655
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "EditCompanyScreen",
+      "file": "lib/doctor_dashboard/inventory/view/company/edit_company_screen.dart",
+      "routes": [
+        {
+          "path": "/editCompanyScreen",
+          "name": "editCompanyScreen",
+          "line": 576
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/companyListScreen",
+          "name": "companyListScreen",
+          "line": 80
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "EditIngredientScreen",
+      "file": "lib/doctor_dashboard/inventory/view/ingredient/edit_ingredient_screen.dart",
+      "routes": [
+        {
+          "path": "/editIngredientScreen",
+          "name": "editIngredientScreen",
+          "line": 623
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/ingredientListScreen",
+          "name": "ingredientListScreen",
+          "line": 134
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "EditMedicineScreen",
+      "file": "lib/doctor_dashboard/inventory/view/medicine/edit_medicine_screen.dart",
+      "routes": [
+        {
+          "path": "/editMedicineScreen",
+          "name": "editMedicineScreen",
+          "line": 545
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/medicineListScreen",
+          "name": "medicineListScreen",
+          "line": 138
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "EditPatientProfileScreen",
+      "file": "lib/patient_module/view/edit_patient_profile_screen.dart",
+      "routes": [
+        {
+          "path": "/editPatientProfile",
+          "name": "editPatientProfile",
+          "line": 985
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/drawerMenuPatient",
+          "line": 150
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "EditPatientScreen",
+      "file": "lib/doctor_dashboard/patient/view/edit_patient/edit_patient_screen.dart",
+      "routes": [
+        {
+          "path": "/editPatientScreen",
+          "name": "editPatientScreen",
+          "line": 266
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "EditSupplementScreen",
+      "file": "lib/doctor_dashboard/inventory/view/supplements/edit_supplement_screen.dart",
+      "routes": [
+        {
+          "path": "/editSupplementScreen",
+          "name": "editSupplementScreen",
+          "line": 499
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/supplementListScreen",
+          "name": "supplementListScreen",
+          "line": 137
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "FillPrakrutiScreen",
+      "file": "lib/doctor_dashboard/nadi_flow_new/view/fill_prakruti_screen.dart",
+      "routes": [
+        {
+          "path": "/fillPrakrutiScreen",
+          "name": "fillPrakrutiScreen",
+          "line": 333
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/assessmentScreen",
+          "line": 205
+        },
+        {
+          "path": "/patientScreen",
+          "line": 103
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "ForgotPasswordScreen",
+      "file": "lib/common_files/Login/view/forgot_password_screen.dart",
+      "routes": [
+        {
+          "path": "/forgotPasswordScreen",
+          "name": "forgotPasswordScreen",
+          "line": 358
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/loginScreen",
+          "line": 60
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "GeoRestrictedScreen",
+      "file": "lib/doctor_dashboard/dashboard/view/geo_restricted_screen.dart",
+      "routes": [
+        {
+          "path": "/geoRestrictedScreen",
+          "name": "geoRestrictedScreen",
+          "line": 1020
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "HelpCenterScreen",
+      "file": "lib/doctor_dashboard/help_center/view/help_center.dart",
+      "routes": [
+        {
+          "path": "/helpCenterScreen",
+          "name": "helpCenterScreen",
+          "line": 891
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "IngredientListScreen",
+      "file": "lib/doctor_dashboard/inventory/view/ingredient/ingredient_list_screen.dart",
+      "routes": [
+        {
+          "path": "/ingredientListScreen",
+          "name": "ingredientListScreen",
+          "line": 515
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/addIngredientScreen",
+          "name": "addIngredientScreen",
+          "line": 187
+        },
+        {
+          "path": "/editIngredientScreen",
+          "name": "editIngredientScreen",
+          "line": 265
+        },
+        {
+          "path": "/inventoryScreen",
+          "name": "inventoryScreen",
+          "line": 53
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "InventoryScreen",
+      "file": "lib/doctor_dashboard/inventory/view/inventory_screen.dart",
+      "routes": [
+        {
+          "path": "/inventoryScreen",
+          "name": "inventoryScreen",
+          "line": 409
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/companyListScreen",
+          "name": "companyListScreen",
+          "line": 155
+        },
+        {
+          "path": "/ingredientListScreen",
+          "name": "ingredientListScreen",
+          "line": 170
+        },
+        {
+          "path": "/medicineListScreen",
+          "name": "medicineListScreen",
+          "line": 165
+        },
+        {
+          "path": "/medicineTypeListScreen",
+          "name": "medicineTypeListScreen",
+          "line": 160
+        },
+        {
+          "path": "/supplementListScreen",
+          "name": "supplementListScreen",
+          "line": 175
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "InvoicePdfScreen",
+      "file": "lib/doctor_dashboard/subscription/view/invoice_screen.dart",
+      "routes": [
+        {
+          "path": "/invoiceScreen",
+          "name": "invoiceScreen",
+          "line": 767
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "KycScreen",
+      "file": "lib/doctor_dashboard/kyc/view/kyc_screen.dart",
+      "routes": [
+        {
+          "path": "/kycScreen",
+          "name": "kycScreen",
+          "line": 698
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/dashboardScreen",
+          "line": 285
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "LanguageScreen",
+      "file": "lib/common_files/language/language_screen.dart",
+      "routes": [
+        {
+          "path": "/languageScreen",
+          "name": "languageScreen",
+          "line": 144
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/onBoardingScreen",
+          "line": 87
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "LoginScreen",
+      "file": "lib/common_files/Login/view/login_screen.dart",
+      "routes": [
+        {
+          "path": "/loginScreen",
+          "name": "loginScreen",
+          "line": 156
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/signupScreen",
+          "line": 243
+        }
+      ],
+      "embeds": [
+        {
+          "screen": "LoginWithOtpScreen",
+          "line": 212
+        },
+        {
+          "screen": "LoginWithUsernameScreen",
+          "line": 205
+        }
+      ]
+    },
+    {
+      "id": "LoginWithOtpScreen",
+      "file": "lib/common_files/Login/view/login_with_otp.dart",
+      "routes": [],
+      "navigates_to": [
+        {
+          "path": "/dashboardScreen",
+          "line": 176
+        },
+        {
+          "path": "/geoRestrictedScreen",
+          "line": 147
+        },
+        {
+          "path": "/kycScreen",
+          "line": 167
+        },
+        {
+          "path": "/reportScreenPatient",
+          "line": 163
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "LoginWithUsernameScreen",
+      "file": "lib/common_files/Login/view/login_with_username_screen.dart",
+      "routes": [],
+      "navigates_to": [
+        {
+          "path": "/dashboardScreen",
+          "line": 92
+        },
+        {
+          "path": "/forgotPasswordScreen",
+          "name": "forgotPasswordScreen",
+          "line": 232
+        },
+        {
+          "path": "/geoRestrictedScreen",
+          "line": 81
+        },
+        {
+          "path": "/kycScreen",
+          "line": 99
+        },
+        {
+          "path": "/reportScreenPatient",
+          "line": 90
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "MainAssessmentScreen",
+      "file": "lib/doctor_dashboard/nadi_flow_new/view/main_assessment_screen.dart",
+      "routes": [
+        {
+          "path": "/assessmentScreen",
+          "name": "assessmentScreen",
+          "line": 299
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "MedicineListScreen",
+      "file": "lib/doctor_dashboard/inventory/view/medicine/medicine_list_screen.dart",
+      "routes": [
+        {
+          "path": "/medicineListScreen",
+          "name": "medicineListScreen",
+          "line": 424
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/addMedicineScreen",
+          "name": "addMedicineScreen",
+          "line": 187
+        },
+        {
+          "path": "/editMedicineScreen",
+          "name": "editMedicineScreen",
+          "line": 265
+        },
+        {
+          "path": "/inventoryScreen",
+          "name": "inventoryScreen",
+          "line": 53
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "MedicineTypeListScreen",
+      "file": "lib/doctor_dashboard/inventory/view/medicine_type/medicine_type_list_screen.dart",
+      "routes": [
+        {
+          "path": "/medicineTypeListScreen",
+          "name": "medicineTypeListScreen",
+          "line": 454
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/addMedicineTypeScreen",
+          "name": "addMedicineTypeScreen",
+          "line": 108
+        },
+        {
+          "path": "/inventoryScreen",
+          "name": "inventoryScreen",
+          "line": 45
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "MyAccountScreen",
+      "file": "lib/doctor_dashboard/my_account/view/my_account_screen.dart",
+      "routes": [
+        {
+          "path": "/myAccountScreen/:tabId",
+          "name": "myAccountScreen",
+          "line": 388
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/drawerMenu",
+          "line": 135
+        },
+        {
+          "path": "/loginScreen",
+          "line": 159
+        }
+      ],
+      "embeds": [
+        {
+          "screen": "MyDevicesScreen",
+          "line": 58
+        }
+      ]
+    },
+    {
+      "id": "MyDevicesScreen",
+      "file": "lib/doctor_dashboard/my_account/view/my_device_screen.dart",
+      "routes": [],
+      "navigates_to": [
+        {
+          "path": "/drawerMenu",
+          "line": 137
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "NadiReportScreen",
+      "file": "lib/doctor_dashboard/visit_reports/view/nadi_report_screen.dart",
+      "routes": [
+        {
+          "path": "/nadiReportScreen",
+          "name": "nadiReportScreen",
+          "line": 855
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "NotificationScreen",
+      "file": "lib/doctor_dashboard/notifications/view/notification_screen.dart",
+      "routes": [
+        {
+          "path": "/notificationScreen",
+          "name": "notificationScreen",
+          "line": 875
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/dashboardScreen",
+          "line": 33
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "OnboardingScreen",
+      "file": "lib/on_boarding/on_boarding_screen.dart",
+      "routes": [
+        {
+          "path": "/onBoardingScreen",
+          "name": "onBoardingScreen",
+          "line": 673
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/loginScreen",
+          "name": "loginScreen",
+          "line": 107
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "PatientScreen",
+      "file": "lib/doctor_dashboard/patient/view/patient_list/patient_screen.dart",
+      "routes": [
+        {
+          "path": "/patientScreen",
+          "name": "patientScreen",
+          "line": 214
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/addPatientScreen",
+          "line": 645
+        },
+        {
+          "path": "/assessmentScreen",
+          "line": 589
+        },
+        {
+          "path": "/editPatientScreen",
+          "line": 483
+        },
+        {
+          "path": "/fillPrakrutiScreen",
+          "line": 178
+        },
+        {
+          "path": "/reportScreen",
+          "name": "reportScreen",
+          "line": 451
+        },
+        {
+          "path": "/viewPatientScreen",
+          "line": 283
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "PricingPlanScreen",
+      "file": "lib/doctor_dashboard/subscription/view/pricing_plan_screen.dart",
+      "routes": [
+        {
+          "path": "/pricingPlanScreen",
+          "name": "pricingPlanScreen",
+          "line": 778
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "ReportScreen",
+      "file": "lib/patient_module/view/report_screen.dart",
+      "routes": [
+        {
+          "path": "/reportScreenPatient",
+          "name": "reportScreenPatient",
+          "line": 1008
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "RutucharyaScreen",
+      "file": "lib/doctor_dashboard/rutucharya/view/rutucharya_screen.dart",
+      "routes": [
+        {
+          "path": "/rutucharyaScreen",
+          "name": "rutucharyaScreen",
+          "line": 714
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "SignUpScreen",
+      "file": "lib/common_files/signup/view/signup_screen.dart",
+      "routes": [
+        {
+          "path": "/signupScreen",
+          "name": "signupScreen",
+          "line": 279
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/loginScreen",
+          "line": 228
+        },
+        {
+          "path": "/webViewScreen",
+          "line": 1342
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "SplashScreen",
+      "file": "lib/splash_screen.dart",
+      "routes": [
+        {
+          "path": "/",
+          "name": "splash",
+          "line": 150
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/dashboardScreen",
+          "line": 85
+        },
+        {
+          "path": "/geoRestrictedScreen",
+          "line": 70
+        },
+        {
+          "path": "/kycScreen",
+          "line": 83
+        },
+        {
+          "path": "/languageScreen",
+          "line": 48
+        },
+        {
+          "path": "/loginScreen",
+          "line": 55
+        },
+        {
+          "path": "/onBoardingScreen",
+          "line": 51
+        },
+        {
+          "path": "/reportScreenPatient",
+          "line": 63
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "SupplementListScreen",
+      "file": "lib/doctor_dashboard/inventory/view/supplements/supplement_list_screen.dart",
+      "routes": [
+        {
+          "path": "/supplementListScreen",
+          "name": "supplementListScreen",
+          "line": 469
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/addSupplementScreen",
+          "name": "addSupplementScreen",
+          "line": 187
+        },
+        {
+          "path": "/editSupplementScreen",
+          "name": "editSupplementScreen",
+          "line": 265
+        },
+        {
+          "path": "/inventoryScreen",
+          "name": "inventoryScreen",
+          "line": 53
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "UpdateDataConsentScreen",
+      "file": "lib/patient_module/view/update_data_consent_screen.dart",
+      "routes": [
+        {
+          "path": "/updateDataConsentScreen",
+          "name": "updateDataConsentScreen",
+          "line": 974
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/drawerMenuPatient",
+          "line": 62
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "ViewAppointmentScreen",
+      "file": "lib/doctor_dashboard/appointments/view/view_appointment_screen.dart",
+      "routes": [
+        {
+          "path": "/viewAppointmentScreen",
+          "name": "viewAppointmentScreen",
+          "line": 753
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/appointmentListScreen",
+          "line": 27
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "ViewPatientScreen",
+      "file": "lib/doctor_dashboard/patient/view/view_patient/view_patient_screen.dart",
+      "routes": [
+        {
+          "path": "/viewPatientScreen",
+          "name": "viewPatientScreen",
+          "line": 242
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "VisitReportListScreen",
+      "file": "lib/doctor_dashboard/visit_reports/view/visit_report_list_screen.dart",
+      "routes": [
+        {
+          "path": "/reportScreen",
+          "name": "reportScreen",
+          "line": 814
+        }
+      ],
+      "navigates_to": [
+        {
+          "path": "/fillPrakrutiScreen",
+          "line": 132
+        }
+      ],
+      "embeds": []
+    },
+    {
+      "id": "VisitReportScreen",
+      "file": "lib/doctor_dashboard/visit_reports/view/visit_report_screen.dart",
+      "routes": [
+        {
+          "path": "/visitReportScreen",
+          "name": "visitReportScreen",
+          "line": 835
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    },
+    {
+      "id": "WebViewScreen",
+      "file": "lib/common_files/common_widgets/web_view_screen_widget.dart",
+      "routes": [
+        {
+          "path": "/webViewScreen",
+          "name": "webViewScreen",
+          "line": 368
+        }
+      ],
+      "navigates_to": [],
+      "embeds": []
+    }
+  ]
+}

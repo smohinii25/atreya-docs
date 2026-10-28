@@ -1,0 +1,226 @@
+{
+  "ticket": "adhoc-otp-attempt-limit",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "map_behind": [],
+  "seeds": {
+    "ticket": "adhoc-otp-attempt-limit",
+    "files": [
+      {
+        "repo": "Ashoka-World-Backend",
+        "path": "app/Http/Controllers/OtpSmsController.php",
+        "line": 199
+      },
+      {
+        "repo": "Ashoka-World-Backend",
+        "path": "app/Http/Controllers/OtpSmsController.php",
+        "line": 457
+      }
+    ],
+    "routes": [],
+    "tables": [],
+    "screens": [],
+    "modules": []
+  },
+  "spans": [
+    {
+      "repo": "Ashoka-World-Backend",
+      "path": "app/Http/Controllers/OtpSmsController.php",
+      "from": 424,
+      "to": 459,
+      "kind": "method",
+      "fqcn": "App\\Http\\Controllers\\OtpSmsController",
+      "methods": [
+        "verifyEmailOtp"
+      ]
+    },
+    {
+      "repo": "Ashoka-World-Backend",
+      "path": "app/Http/Controllers/OtpSmsController.php",
+      "from": 98,
+      "to": 201,
+      "kind": "method",
+      "fqcn": "App\\Http\\Controllers\\OtpSmsController",
+      "methods": [
+        "verifyOtp"
+      ]
+    },
+    {
+      "repo": "Ashoka-World-Backend",
+      "path": "routes/api.php",
+      "from": 789,
+      "to": 789,
+      "kind": "route-line"
+    },
+    {
+      "repo": "Ashoka-World-Backend",
+      "path": "routes/api.php",
+      "from": 791,
+      "to": 791,
+      "kind": "route-line"
+    }
+  ],
+  "direct_modules": [
+    {
+      "id": "auth",
+      "name": "Authentication & sign-up",
+      "critical": false,
+      "why": [
+        "owns Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php",
+        "owns route POST otp/verify-email-otp",
+        "owns route POST otp/verify-otp"
+      ]
+    }
+  ],
+  "related_modules": [],
+  "backend_routes": [
+    {
+      "key": "POST otp/verify-email-otp",
+      "controller": "OtpSmsController@verifyEmailOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:791",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php",
+      "middleware": [
+        "api"
+      ],
+      "tables": [
+        "user_personal_info"
+      ],
+      "callers": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "verifyEmailOtp",
+          "pages": [
+            "LoginWithOtpScreen"
+          ],
+          "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:494"
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@verifyEmailLoginOtp",
+          "pages": [
+            "auth.login"
+          ],
+          "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:696"
+        }
+      ]
+    },
+    {
+      "key": "POST otp/verify-otp",
+      "controller": "OtpSmsController@verifyOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:789",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php",
+      "middleware": [
+        "api"
+      ],
+      "tables": [
+        "user_personal_info"
+      ],
+      "callers": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "verifyMobileOtp",
+          "pages": [
+            "LoginWithOtpScreen"
+          ],
+          "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:465"
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@verifyWhatsappLoginOtp",
+          "pages": [
+            "auth.login"
+          ],
+          "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:378"
+        }
+      ]
+    }
+  ],
+  "web_routes": [],
+  "client_calls": [],
+  "screens": {
+    "changed": [],
+    "web_pages": [
+      "Nadi-Tarangini-Frontend:auth.login"
+    ],
+    "app_screens": [
+      "LoginWithOtpScreen"
+    ]
+  },
+  "tables": {
+    "changed": [],
+    "read": [
+      {
+        "name": "user_personal_info",
+        "modules": 21
+      }
+    ]
+  },
+  "external_systems": [],
+  "risk": {
+    "level": "Medium",
+    "high": [],
+    "medium": [
+      "route POST otp/verify-email-otp is called by web and app",
+      "route POST otp/verify-otp is called by web and app"
+    ]
+  },
+  "qa": {
+    "sanity": [
+      "auth"
+    ],
+    "regression": [
+      "auth"
+    ],
+    "not_covered": [
+      "app screens (QA tests web only): LoginWithOtpScreen"
+    ]
+  },
+  "docs": [
+    {
+      "doc": "nt/auth/BRD.md",
+      "where": [
+        "§6"
+      ],
+      "cites": [
+        "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:136"
+      ]
+    },
+    {
+      "doc": "nt/auth/PRD.md",
+      "where": [
+        "AUTH-R02",
+        "AUTH-R03",
+        "§6 (route line only)",
+        "§8",
+        "§9"
+      ],
+      "cites": [
+        "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:127",
+        "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:136",
+        "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:188",
+        "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:197",
+        "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:199",
+        "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:433",
+        "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:436",
+        "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:439"
+      ]
+    },
+    {
+      "doc": "nt/auth/diagrams/seq-AUTH-R02.drawio",
+      "where": [
+        "OtpSmsController@verifyOtp",
+        "POST otp/verify-otp (route line only)",
+        "response 200/400",
+        "uses user_personal_info"
+      ],
+      "cites": [
+        "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:120",
+        "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:98",
+        "Ashoka-World-Backend:routes/api.php:789"
+      ]
+    }
+  ]
+}

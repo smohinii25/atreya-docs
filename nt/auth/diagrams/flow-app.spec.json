@@ -1,0 +1,179 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "platform": "app"
+  },
+  "kind": "flow",
+  "name": "flow-app",
+  "title": "Authentication & sign-up: screen flow (app)",
+  "nodes": [
+    {
+      "id": "s-forgotpasswordscreen",
+      "label": "ForgotPasswordScreen",
+      "sub": "/forgotPasswordScreen",
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/forgot_password_screen.dart"
+    },
+    {
+      "id": "s-loginscreen",
+      "label": "LoginScreen",
+      "sub": "/loginScreen",
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_screen.dart"
+    },
+    {
+      "id": "s-loginwithotpscreen",
+      "label": "LoginWithOtpScreen",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart"
+    },
+    {
+      "id": "s-loginwithusernamescreen",
+      "label": "LoginWithUsernameScreen",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart"
+    },
+    {
+      "id": "s-signupscreen",
+      "label": "SignUpScreen",
+      "sub": "/signupScreen",
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart"
+    },
+    {
+      "id": "x-dashboardscreen",
+      "label": "DashboardScreen",
+      "sub": "/dashboardScreen",
+      "type": "external",
+      "source": "Nadi-Tarangini-App:lib/route/router.dart:204"
+    },
+    {
+      "id": "x-georestrictedscreen",
+      "label": "GeoRestrictedScreen",
+      "sub": "/geoRestrictedScreen",
+      "type": "external",
+      "source": "Nadi-Tarangini-App:lib/route/router.dart:1020"
+    },
+    {
+      "id": "x-kycscreen",
+      "label": "KycScreen",
+      "sub": "/kycScreen",
+      "type": "external",
+      "source": "Nadi-Tarangini-App:lib/route/router.dart:698"
+    },
+    {
+      "id": "x-reportscreen",
+      "label": "ReportScreen",
+      "sub": "/reportScreenPatient",
+      "type": "external",
+      "source": "Nadi-Tarangini-App:lib/route/router.dart:1008"
+    },
+    {
+      "id": "x-webviewscreen",
+      "label": "WebViewScreen",
+      "sub": "/webViewScreen",
+      "type": "external",
+      "source": "Nadi-Tarangini-App:lib/route/router.dart:368"
+    }
+  ],
+  "edges": [
+    {
+      "from": "s-forgotpasswordscreen",
+      "to": "s-loginscreen",
+      "label": "/loginScreen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/forgot_password_screen.dart:60"
+    },
+    {
+      "from": "s-loginscreen",
+      "to": "s-loginwithotpscreen",
+      "label": "contains",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_screen.dart:212"
+    },
+    {
+      "from": "s-loginscreen",
+      "to": "s-loginwithusernamescreen",
+      "label": "contains",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_screen.dart:205"
+    },
+    {
+      "from": "s-loginscreen",
+      "to": "s-signupscreen",
+      "label": "/signupScreen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_screen.dart:243"
+    },
+    {
+      "from": "s-loginwithotpscreen",
+      "to": "x-dashboardscreen",
+      "label": "/dashboardScreen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart:176"
+    },
+    {
+      "from": "s-loginwithotpscreen",
+      "to": "x-georestrictedscreen",
+      "label": "/geoRestrictedScreen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart:147"
+    },
+    {
+      "from": "s-loginwithotpscreen",
+      "to": "x-kycscreen",
+      "label": "/kycScreen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart:167"
+    },
+    {
+      "from": "s-loginwithotpscreen",
+      "to": "x-reportscreen",
+      "label": "/reportScreenPatient",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart:163"
+    },
+    {
+      "from": "s-loginwithusernamescreen",
+      "to": "s-forgotpasswordscreen",
+      "label": "/forgotPasswordScreen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart:232"
+    },
+    {
+      "from": "s-loginwithusernamescreen",
+      "to": "x-dashboardscreen",
+      "label": "/dashboardScreen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart:92"
+    },
+    {
+      "from": "s-loginwithusernamescreen",
+      "to": "x-georestrictedscreen",
+      "label": "/geoRestrictedScreen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart:81"
+    },
+    {
+      "from": "s-loginwithusernamescreen",
+      "to": "x-kycscreen",
+      "label": "/kycScreen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart:99"
+    },
+    {
+      "from": "s-loginwithusernamescreen",
+      "to": "x-reportscreen",
+      "label": "/reportScreenPatient",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart:90"
+    },
+    {
+      "from": "s-signupscreen",
+      "to": "s-loginscreen",
+      "label": "/loginScreen",
+      "source": "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart:228"
+    },
+    {
+      "from": "s-signupscreen",
+      "to": "x-webviewscreen",
+      "label": "/webViewScreen",
+      "source": "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart:1342"
+    }
+  ]
+}

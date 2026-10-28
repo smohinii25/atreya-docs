@@ -1,0 +1,153 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "routes": "POST otp/send-verification-otp,POST otp/verify-verification-otp",
+    "name": "seq-AUTH-R08",
+    "title": "AUTH-R08: Verify an email or mobile number with a one-time code"
+  },
+  "kind": "sequence",
+  "name": "seq-AUTH-R08",
+  "title": "AUTH-R08: Verify an email or mobile number with a one-time code",
+  "nodes": [
+    {
+      "id": "scr-addclinicscreen-editclinicscreen-editdoctoraccount-kycscreen-signupscreen",
+      "label": "5 screens",
+      "sub": "AddClinicScreen, EditClinicScreen, EditDoctorAccount, KycScreen, SignUpScreen",
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart; Nadi-Tarangini-App:lib/doctor_dashboard/kyc/view/kyc_screen.dart; Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_account/edit_account.dart; Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/add_clinic.dart; Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/edit_clinic.dart"
+    },
+    {
+      "id": "scr-admin-create-user-admin-edit-profile-auth-admin-signup-auth-college-signup-auth-nt-lite-signup-auth-signup-my-account-editclinicdetails-my-account-update-kyc",
+      "label": "8 screens",
+      "sub": "admin.create_user, admin.edit_profile, auth.admin_signUp, auth.college_signUp, auth.nt_lite_signup, auth.signup, my_account.editClinicDetails, my_account.update_kyc",
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:643; Nadi-Tarangini-Frontend:public/js/common.js:898; Nadi-Tarangini-Frontend:public/js/nt_lite_signup.js:185; Nadi-Tarangini-Frontend:resources/views/admin/create_user.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/edit_profile.blade.php; Nadi-Tarangini-Frontend:resources/views/auth/admin_signUp.blade.php; Nadi-Tarangini-Frontend:resources/views/auth/college_signUp.blade.php; Nadi-Tarangini-Frontend:resources/views/auth/nt_lite_signup.blade.php; Nadi-Tarangini-Frontend:resources/views/auth/signup.blade.php; Nadi-Tarangini-Frontend:resources/views/my_account/editClinicDetails.blade.php; Nadi-Tarangini-Frontend:resources/views/my_account/update_kyc.blade.php"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-sendverificationotp",
+      "label": "sendVerificationOtp",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2486"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-verifyverificationotp",
+      "label": "verifyVerificationOtp",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2498"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-otpverificationcontroller-sendverificationotpsignup",
+      "label": "OtpVerificationController@sendVerificationOtpsignup",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/OtpVerificationController.php:33"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-otpverificationcontroller-verifyverificationotpsignup",
+      "label": "OtpVerificationController@verifyVerificationOtpsignup",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/OtpVerificationController.php:77"
+    },
+    {
+      "id": "rt-post-otp-send-verification-otp",
+      "label": "POST otp/send-verification-otp",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:793"
+    },
+    {
+      "id": "rt-post-otp-verify-verification-otp",
+      "label": "POST otp/verify-verification-otp",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:794"
+    },
+    {
+      "id": "ctl-otpsmscontroller-sendverificationotp",
+      "label": "OtpSmsController@sendVerificationOtp",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:475"
+    },
+    {
+      "id": "ctl-otpsmscontroller-verifyverificationotp",
+      "label": "OtpSmsController@verifyVerificationOtp",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:624"
+    }
+  ],
+  "edges": [
+    {
+      "from": "scr-addclinicscreen-editclinicscreen-editdoctoraccount-kycscreen-signupscreen",
+      "to": "cli-nadi-tarangini-app-sendverificationotp",
+      "label": "uses sendVerificationOtp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2486"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-sendverificationotp",
+      "to": "rt-post-otp-send-verification-otp",
+      "label": "POST /otp/send-verification-otp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2486"
+    },
+    {
+      "from": "scr-admin-create-user-admin-edit-profile-auth-admin-signup-auth-college-signup-auth-nt-lite-signup-auth-signup-my-account-editclinicdetails-my-account-update-kyc",
+      "to": "cli-nadi-tarangini-frontend-otpverificationcontroller-sendverificationotpsignup",
+      "label": "uses OtpVerificationController@sendVerificationOtpsignup",
+      "source": "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:643; Nadi-Tarangini-Frontend:public/js/common.js:898; Nadi-Tarangini-Frontend:public/js/nt_lite_signup.js:185"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-otpverificationcontroller-sendverificationotpsignup",
+      "to": "rt-post-otp-send-verification-otp",
+      "label": "POST /otp/send-verification-otp",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/OtpVerificationController.php:33"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-verifyverificationotp",
+      "to": "rt-post-otp-verify-verification-otp",
+      "label": "POST /otp/verify-verification-otp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2498"
+    },
+    {
+      "from": "scr-admin-create-user-admin-edit-profile-auth-admin-signup-auth-college-signup-auth-nt-lite-signup-auth-signup-my-account-editclinicdetails-my-account-update-kyc",
+      "to": "cli-nadi-tarangini-frontend-otpverificationcontroller-verifyverificationotpsignup",
+      "label": "uses OtpVerificationController@verifyVerificationOtpsignup",
+      "source": "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:734; Nadi-Tarangini-Frontend:public/js/common.js:989; Nadi-Tarangini-Frontend:public/js/nt_lite_signup.js:247"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-otpverificationcontroller-verifyverificationotpsignup",
+      "to": "rt-post-otp-verify-verification-otp",
+      "label": "POST /otp/verify-verification-otp",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/OtpVerificationController.php:77"
+    },
+    {
+      "from": "rt-post-otp-send-verification-otp",
+      "to": "ctl-otpsmscontroller-sendverificationotp",
+      "label": "OtpSmsController@sendVerificationOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:793"
+    },
+    {
+      "from": "ctl-otpsmscontroller-sendverificationotp",
+      "to": "cli-nadi-tarangini-app-sendverificationotp",
+      "label": "response 400/500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:564"
+    },
+    {
+      "from": "rt-post-otp-verify-verification-otp",
+      "to": "ctl-otpsmscontroller-verifyverificationotp",
+      "label": "OtpSmsController@verifyVerificationOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:794"
+    },
+    {
+      "from": "ctl-otpsmscontroller-verifyverificationotp",
+      "to": "cli-nadi-tarangini-app-verifyverificationotp",
+      "label": "response 422",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:656"
+    }
+  ]
+}

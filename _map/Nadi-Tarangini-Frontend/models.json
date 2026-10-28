@@ -1,0 +1,170 @@
+{
+  "repo": "Nadi-Tarangini-Frontend",
+  "commit": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d",
+  "counts": {
+    "models": 1,
+    "tables": 4,
+    "tables_with_migration": 4,
+    "tables_without_migration": 0,
+    "inferred_table_names": 1
+  },
+  "models": [
+    {
+      "class": "User",
+      "fqcn": "App\\Models\\User",
+      "file": "app/Models/User.php",
+      "table": "users",
+      "table_source": "inferred",
+      "fillable": [
+        "name",
+        "email",
+        "password"
+      ],
+      "relations": []
+    }
+  ],
+  "tables": [
+    {
+      "name": "failed_jobs",
+      "models": [],
+      "created_in_migrations": true,
+      "migrations": [
+        "database/migrations/2019_08_19_000000_create_failed_jobs_table.php"
+      ],
+      "columns": [
+        {
+          "name": "connection",
+          "type": "text"
+        },
+        {
+          "name": "exception",
+          "type": "longText"
+        },
+        {
+          "name": "failed_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "payload",
+          "type": "longText"
+        },
+        {
+          "name": "queue",
+          "type": "text"
+        },
+        {
+          "name": "uuid",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "password_resets",
+      "models": [],
+      "created_in_migrations": true,
+      "migrations": [
+        "database/migrations/2014_10_12_100000_create_password_resets_table.php"
+      ],
+      "columns": [
+        {
+          "name": "created_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "token",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "personal_access_tokens",
+      "models": [],
+      "created_in_migrations": true,
+      "migrations": [
+        "database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php"
+      ],
+      "columns": [
+        {
+          "name": "abilities",
+          "type": "text"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "last_used_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "token",
+          "type": "string"
+        },
+        {
+          "name": "tokenable",
+          "type": "morphs"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp"
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "models": [
+        "App\\Models\\User"
+      ],
+      "created_in_migrations": true,
+      "migrations": [
+        "database/migrations/2014_10_12_000000_create_users_table.php"
+      ],
+      "columns": [
+        {
+          "name": "created_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "email_verified_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "type": "string"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp"
+        }
+      ]
+    }
+  ]
+}

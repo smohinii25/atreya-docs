@@ -1,0 +1,187 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {},
+  "kind": "er",
+  "name": "er",
+  "title": "Authentication & sign-up: data model (columns from migrations only)",
+  "nodes": [
+    {
+      "id": "api_endpoints",
+      "label": "api_endpoints",
+      "type": "table",
+      "columns": [
+        "create_date",
+        "id",
+        "is_active",
+        "is_public",
+        "is_public_reception",
+        "method",
+        "name",
+        "updated_date",
+        "url"
+      ],
+      "source": "Ashoka-World-Backend:app/Models/ApiEndpoints.php"
+    },
+    {
+      "id": "corporate_info",
+      "label": "corporate_info",
+      "type": "table",
+      "columns": [
+        "add_patient_url",
+        "city",
+        "corp_role_id",
+        "corporate_id",
+        "corporate_type",
+        "country",
+        "doctors_info",
+        "pincode",
+        "profile_image",
+        "state"
+      ],
+      "source": "Ashoka-World-Backend:app/Models/CorporateInfo.php"
+    },
+    {
+      "id": "country_wise_states",
+      "label": "country_wise_states",
+      "type": "table",
+      "columns": [
+        "timezone"
+      ],
+      "source": "Ashoka-World-Backend:app/Models/CountryWiseStates.php"
+    },
+    {
+      "id": "currency_type",
+      "label": "currency_type",
+      "type": "table",
+      "columns": [],
+      "source": "Ashoka-World-Backend:app/Models/CurrencyType.php"
+    },
+    {
+      "id": "locality_info",
+      "label": "locality_info",
+      "type": "table",
+      "columns": [
+        "is_default",
+        "timezone"
+      ],
+      "source": "Ashoka-World-Backend:app/Models/LocalityInfo.php"
+    },
+    {
+      "id": "pg_device_mapping",
+      "label": "pg_device_mapping",
+      "type": "table",
+      "columns": [],
+      "source": "Ashoka-World-Backend:app/Models/PgDeviceMapping.php"
+    },
+    {
+      "id": "salutation_types",
+      "label": "salutation_types",
+      "type": "table",
+      "columns": [],
+      "source": "Ashoka-World-Backend:app/Models/SalutationTypes.php"
+    },
+    {
+      "id": "subscriptions",
+      "label": "subscriptions",
+      "type": "table",
+      "columns": [
+        "api_rules",
+        "blocked_api_rules",
+        "create_date",
+        "duration",
+        "features",
+        "id",
+        "limits",
+        "name",
+        "price",
+        "status",
+        "updated_at"
+      ],
+      "source": "Ashoka-World-Backend:app/Models/Subscription.php"
+    },
+    {
+      "id": "transactions",
+      "label": "transactions",
+      "type": "table",
+      "columns": [
+        "amount",
+        "comment",
+        "coupon_code",
+        "create_date",
+        "currency",
+        "expire_status",
+        "free_expire_date",
+        "id",
+        "invoice_data",
+        "is_trial",
+        "month",
+        "order_id",
+        "pay_gate_order_id",
+        "pay_gate_order_json",
+        "pay_gate_payment_id",
+        "pay_gate_payment_status",
+        "pay_gate_response_json",
+        "pay_gate_signature",
+        "pay_gate_webhook_json",
+        "payment_date",
+        "payment_status",
+        "plan_id",
+        "plan_id_v2",
+        "report_count",
+        "updated_at",
+        "user_id"
+      ],
+      "source": "Ashoka-World-Backend:app/Models/Transaction.php"
+    },
+    {
+      "id": "user_nadi_capture_type",
+      "label": "user_nadi_capture_type",
+      "type": "table",
+      "columns": [
+        "allowed_countries",
+        "avoid_device_selection_usb",
+        "can_change_capture_type",
+        "create_date",
+        "expiry_date",
+        "free_tier_enrolled",
+        "id",
+        "is_active",
+        "is_star_account",
+        "last_modified_on",
+        "nadi_capture_type",
+        "no_of_reports",
+        "plan_type",
+        "user_id"
+      ],
+      "source": "Ashoka-World-Backend:app/Models/UserNadiCaptureType.php"
+    },
+    {
+      "id": "user_personal_info",
+      "label": "user_personal_info",
+      "type": "table",
+      "columns": [
+        "allowed_functions",
+        "app_language",
+        "ayush_no",
+        "clinic_id",
+        "external_user_status",
+        "is_parent",
+        "parent_id",
+        "plan_expire_date",
+        "plan_id",
+        "profession_type_id",
+        "reception_id",
+        "verified_role_id",
+        "welcome_tours_taken"
+      ],
+      "source": "Ashoka-World-Backend:app/Models/UserPersonalInfo.php"
+    }
+  ],
+  "edges": []
+}

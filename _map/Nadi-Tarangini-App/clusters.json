@@ -1,0 +1,261 @@
+{
+  "repo": "Nadi-Tarangini-App",
+  "commit": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+  "kind": "flutter",
+  "screens_without_file": [],
+  "folders": [
+    {
+      "folder": "lib/common_files/Login",
+      "screens": [
+        "ForgotPasswordScreen",
+        "LoginScreen",
+        "LoginWithOtpScreen",
+        "LoginWithUsernameScreen"
+      ],
+      "go_routes": [
+        "/forgotPasswordScreen",
+        "/loginScreen"
+      ]
+    },
+    {
+      "folder": "lib/common_files/common_widgets",
+      "screens": [
+        "WebViewScreen"
+      ],
+      "go_routes": [
+        "/webViewScreen"
+      ]
+    },
+    {
+      "folder": "lib/common_files/language",
+      "screens": [
+        "LanguageScreen"
+      ],
+      "go_routes": [
+        "/languageScreen"
+      ]
+    },
+    {
+      "folder": "lib/common_files/signup",
+      "screens": [
+        "SignUpScreen"
+      ],
+      "go_routes": [
+        "/signupScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/appointments",
+      "screens": [
+        "AddAppointmentScreen",
+        "AppointmentScreen",
+        "EditAppointmentScreen",
+        "ViewAppointmentScreen"
+      ],
+      "go_routes": [
+        "/addAppointmentScreen",
+        "/appointmentListScreen",
+        "/editAppointmentScreen",
+        "/viewAppointmentScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/chotbot",
+      "screens": [
+        "ChatRegistrationScreen",
+        "ChatScreen"
+      ],
+      "go_routes": [
+        "/chatRegistration",
+        "/chatScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/dashboard",
+      "screens": [
+        "DashboardScreen",
+        "GeoRestrictedScreen"
+      ],
+      "go_routes": [
+        "/dashboardScreen",
+        "/geoRestrictedScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/help_center",
+      "screens": [
+        "HelpCenterScreen"
+      ],
+      "go_routes": [
+        "/helpCenterScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/inventory",
+      "screens": [
+        "AddCompanyScreen",
+        "AddIngredientScreen",
+        "AddMedicineScreen",
+        "AddMedicineTypeScreen",
+        "AddSupplementScreen",
+        "CompanyListScreen",
+        "EditCompanyScreen",
+        "EditIngredientScreen",
+        "EditMedicineScreen",
+        "EditSupplementScreen",
+        "IngredientListScreen",
+        "InventoryScreen",
+        "MedicineListScreen",
+        "MedicineTypeListScreen",
+        "SupplementListScreen"
+      ],
+      "go_routes": [
+        "/addCompanyScreen",
+        "/addIngredientScreen",
+        "/addMedicineScreen",
+        "/addMedicineTypeScreen",
+        "/addSupplementScreen",
+        "/companyListScreen",
+        "/editCompanyScreen",
+        "/editIngredientScreen",
+        "/editMedicineScreen",
+        "/editSupplementScreen",
+        "/ingredientListScreen",
+        "/inventoryScreen",
+        "/medicineListScreen",
+        "/medicineTypeListScreen",
+        "/supplementListScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/kyc",
+      "screens": [
+        "KycScreen"
+      ],
+      "go_routes": [
+        "/kycScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/my_account",
+      "screens": [
+        "AddClinicScreen",
+        "EditClinicScreen",
+        "MyAccountScreen",
+        "MyDevicesScreen"
+      ],
+      "go_routes": [
+        "/addClinicScreen",
+        "/editClinicScreen",
+        "/myAccountScreen/:tabId"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/nadi_flow_new",
+      "screens": [
+        "FillPrakrutiScreen",
+        "MainAssessmentScreen"
+      ],
+      "go_routes": [
+        "/assessmentScreen",
+        "/fillPrakrutiScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/notifications",
+      "screens": [
+        "NotificationScreen"
+      ],
+      "go_routes": [
+        "/notificationScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/patient",
+      "screens": [
+        "AddPatientFromAppointmentScreen",
+        "AddPatientScreen",
+        "EditPatientScreen",
+        "PatientScreen",
+        "ViewPatientScreen"
+      ],
+      "go_routes": [
+        "/addPatientScreen",
+        "/editPatientScreen",
+        "/patientScreen",
+        "/viewPatientScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/rutucharya",
+      "screens": [
+        "RutucharyaScreen"
+      ],
+      "go_routes": [
+        "/rutucharyaScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/subscription",
+      "screens": [
+        "CheckOutScreen",
+        "InvoicePdfScreen",
+        "PricingPlanScreen"
+      ],
+      "go_routes": [
+        "/checkoutScreen",
+        "/invoiceScreen",
+        "/pricingPlanScreen"
+      ]
+    },
+    {
+      "folder": "lib/doctor_dashboard/visit_reports",
+      "screens": [
+        "NadiReportScreen",
+        "VisitReportListScreen",
+        "VisitReportScreen"
+      ],
+      "go_routes": [
+        "/nadiReportScreen",
+        "/reportScreen",
+        "/visitReportScreen"
+      ]
+    },
+    {
+      "folder": "lib/on_boarding/on_boarding_screen.dart",
+      "screens": [
+        "OnboardingScreen"
+      ],
+      "go_routes": [
+        "/onBoardingScreen"
+      ]
+    },
+    {
+      "folder": "lib/patient_module/view",
+      "screens": [
+        "AllReportScreen",
+        "ComingSoonPage",
+        "ContactScreen",
+        "DietScreen",
+        "EditPatientProfileScreen",
+        "ReportScreen",
+        "UpdateDataConsentScreen"
+      ],
+      "go_routes": [
+        "/dietScreen",
+        "/editPatientProfile",
+        "/reportScreenPatient",
+        "/updateDataConsentScreen"
+      ]
+    },
+    {
+      "folder": "lib/splash_screen.dart",
+      "screens": [
+        "SplashScreen"
+      ],
+      "go_routes": [
+        "/"
+      ]
+    }
+  ]
+}

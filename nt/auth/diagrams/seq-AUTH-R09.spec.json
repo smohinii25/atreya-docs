@@ -1,0 +1,109 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "routes": "POST updatepassword",
+    "name": "seq-AUTH-R09",
+    "title": "AUTH-R09: Change the password while logged in"
+  },
+  "kind": "sequence",
+  "name": "seq-AUTH-R09",
+  "title": "AUTH-R09: Change the password while logged in",
+  "nodes": [
+    {
+      "id": "scr-my-account-myaccount",
+      "label": "my_account.myaccount",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:public/js/myaccount/changePassword.js:170; Nadi-Tarangini-Frontend:resources/views/my_account/myaccount.blade.php"
+    },
+    {
+      "id": "scr-myaccountscreen",
+      "label": "MyAccountScreen",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_account_screen.dart"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-updatepassword",
+      "label": "updatePassword",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1316"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-changepasswordcontroller-updatepassword",
+      "label": "ChangePasswordController@updatePassword",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/ChangePasswordController.php:29"
+    },
+    {
+      "id": "rt-post-updatepassword",
+      "label": "POST updatepassword",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:975"
+    },
+    {
+      "id": "ctl-updatepasswordcontroller-updatepassword",
+      "label": "UpdatePasswordController@updatePassword",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php:12"
+    },
+    {
+      "id": "tbl-user-personal-info",
+      "label": "user_personal_info",
+      "type": "db",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php:12"
+    }
+  ],
+  "edges": [
+    {
+      "from": "scr-myaccountscreen",
+      "to": "cli-nadi-tarangini-app-updatepassword",
+      "label": "uses updatePassword",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1316"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-updatepassword",
+      "to": "rt-post-updatepassword",
+      "label": "POST /updatepassword",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1316"
+    },
+    {
+      "from": "scr-my-account-myaccount",
+      "to": "cli-nadi-tarangini-frontend-changepasswordcontroller-updatepassword",
+      "label": "uses ChangePasswordController@updatePassword",
+      "source": "Nadi-Tarangini-Frontend:public/js/myaccount/changePassword.js:170"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-changepasswordcontroller-updatepassword",
+      "to": "rt-post-updatepassword",
+      "label": "POST /updatepassword",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/ChangePasswordController.php:29"
+    },
+    {
+      "from": "rt-post-updatepassword",
+      "to": "ctl-updatepasswordcontroller-updatepassword",
+      "label": "UpdatePasswordController@updatePassword",
+      "source": "Ashoka-World-Backend:routes/api.php:975"
+    },
+    {
+      "from": "ctl-updatepasswordcontroller-updatepassword",
+      "to": "tbl-user-personal-info",
+      "label": "uses user_personal_info",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php:12"
+    },
+    {
+      "from": "ctl-updatepasswordcontroller-updatepassword",
+      "to": "cli-nadi-tarangini-app-updatepassword",
+      "label": "response 200/400",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php:38"
+    }
+  ]
+}

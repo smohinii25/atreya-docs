@@ -1,0 +1,3790 @@
+{
+  "repo": "Ashoka-World-Backend",
+  "commit": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+  "kind": "blade",
+  "counts": {
+    "screens": 221,
+    "partials": 130,
+    "rendered_by_controller": 51,
+    "reachable_by_route": 49,
+    "js_calls": 34,
+    "js_calls_credited": 33,
+    "js_calls_unresolved": 9
+  },
+  "screens": [
+    {
+      "id": "components.arogyaDarshikaReport.eighthPage",
+      "file": "resources/views/components/arogyaDarshikaReport/eighthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.arogyaDarshikaReport.fifthPage",
+      "file": "resources/views/components/arogyaDarshikaReport/fifthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.arogyaDarshikaReport.firstPage",
+      "file": "resources/views/components/arogyaDarshikaReport/firstPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.arogyaDarshikaReport.fourthPage",
+      "file": "resources/views/components/arogyaDarshikaReport/fourthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.arogyaDarshikaReport.secondPage",
+      "file": "resources/views/components/arogyaDarshikaReport/secondPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.arogyaDarshikaReport.seventhPage",
+      "file": "resources/views/components/arogyaDarshikaReport/seventhPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.arogyaDarshikaReport.sixthPage",
+      "file": "resources/views/components/arogyaDarshikaReport/sixthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.arogyaDarshikaReport.thirdPage",
+      "file": "resources/views/components/arogyaDarshikaReport/thirdPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.careServicesReport.firstpage",
+      "file": "resources/views/components/careServicesReport/firstpage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.dietReport.firstpage",
+      "file": "resources/views/components/dietReport/firstpage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.medicalReport.firstPage",
+      "file": "resources/views/components/medicalReport/firstPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.medicalReportV2.firstpage",
+      "file": "resources/views/components/medicalReportV2/firstpage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.eighthPage",
+      "file": "resources/views/components/nadiTaranginiReport/eighthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.fifthPage",
+      "file": "resources/views/components/nadiTaranginiReport/fifthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.firstPage",
+      "file": "resources/views/components/nadiTaranginiReport/firstPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.fourthPage",
+      "file": "resources/views/components/nadiTaranginiReport/fourthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.gatiBasedNadi",
+      "file": "resources/views/components/nadiTaranginiReport/gatiBasedNadi.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.gunaScores",
+      "file": "resources/views/components/nadiTaranginiReport/gunaScores.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.ninethPage",
+      "file": "resources/views/components/nadiTaranginiReport/ninethPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.secondPage",
+      "file": "resources/views/components/nadiTaranginiReport/secondPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.seventhPage",
+      "file": "resources/views/components/nadiTaranginiReport/seventhPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.sixthPage",
+      "file": "resources/views/components/nadiTaranginiReport/sixthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.tenthPage",
+      "file": "resources/views/components/nadiTaranginiReport/tenthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReport.thirdPage",
+      "file": "resources/views/components/nadiTaranginiReport/thirdPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.dinacharya.ninethPage",
+      "file": "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.dinacharya.ninethPageBengali",
+      "file": "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageBengali.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.dinacharya.ninethPageEnglish",
+      "file": "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageEnglish.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.dinacharya.ninethPageGujrati",
+      "file": "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageGujrati.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.dinacharya.ninethPageHindi",
+      "file": "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageHindi.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.dinacharya.ninethPageMarathi",
+      "file": "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageMarathi.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.dinacharya.ninethPageTamil",
+      "file": "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageTamil.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.dinacharya.ninethPageTelugu",
+      "file": "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageTelugu.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.dinacharya.ninethPageUS",
+      "file": "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageUS.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.dinacharya.ninethPageUrdu",
+      "file": "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageUrdu.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.disclaimer.bengali",
+      "file": "resources/views/components/nadiTaranginiReportV3/disclaimer/bengali.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.disclaimer.english",
+      "file": "resources/views/components/nadiTaranginiReportV3/disclaimer/english.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.disclaimer.gujrati",
+      "file": "resources/views/components/nadiTaranginiReportV3/disclaimer/gujrati.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.disclaimer.hindi",
+      "file": "resources/views/components/nadiTaranginiReportV3/disclaimer/hindi.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.disclaimer.marathi",
+      "file": "resources/views/components/nadiTaranginiReportV3/disclaimer/marathi.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.disclaimer.tamil",
+      "file": "resources/views/components/nadiTaranginiReportV3/disclaimer/tamil.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.disclaimer.telugu",
+      "file": "resources/views/components/nadiTaranginiReportV3/disclaimer/telugu.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.disclaimer.urdu",
+      "file": "resources/views/components/nadiTaranginiReportV3/disclaimer/urdu.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.eighthPage",
+      "file": "resources/views/components/nadiTaranginiReportV3/eighthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.eleventhPage",
+      "file": "resources/views/components/nadiTaranginiReportV3/eleventhPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.fifthPage",
+      "file": "resources/views/components/nadiTaranginiReportV3/fifthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.firstPage",
+      "file": "resources/views/components/nadiTaranginiReportV3/firstPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.fourthPage",
+      "file": "resources/views/components/nadiTaranginiReportV3/fourthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.rutucharya.bengaliGrishma",
+      "file": "resources/views/components/nadiTaranginiReportV3/rutucharya/bengaliGrishma.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.rutucharya.englishGrishma",
+      "file": "resources/views/components/nadiTaranginiReportV3/rutucharya/englishGrishma.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.rutucharya.gujratiGrishma",
+      "file": "resources/views/components/nadiTaranginiReportV3/rutucharya/gujratiGrishma.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.rutucharya.hindiGrishma",
+      "file": "resources/views/components/nadiTaranginiReportV3/rutucharya/hindiGrishma.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.rutucharya.marathiGrishma",
+      "file": "resources/views/components/nadiTaranginiReportV3/rutucharya/marathiGrishma.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.rutucharya.tamilGrishma",
+      "file": "resources/views/components/nadiTaranginiReportV3/rutucharya/tamilGrishma.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.rutucharya.teluguGrishma",
+      "file": "resources/views/components/nadiTaranginiReportV3/rutucharya/teluguGrishma.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.rutucharya.tenthPage",
+      "file": "resources/views/components/nadiTaranginiReportV3/rutucharya/tenthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.rutucharya.tenthPageDubai",
+      "file": "resources/views/components/nadiTaranginiReportV3/rutucharya/tenthPageDubai.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.rutucharya.urduGrishma",
+      "file": "resources/views/components/nadiTaranginiReportV3/rutucharya/urduGrishma.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.secondPage",
+      "file": "resources/views/components/nadiTaranginiReportV3/secondPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.seventhPage",
+      "file": "resources/views/components/nadiTaranginiReportV3/seventhPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.sixthPage",
+      "file": "resources/views/components/nadiTaranginiReportV3/sixthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.nadiTaranginiReportV3.thirdPage",
+      "file": "resources/views/components/nadiTaranginiReportV3/thirdPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.ntRecommendationReport.firstPage",
+      "file": "resources/views/components/ntRecommendationReport/firstPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.ntRecommendationReport.secondPage",
+      "file": "resources/views/components/ntRecommendationReport/secondPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.onePagerNadiTaranginiReport.firstPage",
+      "file": "resources/views/components/onePagerNadiTaranginiReport/firstPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.patanjaliReport.firstPage",
+      "file": "resources/views/components/patanjaliReport/firstPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.prescriptionReport.firstpage",
+      "file": "resources/views/components/prescriptionReport/firstpage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.prescriptionReportV2.firstpage",
+      "file": "resources/views/components/prescriptionReportV2/firstpage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.spaReport.firstPage",
+      "file": "resources/views/components/spaReport/firstPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.eighthPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/eighthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.eleventhPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/eleventhPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.fifthPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/fifthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.firstPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/firstPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.fourthPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/fourthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.ninethPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/ninethPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.secondPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/secondPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.seventhPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/seventhPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.sixthPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/sixthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.tenthPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/tenthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.thirdPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/thirdPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.swasthyaDarshikaV2.twelthPage",
+      "file": "resources/views/components/swasthyaDarshikaV2/twelthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.weeklyDietReport.firstpage",
+      "file": "resources/views/components/weeklyDietReport/firstpage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.eightPage",
+      "file": "resources/views/components/yogaReport/eightPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.eleventhPage",
+      "file": "resources/views/components/yogaReport/eleventhPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.fifteenPage",
+      "file": "resources/views/components/yogaReport/fifteenPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.fifthPage",
+      "file": "resources/views/components/yogaReport/fifthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.firstPage",
+      "file": "resources/views/components/yogaReport/firstPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.fourthPage",
+      "file": "resources/views/components/yogaReport/fourthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.fourtheenPage",
+      "file": "resources/views/components/yogaReport/fourtheenPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.ninethPage",
+      "file": "resources/views/components/yogaReport/ninethPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.secondHeader",
+      "file": "resources/views/components/yogaReport/secondHeader.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.secondPage",
+      "file": "resources/views/components/yogaReport/secondPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.seventhPage",
+      "file": "resources/views/components/yogaReport/seventhPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.sixthPage",
+      "file": "resources/views/components/yogaReport/sixthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.tenthPage",
+      "file": "resources/views/components/yogaReport/tenthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.thirdPage",
+      "file": "resources/views/components/yogaReport/thirdPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.thirteenPage",
+      "file": "resources/views/components/yogaReport/thirteenPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "components.yogaReport.twelthPage",
+      "file": "resources/views/components/yogaReport/twelthPage.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "concents.deleteClinicPage",
+      "file": "resources/views/concents/deleteClinicPage.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/concents/deleteClinicPage.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "concents.previusReportNotSupported",
+      "file": "resources/views/concents/previusReportNotSupported.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "swasthyaDarshikaReportV2"
+        }
+      ],
+      "routes": [
+        "GET swasthyaDarshikaReport",
+        "GET swasthyaDarshikaReportV2"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/concents/previusReportNotSupported.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "concents.revokeReportPatient",
+      "file": "resources/views/concents/revokeReportPatient.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "aiGeneratedRutucharyaReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "aiGeneratedyogaPlannerReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "arogyaDarshikaReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "careServicesReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "dietAndLifestylereport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "medicalVisitReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "medicalVisitReportV2"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "nadiNaranginiReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "nadiNaranginiReportV3"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "nadiSwasthyaReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "ntRecommendationsReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "onePagerNadiTaranginiReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "prescriptionReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "spaReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "swasthyaDarshikaReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "swasthyaDarshikaReportV2"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "weeklyDietReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "yogaReport"
+        }
+      ],
+      "routes": [
+        "GET arogyaDarshika",
+        "GET careServicesReport",
+        "GET dietReport",
+        "GET medicalVisitReport",
+        "GET medicalVisitReportV2",
+        "GET nadiSwasthyaReport",
+        "GET nadiTaranginiReport",
+        "GET nadiTaranginiReportV3",
+        "GET ntRecommendationReport",
+        "GET onePagerNadiTaranginiReport",
+        "GET prescriptionReport",
+        "GET rutucharyaReport",
+        "GET spaReport",
+        "GET swasthyaDarshikaReport",
+        "GET swasthyaDarshikaReportV2",
+        "GET weeklyDietReport",
+        "GET yogaPlannerReport",
+        "GET yogaReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/concents/revokeReportPatient.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "email.appointment.add_appointment",
+      "file": "resources/views/email/appointment/add_appointment.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "email.appointment.delete_appointment",
+      "file": "resources/views/email/appointment/delete_appointment.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "email.appointment.update_appointment",
+      "file": "resources/views/email/appointment/update_appointment.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "email.layout.layout",
+      "file": "resources/views/email/layout/layout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "email.transaction.freeTrialStarted",
+      "file": "resources/views/email/transaction/freeTrialStarted.blade.php",
+      "partial": true,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\SubscriptionController",
+          "method": "startTrial"
+        }
+      ],
+      "routes": [
+        "POST subscriptions/startTrial"
+      ],
+      "links_to": []
+    },
+    {
+      "id": "email.transaction.purchasePlan",
+      "file": "resources/views/email/transaction/purchasePlan.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "errors.404",
+      "file": "resources/views/errors/404.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "aiGeneratedRutucharyaReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "aiGeneratedyogaPlannerReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "arogyaDarshikaReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "careServicesReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "dietAndLifestylereport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "medicalVisitReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "medicalVisitReportV2"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "nadiNaranginiReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "nadiNaranginiReportV3"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "nadiSwasthyaReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "ntRecommendationsReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "onePagerNadiTaranginiReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "patanjaliReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "postFetchNadiInfo"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "prescriptionReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "spaReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "swasthyaDarshikaReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "swasthyaDarshikaReportV2"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "weeklyDietReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "yogaReport"
+        }
+      ],
+      "routes": [
+        "GET arogyaDarshika",
+        "GET careServicesReport",
+        "GET dietReport",
+        "GET medicalVisitReport",
+        "GET medicalVisitReportV2",
+        "GET nadiSwasthyaReport",
+        "GET nadiTaranginiReport",
+        "GET nadiTaranginiReportV3",
+        "GET ntRecommendationReport",
+        "GET onePagerNadiTaranginiReport",
+        "GET patanjaliReport",
+        "GET prescriptionReport",
+        "GET rutucharyaReport",
+        "GET spaReport",
+        "GET swasthyaDarshikaReport",
+        "GET swasthyaDarshikaReportV2",
+        "GET weeklyDietReport",
+        "GET yogaPlannerReport",
+        "GET yogaReport",
+        "POST postFetchNadiInfo"
+      ],
+      "links_to": [
+        {
+          "url": "/",
+          "line": 52
+        }
+      ],
+      "parts": [
+        "resources/views/errors/404.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "errors.405",
+      "file": "resources/views/errors/405.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/errors/405.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "errors.500",
+      "file": "resources/views/errors/500.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/errors/500.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js"
+      ]
+    },
+    {
+      "id": "errors.reloadPageWrong",
+      "file": "resources/views/errors/reloadPageWrong.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "ntRecommendationsReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "swasthyaDarshikaReportV2"
+        }
+      ],
+      "routes": [
+        "GET ntRecommendationReport",
+        "GET swasthyaDarshikaReport",
+        "GET swasthyaDarshikaReportV2"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/errors/reloadPageWrong.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "invoice",
+      "file": "resources/views/invoice.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/invoice.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "layouts.arogyaDarshikaLayout",
+      "file": "resources/views/layouts/arogyaDarshikaLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.dietReportLayout",
+      "file": "resources/views/layouts/dietReportLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.medicalReportLayout",
+      "file": "resources/views/layouts/medicalReportLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.medicalReportLayoutV2",
+      "file": "resources/views/layouts/medicalReportLayoutV2.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.nadiSwasthyaLayout",
+      "file": "resources/views/layouts/nadiSwasthyaLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.nadiTaranginiLayout",
+      "file": "resources/views/layouts/nadiTaranginiLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.nadiTaranginiV3Layout",
+      "file": "resources/views/layouts/nadiTaranginiV3Layout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.ntRecommendationLayout",
+      "file": "resources/views/layouts/ntRecommendationLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.onePagerNtReportLayout",
+      "file": "resources/views/layouts/onePagerNtReportLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.patanjaliLayout",
+      "file": "resources/views/layouts/patanjaliLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.prescriptionReportLayout",
+      "file": "resources/views/layouts/prescriptionReportLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.prescriptionReportLayoutV2",
+      "file": "resources/views/layouts/prescriptionReportLayoutV2.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.spaLayout",
+      "file": "resources/views/layouts/spaLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.swasthyaDarshikaLayout",
+      "file": "resources/views/layouts/swasthyaDarshikaLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.swasthyaDarshikaLayoutV2",
+      "file": "resources/views/layouts/swasthyaDarshikaLayoutV2.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.weeklyDietReportLayout",
+      "file": "resources/views/layouts/weeklyDietReportLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "layouts.yogaLayout",
+      "file": "resources/views/layouts/yogaLayout.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_coach_management",
+      "file": "resources/views/nadi-pariksha/admin/admin_coach_management.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "adminCoachManagement"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/coach-dashboard"
+      ],
+      "links_to": [
+        {
+          "url": "/nadi-pariksha-admin/dashboard",
+          "line": 8
+        }
+      ],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_coach_management.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php",
+        "resources/views/nadi-pariksha/modal/notification_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.datatables.net/2.3.2/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/2.3.2/js/dataTables.min.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public//code.jquery.com/jquery-3.7.1.min.js",
+        "public/js/nadiPariksha/admin-dashboard/admin-coach.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_coach_user_details",
+      "file": "resources/views/nadi-pariksha/admin/admin_coach_user_details.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "adminCoachUserDetails"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/coach-user-details/{id}"
+      ],
+      "links_to": [
+        {
+          "url": "/nadi-pariksha-admin/coach-dashboard",
+          "line": 50
+        },
+        {
+          "url": "/nadi-pariksha-admin/dashboard",
+          "line": 24
+        }
+      ],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_coach_user_details.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.7.1.min.js",
+        "public/js/nadiPariksha/admin-dashboard/admin-userFull-details.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_coupon_management",
+      "file": "resources/views/nadi-pariksha/admin/admin_coupon_management.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "couponManagement"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/coupon-management"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_coupon_management.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/addCouponModal.blade.php",
+        "resources/views/nadi-pariksha/modal/deactivateCouponModal.blade.php",
+        "resources/views/nadi-pariksha/modal/editCouponModal.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php",
+        "resources/views/nadi-pariksha/modal/notification_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public//code.jquery.com/jquery-3.7.1.min.js",
+        "public/js/nadiPariksha/admin-dashboard/admin-couponManagement.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_dasbhoard_access_denied",
+      "file": "resources/views/nadi-pariksha/admin/admin_dasbhoard_access_denied.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [
+        {
+          "url": "/nadi-pariksha-admin/dashboard",
+          "line": 81
+        }
+      ],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_dasbhoard_access_denied.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_dashboard",
+      "file": "resources/views/nadi-pariksha/admin/admin_dashboard.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "adminDashboard"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/dashboard"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_dashboard.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//cdn.jsdelivr.net/npm/chart.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_doctor_edit",
+      "file": "resources/views/nadi-pariksha/admin/admin_doctor_edit.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "editDoctorDetailsView"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/doctor/edit/{id}"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_doctor_edit.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_doctor_view_details",
+      "file": "resources/views/nadi-pariksha/admin/admin_doctor_view_details.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "viewDoctorDetails"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/doctor/{id}"
+      ],
+      "links_to": [
+        {
+          "url": "/nadi-pariksha-admin/getAllDoctorsDetails",
+          "line": 15
+        }
+      ],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_doctor_view_details.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_doctors_catlogue",
+      "file": "resources/views/nadi-pariksha/admin/admin_doctors_catlogue.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "getAllDoctorsDetails"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/getAllDoctorsDetails"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_doctors_catlogue.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php",
+        "resources/views/nadi-pariksha/modal/notification_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public/js/nadiPariksha/admin-dashboard/admin-addDoctorsDetails.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_loginPage",
+      "file": "resources/views/nadi-pariksha/admin/admin_loginPage.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_loginPage.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_management",
+      "file": "resources/views/nadi-pariksha/admin/admin_management.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "adminUsersManagement"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/admin-users"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_management.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/addAdminModal.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php",
+        "resources/views/nadi-pariksha/modal/notification_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public/js/nadiPariksha/admin-dashboard/admin-management.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_marketing_leads",
+      "file": "resources/views/nadi-pariksha/admin/admin_marketing_leads.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "showMarketingLeads"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/marketing-leads"
+      ],
+      "links_to": [
+        {
+          "url": "/nadi-pariksha-admin/dashboard",
+          "line": 8
+        }
+      ],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_marketing_leads.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.datatables.net/2.3.2/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/2.3.2/js/dataTables.min.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public//code.jquery.com/jquery-3.7.1.min.js",
+        "public/js/nadiPariksha/admin-dashboard/admin-marketing-leads.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_payment_management",
+      "file": "resources/views/nadi-pariksha/admin/admin_payment_management.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "paymentManagement"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/payment-management"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_payment_management.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php",
+        "resources/views/nadi-pariksha/modal/notification_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js",
+        "public//cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js",
+        "public//cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js",
+        "public//cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public//code.jquery.com/jquery-3.7.1.min.js",
+        "public/js/nadiPariksha/admin-dashboard/admin-paymentManagement.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_report_price_management",
+      "file": "resources/views/nadi-pariksha/admin/admin_report_price_management.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "reportPriceManagement"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/report-price-management"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_report_price_management.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/editPriceModal.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php",
+        "resources/views/nadi-pariksha/modal/notification_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public//code.jquery.com/jquery-3.7.1.min.js",
+        "public/js/nadiPariksha/admin-dashboard/admin-ReportPriceManagement.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.admin_users_management",
+      "file": "resources/views/nadi-pariksha/admin/admin_users_management.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "usersManagement"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/users-management"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/admin_users_management.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php",
+        "resources/views/nadi-pariksha/modal/notification_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.datatables.net/2.3.2/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/2.3.2/js/dataTables.min.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public//code.jquery.com/jquery-3.7.1.min.js",
+        "public/js/nadiPariksha/admin-dashboard/admin-UsersManagement.js",
+        "public/js/nadiPariksha/common.js",
+        "public/js/nadiPariksha/sweetalert2@10.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.admin.otp_list",
+      "file": "resources/views/nadi-pariksha/admin/otp_list.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "showOtpListPage"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/otp-list"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/admin/otp_list.blade.php",
+        "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+        "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+        "resources/views/nadi-pariksha/modal/logout_modal.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public/js/nadiPariksha/common.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.capture_nadi",
+      "file": "resources/views/nadi-pariksha/capture_nadi.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\NadiParikshaController",
+          "method": "nadiCaptureView"
+        }
+      ],
+      "routes": [
+        "GET nadi_pariksha/nadiCaptureView"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/capture_nadi.blade.php"
+      ],
+      "scripts": [
+        "public//f94bf2f46c43.ngrok-free.app/js/arogyaDarshika/bootstrap4.6.1.js",
+        "public//f94bf2f46c43.ngrok-free.app/js/arogyaDarshika/jquery3.6.0.js",
+        "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/gauge.min.js",
+        "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/jquery-3.6.4.min.js",
+        "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/liveNadiBluetooth.js",
+        "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/npm.chart.js",
+        "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/raphael2.3.0.min.js",
+        "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/sweetalert2@10.js",
+        "public/js/arogyaDarshika/bootstrap4.6.1.js",
+        "public/js/arogyaDarshika/jquery3.6.0.js",
+        "public/js/nadiPariksha/gauge.min.js",
+        "public/js/nadiPariksha/jquery-3.6.4.min.js",
+        "public/js/nadiPariksha/livenadiBluetooth.js",
+        "public/js/nadiPariksha/npm.chart.js",
+        "public/js/nadiPariksha/raphael2.3.0.min.js",
+        "public/js/nadiPariksha/sweetalert2@10.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.layouts.admin_dashboard_nav_layouts",
+      "file": "resources/views/nadi-pariksha/layouts/admin_dashboard_nav_layouts.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [
+        {
+          "url": "/nadi-pariksha-admin/admin-users",
+          "line": 35
+        },
+        {
+          "url": "/nadi-pariksha-admin/coach-dashboard",
+          "line": 50
+        },
+        {
+          "url": "/nadi-pariksha-admin/coupon-management",
+          "line": 38
+        },
+        {
+          "url": "/nadi-pariksha-admin/dashboard",
+          "line": 11
+        },
+        {
+          "url": "/nadi-pariksha-admin/getAllDoctorsDetails",
+          "line": 56
+        },
+        {
+          "url": "/nadi-pariksha-admin/marketing-leads",
+          "line": 53
+        },
+        {
+          "url": "/nadi-pariksha-admin/otp-list",
+          "line": 59
+        },
+        {
+          "url": "/nadi-pariksha-admin/payment-management",
+          "line": 41
+        },
+        {
+          "url": "/nadi-pariksha-admin/report-price-management",
+          "line": 44
+        },
+        {
+          "url": "/nadi-pariksha-admin/users-management",
+          "line": 47
+        }
+      ]
+    },
+    {
+      "id": "nadi-pariksha.layouts.auth_layouts",
+      "file": "resources/views/nadi-pariksha/layouts/auth_layouts.blade.php",
+      "partial": true,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "adminLogout"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "showAdminLoginPage"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-admin/login",
+        "GET nadi-pariksha-admin/logout",
+        "POST nadi-pariksha-admin/logout"
+      ],
+      "links_to": [
+        {
+          "url": "/auth/google/redirect",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "id": "nadi-pariksha.layouts.main_layouts",
+      "file": "resources/views/nadi-pariksha/layouts/main_layouts.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "nadi-pariksha.modal.addAdminModal",
+      "file": "resources/views/nadi-pariksha/modal/addAdminModal.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "nadi-pariksha.modal.addCouponModal",
+      "file": "resources/views/nadi-pariksha/modal/addCouponModal.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "nadi-pariksha.modal.deactivateCouponModal",
+      "file": "resources/views/nadi-pariksha/modal/deactivateCouponModal.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "nadi-pariksha.modal.editCouponModal",
+      "file": "resources/views/nadi-pariksha/modal/editCouponModal.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "nadi-pariksha.modal.editPriceModal",
+      "file": "resources/views/nadi-pariksha/modal/editPriceModal.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "nadi-pariksha.modal.logout_modal",
+      "file": "resources/views/nadi-pariksha/modal/logout_modal.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "nadi-pariksha.modal.notification_modal",
+      "file": "resources/views/nadi-pariksha/modal/notification_modal.blade.php",
+      "partial": true,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.header",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.nadiParikshaLayoutPdf",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/nadiParikshaLayoutPdf.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/nadiParikshaLayoutPdf.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.nadiParikshaReportPdf",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/nadiParikshaReportPdf.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\NadiParikshaController",
+          "method": "testViewNadiReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\NadiParikshaController",
+          "method": "testrenderNadiReportPdf"
+        }
+      ],
+      "routes": [
+        "GET nadi-report/pdf/{userId}",
+        "GET web-nadi-report/pdf/{userId}"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/nadiParikshaLayoutPdf.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/nadiParikshaReportPdf.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page1.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page10.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page11.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page12.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page13.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page2.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page3.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page4.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page5.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page6.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page7.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page8.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page9.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page1",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page1.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page1.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page10",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page10.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page10.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page11",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page11.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page11.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page12",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page12.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page12.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page13",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page13.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page13.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page2",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page2.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page2.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page3",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page3.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page3.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page4",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page4.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page4.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page5",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page5.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page5.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page6",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page6.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page6.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page7",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page7.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page7.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page8",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page8.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page8.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdf.page9",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdf/page9.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdf/page9.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.header",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.nadiParikshaLayoutPdf",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/nadiParikshaLayoutPdf.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/nadiParikshaLayoutPdf.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.nadiParikshaReportPdf",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/nadiParikshaReportPdf.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/nadiParikshaLayoutPdf.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/nadiParikshaReportPdf.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page1.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page10.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page11.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page12.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page13.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page2.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page3.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page4.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page5.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page6.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page7.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page8.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page9.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page1",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page1.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page1.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page10",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page10.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page10.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page11",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page11.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page11.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page12",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page12.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page12.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page13",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page13.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page13.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page2",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page2.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page2.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page3",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page3.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page3.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page4",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page4.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page4.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page5",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page5.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page5.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page6",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page6.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page6.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page7",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page7.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page7.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page8",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page8.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page8.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.nadiParikshaReportPdfNew.page9",
+      "file": "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page9.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/header.blade.php",
+        "resources/views/nadi-pariksha/nadiParikshaReportPdfNew/page9.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.np_dashboard",
+      "file": "resources/views/nadi-pariksha/np_dashboard.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "index"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-coach"
+      ],
+      "links_to": [
+        {
+          "url": "/nadi-pariksha-coach/user-details/",
+          "line": 90
+        }
+      ],
+      "parts": [
+        "resources/views/nadi-pariksha/np_dashboard.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.datatables.net/2.3.2/js/dataTables.bootstrap5.min.js",
+        "public//cdn.datatables.net/2.3.2/js/dataTables.min.js",
+        "public//cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.7.1.min.js"
+      ]
+    },
+    {
+      "id": "nadi-pariksha.np_loginPage",
+      "file": "resources/views/nadi-pariksha/np_loginPage.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "showLoginPage"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-coach-login"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/nadi-pariksha/np_loginPage.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "nadi-pariksha.np_user_details",
+      "file": "resources/views/nadi-pariksha/np_user_details.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+          "method": "showUserDetails"
+        }
+      ],
+      "routes": [
+        "GET nadi-pariksha-coach/user-details/{id}"
+      ],
+      "links_to": [
+        {
+          "url": "/nadi-pariksha-coach",
+          "line": 24
+        }
+      ],
+      "parts": [
+        "resources/views/nadi-pariksha/np_user_details.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
+        "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        "public//code.jquery.com/jquery-3.7.1.min.js"
+      ]
+    },
+    {
+      "id": "pdf",
+      "file": "resources/views/pdf.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/pdf.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "reports.arogyaDarshika",
+      "file": "resources/views/reports/arogyaDarshika.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "arogyaDarshikaReport"
+        },
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "postFetchNadiInfo"
+        }
+      ],
+      "routes": [
+        "GET arogyaDarshika",
+        "POST postFetchNadiInfo"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/arogyaDarshikaReport/eighthPage.blade.php",
+        "resources/views/components/arogyaDarshikaReport/fifthPage.blade.php",
+        "resources/views/components/arogyaDarshikaReport/firstPage.blade.php",
+        "resources/views/components/arogyaDarshikaReport/fourthPage.blade.php",
+        "resources/views/components/arogyaDarshikaReport/secondPage.blade.php",
+        "resources/views/components/arogyaDarshikaReport/seventhPage.blade.php",
+        "resources/views/components/arogyaDarshikaReport/sixthPage.blade.php",
+        "resources/views/components/arogyaDarshikaReport/thirdPage.blade.php",
+        "resources/views/layouts/arogyaDarshikaLayout.blade.php",
+        "resources/views/reports/arogyaDarshika.blade.php"
+      ],
+      "scripts": [
+        "public/js/arogyaDarshika/bootstrap4.6.1.js",
+        "public/js/arogyaDarshika/chart2.0.0.js",
+        "public/js/arogyaDarshika/chart3.0.0.js",
+        "public/js/arogyaDarshika/jquery3.6.0.js",
+        "public/js/arogyaDarshika/jspdf1.3.2.js",
+        "public/js/arogyaDarshika/logic.js",
+        "public/js/arogyaDarshika/pattern1.3.0.js",
+        "public/js/arogyaDarshika/popper1.16.1.js",
+        "public/js/nadiTaranginiReport/jquery-1.12.1.min.js",
+        "public/js/nadiTaranginiReport/jquery-ui.min.js"
+      ]
+    },
+    {
+      "id": "reports.careServicesReport",
+      "file": "resources/views/reports/careServicesReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "careServicesReport"
+        }
+      ],
+      "routes": [
+        "GET careServicesReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/careServicesReport/firstpage.blade.php",
+        "resources/views/layouts/prescriptionReportLayout.blade.php",
+        "resources/views/reports/careServicesReport.blade.php"
+      ],
+      "scripts": [
+        "public/js/careservicesreport/careservicesreportLogic.js"
+      ]
+    },
+    {
+      "id": "reports.dietReport",
+      "file": "resources/views/reports/dietReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "dietAndLifestylereport"
+        }
+      ],
+      "routes": [
+        "GET dietReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/dietReport/firstpage.blade.php",
+        "resources/views/layouts/dietReportLayout.blade.php",
+        "resources/views/reports/dietReport.blade.php"
+      ],
+      "scripts": [
+        "public/js/arogyaDarshika/bootstrap4.6.1.js",
+        "public/js/arogyaDarshika/chart2.0.0.js",
+        "public/js/arogyaDarshika/chart3.0.0.js",
+        "public/js/arogyaDarshika/jquery3.6.0.js",
+        "public/js/arogyaDarshika/jspdf1.3.2.js",
+        "public/js/arogyaDarshika/pattern1.3.0.js",
+        "public/js/arogyaDarshika/popper1.16.1.js",
+        "public/js/dietReport/dietReportLogic.js",
+        "public/js/nadiTaranginiReport/jquery-1.12.1.min.js",
+        "public/js/nadiTaranginiReport/jquery-ui.min.js"
+      ]
+    },
+    {
+      "id": "reports.loadingReport",
+      "file": "resources/views/reports/loadingReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "showLoadingPage"
+        }
+      ],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/reports/loadingReport.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "reports.medicalReport",
+      "file": "resources/views/reports/medicalReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "medicalVisitReport"
+        }
+      ],
+      "routes": [
+        "GET medicalVisitReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/medicalReport/firstPage.blade.php",
+        "resources/views/layouts/medicalReportLayout.blade.php",
+        "resources/views/reports/medicalReport.blade.php"
+      ],
+      "scripts": [
+        "public/js/medicalVisitReport/medicalReportLogic.js"
+      ]
+    },
+    {
+      "id": "reports.medicalReportV2",
+      "file": "resources/views/reports/medicalReportV2.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "medicalVisitReportV2"
+        }
+      ],
+      "routes": [
+        "GET medicalVisitReportV2"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/medicalReportV2/firstpage.blade.php",
+        "resources/views/layouts/medicalReportLayoutV2.blade.php",
+        "resources/views/reports/medicalReportV2.blade.php"
+      ],
+      "scripts": [
+        "public/js/medicalVisitReport/medicalReportLogicV2.js"
+      ]
+    },
+    {
+      "id": "reports.nadiSwasthyaReport",
+      "file": "resources/views/reports/nadiSwasthyaReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "nadiSwasthyaReport"
+        }
+      ],
+      "routes": [
+        "GET nadiSwasthyaReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/layouts/nadiSwasthyaLayout.blade.php",
+        "resources/views/reports/nadiSwasthyaReport.blade.php"
+      ],
+      "scripts": [
+        "public//cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js",
+        "public/js/nadiTaranginiReport/jquery-1.12.1.min.js",
+        "public/js/nadiTaranginiReport/jquery-ui.min.js",
+        "public/js/onePagerNadiTaranginiReport/custom.js"
+      ]
+    },
+    {
+      "id": "reports.nadiTaranginiReport",
+      "file": "resources/views/reports/nadiTaranginiReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "nadiNaranginiReport"
+        }
+      ],
+      "routes": [
+        "GET nadiTaranginiReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/nadiTaranginiReport/eighthPage.blade.php",
+        "resources/views/components/nadiTaranginiReport/fifthPage.blade.php",
+        "resources/views/components/nadiTaranginiReport/firstPage.blade.php",
+        "resources/views/components/nadiTaranginiReport/fourthPage.blade.php",
+        "resources/views/components/nadiTaranginiReport/gatiBasedNadi.blade.php",
+        "resources/views/components/nadiTaranginiReport/ninethPage.blade.php",
+        "resources/views/components/nadiTaranginiReport/secondPage.blade.php",
+        "resources/views/components/nadiTaranginiReport/seventhPage.blade.php",
+        "resources/views/components/nadiTaranginiReport/sixthPage.blade.php",
+        "resources/views/components/nadiTaranginiReport/tenthPage.blade.php",
+        "resources/views/components/nadiTaranginiReport/thirdPage.blade.php",
+        "resources/views/layouts/nadiTaranginiLayout.blade.php",
+        "resources/views/reports/nadiTaranginiReport.blade.php"
+      ],
+      "scripts": [
+        "public/js/nadiTaranginiReport/chart/Chart.js",
+        "public/js/nadiTaranginiReport/components/personalInfo.js",
+        "public/js/nadiTaranginiReport/jquery-1.12.1.min.js",
+        "public/js/nadiTaranginiReport/jquery-ui.min.js"
+      ]
+    },
+    {
+      "id": "reports.nadiTaranginiReportV3",
+      "file": "resources/views/reports/nadiTaranginiReportV3.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "nadiNaranginiReportV3"
+        }
+      ],
+      "routes": [
+        "GET nadiTaranginiReportV3"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageBengali.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageEnglish.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageGujrati.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageHindi.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageMarathi.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageTamil.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageTelugu.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageUS.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/dinacharya/ninethPageUrdu.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/disclaimer/bengali.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/disclaimer/english.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/disclaimer/gujrati.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/disclaimer/hindi.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/disclaimer/marathi.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/disclaimer/tamil.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/disclaimer/telugu.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/disclaimer/urdu.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/eighthPage.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/fifthPage.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/firstPage.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/fourthPage.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/rutucharya/bengaliGrishma.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/rutucharya/englishGrishma.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/rutucharya/gujratiGrishma.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/rutucharya/hindiGrishma.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/rutucharya/marathiGrishma.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/rutucharya/tamilGrishma.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/rutucharya/teluguGrishma.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/rutucharya/tenthPage.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/rutucharya/urduGrishma.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/secondPage.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/seventhPage.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/sixthPage.blade.php",
+        "resources/views/components/nadiTaranginiReportV3/thirdPage.blade.php",
+        "resources/views/layouts/nadiTaranginiV3Layout.blade.php",
+        "resources/views/reports/nadiTaranginiReportV3.blade.php"
+      ],
+      "scripts": [
+        "public/js/nadiTaranginiReport/chart/Chart.js",
+        "public/js/nadiTaranginiReport/jquery-1.12.1.min.js",
+        "public/js/nadiTaranginiReport/jquery-ui.min.js",
+        "public/js/nadiTaranginiReportV3/logic.js"
+      ]
+    },
+    {
+      "id": "reports.ntRecommendationReport",
+      "file": "resources/views/reports/ntRecommendationReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "ntRecommendationsReport"
+        }
+      ],
+      "routes": [
+        "GET ntRecommendationReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/ntRecommendationReport/firstPage.blade.php",
+        "resources/views/components/ntRecommendationReport/secondPage.blade.php",
+        "resources/views/layouts/ntRecommendationLayout.blade.php",
+        "resources/views/reports/ntRecommendationReport.blade.php"
+      ],
+      "scripts": [
+        "public//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js",
+        "public/js/arogyaDarshika/chart2.0.0.js",
+        "public/js/arogyaDarshika/chart3.0.0.js",
+        "public/js/nadiTaranginiReport/jquery-1.12.1.min.js",
+        "public/js/nadiTaranginiReport/jquery-ui.min.js",
+        "public/js/ntRecommendationsReport/ntRecommendations.js"
+      ]
+    },
+    {
+      "id": "reports.onePagerNadiTaranginiReport",
+      "file": "resources/views/reports/onePagerNadiTaranginiReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "onePagerNadiTaranginiReport"
+        }
+      ],
+      "routes": [
+        "GET onePagerNadiTaranginiReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/onePagerNadiTaranginiReport/firstPage.blade.php",
+        "resources/views/layouts/onePagerNtReportLayout.blade.php",
+        "resources/views/reports/onePagerNadiTaranginiReport.blade.php"
+      ],
+      "scripts": [
+        "public//cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js",
+        "public/js/nadiTaranginiReport/jquery-1.12.1.min.js",
+        "public/js/nadiTaranginiReport/jquery-ui.min.js",
+        "public/js/onePagerNadiTaranginiReport/custom.js"
+      ]
+    },
+    {
+      "id": "reports.patanjaliReport",
+      "file": "resources/views/reports/patanjaliReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "patanjaliReport"
+        }
+      ],
+      "routes": [
+        "GET patanjaliReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/patanjaliReport/firstPage.blade.php",
+        "resources/views/layouts/patanjaliLayout.blade.php",
+        "resources/views/reports/patanjaliReport.blade.php"
+      ],
+      "scripts": [
+        "public/js/patanjaliReport/patanjali-report.js"
+      ]
+    },
+    {
+      "id": "reports.prescriptionReport",
+      "file": "resources/views/reports/prescriptionReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "prescriptionReport"
+        }
+      ],
+      "routes": [
+        "GET prescriptionReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/prescriptionReport/firstpage.blade.php",
+        "resources/views/layouts/prescriptionReportLayout.blade.php",
+        "resources/views/reports/prescriptionReport.blade.php"
+      ],
+      "scripts": [
+        "public/js/prescriptionReport/prescriptionReportLogic.js"
+      ]
+    },
+    {
+      "id": "reports.prescriptionReportV2",
+      "file": "resources/views/reports/prescriptionReportV2.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "prescriptionReport"
+        }
+      ],
+      "routes": [
+        "GET prescriptionReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/prescriptionReportV2/firstpage.blade.php",
+        "resources/views/layouts/prescriptionReportLayoutV2.blade.php",
+        "resources/views/reports/prescriptionReportV2.blade.php"
+      ],
+      "scripts": [
+        "public/js/prescriptionReportV2/prescriptionReportLogicV2.js"
+      ]
+    },
+    {
+      "id": "reports.rutucharyaNotGenerated",
+      "file": "resources/views/reports/rutucharyaNotGenerated.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "aiGeneratedRutucharyaReport"
+        }
+      ],
+      "routes": [
+        "GET rutucharyaReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/reports/rutucharyaNotGenerated.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "reports.rutucharyaReport",
+      "file": "resources/views/reports/rutucharyaReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "aiGeneratedRutucharyaReport"
+        }
+      ],
+      "routes": [
+        "GET rutucharyaReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/reports/rutucharyaReport.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.js",
+        "public//cdn.jsdelivr.net/npm/chart.js"
+      ]
+    },
+    {
+      "id": "reports.spaReport",
+      "file": "resources/views/reports/spaReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "spaReport"
+        }
+      ],
+      "routes": [
+        "GET spaReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/spaReport/firstPage.blade.php",
+        "resources/views/layouts/spaLayout.blade.php",
+        "resources/views/reports/spaReport.blade.php"
+      ],
+      "scripts": [
+        "public//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js",
+        "public/js/spaReport/Chart.js",
+        "public/js/spaReport/jquery-1.12.1.min.js",
+        "public/js/spaReport/jquery-ui.min.js",
+        "public/js/spaReport/spa-bootstrap.bundle.min.js",
+        "public/js/spaReport/spa-jquery.min.js",
+        "public/js/spaReport/spa-report-functions.js"
+      ]
+    },
+    {
+      "id": "reports.swasthyaDarshikaReport",
+      "file": "resources/views/reports/swasthyaDarshikaReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "swasthyaDarshikaReport"
+        }
+      ],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/layouts/swasthyaDarshikaLayout.blade.php",
+        "resources/views/reports/swasthyaDarshikaReport.blade.php"
+      ],
+      "scripts": [
+        "public//cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js",
+        "public/js/nadiTaranginiReport/jquery-1.12.1.min.js",
+        "public/js/nadiTaranginiReport/jquery-ui.min.js",
+        "public/js/onePagerNadiTaranginiReport/custom.js",
+        "public/js/swasthyaDarshikaReport/swasthyaDarshika.js"
+      ]
+    },
+    {
+      "id": "reports.swasthyaDarshikaReportV2",
+      "file": "resources/views/reports/swasthyaDarshikaReportV2.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "swasthyaDarshikaReportV2"
+        }
+      ],
+      "routes": [
+        "GET swasthyaDarshikaReport",
+        "GET swasthyaDarshikaReportV2"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/swasthyaDarshikaV2/eighthPage.blade.php",
+        "resources/views/components/swasthyaDarshikaV2/eleventhPage.blade.php",
+        "resources/views/components/swasthyaDarshikaV2/fifthPage.blade.php",
+        "resources/views/components/swasthyaDarshikaV2/firstPage.blade.php",
+        "resources/views/components/swasthyaDarshikaV2/fourthPage.blade.php",
+        "resources/views/components/swasthyaDarshikaV2/ninethPage.blade.php",
+        "resources/views/components/swasthyaDarshikaV2/secondPage.blade.php",
+        "resources/views/components/swasthyaDarshikaV2/seventhPage.blade.php",
+        "resources/views/components/swasthyaDarshikaV2/sixthPage.blade.php",
+        "resources/views/components/swasthyaDarshikaV2/tenthPage.blade.php",
+        "resources/views/components/swasthyaDarshikaV2/thirdPage.blade.php",
+        "resources/views/components/swasthyaDarshikaV2/twelthPage.blade.php",
+        "resources/views/layouts/swasthyaDarshikaLayoutV2.blade.php",
+        "resources/views/reports/swasthyaDarshikaReportV2.blade.php"
+      ],
+      "scripts": [
+        "public/js/nadiTaranginiReport/jquery-1.12.1.min.js",
+        "public/js/nadiTaranginiReport/jquery-ui.min.js",
+        "public/js/swasthyaDarshikaV2/chart.js",
+        "public/js/swasthyaDarshikaV2/logic.js"
+      ]
+    },
+    {
+      "id": "reports.weeklyDietNotGenerated",
+      "file": "resources/views/reports/weeklyDietNotGenerated.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "weeklyDietReport"
+        }
+      ],
+      "routes": [
+        "GET weeklyDietReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/reports/weeklyDietNotGenerated.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "reports.weeklyDietReport",
+      "file": "resources/views/reports/weeklyDietReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "weeklyDietReport"
+        }
+      ],
+      "routes": [
+        "GET weeklyDietReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/weeklyDietReport/firstpage.blade.php",
+        "resources/views/layouts/weeklyDietReportLayout.blade.php",
+        "resources/views/reports/weeklyDietReport.blade.php"
+      ],
+      "scripts": [
+        "public/js/nadiTaranginiReport/jquery-1.12.1.min.js",
+        "public/js/nadiTaranginiReport/jquery-ui.min.js",
+        "public/js/weeklyDietReport/logic.js"
+      ]
+    },
+    {
+      "id": "reports.yogaPlannerNotGenerated",
+      "file": "resources/views/reports/yogaPlannerNotGenerated.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "aiGeneratedyogaPlannerReport"
+        }
+      ],
+      "routes": [
+        "GET yogaPlannerReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/reports/yogaPlannerNotGenerated.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "reports.yogaPlannerReport",
+      "file": "resources/views/reports/yogaPlannerReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "aiGeneratedyogaPlannerReport"
+        }
+      ],
+      "routes": [
+        "GET yogaPlannerReport"
+      ],
+      "links_to": [
+        {
+          "url": "/updateYogaPlannerPublic",
+          "line": 1410
+        }
+      ],
+      "parts": [
+        "resources/views/reports/yogaPlannerReport.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "reports.yogaReport",
+      "file": "resources/views/reports/yogaReport.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ReportsWebController",
+          "method": "yogaReport"
+        }
+      ],
+      "routes": [
+        "GET yogaReport"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/components/yogaReport/eightPage.blade.php",
+        "resources/views/components/yogaReport/eleventhPage.blade.php",
+        "resources/views/components/yogaReport/fifteenPage.blade.php",
+        "resources/views/components/yogaReport/fifthPage.blade.php",
+        "resources/views/components/yogaReport/firstPage.blade.php",
+        "resources/views/components/yogaReport/fourthPage.blade.php",
+        "resources/views/components/yogaReport/fourtheenPage.blade.php",
+        "resources/views/components/yogaReport/ninethPage.blade.php",
+        "resources/views/components/yogaReport/secondPage.blade.php",
+        "resources/views/components/yogaReport/seventhPage.blade.php",
+        "resources/views/components/yogaReport/sixthPage.blade.php",
+        "resources/views/components/yogaReport/tenthPage.blade.php",
+        "resources/views/components/yogaReport/thirdPage.blade.php",
+        "resources/views/components/yogaReport/thirteenPage.blade.php",
+        "resources/views/components/yogaReport/twelthPage.blade.php",
+        "resources/views/layouts/yogaLayout.blade.php",
+        "resources/views/reports/yogaReport.blade.php"
+      ],
+      "scripts": [
+        "public/js/yogaReport/yoga-report.js"
+      ]
+    },
+    {
+      "id": "research_dashboard_vata",
+      "file": "resources/views/research_dashboard_vata.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\ResearchDasbhoardController",
+          "method": "vataDashboard"
+        }
+      ],
+      "routes": [
+        "GET research-dashboard-pulse-view",
+        "GET research/dashboard-pulse-view",
+        "POST research-dashboard-pulse-view",
+        "POST research/dashboard-pulse-view"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/research_dashboard_vata.blade.php"
+      ],
+      "scripts": [
+        "public//cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"
+      ]
+    },
+    {
+      "id": "swagger.developer",
+      "file": "resources/views/swagger/developer.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\SwaggerController",
+          "method": "developer"
+        }
+      ],
+      "routes": [
+        "GET api-docs/developer"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/swagger/developer.blade.php"
+      ],
+      "scripts": [
+        "public//code.jquery.com/jquery-3.6.0.min.js",
+        "public//unpkg.com/swagger-ui-dist/swagger-ui-bundle.js",
+        "public//unpkg.com/swagger-ui-dist/swagger-ui-standalone-preset.js"
+      ]
+    },
+    {
+      "id": "swagger.user",
+      "file": "resources/views/swagger/user.blade.php",
+      "partial": false,
+      "rendered_by": [
+        {
+          "controller": "App\\Http\\Controllers\\SwaggerController",
+          "method": "user"
+        }
+      ],
+      "routes": [
+        "GET api-docs/public"
+      ],
+      "links_to": [],
+      "parts": [
+        "resources/views/swagger/user.blade.php"
+      ],
+      "scripts": [
+        "public//unpkg.com/swagger-ui-dist/swagger-ui-bundle.js",
+        "public//unpkg.com/swagger-ui-dist/swagger-ui-standalone-preset.js"
+      ]
+    },
+    {
+      "id": "turyaa.stageReport",
+      "file": "resources/views/turyaa/stageReport.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/turyaa/stageReport.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "turyaa.turyaaDietUi",
+      "file": "resources/views/turyaa/turyaaDietUi.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/turyaa/turyaaDietUi.blade.php"
+      ],
+      "scripts": []
+    },
+    {
+      "id": "vendor.l5-swagger.index",
+      "file": "resources/views/vendor/l5-swagger/index.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [
+        {
+          "route": null,
+          "name": "l5-swagger.",
+          "line": 44
+        }
+      ],
+      "parts": [
+        "resources/views/vendor/l5-swagger/index.blade.php"
+      ],
+      "scripts": [
+        "public/swagger-ui-bundle.js",
+        "public/swagger-ui-standalone-preset.js"
+      ]
+    },
+    {
+      "id": "welcome",
+      "file": "resources/views/welcome.blade.php",
+      "partial": false,
+      "rendered_by": [],
+      "routes": [],
+      "links_to": [],
+      "parts": [
+        "resources/views/welcome.blade.php"
+      ],
+      "scripts": []
+    }
+  ],
+  "js_files": [
+    "public//cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js",
+    "public//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js",
+    "public//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js",
+    "public//cdn.datatables.net/2.3.2/js/dataTables.bootstrap5.min.js",
+    "public//cdn.datatables.net/2.3.2/js/dataTables.min.js",
+    "public//cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js",
+    "public//cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js",
+    "public//cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js",
+    "public//cdn.js",
+    "public//cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
+    "public//cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js",
+    "public//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+    "public//cdn.jsdelivr.net/npm/chart.js",
+    "public//cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js",
+    "public//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js",
+    "public//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js",
+    "public//cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js",
+    "public//code.jquery.com/jquery-3.6.0.min.js",
+    "public//code.jquery.com/jquery-3.7.1.min.js",
+    "public//f94bf2f46c43.ngrok-free.app/js/arogyaDarshika/bootstrap4.6.1.js",
+    "public//f94bf2f46c43.ngrok-free.app/js/arogyaDarshika/jquery3.6.0.js",
+    "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/gauge.min.js",
+    "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/jquery-3.6.4.min.js",
+    "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/liveNadiBluetooth.js",
+    "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/npm.chart.js",
+    "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/raphael2.3.0.min.js",
+    "public//f94bf2f46c43.ngrok-free.app/js/nadiPariksha/sweetalert2@10.js",
+    "public//unpkg.com/swagger-ui-dist/swagger-ui-bundle.js",
+    "public//unpkg.com/swagger-ui-dist/swagger-ui-standalone-preset.js",
+    "public/js/arogyaDarshika/bootstrap4.6.1.js",
+    "public/js/arogyaDarshika/chart2.0.0.js",
+    "public/js/arogyaDarshika/chart3.0.0.js",
+    "public/js/arogyaDarshika/jquery3.6.0.js",
+    "public/js/arogyaDarshika/jspdf1.3.2.js",
+    "public/js/arogyaDarshika/logic.js",
+    "public/js/arogyaDarshika/pattern1.3.0.js",
+    "public/js/arogyaDarshika/popper1.16.1.js",
+    "public/js/careservicesreport/careservicesreportLogic.js",
+    "public/js/dietReport/dietReportLogic.js",
+    "public/js/medicalVisitReport/medicalReportLogic.js",
+    "public/js/medicalVisitReport/medicalReportLogicV2.js",
+    "public/js/nadiPariksha/admin-dashboard/admin-ReportPriceManagement.js",
+    "public/js/nadiPariksha/admin-dashboard/admin-UsersManagement.js",
+    "public/js/nadiPariksha/admin-dashboard/admin-addDoctorsDetails.js",
+    "public/js/nadiPariksha/admin-dashboard/admin-coach.js",
+    "public/js/nadiPariksha/admin-dashboard/admin-couponManagement.js",
+    "public/js/nadiPariksha/admin-dashboard/admin-management.js",
+    "public/js/nadiPariksha/admin-dashboard/admin-marketing-leads.js",
+    "public/js/nadiPariksha/admin-dashboard/admin-paymentManagement.js",
+    "public/js/nadiPariksha/admin-dashboard/admin-userFull-details.js",
+    "public/js/nadiPariksha/common.js",
+    "public/js/nadiPariksha/gauge.min.js",
+    "public/js/nadiPariksha/jquery-3.6.4.min.js",
+    "public/js/nadiPariksha/livenadiBluetooth.js",
+    "public/js/nadiPariksha/npm.chart.js",
+    "public/js/nadiPariksha/raphael2.3.0.min.js",
+    "public/js/nadiPariksha/sweetalert2@10.js",
+    "public/js/nadiTaranginiReport/chart/Chart.js",
+    "public/js/nadiTaranginiReport/components/personalInfo.js",
+    "public/js/nadiTaranginiReport/jquery-1.12.1.min.js",
+    "public/js/nadiTaranginiReport/jquery-ui.min.js",
+    "public/js/nadiTaranginiReportV3/logic.js",
+    "public/js/ntRecommendationsReport/ntRecommendations.js",
+    "public/js/onePagerNadiTaranginiReport/custom.js",
+    "public/js/patanjaliReport/patanjali-report.js",
+    "public/js/prescriptionReport/prescriptionReportLogic.js",
+    "public/js/prescriptionReportV2/prescriptionReportLogicV2.js",
+    "public/js/spaReport/Chart.js",
+    "public/js/spaReport/jquery-1.12.1.min.js",
+    "public/js/spaReport/jquery-ui.min.js",
+    "public/js/spaReport/spa-bootstrap.bundle.min.js",
+    "public/js/spaReport/spa-jquery.min.js",
+    "public/js/spaReport/spa-report-functions.js",
+    "public/js/swasthyaDarshikaReport/swasthyaDarshika.js",
+    "public/js/swasthyaDarshikaV2/chart.js",
+    "public/js/swasthyaDarshikaV2/logic.js",
+    "public/js/weeklyDietReport/logic.js",
+    "public/js/yogaReport/yoga-report.js",
+    "public/swagger-ui-bundle.js",
+    "public/swagger-ui-standalone-preset.js"
+  ],
+  "js_calls": [
+    {
+      "file": "public/js/arogyaDarshika/logic.js",
+      "line": 59,
+      "method": null,
+      "url": "/reportJson/arogyaDarshika/arogyaDarshika-{}",
+      "context": "page load",
+      "pages": [
+        "reports.arogyaDarshika"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/dietReport/dietReportLogic.js",
+      "line": 193,
+      "method": null,
+      "url": "/reportJson/arogyaDarshika/arogyaDarshika-{}",
+      "context": "page load",
+      "pages": [
+        "reports.dietReport"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-UsersManagement.js",
+      "line": 48,
+      "method": null,
+      "url": "/{}/get-all-users",
+      "context": "page load",
+      "pages": [
+        "nadi-pariksha.admin.admin_users_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-marketing-leads.js",
+      "line": 28,
+      "method": null,
+      "url": "/{}/get-marketing-leads",
+      "context": "page load",
+      "pages": [
+        "nadi-pariksha.admin.admin_marketing_leads"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-userFull-details.js",
+      "line": 40,
+      "method": null,
+      "url": "/nadi-pariksha-admin/renderNadiReportPdfForAdmin",
+      "context": "page load",
+      "pages": [
+        "nadi-pariksha.admin.admin_coach_user_details"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-userFull-details.js",
+      "line": 159,
+      "method": "GET",
+      "url": "/nadi-pariksha-admin/reset-nadi-report",
+      "context": "page load",
+      "pages": [
+        "nadi-pariksha.admin.admin_coach_user_details"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-userFull-details.js",
+      "line": 226,
+      "method": "POST",
+      "url": "/nadi-pariksha-admin/reset-profile",
+      "context": "page load",
+      "pages": [
+        "nadi-pariksha.admin.admin_coach_user_details"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiTaranginiReport/components/personalInfo.js",
+      "line": 25,
+      "method": null,
+      "url": "/reportJson/nadiTarangini/lang/nadiReport-{}",
+      "context": "page load",
+      "pages": [
+        "reports.nadiTaranginiReport"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiTaranginiReportV3/logic.js",
+      "line": 53,
+      "method": null,
+      "url": "/reportJson/nadiTaranginiV3/lang/nadiReport-{}",
+      "context": "page load",
+      "pages": [
+        "reports.nadiTaranginiReportV3"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/ntRecommendationsReport/ntRecommendations.js",
+      "line": 436,
+      "method": null,
+      "url": "/reportJson/ntRecommendationReport/{}",
+      "context": "page load",
+      "pages": [
+        "reports.ntRecommendationReport"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/swasthyaDarshikaReport/swasthyaDarshika.js",
+      "line": 21,
+      "method": null,
+      "url": "/reportJson/swasthyaDarshikaReport/{}",
+      "context": "page load",
+      "pages": [
+        "reports.swasthyaDarshikaReport"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "resources/views/vendor/l5-swagger/index.blade.php",
+      "line": 40,
+      "method": null,
+      "url": "/{!! $urlToDocs !!}",
+      "context": "page load",
+      "pages": [
+        "vendor.l5-swagger.index"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-addDoctorsDetails.js",
+      "line": 86,
+      "method": "POST",
+      "url": "/nadi_pariksha/addDoctorsDetailsFromAdminDash",
+      "context": "sel #addDoctorForm",
+      "pages": [
+        "nadi-pariksha.admin.admin_doctors_catlogue"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-management.js",
+      "line": 349,
+      "method": "POST",
+      "url": "/{}/deactivate-admin",
+      "context": "sel #confirmActionBtn",
+      "pages": [
+        "nadi-pariksha.admin.admin_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "resources/views/nadi-pariksha/admin/admin_doctor_edit.blade.php",
+      "line": 118,
+      "method": "POST",
+      "url": "/nadi-pariksha-admin/doctor/update/{{ $doctor->id }}",
+      "context": "sel #editDoctorForm",
+      "pages": [
+        "nadi-pariksha.admin.admin_doctor_edit"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-management.js",
+      "line": 234,
+      "method": "POST",
+      "url": "/{}/add-admin",
+      "context": "sel #saveAdminBtn",
+      "pages": [
+        "nadi-pariksha.admin.admin_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-UsersManagement.js",
+      "line": 83,
+      "method": "GET",
+      "url": "/{}/get-pricing",
+      "context": "sel #usersTable",
+      "pages": [
+        "nadi-pariksha.admin.admin_users_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-management.js",
+      "line": 418,
+      "method": "GET",
+      "url": "/nadi-pariksha-admin/getAlladminDashFeatures",
+      "context": "sel .give-access-btn",
+      "pages": [
+        "nadi-pariksha.admin.admin_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-UsersManagement.js",
+      "line": 113,
+      "method": "POST",
+      "url": "/{}/make-report-free",
+      "context": "sel .submit-payment",
+      "pages": [
+        "nadi-pariksha.admin.admin_users_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-management.js",
+      "line": 286,
+      "method": "POST",
+      "url": "/{}/switchAdminRole",
+      "context": "sel .switch-role-btn",
+      "pages": [
+        "nadi-pariksha.admin.admin_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/livenadiBluetooth.js",
+      "line": 2775,
+      "method": "POST",
+      "url": "/nadi_pariksha/nadiParikshaNadiAnalysis",
+      "context": "fn analyzeNadi",
+      "pages": [
+        "nadi-pariksha.capture_nadi"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "resources/views/swagger/developer.blade.php",
+      "line": 110,
+      "method": "POST",
+      "url": "/login",
+      "context": "fn authenticate",
+      "pages": [
+        "swagger.developer"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "resources/views/reports/loadingReport.blade.php",
+      "line": 67,
+      "method": null,
+      "url": "/checkReportStatus",
+      "context": "fn checkStatus",
+      "pages": [
+        "reports.loadingReport"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-couponManagement.js",
+      "line": 91,
+      "method": "POST",
+      "url": "/{}/add-coupon",
+      "context": "fn handleAddCoupon",
+      "pages": [
+        "nadi-pariksha.admin.admin_coupon_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-couponManagement.js",
+      "line": 163,
+      "method": "POST",
+      "url": "/{}/delete-coupon",
+      "context": "fn handleDeleteCoupon",
+      "pages": [
+        "nadi-pariksha.admin.admin_coupon_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-couponManagement.js",
+      "line": 134,
+      "method": "POST",
+      "url": "/{}/edit-coupon",
+      "context": "fn handleEditCoupon",
+      "pages": [
+        "nadi-pariksha.admin.admin_coupon_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/auth/login.js",
+      "line": 38,
+      "method": null,
+      "url": "/nadi-pariksha-admin/login-validation",
+      "context": "fn handleLogin",
+      "pages": [],
+      "how": null,
+      "unresolved": "no page loads public/js/nadiPariksha/auth/login.js"
+    },
+    {
+      "file": "resources/views/nadi-pariksha/admin/admin_loginPage.blade.php",
+      "line": 74,
+      "method": null,
+      "url": "/nadi-pariksha-admin/login-validation",
+      "context": "fn handleLogin",
+      "pages": [
+        "nadi-pariksha.admin.admin_loginPage"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "resources/views/nadi-pariksha/np_loginPage.blade.php",
+      "line": 96,
+      "method": null,
+      "url": "/nadi-pariksha-login-validation",
+      "context": "fn handleLogin",
+      "pages": [
+        "nadi-pariksha.np_loginPage"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-management.js",
+      "line": 32,
+      "method": null,
+      "url": "/{}/get-all-admins",
+      "context": "fn initAdminTable",
+      "pages": [
+        "nadi-pariksha.admin.admin_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-couponManagement.js",
+      "line": 26,
+      "method": "GET",
+      "url": "/{}/get-coupons",
+      "context": "fn loadCoupons",
+      "pages": [
+        "nadi-pariksha.admin.admin_coupon_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-paymentManagement.js",
+      "line": 65,
+      "method": "GET",
+      "url": "/{}/get-payments",
+      "context": "fn loadPayments",
+      "pages": [
+        "nadi-pariksha.admin.admin_payment_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-ReportPriceManagement.js",
+      "line": 35,
+      "method": null,
+      "url": "/{}/update-report-price",
+      "context": "fn submitEditForm",
+      "pages": [
+        "nadi-pariksha.admin.admin_report_price_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    },
+    {
+      "file": "public/js/nadiPariksha/admin-dashboard/admin-management.js",
+      "line": 562,
+      "method": "POST",
+      "url": "/nadi-pariksha-admin/updateAdminUserFeatures",
+      "context": "fn success",
+      "pages": [
+        "nadi-pariksha.admin.admin_management"
+      ],
+      "how": "only page that loads it",
+      "unresolved": null
+    }
+  ],
+  "js_unresolved": [
+    {
+      "file": "resources/views/reports/rutucharyaReport.blade.php",
+      "line": 841,
+      "reason": "url built from variable languageJsonUrl"
+    },
+    {
+      "file": "resources/views/reports/yogaPlannerReport.blade.php",
+      "line": 1495,
+      "reason": "url built from variable lambdaUrl"
+    },
+    {
+      "file": "resources/views/reports/yogaPlannerReport.blade.php",
+      "line": 1515,
+      "reason": "url built from variable YOGA_PLANNER_SAVE_URL"
+    },
+    {
+      "file": "resources/views/swagger/developer.blade.php",
+      "line": 75,
+      "reason": "url built from variable apiUrl"
+    },
+    {
+      "file": "resources/views/swagger/user.blade.php",
+      "line": 253,
+      "reason": "url built from variable apiUrl"
+    },
+    {
+      "file": "public/js/arogyaDarshika/jspdf1.3.2.js",
+      "line": 134,
+      "reason": "line longer than 1500 characters not scanned (minified code?)"
+    },
+    {
+      "file": "public/js/weeklyDietReport/logic.js",
+      "line": 535,
+      "reason": "url built from variable languageJsonUrl"
+    },
+    {
+      "file": "public/js/weeklyDietReport/logic.js",
+      "line": 555,
+      "reason": "url built from variable languageJsonUrl"
+    }
+  ],
+  "forms": []
+}

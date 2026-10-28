@@ -1,0 +1,524 @@
+# Module proposal for /atreya:map --merge (draft, awaiting approval).
+# Expanded by scripts/build-modules.sh into atreya-docs/modules.yaml.
+backend: Ashoka-World-Backend
+modules:
+  # ------------------------------------------------------------ NT doctor app / web
+  - id: auth
+    name: "Authentication & sign-up"
+    critical: false
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - AuthController
+          - OtpSmsController
+          - SignUpController
+          - CheckUserExistOrNotController
+          - UpdatePasswordController
+        exclude_routes:
+          - "GET getCurrencyTypes"
+          - "POST getCurrencyTypes"
+          - "POST getUserSummary"
+          - "POST getUserCurrentSummary"
+          - "POST getUserCustomizeSummary"
+          - "POST deleteUserAccount"
+          - "POST flush-cache"
+          - "GET profile"
+          - "GET v2/getDoctorData"
+          - "GET v2/client/getClientDetails"
+          - "GET checkpatientcode"
+          - "POST nt-jiva/send-otp"
+          - "POST nt-jiva/verify-otp"
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - LoginController
+          - NewSignUpController
+          - forgotPasswordController
+          - OtpVerificationController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/common_files/Login/
+          - lib/common_files/signup/
+  - id: dashboard
+    name: "Doctor dashboard, onboarding & welcome tour"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - UserStatsController
+          - WelcomeTourController
+        extra_routes:
+          - "POST getUserSummary"
+          - "POST getUserCurrentSummary"
+          - "POST getUserCustomizeSummary"
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - DashboardController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/doctor_dashboard/dashboard/
+          - lib/on_boarding/
+          - lib/splash_screen.dart
+  - id: patients
+    name: "Patients"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - PatientDetailsController
+        extra_routes:
+          - "GET checkpatientcode"
+        exclude_routes:
+          - "POST nt-jiva/getLatestTongueData"
+          - "POST nt-jiva/getTongueData"
+          - "POST nt-jiva/patientPreviousVisit"
+          - "POST reception-api/getLimitedActivePatients"
+          - "POST reception-api/infinitePatientList"
+          - "POST reception-api/patient/addAnonymousClient"
+          - "POST reception-api/patient/addClient"
+          - "POST reception-api/patient/fetchPatientNames"
+          - "POST reception-api/patient/getClientDetails"
+          - "POST reception-api/patient/updateClient"
+          - "POST reception-api/patientList"
+          - "POST reception-api/searchPatientUsingName"
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - PatientListController
+          - AddMemberController
+          - EditMemberController
+          - ViewMemberController
+          - PreviousVisitsController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/doctor_dashboard/patient/
+  - id: appointments
+    name: "Appointments"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - AppointmentController
+          - CronController
+        exclude_routes:
+          - "GET reception-api/appointment/getAppointmentHistory"
+          - "GET reception-api/appointment/getCurrentsAppointment"
+          - "POST reception-api/appointment/addAppointment"
+          - "POST reception-api/appointment/dateWiseAppointment"
+          - "POST reception-api/appointment/dateWisePatientAppointment"
+          - "POST reception-api/appointment/deleteAppointment"
+          - "POST reception-api/appointment/fetchSingleAppointment"
+          - "POST reception-api/appointment/getAllAppointment"
+          - "POST reception-api/appointment/updateAppointment"
+          - "PUT reception-api/appointment/markAppointmentDone"
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - AppointmentController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/doctor_dashboard/appointments/
+  - id: nadi-flow
+    name: "Nadi assessment & visit flow (prakruti, vikruti, nadi capture, diet, prescription, fees)"
+    critical: true
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - MedicalReportSaveController
+          - NadiReportController
+          - PrakrutiController
+          - ExternalCaptureController
+          - GenerateSwasthyaLambda
+          - MedicineContorller
+        exclude_routes:
+          - "POST reception-api/report/fetchManualNadiKeywords"
+          - "POST reception-api/report/fetchMarkOnImageUrl"
+          - "POST reception-api/report/fetchNewVisitCategoryWiseQuestions"
+          - "POST reception-api/report/fetchNewVisitInformation"
+          - "POST reception-api/report/getNewMedicalId"
+          - "POST reception-api/report/nadiDataAnalysis"
+          - "POST reception-api/report/saveCategoryWiseVikrutiQuestions"
+          - "POST reception-api/report/saveManualNadi"
+          - "POST reception-api/report/saveMarkOnImageUrl"
+          - "POST reception-api/report/saveVikrutiQuestions"
+          - "POST reception-api/prakruti/fetchPrakrutiQuestions"
+          - "POST reception-api/prakruti/getAllPrakrutiTypes"
+          - "POST reception-api/prakruti/saveManualPrakruti"
+          - "POST reception-api/prakruti/savePrakrutiQuestions"
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - MedicalAssessmentV3Controller
+          - LiveNadiController
+          - VikrutiController
+          - PrakrutiQuestionsController
+          - ManualNadiKeywordsController
+          - MarkOnImageController
+          - DietController
+          - PrescriptionController
+          - FeeDetailsController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/doctor_dashboard/nadi_flow_new/
+  - id: reports
+    name: "Reports (generation & language selection)"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - ReportsWebController
+          - SpaReportController
+          - PdfGeneratorController
+          - DinacharyaController
+          - NewPdfGenerateController
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - ReportController
+          - DownloadRutucharyaController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/doctor_dashboard/visit_reports/
+          - lib/doctor_dashboard/rutucharya/
+  - id: medical-inventory
+    name: "Medical inventory (medicines, ingredients, companies, pudi)"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - MedicineController
+          - MedicalInventoryController
+          - IngredientController
+          - CompanyController
+          - PudiController
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - MedicineController
+          - CompanyController
+          - IngredientsController
+          - PudiController
+          - InventoryController
+          - MedicineTypeController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/doctor_dashboard/inventory/
+  - id: customization
+    name: "Customisation (medical forms, report features, reorder)"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - CustomizeDetailsController
+          - ReorderFeaturesController
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - DesignFormController
+          - CustomizeController
+  - id: payments
+    name: "Subscriptions & payments (Razorpay)"
+    critical: true
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - SubscriptionController
+          - NtTransactionController
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - SamvitPaymentBridgeController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/doctor_dashboard/subscription/
+  - id: enach
+    name: "ENACH e-mandates"
+    critical: true
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - ENACHController
+  - id: my-account
+    name: "My account (profile, clinics, KYC, devices, UPI)"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - DoctorController
+          - ClinicController
+          - ProfileInfoController
+          - LinkDeviceContoller
+        extra_routes:
+          - "POST deleteUserAccount"
+          - "GET profile"
+          - "GET v2/getDoctorData"
+        exclude_routes:
+          - "POST ashokaDashboard/storeReleaseDetails"
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - EditDoctorDetailsController
+          - ClinicListController
+          - AddClinicDetailsController
+          - EditClinicDetailsController
+          - MarkClinicDefaultController
+          - ChangePasswordController
+          - AddressDetailsController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/doctor_dashboard/my_account/
+          - lib/doctor_dashboard/kyc/
+  - id: notifications
+    name: "Notifications (in-app and push)"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - NotificationController
+          - FirebaseController
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - NotificationController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/doctor_dashboard/notifications/
+  - id: chatbot
+    name: "Chatbot"
+    repos:
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - NtChatbotProxyController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/doctor_dashboard/chotbot/
+  - id: help
+    name: "Help centre, FAQ & videos"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - HelpController
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - HelpController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/doctor_dashboard/help_center/
+  - id: nt-admin
+    name: "NT admin panel (users, access, data management, customise by user)"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - UserManagementController
+          - DataManagementController
+          - FeaturesController
+          - AdminManagementController
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - AdminDashboardController
+          - AdminCustomizeController
+  - id: patient-portal
+    name: "Patient portal (client login, reports, questions, consent)"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - AccountManagementController
+          - AskQuestionController
+          - EditProfileController
+          - VisitManagementController
+          - DataConsentController
+        extra_routes:
+          - "GET v2/client/getClientDetails"
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - PatientDashboardController
+          - PatientVisitController
+          - RequestAppointmentController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/patient_module/
+  - id: corporate
+    name: "Corporate & franchise organisations"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - orgPatientManagementController
+          - orgExpertsController
+          - orgFranchiseController
+          - orgAnalyticsController
+          - orgAuthController
+          - orgSignUpController
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - PatientDashboardManagementController
+  - id: nt-lite
+    name: "NT Lite dashboard"
+    repos:
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - NtLiteDashboardController
+          - NtLiteSignUpController
+          - NtLiteLiveNadiController
+  - id: external-api
+    name: "External / partner API (NT capture, v1 analysis)"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - ExternalUserController
+          - NadiAnalysisController
+          - prakrutiManagementController
+          - DietAndRecipesManagementController
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - ExternalNadiController
+  - id: nt-jiva
+    name: "Jiva integration (OTP, tongue data, previous visits)"
+    repos:
+      - repo: Ashoka-World-Backend
+        extra_routes:
+          - "POST nt-jiva/send-otp"
+          - "POST nt-jiva/verify-otp"
+          - "POST nt-jiva/getLatestTongueData"
+          - "POST nt-jiva/getTongueData"
+          - "POST nt-jiva/patientPreviousVisit"
+  - id: platform
+    name: "Platform utilities (masters, app versions, languages, geo, errors, API docs)"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - PublicFunctionsController
+          - AllPrakrutiTypesController
+          - SwaggerController
+        extra_routes:
+          - "GET getCurrencyTypes"
+          - "POST getCurrencyTypes"
+          - "POST flush-cache"
+        exclude_routes:
+          - "POST ashokaDashboard/generatePresignedUrlForS3Bucket"
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - UnauthorizedController
+          - WebErrorReportController
+      - repo: Nadi-Tarangini-App
+        paths:
+          - lib/common_files/language/
+          - lib/common_files/common_widgets/
+  # ------------------------------------------------------------ confirmed not in use
+  - id: receptionist
+    name: "Receptionist (confirmed not in use)"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - ReceptionManagementController
+        extra_routes:
+          - "POST reception-api/getLimitedActivePatients"
+          - "POST reception-api/infinitePatientList"
+          - "POST reception-api/patient/addAnonymousClient"
+          - "POST reception-api/patient/addClient"
+          - "POST reception-api/patient/fetchPatientNames"
+          - "POST reception-api/patient/getClientDetails"
+          - "POST reception-api/patient/updateClient"
+          - "POST reception-api/patientList"
+          - "POST reception-api/searchPatientUsingName"
+          - "GET reception-api/appointment/getAppointmentHistory"
+          - "GET reception-api/appointment/getCurrentsAppointment"
+          - "POST reception-api/appointment/addAppointment"
+          - "POST reception-api/appointment/dateWiseAppointment"
+          - "POST reception-api/appointment/dateWisePatientAppointment"
+          - "POST reception-api/appointment/deleteAppointment"
+          - "POST reception-api/appointment/fetchSingleAppointment"
+          - "POST reception-api/appointment/getAllAppointment"
+          - "POST reception-api/appointment/updateAppointment"
+          - "PUT reception-api/appointment/markAppointmentDone"
+          - "POST reception-api/report/fetchManualNadiKeywords"
+          - "POST reception-api/report/fetchMarkOnImageUrl"
+          - "POST reception-api/report/fetchNewVisitCategoryWiseQuestions"
+          - "POST reception-api/report/fetchNewVisitInformation"
+          - "POST reception-api/report/getNewMedicalId"
+          - "POST reception-api/report/nadiDataAnalysis"
+          - "POST reception-api/report/saveCategoryWiseVikrutiQuestions"
+          - "POST reception-api/report/saveManualNadi"
+          - "POST reception-api/report/saveMarkOnImageUrl"
+          - "POST reception-api/report/saveVikrutiQuestions"
+          - "POST reception-api/prakruti/fetchPrakrutiQuestions"
+          - "POST reception-api/prakruti/getAllPrakrutiTypes"
+          - "POST reception-api/prakruti/saveManualPrakruti"
+          - "POST reception-api/prakruti/savePrakrutiQuestions"
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - ReceptionistController
+  - id: research-dashboard
+    name: "Research dashboard (confirmed: production only links to another website)"
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - ResearchDasbhoardController
+          - AuthenticateController
+          - RecipeCategoryController
+          - AniruddhaRuleListController
+          - CategoryValueController
+          - CommonJsonController
+          - DayNamesJsonController
+          - ExerciseCategoryController
+          - ExerciseTagsController
+          - JsonArrayRuleListController
+          - MealsCategoryController
+          - MusicLibraryController
+          - MusicTagsController
+          - RecipePreferenceJsonController
+          - StatesNamesController
+          - YogaCategoryController
+          - YogaJsonController
+      - repo: Nadi-Tarangini-Frontend
+        controllers:
+          - ResearchDashboardController
+  # ------------------------------------------------------------ other products on the same backend
+  - id: ashoka-admin
+    name: "Ashoka internal admin dashboard (devices, doctors, sales, shipments, stores, subscriptions)"
+    product: ashoka-admin
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - DeviceManagementController
+          - DoctorsManagementController
+          - AshokaSalesController
+          - AshokaShipmentManagementController
+          - AshokaUserManangementController
+          - AshokaSubscriptionManagementController
+          - AshokaStoresController
+          - UserAnalyticsController
+          - AshokaAuthController
+          - ReportManagementController
+          - AshokaQuotationController
+          - AshokaCorporateManagementController
+          - AshokaCustomersController
+          - AshokaPaymentOrderController
+          - AshokaStatusMasterController
+          - NadiReportGrantController
+          - AshokaAccessManagementController
+          - AshokaRolesController
+          - AshokaDepartmentsController
+          - NtCouponsController
+        extra_routes:
+          - "POST ashokaDashboard/storeReleaseDetails"
+          - "POST ashokaDashboard/generatePresignedUrlForS3Bucket"
+  - id: nadi-pariksha
+    name: "Nadi Pariksha app, admin & coach dashboard"
+    product: nadi-pariksha
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - CoachDashboardController
+          - NadiParikshaController
+          - NPUserController
+          - NpAppVersionController
+          - NPPaymentController
+          - NpPaymentControllerV2
+          - NadiParikshaOTPSmsController
+          - NpFirebaseNotificationController
+          - NpPublicController
+          - NpSurveyQuestionController
+          - AyurvedaStaticController
+          - NPnadiController
+          - NpCohortManagement
+          - NpGoogleCronController
+  - id: turyaa
+    name: "Turyaa wellness app & coach"
+    product: turyaa
+    repos:
+      - repo: Ashoka-World-Backend
+        controllers:
+          - getAllTuryaaController
+          - QuestionsController
+          - WellnessReportController
+          - NadiController
+          - CoachController
+          - DailyQuestionsController
+          - DietManagementController
+          - WellnessController
+          - TuryaaOTPSmsController
+          - FaqDataController
+          - KnowledgeDataController
+          - FirebaseNotificationController

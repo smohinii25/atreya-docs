@@ -1,0 +1,177 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "routes": "POST otp/send-otp,POST otp/verify-otp",
+    "name": "seq-AUTH-R02",
+    "title": "AUTH-R02: Request and verify a login OTP by mobile number"
+  },
+  "kind": "sequence",
+  "name": "seq-AUTH-R02",
+  "title": "AUTH-R02: Request and verify a login OTP by mobile number",
+  "nodes": [
+    {
+      "id": "scr-auth-login",
+      "label": "auth.login",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/login.js:581; Nadi-Tarangini-Frontend:public/js/auth/login.js:708; Nadi-Tarangini-Frontend:resources/views/auth/login.blade.php"
+    },
+    {
+      "id": "scr-loginwithotpscreen",
+      "label": "LoginWithOtpScreen",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-sendmobileotp",
+      "label": "sendMobileOtp",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:448"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-verifymobileotp",
+      "label": "verifyMobileOtp",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:465"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-logincontroller-sendwhatsapploginotp",
+      "label": "loginController@sendWhatsappLoginOtp",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:319"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-logincontroller-verifywhatsapploginotp",
+      "label": "loginController@verifyWhatsappLoginOtp",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:378"
+    },
+    {
+      "id": "rt-post-otp-send-otp",
+      "label": "POST otp/send-otp",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:788"
+    },
+    {
+      "id": "rt-post-otp-verify-otp",
+      "label": "POST otp/verify-otp",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:789"
+    },
+    {
+      "id": "ctl-otpsmscontroller-sendotp",
+      "label": "OtpSmsController@sendOtp",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:24"
+    },
+    {
+      "id": "ctl-otpsmscontroller-verifyotp",
+      "label": "OtpSmsController@verifyOtp",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:98"
+    },
+    {
+      "id": "tbl-user-personal-info",
+      "label": "user_personal_info",
+      "type": "db",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:24"
+    }
+  ],
+  "edges": [
+    {
+      "from": "scr-loginwithotpscreen",
+      "to": "cli-nadi-tarangini-app-sendmobileotp",
+      "label": "uses sendMobileOtp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:448"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-sendmobileotp",
+      "to": "rt-post-otp-send-otp",
+      "label": "POST /otp/send-otp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:448"
+    },
+    {
+      "from": "scr-auth-login",
+      "to": "cli-nadi-tarangini-frontend-logincontroller-sendwhatsapploginotp",
+      "label": "uses loginController@sendWhatsappLoginOtp",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/login.js:581; Nadi-Tarangini-Frontend:public/js/auth/login.js:708"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-logincontroller-sendwhatsapploginotp",
+      "to": "rt-post-otp-send-otp",
+      "label": "POST /otp/send-otp",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:319"
+    },
+    {
+      "from": "scr-loginwithotpscreen",
+      "to": "cli-nadi-tarangini-app-verifymobileotp",
+      "label": "uses verifyMobileOtp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:465"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-verifymobileotp",
+      "to": "rt-post-otp-verify-otp",
+      "label": "POST /otp/verify-otp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:465"
+    },
+    {
+      "from": "scr-auth-login",
+      "to": "cli-nadi-tarangini-frontend-logincontroller-verifywhatsapploginotp",
+      "label": "uses loginController@verifyWhatsappLoginOtp",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/login.js:812"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-logincontroller-verifywhatsapploginotp",
+      "to": "rt-post-otp-verify-otp",
+      "label": "POST /otp/verify-otp",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:378"
+    },
+    {
+      "from": "rt-post-otp-send-otp",
+      "to": "ctl-otpsmscontroller-sendotp",
+      "label": "OtpSmsController@sendOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:788"
+    },
+    {
+      "from": "ctl-otpsmscontroller-sendotp",
+      "to": "tbl-user-personal-info",
+      "label": "uses user_personal_info",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:24"
+    },
+    {
+      "from": "ctl-otpsmscontroller-sendotp",
+      "to": "cli-nadi-tarangini-app-sendmobileotp",
+      "label": "response 200/400/500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:54"
+    },
+    {
+      "from": "rt-post-otp-verify-otp",
+      "to": "ctl-otpsmscontroller-verifyotp",
+      "label": "OtpSmsController@verifyOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:789"
+    },
+    {
+      "from": "ctl-otpsmscontroller-verifyotp",
+      "to": "tbl-user-personal-info",
+      "label": "uses user_personal_info",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:98"
+    },
+    {
+      "from": "ctl-otpsmscontroller-verifyotp",
+      "to": "cli-nadi-tarangini-app-verifymobileotp",
+      "label": "response 200/400",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:120"
+    }
+  ]
+}

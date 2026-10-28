@@ -1,0 +1,2687 @@
+{
+  "repo": "Ashoka-World-Backend",
+  "commit": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+  "kind": "laravel",
+  "closures_and_unresolved": [
+    "GET /",
+    "GET auth/google/redirect",
+    "GET pdf",
+    "GET spa",
+    "GET user",
+    "GET yoga"
+  ],
+  "controllers": [
+    {
+      "controller": "MedicalReportSaveController",
+      "fqcn": "App\\Http\\Controllers\\MedicalReportSaveController",
+      "file": "app/Http/Controllers/MedicalReportSaveController.php",
+      "routes": 61,
+      "uri_prefixes": [
+        "getDietDataTest (1)",
+        "nadiDataAnalysis (1)",
+        "reception-api/report (10)",
+        "report (38)",
+        "updateYogaPlannerPublic (1)",
+        "v2/report (9)",
+        "zipFileNadiAnalysis (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token",
+        "reception.authentication"
+      ],
+      "models": [
+        "AllCountryNames",
+        "AllPrakrutiTypes",
+        "CalendarEvent",
+        "DoctorMedicineInventory",
+        "Ingredient",
+        "Languages",
+        "LocalityInfo",
+        "MajorSymptomData",
+        "MedicalReport",
+        "MedicalReportDiet",
+        "MedicalReportImageMarker",
+        "MedicalReportPrescription",
+        "MedicalReportSymptomDetail",
+        "MedicineCompany",
+        "MedicineNames",
+        "MedicineQuantity",
+        "MedicineTiming",
+        "MedicineType",
+        "MedicineWithConsume",
+        "MultichoiceFieldList",
+        "MultichoiceOptions",
+        "NTApplicationVersion",
+        "NadiReport",
+        "OtherReportData",
+        "PgDeviceList",
+        "PgDeviceMapping",
+        "PrakrutiWiseDiet",
+        "ResourceNameMaster",
+        "SymptomCategory",
+        "SymptomsDropdownItem",
+        "UserPersonalInfo",
+        "UserReport",
+        "UserSelectedCountry",
+        "YogaReportData"
+      ],
+      "views": []
+    },
+    {
+      "controller": "CoachDashboardController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\CoachDashboardController",
+      "file": "app/Http/Controllers/NadiPariksha/CoachDashboardController.php",
+      "routes": 44,
+      "uri_prefixes": [
+        "nadi-pariksha-admin (30)",
+        "nadi-pariksha-admin/auth (1)",
+        "nadi-pariksha-admin/coach-user-details (1)",
+        "nadi-pariksha-admin/doctor (3)",
+        "nadi-pariksha-coach (1)",
+        "nadi-pariksha-coach-login (1)",
+        "nadi-pariksha-coach/user-details (1)",
+        "nadi-pariksha-login-validation (1)",
+        "nadi_pariksha (2)",
+        "nadi_pariksha/getNadiReportForCoach (1)",
+        "nadi_pariksha/getUserPrakritiAnswers (1)",
+        "nadi_pariksha/getUserSurveyAnswersWithQuestions (1)"
+      ],
+      "middleware": [
+        "nadiPariksha.adminDashboardAuthentication"
+      ],
+      "models": [
+        "NPAnalysisDataModel",
+        "NPPrakritiAnswers",
+        "NPSurveyQuestion",
+        "NPUserModel",
+        "NPUserSurveyAnswer",
+        "NpAdminDashboardFeatures",
+        "NpAdminUser",
+        "NpCoupon",
+        "NpDoctorsDetails",
+        "NpLanguage",
+        "NpNotifyMe",
+        "NpPaymentDetails",
+        "NpPrakritiQuestion",
+        "NpPricingMaster",
+        "NpUserActivity"
+      ],
+      "views": [
+        "nadi-pariksha"
+      ]
+    },
+    {
+      "controller": "PatientDetailsController",
+      "fqcn": "App\\Http\\Controllers\\PatientDetailsController",
+      "file": "app/Http/Controllers/PatientDetailsController.php",
+      "routes": 43,
+      "uri_prefixes": [
+        "accessUserWisePatientList (1)",
+        "fetchPatientNames (1)",
+        "getAllCountries (2)",
+        "getAssociationsCount (1)",
+        "getLanguage (1)",
+        "getLimitedActivePatients (1)",
+        "infinitePatientList (1)",
+        "nt-jiva (3)",
+        "patient (20)",
+        "patientList (1)",
+        "reception-api (4)",
+        "reception-api/patient (5)",
+        "searchPatientUsingName (1)",
+        "v2/patient (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token",
+        "reception.authentication"
+      ],
+      "models": [
+        "BannersData",
+        "CalendarEvent",
+        "DoctorFormDetail",
+        "HrvResult",
+        "Languages",
+        "LocalityInfo",
+        "MedicalReport",
+        "MedicalReportDiet",
+        "MedicalReportFileUpload",
+        "MedicalReportPrescription",
+        "MedicalReportSymptomDetail",
+        "NadiReport",
+        "NakshatraResult",
+        "OtherReportData",
+        "PatientQuestionAnswer",
+        "Symptoms",
+        "SymptomsDropdownItem",
+        "UserPersonalInfo",
+        "UserReport"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AppointmentController",
+      "fqcn": "App\\Http\\Controllers\\AppointmentController",
+      "file": "app/Http/Controllers/AppointmentController.php",
+      "routes": 27,
+      "uri_prefixes": [
+        "appointment (13)",
+        "editApproveRejectAppointment (1)",
+        "getApproveRejectList (1)",
+        "loadNewAppointment (1)",
+        "markOnImage (1)",
+        "reception-api/appointment (10)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token",
+        "reception.authentication"
+      ],
+      "models": [
+        "CalendarEvent",
+        "Languages",
+        "LocalityInfo",
+        "MedicalReport",
+        "MedicalReportImageMarker",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "DoctorController",
+      "fqcn": "App\\Http\\Controllers\\DoctorController",
+      "file": "app/Http/Controllers/DoctorController.php",
+      "routes": 27,
+      "uri_prefixes": [
+        "ashokaDashboard (1)",
+        "editProfile (1)",
+        "fetchUserInfo (1)",
+        "getAllCountriesName (1)",
+        "getCountryWiseStates (1)",
+        "getDisallowedReports (1)",
+        "getDocumentTypes (2)",
+        "getExperienceList (2)",
+        "getFormLanguages (2)",
+        "getLanguages (2)",
+        "getMaritialList (2)",
+        "getProfessionType (1)",
+        "getReleaseDetails (1)",
+        "getUpiDetails (1)",
+        "getUserWiseAllowedReports (1)",
+        "storeDisallowedReports (1)",
+        "updateApplicationLanguages (1)",
+        "updateUpiDetails (1)",
+        "updateWelcomeTour (1)",
+        "userAllowedReports (1)",
+        "v2 (2)"
+      ],
+      "middleware": [
+        "api",
+        "atreyaDashboard.authentication",
+        "auth.token"
+      ],
+      "models": [
+        "AllCountryNames",
+        "CountryWiseStates",
+        "Languages",
+        "MasterContents",
+        "PgDeviceMapping",
+        "ProfessionType",
+        "ResourceNameMaster",
+        "Subscription",
+        "Transaction",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "CustomizeDetailsController",
+      "fqcn": "App\\Http\\Controllers\\CustomizeDetailsController",
+      "file": "app/Http/Controllers/CustomizeDetailsController.php",
+      "routes": 26,
+      "uri_prefixes": [
+        "GetReorderFeatures (1)",
+        "addNewSymptoms (1)",
+        "addnewDetails (1)",
+        "custom (1)",
+        "custom-data (1)",
+        "getAnswerTypes (1)",
+        "getCustomizeTab (1)",
+        "getFormList (1)",
+        "getSymptomInfo (1)",
+        "medicalForm (7)",
+        "medicalFormList (1)",
+        "reportManagement (5)",
+        "saveNadiKeywords (1)",
+        "selectManualNadiKeywords (1)",
+        "updateFormDetails (1)",
+        "updateReorder (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "CommonData",
+        "CustomizeTab",
+        "DoctorFormDetail",
+        "DoctorMultichoiceOption",
+        "MedicalFormDetail",
+        "MedicalFormList",
+        "MultichoiceFieldList",
+        "MultichoiceOptions",
+        "ResourceNameMaster",
+        "SymptomCategory",
+        "Symptoms",
+        "SymptomsDropdownItem",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "DeviceManagementController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\DeviceManagementController",
+      "file": "app/Http/Controllers/Admin/DeviceManagementController.php",
+      "routes": 26,
+      "uri_prefixes": [
+        "ashokaDashboard/device (25)",
+        "ashokaDashboard/summary (1)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "MedicalReport",
+        "PgDeviceList",
+        "PgDeviceMapping",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "DoctorsManagementController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\DoctorsManagementController",
+      "file": "app/Http/Controllers/Admin/DoctorsManagementController.php",
+      "routes": 23,
+      "uri_prefixes": [
+        "ashokaDashboard (7)",
+        "ashokaDashboard/doctor (16)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "LocalityInfo",
+        "MedicalReport",
+        "PgDeviceList",
+        "PgDeviceMapping",
+        "PgOrderDetail",
+        "PgOrderDispatch",
+        "PgOrderIdGenerate",
+        "PgPlanDetail",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "ReportsWebController",
+      "fqcn": "App\\Http\\Controllers\\ReportsWebController",
+      "file": "app/Http/Controllers/ReportsWebController.php",
+      "routes": 23,
+      "uri_prefixes": [
+        "arogyaDarshika (1)",
+        "careServicesReport (1)",
+        "checkReportStatus (1)",
+        "dietReport (1)",
+        "getReportWiseLanguages (1)",
+        "medicalVisitReport (1)",
+        "medicalVisitReportV2 (1)",
+        "nadiSwasthyaReport (1)",
+        "nadiTaranginiReport (1)",
+        "nadiTaranginiReportV3 (1)",
+        "ntRecommendationReport (1)",
+        "onePagerNadiTaranginiReport (1)",
+        "patanjaliReport (1)",
+        "postFetchNadiInfo (1)",
+        "postPatanjaliReport (1)",
+        "prescriptionReport (1)",
+        "rutucharyaReport (1)",
+        "spaReport (1)",
+        "swasthyaDarshikaReport (1)",
+        "swasthyaDarshikaReportV2 (1)",
+        "weeklyDietReport (1)",
+        "yogaPlannerReport (1)",
+        "yogaReport (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "ArogyaDarshikaSavedData",
+        "Languages",
+        "LocalityInfo",
+        "MasterContents",
+        "MedicalReport",
+        "MedicalReportPrescription",
+        "NadiReport",
+        "OtherReportData",
+        "PgDeviceMapping",
+        "ResourceNameMaster",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": [
+        "concents",
+        "errors",
+        "reports"
+      ]
+    },
+    {
+      "controller": "NadiParikshaController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NadiParikshaController",
+      "file": "app/Http/Controllers/NadiPariksha/NadiParikshaController.php",
+      "routes": 21,
+      "uri_prefixes": [
+        "nadi-pariksha-admin (2)",
+        "nadi-report/pdf (1)",
+        "nadi_pariksha (17)",
+        "web-nadi-report/pdf (1)"
+      ],
+      "middleware": [
+        "NadiParikshaPublic",
+        "nadiPariksha.adminDashboardAuthentication",
+        "nadiPariksha.authentication"
+      ],
+      "models": [
+        "NPAnalysisDataModel",
+        "NPPrakritiAnswers",
+        "NPUserModel",
+        "NpLanguage",
+        "NpPrakritiQuestion",
+        "PrakritiAnswers"
+      ],
+      "views": [
+        "nadi-pariksha"
+      ]
+    },
+    {
+      "controller": "ExternalUserController",
+      "fqcn": "App\\Http\\Controllers\\External\\ExternalUserController",
+      "file": "app/Http/Controllers/External/ExternalUserController.php",
+      "routes": 20,
+      "uri_prefixes": [
+        "external (1)",
+        "external/nadi (3)",
+        "external/patient (2)",
+        "external/report (3)",
+        "nt-capture/analyze (1)",
+        "nt-capture/internal (5)",
+        "nt-capture/patient (2)",
+        "nt-capture/report (3)"
+      ],
+      "middleware": [
+        "api"
+      ],
+      "models": [
+        "AllCountryNames",
+        "AllPrakrutiTypes",
+        "LocalityInfo",
+        "MedicalReport",
+        "MedicalReportSymptomDetail",
+        "PgDeviceMapping",
+        "UserNadiCaptureType",
+        "UserPersonalInfo",
+        "UserReport",
+        "YogaReportData"
+      ],
+      "views": []
+    },
+    {
+      "controller": "MedicineController",
+      "fqcn": "App\\Http\\Controllers\\MedicalInventory\\MedicineController",
+      "file": "app/Http/Controllers/MedicalInventory/MedicineController.php",
+      "routes": 20,
+      "uri_prefixes": [
+        "medicalInventory (20)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "DoctorMedicineInventory",
+        "MedicineCompany",
+        "MedicineNames",
+        "MedicineQuantity",
+        "MedicineQuantityTypeCategory",
+        "MedicineType"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AshokaSalesController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaSalesController",
+      "file": "app/Http/Controllers/Admin/AshokaSalesController.php",
+      "routes": 18,
+      "uri_prefixes": [
+        "ashokaDashboard/report (2)",
+        "ashokaDashboard/sales (13)",
+        "ashokaDashboard/summary (3)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AshokaSalesRequest",
+        "AshokaShipmentTracking",
+        "AshokaSubSalesRequest",
+        "AshokaUsersMaster",
+        "PgDeviceList",
+        "PgDeviceMapping",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AuthController",
+      "fqcn": "App\\Http\\Controllers\\AuthController",
+      "file": "app/Http/Controllers/AuthController.php",
+      "routes": 17,
+      "uri_prefixes": [
+        "deleteUserAccount (1)",
+        "editFcmToken (1)",
+        "flush-cache (1)",
+        "forgotPassword (1)",
+        "getCurrencyTypes (2)",
+        "getUserCurrentSummary (1)",
+        "getUserCustomizeSummary (1)",
+        "getUserSummary (1)",
+        "login (1)",
+        "loginOtpBasedUser (1)",
+        "logout (1)",
+        "profile (1)",
+        "v2 (2)",
+        "v2/client (1)",
+        "validateCorporateCode (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token",
+        "client.authentication"
+      ],
+      "models": [
+        "ApiEndpoints",
+        "CorporateInfo",
+        "Languages",
+        "LocalityInfo",
+        "MedicalReport",
+        "PgDeviceMapping",
+        "ProfessionType",
+        "ProjectVariable",
+        "Subscription",
+        "Transaction",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "UserManagementController",
+      "fqcn": "App\\Http\\Controllers\\NTAdmin\\UserManagementController",
+      "file": "app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "routes": 14,
+      "uri_prefixes": [
+        "nt-admin/access-management (13)",
+        "public (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "AshokaShipmentManagementController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaShipmentManagementController",
+      "file": "app/Http/Controllers/Admin/AshokaShipmentManagementController.php",
+      "routes": 13,
+      "uri_prefixes": [
+        "ashokaDashboard/shipment (13)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AshokaSalesRequest",
+        "AshokaShipmentTracking",
+        "PgDeviceList"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AshokaUserManangementController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaUserManangementController",
+      "file": "app/Http/Controllers/Admin/AshokaUserManangementController.php",
+      "routes": 13,
+      "uri_prefixes": [
+        "ashokaDashboard (13)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AllCountryNames",
+        "AshokaRolesMaster",
+        "AshokaUsersMaster",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "getAllTuryaaController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\getAllTuryaaController",
+      "file": "app/Http/Controllers/Turyaa/getAllTuryaaController.php",
+      "routes": 12,
+      "uri_prefixes": [
+        "turyaa (9)",
+        "turyaa/v2 (3)"
+      ],
+      "middleware": [
+        "turyaa.authentication"
+      ],
+      "models": [
+        "AnalysisData",
+        "GetTuryaaPrakrutiQuestion",
+        "PrakritiAnswers",
+        "PrakritiAnswersDescriptions",
+        "QuestionAnswers",
+        "TuryaaUserModel"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AshokaSubscriptionManagementController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaSubscriptionManagementController",
+      "file": "app/Http/Controllers/Admin/AshokaSubscriptionManagementController.php",
+      "routes": 11,
+      "uri_prefixes": [
+        "ashokaDashboard (1)",
+        "ashokaDashboard/subscription (5)",
+        "ashokaDashboard/subscriptions (5)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "ApiEndpoints",
+        "PgDeviceMapping",
+        "ResourceNameMaster",
+        "Subscription",
+        "SubscriptionStatus",
+        "SubscriptionTypes",
+        "SubscriptionTypesMaster",
+        "Transaction",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NPUserController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NPUserController",
+      "file": "app/Http/Controllers/NadiPariksha/NPUserController.php",
+      "routes": 11,
+      "uri_prefixes": [
+        "nadi_pariksha (10)",
+        "rate-us (1)"
+      ],
+      "middleware": [
+        "NadiParikshaPublic",
+        "nadiPariksha.authentication"
+      ],
+      "models": [
+        "NPAnalysisDataModel",
+        "NPPrakritiAnswers",
+        "NPUserModel",
+        "NPUserSurveyAnswer",
+        "NPVisitParameter",
+        "NPVisitParameterData",
+        "NpLanguage",
+        "NpMasterContent",
+        "NpNotifyMe",
+        "NpPaymentDetails",
+        "NpPricingMaster",
+        "NpUserActivity"
+      ],
+      "views": []
+    },
+    {
+      "controller": "QuestionsController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\QuestionsController",
+      "file": "app/Http/Controllers/Turyaa/QuestionsController.php",
+      "routes": 11,
+      "uri_prefixes": [
+        "turyaa (4)",
+        "turyaa/v2 (7)"
+      ],
+      "middleware": [
+        "turyaa.authentication"
+      ],
+      "models": [
+        "AnalysisData",
+        "QuestionAnswers",
+        "Questions",
+        "TuryaaUserModel",
+        "VikrutiFeedbackQuestion"
+      ],
+      "views": []
+    },
+    {
+      "controller": "ResearchDasbhoardController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDasbhoardController",
+      "file": "app/Http/Controllers/ResearchDasbhoardController.php",
+      "routes": 11,
+      "uri_prefixes": [
+        "research (2)",
+        "research-dashboard (5)",
+        "research-dashboard-pulse-data (2)",
+        "research-dashboard-pulse-view (2)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "MedicalReport",
+        "MedicalReportSymptomDetail",
+        "NadiReport",
+        "UserPersonalInfo"
+      ],
+      "views": [
+        "research_dashboard_vata"
+      ]
+    },
+    {
+      "controller": "PublicFunctionsController",
+      "fqcn": "App\\Http\\Controllers\\PublicFunctionsController",
+      "file": "app/Http/Controllers/PublicFunctionsController.php",
+      "routes": 10,
+      "uri_prefixes": [
+        "appVersion (2)",
+        "ashokaDashboard (1)",
+        "checkGeoIPValidity (1)",
+        "external-capture (1)",
+        "getAddressUsingPincode (1)",
+        "getAppLanguages (1)",
+        "getUserDetailsUsingMobileNumber (1)",
+        "updateLanguageJson (1)",
+        "v2 (1)"
+      ],
+      "middleware": [
+        "api",
+        "atreyaDashboard.authentication",
+        "auth.token"
+      ],
+      "models": [
+        "AppVersions",
+        "CommonData",
+        "LocalityInfo",
+        "MasterContents",
+        "PostalCode",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "WellnessReportController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\WellnessReportController",
+      "file": "app/Http/Controllers/Turyaa/WellnessReportController.php",
+      "routes": 10,
+      "uri_prefixes": [
+        "turyaa/coach (10)"
+      ],
+      "middleware": [
+        "turyaa.authentication"
+      ],
+      "models": [
+        "AnalysisData",
+        "DailyQuestions",
+        "DietData",
+        "PrakritiAnswersDescriptions",
+        "TuryaaUserModel",
+        "UserStages",
+        "WellnessReport",
+        "WellnessTracking"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NotificationController",
+      "fqcn": "App\\Http\\Controllers\\NotificationController",
+      "file": "app/Http/Controllers/NotificationController.php",
+      "routes": 9,
+      "uri_prefixes": [
+        "notification (9)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "AllNotificationsInfo",
+        "NotificationTopic",
+        "UserNotificationsInfo",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "PrakrutiController",
+      "fqcn": "App\\Http\\Controllers\\PrakrutiController",
+      "file": "app/Http/Controllers/PrakrutiController.php",
+      "routes": 9,
+      "uri_prefixes": [
+        "prakruti (5)",
+        "reception-api/prakruti (4)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token",
+        "reception.authentication"
+      ],
+      "models": [
+        "AllPrakrutiTypes",
+        "PatientPrakruti",
+        "Symptoms",
+        "SymptomsDropdownItem",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "SubscriptionController",
+      "fqcn": "App\\Http\\Controllers\\SubscriptionController",
+      "file": "app/Http/Controllers/SubscriptionController.php",
+      "routes": 9,
+      "uri_prefixes": [
+        "getSinglePlan (1)",
+        "subscriptions (8)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "ApiEndpoints",
+        "Feature",
+        "LocalityInfo",
+        "Subscription",
+        "Transaction",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": [
+        "email"
+      ]
+    },
+    {
+      "controller": "AshokaStoresController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaStoresController",
+      "file": "app/Http/Controllers/Admin/AshokaStoresController.php",
+      "routes": 8,
+      "uri_prefixes": [
+        "ashokaDashboard/stores (8)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AshokaStoresAssetsComponent",
+        "AshokaStoresAssetsMaster",
+        "AshokaUsersMaster"
+      ],
+      "views": []
+    },
+    {
+      "controller": "ClinicController",
+      "fqcn": "App\\Http\\Controllers\\ClinicController",
+      "file": "app/Http/Controllers/ClinicController.php",
+      "routes": 8,
+      "uri_prefixes": [
+        "addNewClinic (1)",
+        "deleteClinic (1)",
+        "fetchClinicInfo (1)",
+        "fetchSingleClinicInfo (1)",
+        "getAllUserClinics (1)",
+        "getUserDefaultClinicDetails (1)",
+        "markClinicAsDefault (1)",
+        "updateClinic (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "CountryWiseStates",
+        "LocalityInfo",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "ENACHController",
+      "fqcn": "App\\Http\\Controllers\\ENACH\\ENACHController",
+      "file": "app/Http/Controllers/ENACH/ENACHController.php",
+      "routes": 8,
+      "uri_prefixes": [
+        "eMandate (8)"
+      ],
+      "middleware": [],
+      "models": [
+        "AshokaRolesMaster",
+        "AshokaUsersMaster",
+        "EnachCustomers",
+        "EnachDebitLog",
+        "EnachMandate"
+      ],
+      "views": []
+    },
+    {
+      "controller": "MedicalInventoryController",
+      "fqcn": "App\\Http\\Controllers\\MedicalInventoryController",
+      "file": "app/Http/Controllers/MedicalInventoryController.php",
+      "routes": 8,
+      "uri_prefixes": [
+        "fetchLastVisitPrescription (1)",
+        "medicalInventory (7)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "DoctorMedicineInventory",
+        "MedicalReport",
+        "MedicineCompany",
+        "MedicineNames",
+        "MedicineQuantity",
+        "MedicineTiming",
+        "MedicineType",
+        "MedicineWithConsume",
+        "SymptomsDropdownItem",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NadiController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\NadiController",
+      "file": "app/Http/Controllers/Turyaa/NadiController.php",
+      "routes": 8,
+      "uri_prefixes": [
+        "turyaa (7)",
+        "turyaa/v2 (1)"
+      ],
+      "middleware": [
+        "turyaa.authentication"
+      ],
+      "models": [
+        "AnalysisData",
+        "DietData",
+        "GeneralDescription",
+        "PrakritiAnswers",
+        "QuestionAnswers",
+        "TuryaaUserModel"
+      ],
+      "views": []
+    },
+    {
+      "controller": "OtpSmsController",
+      "fqcn": "App\\Http\\Controllers\\OtpSmsController",
+      "file": "app/Http/Controllers/OtpSmsController.php",
+      "routes": 8,
+      "uri_prefixes": [
+        "nt-jiva (2)",
+        "otp (6)"
+      ],
+      "middleware": [
+        "api"
+      ],
+      "models": [
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "ReceptionManagementController",
+      "fqcn": "App\\Http\\Controllers\\ReceptionManagementController",
+      "file": "app/Http/Controllers/ReceptionManagementController.php",
+      "routes": 8,
+      "uri_prefixes": [
+        "getAllFeatures (1)",
+        "reception (4)",
+        "reception/manage (3)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "Feature",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "IngredientController",
+      "fqcn": "App\\Http\\Controllers\\MedicalInventory\\IngredientController",
+      "file": "app/Http/Controllers/MedicalInventory/IngredientController.php",
+      "routes": 7,
+      "uri_prefixes": [
+        "medicalInventory (7)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "DoctorMedicineInventory",
+        "Ingredient",
+        "MedicineQuantity",
+        "MedicineType"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NpAppVersionController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NpAppVersionController",
+      "file": "app/Http/Controllers/NadiPariksha/NpAppVersionController.php",
+      "routes": 7,
+      "uri_prefixes": [
+        "nadi_pariksha (7)"
+      ],
+      "middleware": [
+        "NadiParikshaPublic",
+        "nadiPariksha.authentication"
+      ],
+      "models": [
+        "NPUserModel",
+        "NpAppVersion",
+        "NpDoctorsDetails",
+        "NpExternalServiceLogs"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NtTransactionController",
+      "fqcn": "App\\Http\\Controllers\\NtTransactionController",
+      "file": "app/Http/Controllers/NtTransactionController.php",
+      "routes": 7,
+      "uri_prefixes": [
+        "calculatePlanPrice (1)",
+        "createNtOrder (1)",
+        "payment-invoices (1)",
+        "planStatus (1)",
+        "test-generate-invoice (1)",
+        "verifyTransaction (1)",
+        "webhook/razorpay (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "LocalityInfo",
+        "MasterContents",
+        "NtCoupons",
+        "Transaction",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "SignUpController",
+      "fqcn": "App\\Http\\Controllers\\SignUpController",
+      "file": "app/Http/Controllers/SignUpController.php",
+      "routes": 7,
+      "uri_prefixes": [
+        "getCurrencyType (2)",
+        "getSalutationTypes (2)",
+        "signup (1)",
+        "signupV2 (1)",
+        "v2 (1)"
+      ],
+      "middleware": [
+        "api"
+      ],
+      "models": [
+        "CountryWiseStates",
+        "CurrencyType",
+        "CustomizeTab",
+        "DoctorFormDetail",
+        "DoctorMedicineInventory",
+        "DoctorMultichoiceOption",
+        "Ingredient",
+        "Languages",
+        "LocalityInfo",
+        "MedicalFormDetail",
+        "MultichoiceFieldList",
+        "MultichoiceOptions",
+        "ProjectVariable",
+        "SalutationTypes",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "UserAnalyticsController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\UserAnalyticsController",
+      "file": "app/Http/Controllers/Admin/UserAnalyticsController.php",
+      "routes": 7,
+      "uri_prefixes": [
+        "ashokaDashboard (5)",
+        "ashokaDashboard/doctor (2)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "MedicalReport",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AshokaAuthController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaAuthController",
+      "file": "app/Http/Controllers/Admin/AshokaAuthController.php",
+      "routes": 6,
+      "uri_prefixes": [
+        "ashokaDashboard (2)",
+        "ashokaDashboard/appVersion (2)",
+        "ashokaDashboard/device (2)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AppVersions",
+        "AshokaRolesMaster",
+        "AshokaUsersMaster",
+        "PgDeviceList"
+      ],
+      "views": []
+    },
+    {
+      "controller": "CoachController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\CoachController",
+      "file": "app/Http/Controllers/Turyaa/CoachController.php",
+      "routes": 6,
+      "uri_prefixes": [
+        "turyaa (3)",
+        "turyaa/coach (3)"
+      ],
+      "middleware": [
+        "turyaa.authentication"
+      ],
+      "models": [
+        "AnalysisData",
+        "DailyQuestions",
+        "PrakritiAnswers",
+        "QuestionAnswers",
+        "Questions",
+        "TuryaaUserModel",
+        "UserStages",
+        "WellnessTracking"
+      ],
+      "views": []
+    },
+    {
+      "controller": "DailyQuestionsController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\DailyQuestionsController",
+      "file": "app/Http/Controllers/Turyaa/DailyQuestionsController.php",
+      "routes": 6,
+      "uri_prefixes": [
+        "turyaa (6)"
+      ],
+      "middleware": [
+        "turyaa.authentication"
+      ],
+      "models": [
+        "AnalysisData",
+        "DailyQuestions",
+        "DietData",
+        "GeneralDescription",
+        "PrakritiAnswers",
+        "QuestionAnswers",
+        "TuryaaUserModel",
+        "VikrutiDescription"
+      ],
+      "views": []
+    },
+    {
+      "controller": "DietManagementController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\DietManagementController",
+      "file": "app/Http/Controllers/Turyaa/DietManagementController.php",
+      "routes": 6,
+      "uri_prefixes": [
+        "client/turyaa (1)",
+        "turyaa (5)"
+      ],
+      "middleware": [
+        "api",
+        "client.authentication",
+        "turyaa.authentication"
+      ],
+      "models": [
+        "AnalysisData",
+        "DietData",
+        "MedicalReport",
+        "MedicalReportSymptomDetail",
+        "PrakritiAnswers",
+        "QuestionAnswers",
+        "TuryaaUserModel",
+        "UserDietChoice",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NPPaymentController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NPPaymentController",
+      "file": "app/Http/Controllers/NadiPariksha/NPPaymentController.php",
+      "routes": 6,
+      "uri_prefixes": [
+        "nadi_pariksha (6)"
+      ],
+      "middleware": [
+        "NadiParikshaPublic",
+        "nadiPariksha.authentication"
+      ],
+      "models": [
+        "NPAnalysisDataModel",
+        "NPUserModel",
+        "NpCoupon",
+        "NpPaymentDetails",
+        "NpPricingMaster"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NadiAnalysisController",
+      "fqcn": "App\\Http\\Controllers\\V1\\NadiAnalysisController",
+      "file": "app/Http/Controllers/V1/NadiAnalysisController.php",
+      "routes": 6,
+      "uri_prefixes": [
+        "v1 (2)",
+        "v1/reports (3)",
+        "v1/vikruti (1)"
+      ],
+      "middleware": [
+        "auth.token"
+      ],
+      "models": [
+        "AllPrakrutiTypes"
+      ],
+      "views": []
+    },
+    {
+      "controller": "ReportManagementController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\ReportManagementController",
+      "file": "app/Http/Controllers/Admin/ReportManagementController.php",
+      "routes": 6,
+      "uri_prefixes": [
+        "ashokaDashboard/dailyCron (1)",
+        "ashokaDashboard/report (5)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AshokaSalesRequest",
+        "AshokaUsersMaster",
+        "MedicalReport",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "WellnessController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\WellnessController",
+      "file": "app/Http/Controllers/Turyaa/WellnessController.php",
+      "routes": 6,
+      "uri_prefixes": [
+        "turyaa (6)"
+      ],
+      "middleware": [
+        "turyaa.authentication"
+      ],
+      "models": [
+        "WellnessTracking"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AshokaQuotationController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaQuotationController",
+      "file": "app/Http/Controllers/Admin/AshokaQuotationController.php",
+      "routes": 5,
+      "uri_prefixes": [
+        "ashokaDashboard/sales (5)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AshokaCustomers",
+        "AshokaQuotation"
+      ],
+      "views": []
+    },
+    {
+      "controller": "CheckUserExistOrNotController",
+      "fqcn": "App\\Http\\Controllers\\CheckUserExistOrNotController",
+      "file": "app/Http/Controllers/CheckUserExistOrNotController.php",
+      "routes": 5,
+      "uri_prefixes": [
+        "checkMobileNumber (1)",
+        "checkUsername (1)",
+        "checkpatientcode (1)",
+        "checkusernameormobileno (1)",
+        "getdetailsbymobileno (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "CompanyController",
+      "fqcn": "App\\Http\\Controllers\\MedicalInventory\\CompanyController",
+      "file": "app/Http/Controllers/MedicalInventory/CompanyController.php",
+      "routes": 5,
+      "uri_prefixes": [
+        "medicalInventory (5)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "MedicineCompany"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NpFirebaseNotificationController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NpFirebaseNotificationController",
+      "file": "app/Http/Controllers/NadiPariksha/NpFirebaseNotificationController.php",
+      "routes": 5,
+      "uri_prefixes": [
+        "nadi_pariksha/firebase (5)"
+      ],
+      "middleware": [],
+      "models": [
+        "NPUserModel"
+      ],
+      "views": []
+    },
+    {
+      "controller": "PudiController",
+      "fqcn": "App\\Http\\Controllers\\PudiController",
+      "file": "app/Http/Controllers/PudiController.php",
+      "routes": 5,
+      "uri_prefixes": [
+        "medicalInventory (5)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "DoctorMedicineInventory",
+        "Ingredient"
+      ],
+      "views": []
+    },
+    {
+      "controller": "RecipeCategoryController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\RecipeCategoryController",
+      "file": "app/Http/Controllers/ResearchDashboard/RecipeCategoryController.php",
+      "routes": 5,
+      "uri_prefixes": [
+        "researchDashboard (5)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "CategoryValue",
+        "RecipeCategory",
+        "StatesNames"
+      ],
+      "views": []
+    },
+    {
+      "controller": "orgPatientManagementController",
+      "fqcn": "App\\Http\\Controllers\\Organization\\orgPatientManagementController",
+      "file": "app/Http/Controllers/Organization/orgPatientManagementController.php",
+      "routes": 5,
+      "uri_prefixes": [
+        "client (1)",
+        "client/corporate (1)",
+        "org (1)",
+        "org/expert (2)"
+      ],
+      "middleware": [
+        "api",
+        "client.authentication",
+        "corporate.authentication"
+      ],
+      "models": [
+        "CorporateInfo",
+        "LocalityInfo",
+        "PatientPrakruti",
+        "Symptoms",
+        "SymptomsDropdownItem",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AccountManagementController",
+      "fqcn": "App\\Http\\Controllers\\Client\\AccountManagementController",
+      "file": "app/Http/Controllers/Client/AccountManagementController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "client (4)"
+      ],
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "models": [
+        "ArogyaDarshikaSavedData",
+        "BannersData",
+        "NadiReport",
+        "UserPersonalInfo",
+        "UserReport"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AniruddhaRuleListController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\AniruddhaRuleListController",
+      "file": "app/Http/Controllers/ResearchDashboard/AniruddhaRuleListController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "AniruddhaRuleList"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AshokaCorporateManagementController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaCorporateManagementController",
+      "file": "app/Http/Controllers/Admin/AshokaCorporateManagementController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "ashokaDashboard/corporate (4)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "CorporateInfo",
+        "CorporatePayments",
+        "MedicalReport",
+        "PgDeviceMapping",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AshokaCustomersController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaCustomersController",
+      "file": "app/Http/Controllers/Admin/AshokaCustomersController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "ashokaDashboard/sales (4)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AshokaCustomers"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AshokaPaymentOrderController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaPaymentOrderController",
+      "file": "app/Http/Controllers/Admin/AshokaPaymentOrderController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "ashokaDashboard/sales (4)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AshokaPaymentOrder"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AshokaStatusMasterController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaStatusMasterController",
+      "file": "app/Http/Controllers/Admin/AshokaStatusMasterController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "ashokaDashboard/status (4)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AshokaStatusMaster"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AskQuestionController",
+      "fqcn": "App\\Http\\Controllers\\Client\\AskQuestionController",
+      "file": "app/Http/Controllers/Client/AskQuestionController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "client (4)"
+      ],
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "models": [
+        "PatientQuestionAnswer",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "BadminFunctionsController",
+      "fqcn": "App\\Http\\Controllers\\Guna\\BadminFunctionsController",
+      "file": "app/Http/Controllers/Guna/BadminFunctionsController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "checkValidDateTest (1)",
+        "getPhpInfo (1)",
+        "guna (2)"
+      ],
+      "middleware": [
+        "api"
+      ],
+      "models": [
+        "MedicalReport",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "CategoryValueController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\CategoryValueController",
+      "file": "app/Http/Controllers/ResearchDashboard/CategoryValueController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "CategoryValue",
+        "RecipeCategory"
+      ],
+      "views": []
+    },
+    {
+      "controller": "CommonJsonController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\CommonJsonController",
+      "file": "app/Http/Controllers/ResearchDashboard/CommonJsonController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "CommonJson"
+      ],
+      "views": []
+    },
+    {
+      "controller": "DataManagementController",
+      "fqcn": "App\\Http\\Controllers\\NTAdmin\\DataManagementController",
+      "file": "app/Http/Controllers/NTAdmin/DataManagementController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "currentUserAccessibleUsers (1)",
+        "currentUserAccessibleUsersWithLocations (1)",
+        "nt-admin/data-management (2)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "DayNamesJsonController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\DayNamesJsonController",
+      "file": "app/Http/Controllers/ResearchDashboard/DayNamesJsonController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "DaynamesJson"
+      ],
+      "views": []
+    },
+    {
+      "controller": "ExerciseCategoryController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\ExerciseCategoryController",
+      "file": "app/Http/Controllers/ResearchDashboard/ExerciseCategoryController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "ExerciseCategory"
+      ],
+      "views": []
+    },
+    {
+      "controller": "ExerciseTagsController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\ExerciseTagsController",
+      "file": "app/Http/Controllers/ResearchDashboard/ExerciseTagsController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "ExerciseCategory",
+        "ExerciseTags"
+      ],
+      "views": []
+    },
+    {
+      "controller": "FeaturesController",
+      "fqcn": "App\\Http\\Controllers\\NTAdmin\\FeaturesController",
+      "file": "app/Http/Controllers/NTAdmin/FeaturesController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "nt-admin/access-management (3)",
+        "report (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "MasterContents",
+        "MedicalReport",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "JsonArrayRuleListController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\JsonArrayRuleListController",
+      "file": "app/Http/Controllers/ResearchDashboard/JsonArrayRuleListController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "JsonArrayRuleslist"
+      ],
+      "views": []
+    },
+    {
+      "controller": "LinkDeviceContoller",
+      "fqcn": "App\\Http\\Controllers\\LinkDeviceContoller",
+      "file": "app/Http/Controllers/LinkDeviceContoller.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "getLinkDevice (1)",
+        "linkDeviceInHouseV2 (1)",
+        "planDetails (1)",
+        "validateDeviceWithSerialNo (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "PgDeviceList",
+        "PgDeviceMapping",
+        "PgOrderDetail",
+        "PgOrderDispatch",
+        "PgOrderIdGenerate",
+        "PgPlanDetail",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "MealsCategoryController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\MealsCategoryController",
+      "file": "app/Http/Controllers/ResearchDashboard/MealsCategoryController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "MealsCategory"
+      ],
+      "views": []
+    },
+    {
+      "controller": "MusicLibraryController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\MusicLibraryController",
+      "file": "app/Http/Controllers/ResearchDashboard/MusicLibraryController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "MusicLibrary",
+        "MusicTags"
+      ],
+      "views": []
+    },
+    {
+      "controller": "MusicTagsController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\MusicTagsController",
+      "file": "app/Http/Controllers/ResearchDashboard/MusicTagsController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "MusicTags"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NadiParikshaOTPSmsController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NadiParikshaOTPSmsController",
+      "file": "app/Http/Controllers/NadiPariksha/NadiParikshaOTPSmsController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "nadi_pariksha/otp (2)",
+        "nadi_pariksha/v2 (2)"
+      ],
+      "middleware": [
+        "NadiParikshaPublic"
+      ],
+      "models": [
+        "NPUserModel",
+        "NpLanguage",
+        "NpOTPattemptMaster"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NadiReportGrantController",
+      "fqcn": "App\\Http\\Controllers\\NadiReportGrantController",
+      "file": "app/Http/Controllers/NadiReportGrantController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "ashokaDashboard/subscription (4)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "NadiManualReportGrant",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NpPublicController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NpPublicController",
+      "file": "app/Http/Controllers/NadiPariksha/NpPublicController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "nadi_pariksha (4)"
+      ],
+      "middleware": [
+        "NadiParikshaPublic"
+      ],
+      "models": [
+        "NPAnalysisDataModel",
+        "NPUserModel"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NtCouponsController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\NtCouponsController",
+      "file": "app/Http/Controllers/Admin/NtCouponsController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "ashokaDashboard/summary (4)"
+      ],
+      "middleware": [],
+      "models": [
+        "NtCoupons"
+      ],
+      "views": []
+    },
+    {
+      "controller": "RecipePreferenceJsonController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\RecipePreferenceJsonController",
+      "file": "app/Http/Controllers/ResearchDashboard/RecipePreferenceJsonController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "RecipePreferenceJson"
+      ],
+      "views": []
+    },
+    {
+      "controller": "StatesNamesController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\StatesNamesController",
+      "file": "app/Http/Controllers/ResearchDashboard/StatesNamesController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "StatesNames"
+      ],
+      "views": []
+    },
+    {
+      "controller": "TuryaaOTPSmsController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\TuryaaOTPSmsController",
+      "file": "app/Http/Controllers/Turyaa/TuryaaOTPSmsController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "turyaa/otp (4)"
+      ],
+      "middleware": [],
+      "models": [
+        "TuryaaUserModel"
+      ],
+      "views": []
+    },
+    {
+      "controller": "UserDetailsController",
+      "fqcn": "App\\Http\\Controllers\\Guna\\UserDetailsController",
+      "file": "app/Http/Controllers/Guna/UserDetailsController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "guna (4)"
+      ],
+      "middleware": [
+        "api"
+      ],
+      "models": [
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "YogaCategoryController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\YogaCategoryController",
+      "file": "app/Http/Controllers/ResearchDashboard/YogaCategoryController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "YogaCategory"
+      ],
+      "views": []
+    },
+    {
+      "controller": "YogaJsonController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\YogaJsonController",
+      "file": "app/Http/Controllers/ResearchDashboard/YogaJsonController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "researchDashboard (4)"
+      ],
+      "middleware": [
+        "research.authentication"
+      ],
+      "models": [
+        "YogaCategory",
+        "YogaJson"
+      ],
+      "views": []
+    },
+    {
+      "controller": "orgExpertsController",
+      "fqcn": "App\\Http\\Controllers\\Organization\\orgExpertsController",
+      "file": "app/Http/Controllers/Organization/orgExpertsController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "org/expert (4)"
+      ],
+      "middleware": [
+        "corporate.authentication"
+      ],
+      "models": [
+        "CorporateInfo",
+        "CustomizeTab",
+        "LocalityInfo",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "orgFranchiseController",
+      "fqcn": "App\\Http\\Controllers\\Organization\\orgFranchiseController",
+      "file": "app/Http/Controllers/Organization/orgFranchiseController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "org/franchise (4)"
+      ],
+      "middleware": [
+        "corporate.authentication"
+      ],
+      "models": [
+        "CorporateInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "prakrutiManagementController",
+      "fqcn": "App\\Http\\Controllers\\V1\\prakrutiManagementController",
+      "file": "app/Http/Controllers/V1/prakrutiManagementController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "v1 (1)",
+        "v1/prakruti (3)"
+      ],
+      "middleware": [
+        "auth.token"
+      ],
+      "models": [
+        "AllPrakrutiTypes",
+        "Symptoms",
+        "SymptomsDropdownItem"
+      ],
+      "views": []
+    },
+    {
+      "controller": "DietAndRecipesManagementController",
+      "fqcn": "App\\Http\\Controllers\\V1\\DietAndRecipesManagementController",
+      "file": "app/Http/Controllers/V1/DietAndRecipesManagementController.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "v1/diet (3)"
+      ],
+      "middleware": [
+        "auth.token"
+      ],
+      "models": [
+        "AllPrakrutiTypes",
+        "MedicalReportSymptomDetail",
+        "MultichoiceOptions",
+        "PrakrutiWiseDiet"
+      ],
+      "views": []
+    },
+    {
+      "controller": "EditProfileController",
+      "fqcn": "App\\Http\\Controllers\\Client\\EditProfileController",
+      "file": "app/Http/Controllers/Client/EditProfileController.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "client (3)"
+      ],
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "models": [
+        "MedicalReport",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "FirebaseController",
+      "fqcn": "App\\Http\\Controllers\\FirebaseController",
+      "file": "app/Http/Controllers/FirebaseController.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "sendToMultipleTopics (1)",
+        "sendToSingleClient (1)",
+        "sendToSingleTopic (1)"
+      ],
+      "middleware": [],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "HelpController",
+      "fqcn": "App\\Http\\Controllers\\HelpController",
+      "file": "app/Http/Controllers/HelpController.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "getHelpVideos (1)",
+        "getNtFaq (1)",
+        "getNtHelpVideos (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "NadiReportController",
+      "fqcn": "App\\Http\\Controllers\\NadiReportController",
+      "file": "app/Http/Controllers/NadiReportController.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "nadi (3)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "MedicalReport",
+        "MedicalReportSymptomDetail",
+        "MultichoiceFieldList",
+        "MultichoiceOptions",
+        "NadiAveragePulseData",
+        "NadiReport",
+        "PrakrutiWiseDiet",
+        "ProjectVariable"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NpPaymentControllerV2",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NpPaymentControllerV2",
+      "file": "app/Http/Controllers/NadiPariksha/NpPaymentControllerV2.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "nadi_pariksha (3)"
+      ],
+      "middleware": [
+        "NadiParikshaPublic",
+        "nadiPariksha.authentication"
+      ],
+      "models": [
+        "NPAnalysisDataModel",
+        "NPUserModel",
+        "NpPaymentDetails",
+        "NpPricingMaster"
+      ],
+      "views": []
+    },
+    {
+      "controller": "S3BucketController",
+      "fqcn": "App\\Http\\Controllers\\TestPurpose\\S3BucketController",
+      "file": "app/Http/Controllers/TestPurpose/S3BucketController.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "getDataUsingIp (1)",
+        "sampleEncrypt (1)",
+        "testUploadS3 (1)"
+      ],
+      "middleware": [],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "VisitManagementController",
+      "fqcn": "App\\Http\\Controllers\\Client\\VisitManagementController",
+      "file": "app/Http/Controllers/Client/VisitManagementController.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "client (3)"
+      ],
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "models": [
+        "MedicalReport",
+        "MedicalReportDiet",
+        "MedicalReportPrescription",
+        "MedicalReportSymptomDetail",
+        "ResourceNameMaster",
+        "UserReport"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AllPrakrutiTypesController",
+      "fqcn": "App\\Http\\Controllers\\AllPrakrutiTypesController",
+      "file": "app/Http/Controllers/AllPrakrutiTypesController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "getallroles (1)",
+        "patientweeklydiet (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "AllPrakrutiTypes",
+        "UserRole"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AshokaAccessManagementController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaAccessManagementController",
+      "file": "app/Http/Controllers/Admin/AshokaAccessManagementController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "ashokaDashboard/accessManagement (2)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AshokaDashboardModulesMaster",
+        "AshokaRolesMaster"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AshokaRolesController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaRolesController",
+      "file": "app/Http/Controllers/Admin/AshokaRolesController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "ashokaDashboard (2)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AshokaRolesMaster"
+      ],
+      "views": []
+    },
+    {
+      "controller": "CronController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\CronController",
+      "file": "app/Http/Controllers/Admin/CronController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "cron (2)"
+      ],
+      "middleware": [
+        "api"
+      ],
+      "models": [
+        "CalendarEvent",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "DataConsentController",
+      "fqcn": "App\\Http\\Controllers\\Client\\DataConsentController",
+      "file": "app/Http/Controllers/Client/DataConsentController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "client (2)"
+      ],
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "models": [
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "DinacharyaController",
+      "fqcn": "App\\Http\\Controllers\\DinacharyaController",
+      "file": "app/Http/Controllers/DinacharyaController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "getDinacharyaRutucharya (1)",
+        "getGermanyRutucharya (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "FaqDataController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\FaqDataController",
+      "file": "app/Http/Controllers/Turyaa/FaqDataController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "turyaa (2)"
+      ],
+      "middleware": [
+        "turyaa.authentication"
+      ],
+      "models": [
+        "FaqData"
+      ],
+      "views": []
+    },
+    {
+      "controller": "KnowledgeDataController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\KnowledgeDataController",
+      "file": "app/Http/Controllers/Turyaa/KnowledgeDataController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "turyaa (2)"
+      ],
+      "middleware": [],
+      "models": [
+        "KnowledgeData"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NpSurveyQuestionController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NpSurveyQuestionController",
+      "file": "app/Http/Controllers/NadiPariksha/NpSurveyQuestionController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "nadi_pariksha (2)"
+      ],
+      "middleware": [
+        "NadiParikshaPublic",
+        "nadiPariksha.authentication"
+      ],
+      "models": [
+        "NPSurveyQuestion",
+        "NPUserModel",
+        "NPUserSurveyAnswer",
+        "NpLanguage"
+      ],
+      "views": []
+    },
+    {
+      "controller": "ProfileInfoController",
+      "fqcn": "App\\Http\\Controllers\\ProfileInfoController",
+      "file": "app/Http/Controllers/ProfileInfoController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "profile-info (2)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "LocalityInfo",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "ReorderFeaturesController",
+      "fqcn": "App\\Http\\Controllers\\ReorderFeaturesController",
+      "file": "app/Http/Controllers/ReorderFeaturesController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "doctor (2)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "DoctorFormDetail",
+        "MedicalFormList"
+      ],
+      "views": []
+    },
+    {
+      "controller": "SwaggerController",
+      "fqcn": "App\\Http\\Controllers\\SwaggerController",
+      "file": "app/Http/Controllers/SwaggerController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "api-docs (2)"
+      ],
+      "middleware": [],
+      "models": [],
+      "views": [
+        "swagger"
+      ]
+    },
+    {
+      "controller": "UserStatsController",
+      "fqcn": "App\\Http\\Controllers\\UserStatsController",
+      "file": "app/Http/Controllers/UserStatsController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "getAccountData (1)",
+        "getUserStatsData (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "Languages",
+        "LocalityInfo",
+        "NadiReport",
+        "PgDeviceMapping",
+        "Subscription",
+        "Transaction",
+        "UserNadiCaptureType",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "WelcomeTourController",
+      "fqcn": "App\\Http\\Controllers\\WelcomeTourController",
+      "file": "app/Http/Controllers/WelcomeTourController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "welcome-tour (2)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "orgAnalyticsController",
+      "fqcn": "App\\Http\\Controllers\\Organization\\orgAnalyticsController",
+      "file": "app/Http/Controllers/Organization/orgAnalyticsController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "org/analytics (2)"
+      ],
+      "middleware": [
+        "corporate.authentication"
+      ],
+      "models": [
+        "CorporateInfo",
+        "MedicalReport",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "orgAuthController",
+      "fqcn": "App\\Http\\Controllers\\Organization\\orgAuthController",
+      "file": "app/Http/Controllers/Organization/orgAuthController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "org (2)"
+      ],
+      "middleware": [],
+      "models": [
+        "CorporateInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AdminManagementController",
+      "fqcn": "App\\Http\\Controllers\\NTUser\\AdminManagementController",
+      "file": "app/Http/Controllers/NTUser/AdminManagementController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "add-self-admin (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "AshokaDepartmentsController",
+      "fqcn": "App\\Http\\Controllers\\Admin\\AshokaDepartmentsController",
+      "file": "app/Http/Controllers/Admin/AshokaDepartmentsController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "ashokaDashboard (1)"
+      ],
+      "middleware": [
+        "atreyaDashboard.authentication"
+      ],
+      "models": [
+        "AshokaDepartmentsMaster"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AuthenticateController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboard\\AuthenticateController",
+      "file": "app/Http/Controllers/ResearchDashboard/AuthenticateController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "researchDashboard (1)"
+      ],
+      "middleware": [],
+      "models": [
+        "ResearchUsers"
+      ],
+      "views": []
+    },
+    {
+      "controller": "AyurvedaStaticController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\AyurvedaStaticController",
+      "file": "app/Http/Controllers/NadiPariksha/AyurvedaStaticController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "nadi_pariksha (1)"
+      ],
+      "middleware": [
+        "NadiParikshaPublic",
+        "nadiPariksha.authentication"
+      ],
+      "models": [
+        "NPUserModel",
+        "NpLanguage"
+      ],
+      "views": []
+    },
+    {
+      "controller": "ExternalCaptureController",
+      "fqcn": "App\\Http\\Controllers\\External\\ExternalCaptureController",
+      "file": "app/Http/Controllers/External/ExternalCaptureController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "external-capture (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "MedicalReport",
+        "OtherReportData"
+      ],
+      "views": []
+    },
+    {
+      "controller": "FirebaseNotificationController",
+      "fqcn": "App\\Http\\Controllers\\Turyaa\\FirebaseNotificationController",
+      "file": "app/Http/Controllers/Turyaa/FirebaseNotificationController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "turyaa (1)"
+      ],
+      "middleware": [
+        "turyaa.authentication"
+      ],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "GenerateSwasthyaLambda",
+      "fqcn": "App\\Http\\Controllers\\GenerateSwasthyaLambda",
+      "file": "app/Http/Controllers/GenerateSwasthyaLambda.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "generateLambda (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "GunaLocalityInfoController",
+      "fqcn": "App\\Http\\Controllers\\Guna\\GunaLocalityInfoController",
+      "file": "app/Http/Controllers/Guna/GunaLocalityInfoController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "guna (1)"
+      ],
+      "middleware": [
+        "api"
+      ],
+      "models": [
+        "LocalityInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "MedicineContorller",
+      "fqcn": "App\\Http\\Controllers\\MedicineContorller",
+      "file": "app/Http/Controllers/MedicineContorller.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "getmedicineprescription (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "MedicalReport",
+        "MedicalReportPrescription"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NPnadiController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NPnadiController",
+      "file": "app/Http/Controllers/NadiPariksha/NPnadiController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "nadi_pariksha (1)"
+      ],
+      "middleware": [
+        "NadiParikshaPublic",
+        "nadiPariksha.authentication"
+      ],
+      "models": [
+        "NPAnalysisDataModel",
+        "NPPrakritiAnswers",
+        "NPUserModel",
+        "NpOtherReportData",
+        "PrakritiAnswers"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NpCohortManagement",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NpCohortManagement",
+      "file": "app/Http/Controllers/NadiPariksha/NpCohortManagement.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "nadi_pariksha (1)"
+      ],
+      "middleware": [
+        "NadiParikshaPublic",
+        "nadiPariksha.authentication"
+      ],
+      "models": [
+        "NPUserModel"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NpGoogleCronController",
+      "fqcn": "App\\Http\\Controllers\\NadiPariksha\\NpGoogleCronController",
+      "file": "app/Http/Controllers/NadiPariksha/NpGoogleCronController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "nadi_pariksha (1)"
+      ],
+      "middleware": [],
+      "models": [
+        "NPAnalysisDataModel",
+        "NPUserModel"
+      ],
+      "views": []
+    },
+    {
+      "controller": "PdfGeneratorController",
+      "fqcn": "App\\Http\\Controllers\\PdfGeneratorController",
+      "file": "app/Http/Controllers/PdfGeneratorController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "generatepdf (1)"
+      ],
+      "middleware": [
+        "api"
+      ],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "SpaReportController",
+      "fqcn": "App\\Http\\Controllers\\SpaReportController",
+      "file": "app/Http/Controllers/SpaReportController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "newReport (1)"
+      ],
+      "middleware": [
+        "api"
+      ],
+      "models": [
+        "Languages",
+        "LocalityInfo",
+        "MedicalReport",
+        "NadiReport",
+        "SpaReportSummary",
+        "SpaReportTherapy",
+        "UserPersonalInfo",
+        "UserReport"
+      ],
+      "views": []
+    },
+    {
+      "controller": "UpdatePasswordController",
+      "fqcn": "App\\Http\\Controllers\\UpdatePasswordController",
+      "file": "app/Http/Controllers/UpdatePasswordController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "updatepassword (1)"
+      ],
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "models": [
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "orgSignUpController",
+      "fqcn": "App\\Http\\Controllers\\Organization\\orgSignUpController",
+      "file": "app/Http/Controllers/Organization/orgSignUpController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "org (1)"
+      ],
+      "middleware": [],
+      "models": [
+        "CorporateInfo",
+        "CustomizeTab",
+        "LocalityInfo",
+        "UserPersonalInfo"
+      ],
+      "views": []
+    },
+    {
+      "controller": "NadiFileController",
+      "fqcn": "App\\Http\\Controllers\\NadiFileController",
+      "file": "app/Http/Controllers/NadiFileController.php",
+      "routes": 0,
+      "uri_prefixes": [],
+      "middleware": [],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "SmsController",
+      "fqcn": "App\\Http\\Controllers\\SmsController",
+      "file": "app/Http/Controllers/SmsController.php",
+      "routes": 0,
+      "uri_prefixes": [],
+      "middleware": [],
+      "models": [],
+      "views": []
+    }
+  ]
+}

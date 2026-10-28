@@ -1,0 +1,139 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "routes": "POST checkUsername,POST checkMobileNumber",
+    "name": "seq-AUTH-R07",
+    "title": "AUTH-R07: Check that a username or mobile number is free during sign-up"
+  },
+  "kind": "sequence",
+  "name": "seq-AUTH-R07",
+  "title": "AUTH-R07: Check that a username or mobile number is free during sign-up",
+  "nodes": [
+    {
+      "id": "cli-nadi-tarangini-frontend-newsignupcontroller-checkdoctormobileno",
+      "label": "NewSignUpController@checkDoctorMobileNo",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:171"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-newsignupcontroller-checkdoctorusername",
+      "label": "NewSignUpController@checkDoctorUsername",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:211"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-ntlitesignupcontroller-checkmobileno",
+      "label": "NtLiteSignUpController@checkMobileNo",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NtLiteSignUpController.php:132"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-ntlitesignupcontroller-checkusername",
+      "label": "NtLiteSignUpController@checkUsername",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NtLiteSignUpController.php:170"
+    },
+    {
+      "id": "rt-post-checkmobilenumber",
+      "label": "POST checkMobileNumber",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:763"
+    },
+    {
+      "id": "rt-post-checkusername",
+      "label": "POST checkUsername",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:764"
+    },
+    {
+      "id": "ctl-checkuserexistornotcontroller-checkmobilenumberv2",
+      "label": "CheckUserExistOrNotController@checkMobileNumberV2",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:220"
+    },
+    {
+      "id": "ctl-checkuserexistornotcontroller-checkusername",
+      "label": "CheckUserExistOrNotController@checkUsername",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:174"
+    },
+    {
+      "id": "tbl-user-personal-info",
+      "label": "user_personal_info",
+      "type": "db",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:174"
+    }
+  ],
+  "edges": [
+    {
+      "from": "cli-nadi-tarangini-frontend-newsignupcontroller-checkdoctorusername",
+      "to": "rt-post-checkusername",
+      "label": "POST /checkUsername",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:211"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-ntlitesignupcontroller-checkusername",
+      "to": "rt-post-checkusername",
+      "label": "POST /checkUsername",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NtLiteSignUpController.php:170"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-newsignupcontroller-checkdoctormobileno",
+      "to": "rt-post-checkmobilenumber",
+      "label": "POST /checkMobileNumber",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:171"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-ntlitesignupcontroller-checkmobileno",
+      "to": "rt-post-checkmobilenumber",
+      "label": "POST /checkMobileNumber",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NtLiteSignUpController.php:132"
+    },
+    {
+      "from": "rt-post-checkusername",
+      "to": "ctl-checkuserexistornotcontroller-checkusername",
+      "label": "CheckUserExistOrNotController@checkUsername",
+      "source": "Ashoka-World-Backend:routes/api.php:764"
+    },
+    {
+      "from": "ctl-checkuserexistornotcontroller-checkusername",
+      "to": "tbl-user-personal-info",
+      "label": "uses user_personal_info",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:174"
+    },
+    {
+      "from": "ctl-checkuserexistornotcontroller-checkusername",
+      "to": "cli-nadi-tarangini-frontend-newsignupcontroller-checkdoctorusername",
+      "label": "response 400/500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:182"
+    },
+    {
+      "from": "rt-post-checkmobilenumber",
+      "to": "ctl-checkuserexistornotcontroller-checkmobilenumberv2",
+      "label": "CheckUserExistOrNotController@checkMobileNumberV2",
+      "source": "Ashoka-World-Backend:routes/api.php:763"
+    },
+    {
+      "from": "ctl-checkuserexistornotcontroller-checkmobilenumberv2",
+      "to": "tbl-user-personal-info",
+      "label": "uses user_personal_info",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:220"
+    },
+    {
+      "from": "ctl-checkuserexistornotcontroller-checkmobilenumberv2",
+      "to": "cli-nadi-tarangini-frontend-newsignupcontroller-checkdoctormobileno",
+      "label": "response 400/500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:229"
+    }
+  ]
+}

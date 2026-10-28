@@ -1,0 +1,325 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "routes": "GET getSalutationTypes,POST getSalutationTypes,GET getCurrencyType,POST getCurrencyType",
+    "name": "seq-AUTH-R11",
+    "title": "AUTH-R11: Provide sign-up reference lists (salutation and currency types)"
+  },
+  "kind": "sequence",
+  "name": "seq-AUTH-R11",
+  "title": "AUTH-R11: Provide sign-up reference lists (salutation and currency types)",
+  "nodes": [
+    {
+      "id": "scr-add-self-admin",
+      "label": "add_self_admin",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/add_self_admin.blade.php"
+    },
+    {
+      "id": "scr-admin-create-user",
+      "label": "admin.create_user",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/admin/create_user.blade.php"
+    },
+    {
+      "id": "scr-auth-signup",
+      "label": "auth.signup",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/signup.blade.php"
+    },
+    {
+      "id": "scr-editdoctoraccount-kycscreen",
+      "label": "2 screens",
+      "sub": "EditDoctorAccount, KycScreen",
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/doctor_dashboard/kyc/view/kyc_screen.dart; Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_account/edit_account.dart"
+    },
+    {
+      "id": "scr-my-account-edit-profile",
+      "label": "my_account.edit_profile",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/my_account/edit_profile.blade.php"
+    },
+    {
+      "id": "scr-my-account-myaccount",
+      "label": "my_account.myaccount",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/my_account/myaccount.blade.php"
+    },
+    {
+      "id": "scr-my-account-update-kyc",
+      "label": "my_account.update_kyc",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/my_account/update_kyc.blade.php"
+    },
+    {
+      "id": "scr-signupscreen",
+      "label": "SignUpScreen",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-fetchcurrencytype",
+      "label": "fetchCurrencyType",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1709"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-fetchsalutationtypes",
+      "label": "fetchSalutationTypes",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:812"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-admindashboardcontroller-createuser",
+      "label": "AdminDashboardController@createUser",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1200"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-dashboardcontroller-addselfadmin",
+      "label": "DashboardController@addSelfAdmin",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1283"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-dashboardcontroller-updatekycdetails",
+      "label": "DashboardController@updateKycDetails",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:684"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-editdoctordetailscontroller-editdoctordetails",
+      "label": "EditDoctorDetailsController@editDoctorDetails",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/EditDoctorDetailsController.php:22"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-editdoctordetailscontroller-editdoctorprofile",
+      "label": "EditDoctorDetailsController@editDoctorProfile",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/EditDoctorDetailsController.php:216"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-newsignupcontroller-doctorsignup",
+      "label": "NewSignUpController@doctorSignUp",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:24"
+    },
+    {
+      "id": "rt-get-getcurrencytype",
+      "label": "GET getCurrencyType",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:760"
+    },
+    {
+      "id": "rt-get-getsalutationtypes",
+      "label": "GET getSalutationTypes",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:759"
+    },
+    {
+      "id": "rt-post-getcurrencytype",
+      "label": "POST getCurrencyType",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:760"
+    },
+    {
+      "id": "rt-post-getsalutationtypes",
+      "label": "POST getSalutationTypes",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:759"
+    },
+    {
+      "id": "ctl-signupcontroller-getcurrencytype",
+      "label": "SignUpController@getCurrencyType",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1124"
+    },
+    {
+      "id": "ctl-signupcontroller-salutationtypes",
+      "label": "SignUpController@salutationTypes",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1347"
+    },
+    {
+      "id": "tbl-currency-type",
+      "label": "currency_type",
+      "type": "db",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1124"
+    },
+    {
+      "id": "tbl-salutation-types",
+      "label": "salutation_types",
+      "type": "db",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1347"
+    }
+  ],
+  "edges": [
+    {
+      "from": "scr-signupscreen",
+      "to": "cli-nadi-tarangini-app-fetchsalutationtypes",
+      "label": "uses fetchSalutationTypes",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:812"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-fetchsalutationtypes",
+      "to": "rt-post-getsalutationtypes",
+      "label": "POST /getSalutationTypes",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:812"
+    },
+    {
+      "from": "scr-admin-create-user",
+      "to": "cli-nadi-tarangini-frontend-admindashboardcontroller-createuser",
+      "label": "uses AdminDashboardController@createUser",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1200"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-admindashboardcontroller-createuser",
+      "to": "rt-post-getsalutationtypes",
+      "label": "POST /getSalutationTypes",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1200"
+    },
+    {
+      "from": "scr-add-self-admin",
+      "to": "cli-nadi-tarangini-frontend-dashboardcontroller-addselfadmin",
+      "label": "uses DashboardController@addSelfAdmin",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1283"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-dashboardcontroller-addselfadmin",
+      "to": "rt-post-getsalutationtypes",
+      "label": "POST /getSalutationTypes",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1283"
+    },
+    {
+      "from": "scr-my-account-update-kyc",
+      "to": "cli-nadi-tarangini-frontend-dashboardcontroller-updatekycdetails",
+      "label": "uses DashboardController@updateKycDetails",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:684"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-dashboardcontroller-updatekycdetails",
+      "to": "rt-post-getsalutationtypes",
+      "label": "POST /getSalutationTypes",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:684"
+    },
+    {
+      "from": "scr-my-account-myaccount",
+      "to": "cli-nadi-tarangini-frontend-editdoctordetailscontroller-editdoctordetails",
+      "label": "uses EditDoctorDetailsController@editDoctorDetails",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/EditDoctorDetailsController.php:22"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-editdoctordetailscontroller-editdoctordetails",
+      "to": "rt-post-getsalutationtypes",
+      "label": "POST /getSalutationTypes",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/EditDoctorDetailsController.php:22"
+    },
+    {
+      "from": "scr-my-account-edit-profile",
+      "to": "cli-nadi-tarangini-frontend-editdoctordetailscontroller-editdoctorprofile",
+      "label": "uses EditDoctorDetailsController@editDoctorProfile",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/EditDoctorDetailsController.php:216"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-editdoctordetailscontroller-editdoctorprofile",
+      "to": "rt-post-getsalutationtypes",
+      "label": "POST /getSalutationTypes",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/EditDoctorDetailsController.php:216"
+    },
+    {
+      "from": "scr-auth-signup",
+      "to": "cli-nadi-tarangini-frontend-newsignupcontroller-doctorsignup",
+      "label": "uses NewSignUpController@doctorSignUp",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:24"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-newsignupcontroller-doctorsignup",
+      "to": "rt-post-getsalutationtypes",
+      "label": "POST /getSalutationTypes",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:24"
+    },
+    {
+      "from": "scr-editdoctoraccount-kycscreen",
+      "to": "cli-nadi-tarangini-app-fetchcurrencytype",
+      "label": "uses fetchCurrencyType",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1709"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-fetchcurrencytype",
+      "to": "rt-post-getcurrencytype",
+      "label": "POST /getCurrencyType",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1709"
+    },
+    {
+      "from": "rt-get-getsalutationtypes",
+      "to": "ctl-signupcontroller-salutationtypes",
+      "label": "SignUpController@salutationTypes",
+      "source": "Ashoka-World-Backend:routes/api.php:759"
+    },
+    {
+      "from": "rt-post-getsalutationtypes",
+      "to": "ctl-signupcontroller-salutationtypes",
+      "label": "SignUpController@salutationTypes",
+      "source": "Ashoka-World-Backend:routes/api.php:759"
+    },
+    {
+      "from": "ctl-signupcontroller-salutationtypes",
+      "to": "tbl-salutation-types",
+      "label": "uses salutation_types",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1347"
+    },
+    {
+      "from": "ctl-signupcontroller-salutationtypes",
+      "to": "cli-nadi-tarangini-app-fetchsalutationtypes",
+      "label": "response 500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1373"
+    },
+    {
+      "from": "rt-get-getcurrencytype",
+      "to": "ctl-signupcontroller-getcurrencytype",
+      "label": "SignUpController@getCurrencyType",
+      "source": "Ashoka-World-Backend:routes/api.php:760"
+    },
+    {
+      "from": "rt-post-getcurrencytype",
+      "to": "ctl-signupcontroller-getcurrencytype",
+      "label": "SignUpController@getCurrencyType",
+      "source": "Ashoka-World-Backend:routes/api.php:760"
+    },
+    {
+      "from": "ctl-signupcontroller-getcurrencytype",
+      "to": "tbl-currency-type",
+      "label": "uses currency_type",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1124"
+    },
+    {
+      "from": "ctl-signupcontroller-getcurrencytype",
+      "to": "cli-nadi-tarangini-app-fetchcurrencytype",
+      "label": "response 500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1151"
+    }
+  ]
+}

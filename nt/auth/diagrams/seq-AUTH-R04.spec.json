@@ -1,0 +1,194 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "routes": "POST loginOtpBasedUser",
+    "name": "seq-AUTH-R04",
+    "title": "AUTH-R04: Create the session after a login or an account switch"
+  },
+  "kind": "sequence",
+  "name": "seq-AUTH-R04",
+  "title": "AUTH-R04: Create the session after a login or an account switch",
+  "nodes": [
+    {
+      "id": "scr-admin-admin-dashboard-admin-all-report-view-admin-create-user-admin-data-management-admin-edit-profile-admin-payment-invoices-admin-update-password-admin-user-and-teams-admin-user-patient-list-admin-user-permissions-admin-user-previous-visits-admin-visit-report-view-customize-add-question-customize-add-question-v2-customize-customize-questionnaire-customize-customize-report-customize-user-wise-customize-questionnaire-customize-user-wise-customize-report",
+      "label": "18 screens",
+      "sub": "admin.admin_dashboard, admin.all_report_view, admin.create_user, admin.data_management, admin.edit_profile, admin.payment_invoices, admin.update_password, admin.user_and_teams, admin.user_patient_list, admin.user_permissions, admin.user_previous_visits, admin.visit_report_view, customize.add_question, customize.add_question_v2, customize.customize_questionnaire, customize.customize_report, customize.user_wise_customize_questionnaire, customize.user_wise_customize_report",
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:189; Nadi-Tarangini-Frontend:resources/views/admin/admin_dashboard.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/all_report_view.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/create_user.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/data_management.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/edit_profile.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/payment_invoices.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/update_password.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/user_and_teams.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/user_patient_list.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/user_permissions.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/user_previous_visits.blade.php; Nadi-Tarangini-Frontend:resources/views/admin/visit_report_view.blade.php; Nadi-Tarangini-Frontend:resources/views/customize/add_question.blade.php; Nadi-Tarangini-Frontend:resources/views/customize/add_question_v2.blade.php; Nadi-Tarangini-Frontend:resources/views/customize/customize_questionnaire.blade.php; Nadi-Tarangini-Frontend:resources/views/customize/customize_report.blade.php; Nadi-Tarangini-Frontend:resources/views/customize/user_wise_customize_questionnaire.blade.php; Nadi-Tarangini-Frontend:resources/views/customize/user_wise_customize_report.blade.php"
+    },
+    {
+      "id": "scr-auth-login",
+      "label": "auth.login",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/login.js:302; Nadi-Tarangini-Frontend:resources/views/auth/login.blade.php"
+    },
+    {
+      "id": "scr-loginwithotpscreen-loginwithusernamescreen-splashscreen",
+      "label": "3 screens",
+      "sub": "LoginWithOtpScreen, LoginWithUsernameScreen, SplashScreen",
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart; Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart; Nadi-Tarangini-App:lib/splash_screen.dart"
+    },
+    {
+      "id": "scr-my-account-update-kyc",
+      "label": "my_account.update_kyc",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/my_account/update_kyc.blade.php"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-loginotpbaseduser",
+      "label": "loginOtpBasedUser",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:431"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-dashboardcontroller-switchtoadmin",
+      "label": "DashboardController@switchToAdmin",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1374"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-dashboardcontroller-switchtodoctor",
+      "label": "DashboardController@switchToDoctor",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1404"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-dashboardcontroller-updatekycdetails",
+      "label": "DashboardController@updateKycDetails",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:667"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-logincontroller-checklogincredentials",
+      "label": "loginController@checkLoginCredentials",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:79"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-logincontroller-getuserdetailsotpbasedlogin",
+      "label": "loginController@getUserDetailsOtpBasedLogin",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:446"
+    },
+    {
+      "id": "rt-post-loginotpbaseduser",
+      "label": "POST loginOtpBasedUser",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:739"
+    },
+    {
+      "id": "ctl-authcontroller-loginotpbaseduser",
+      "label": "AuthController@loginOtpBasedUser",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:795"
+    },
+    {
+      "id": "tbl-grp-authcontroller-loginotpbaseduser",
+      "label": "7 tables",
+      "sub": "api_endpoints, corporate_info, pg_device_mapping, subscriptions, transactions, user_nadi_capture_type, user_personal_info",
+      "type": "db",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:795"
+    }
+  ],
+  "edges": [
+    {
+      "from": "scr-loginwithotpscreen-loginwithusernamescreen-splashscreen",
+      "to": "cli-nadi-tarangini-app-loginotpbaseduser",
+      "label": "uses loginOtpBasedUser",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:431"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-loginotpbaseduser",
+      "to": "rt-post-loginotpbaseduser",
+      "label": "POST /loginOtpBasedUser",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:431"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-dashboardcontroller-switchtoadmin",
+      "to": "rt-post-loginotpbaseduser",
+      "label": "POST /loginOtpBasedUser",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1374"
+    },
+    {
+      "from": "scr-admin-admin-dashboard-admin-all-report-view-admin-create-user-admin-data-management-admin-edit-profile-admin-payment-invoices-admin-update-password-admin-user-and-teams-admin-user-patient-list-admin-user-permissions-admin-user-previous-visits-admin-visit-report-view-customize-add-question-customize-add-question-v2-customize-customize-questionnaire-customize-customize-report-customize-user-wise-customize-questionnaire-customize-user-wise-customize-report",
+      "to": "cli-nadi-tarangini-frontend-dashboardcontroller-switchtodoctor",
+      "label": "uses DashboardController@switchToDoctor",
+      "source": "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:189"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-dashboardcontroller-switchtodoctor",
+      "to": "rt-post-loginotpbaseduser",
+      "label": "POST /loginOtpBasedUser",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1404"
+    },
+    {
+      "from": "scr-my-account-update-kyc",
+      "to": "cli-nadi-tarangini-frontend-dashboardcontroller-updatekycdetails",
+      "label": "uses DashboardController@updateKycDetails",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:667"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-dashboardcontroller-updatekycdetails",
+      "to": "rt-post-loginotpbaseduser",
+      "label": "POST /loginOtpBasedUser",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:667"
+    },
+    {
+      "from": "scr-auth-login",
+      "to": "cli-nadi-tarangini-frontend-logincontroller-checklogincredentials",
+      "label": "uses loginController@checkLoginCredentials",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/login.js:302"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-logincontroller-checklogincredentials",
+      "to": "rt-post-loginotpbaseduser",
+      "label": "POST /loginOtpBasedUser",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:79"
+    },
+    {
+      "from": "scr-auth-login",
+      "to": "cli-nadi-tarangini-frontend-logincontroller-getuserdetailsotpbasedlogin",
+      "label": "uses loginController@getUserDetailsOtpBasedLogin",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/login.js:1052"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-logincontroller-getuserdetailsotpbasedlogin",
+      "to": "rt-post-loginotpbaseduser",
+      "label": "POST /loginOtpBasedUser",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:446"
+    },
+    {
+      "from": "rt-post-loginotpbaseduser",
+      "to": "ctl-authcontroller-loginotpbaseduser",
+      "label": "AuthController@loginOtpBasedUser",
+      "source": "Ashoka-World-Backend:routes/api.php:739"
+    },
+    {
+      "from": "ctl-authcontroller-loginotpbaseduser",
+      "to": "tbl-grp-authcontroller-loginotpbaseduser",
+      "label": "uses 7 tables",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:795"
+    },
+    {
+      "from": "ctl-authcontroller-loginotpbaseduser",
+      "to": "cli-nadi-tarangini-app-loginotpbaseduser",
+      "label": "response 401/500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:806"
+    }
+  ]
+}

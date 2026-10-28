@@ -1,0 +1,13 @@
+{
+  "repo": "Nadi-Tarangini-App",
+  "commit": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+  "counts": {
+    "models": 0,
+    "tables": 0,
+    "tables_with_migration": 0,
+    "tables_without_migration": 0,
+    "inferred_table_names": 0
+  },
+  "models": [],
+  "tables": []
+}

@@ -1,0 +1,177 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "routes": "POST otp/send-email-otp,POST otp/verify-email-otp",
+    "name": "seq-AUTH-R03",
+    "title": "AUTH-R03: Request and verify a login OTP by email"
+  },
+  "kind": "sequence",
+  "name": "seq-AUTH-R03",
+  "title": "AUTH-R03: Request and verify a login OTP by email",
+  "nodes": [
+    {
+      "id": "scr-auth-login",
+      "label": "auth.login",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/login.js:581; Nadi-Tarangini-Frontend:public/js/auth/login.js:708; Nadi-Tarangini-Frontend:resources/views/auth/login.blade.php"
+    },
+    {
+      "id": "scr-loginwithotpscreen",
+      "label": "LoginWithOtpScreen",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-sendemailotp",
+      "label": "sendEmailOtp",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:481"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-verifyemailotp",
+      "label": "verifyEmailOtp",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:494"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-logincontroller-sendemailloginotp",
+      "label": "loginController@sendEmailLoginOtp",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:684"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-logincontroller-verifyemailloginotp",
+      "label": "loginController@verifyEmailLoginOtp",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:696"
+    },
+    {
+      "id": "rt-post-otp-send-email-otp",
+      "label": "POST otp/send-email-otp",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:790"
+    },
+    {
+      "id": "rt-post-otp-verify-email-otp",
+      "label": "POST otp/verify-email-otp",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:791"
+    },
+    {
+      "id": "ctl-otpsmscontroller-sendemailotp",
+      "label": "OtpSmsController@sendEmailOtp",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:351"
+    },
+    {
+      "id": "ctl-otpsmscontroller-verifyemailotp",
+      "label": "OtpSmsController@verifyEmailOtp",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:424"
+    },
+    {
+      "id": "tbl-user-personal-info",
+      "label": "user_personal_info",
+      "type": "db",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:351"
+    }
+  ],
+  "edges": [
+    {
+      "from": "scr-loginwithotpscreen",
+      "to": "cli-nadi-tarangini-app-sendemailotp",
+      "label": "uses sendEmailOtp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:481"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-sendemailotp",
+      "to": "rt-post-otp-send-email-otp",
+      "label": "POST /otp/send-email-otp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:481"
+    },
+    {
+      "from": "scr-auth-login",
+      "to": "cli-nadi-tarangini-frontend-logincontroller-sendemailloginotp",
+      "label": "uses loginController@sendEmailLoginOtp",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/login.js:581; Nadi-Tarangini-Frontend:public/js/auth/login.js:708"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-logincontroller-sendemailloginotp",
+      "to": "rt-post-otp-send-email-otp",
+      "label": "POST /otp/send-email-otp",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:684"
+    },
+    {
+      "from": "scr-loginwithotpscreen",
+      "to": "cli-nadi-tarangini-app-verifyemailotp",
+      "label": "uses verifyEmailOtp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:494"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-verifyemailotp",
+      "to": "rt-post-otp-verify-email-otp",
+      "label": "POST /otp/verify-email-otp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:494"
+    },
+    {
+      "from": "scr-auth-login",
+      "to": "cli-nadi-tarangini-frontend-logincontroller-verifyemailloginotp",
+      "label": "uses loginController@verifyEmailLoginOtp",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/login.js:812"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-logincontroller-verifyemailloginotp",
+      "to": "rt-post-otp-verify-email-otp",
+      "label": "POST /otp/verify-email-otp",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:696"
+    },
+    {
+      "from": "rt-post-otp-send-email-otp",
+      "to": "ctl-otpsmscontroller-sendemailotp",
+      "label": "OtpSmsController@sendEmailOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:790"
+    },
+    {
+      "from": "ctl-otpsmscontroller-sendemailotp",
+      "to": "tbl-user-personal-info",
+      "label": "uses user_personal_info",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:351"
+    },
+    {
+      "from": "ctl-otpsmscontroller-sendemailotp",
+      "to": "cli-nadi-tarangini-app-sendemailotp",
+      "label": "response 200/400/500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:359"
+    },
+    {
+      "from": "rt-post-otp-verify-email-otp",
+      "to": "ctl-otpsmscontroller-verifyemailotp",
+      "label": "OtpSmsController@verifyEmailOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:791"
+    },
+    {
+      "from": "ctl-otpsmscontroller-verifyemailotp",
+      "to": "tbl-user-personal-info",
+      "label": "uses user_personal_info",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:424"
+    },
+    {
+      "from": "ctl-otpsmscontroller-verifyemailotp",
+      "to": "cli-nadi-tarangini-app-verifyemailotp",
+      "label": "response 200/400",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:433"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "routes": "POST forgotPassword",
+    "name": "seq-AUTH-R05",
+    "title": "AUTH-R05: Recover a forgotten password"
+  },
+  "kind": "sequence",
+  "name": "seq-AUTH-R05",
+  "title": "AUTH-R05: Recover a forgotten password",
+  "nodes": [
+    {
+      "id": "scr-auth-forgot-password",
+      "label": "auth.forgot_password",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/forgotpassword.js:87; Nadi-Tarangini-Frontend:resources/views/auth/forgot_password.blade.php"
+    },
+    {
+      "id": "scr-forgotpasswordscreen",
+      "label": "ForgotPasswordScreen",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/forgot_password_screen.dart"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-forgotpassword",
+      "label": "forgotPassword",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:718"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-forgotpasswordcontroller-checkforgotpassword",
+      "label": "forgotPasswordController@checkForgotPassword",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/forgotPasswordController.php:51"
+    },
+    {
+      "id": "rt-post-forgotpassword",
+      "label": "POST forgotPassword",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:777"
+    },
+    {
+      "id": "ctl-authcontroller-getforgotpassword",
+      "label": "AuthController@getForgotPassword",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1646"
+    },
+    {
+      "id": "tbl-user-personal-info",
+      "label": "user_personal_info",
+      "type": "db",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1646"
+    }
+  ],
+  "edges": [
+    {
+      "from": "scr-forgotpasswordscreen",
+      "to": "cli-nadi-tarangini-app-forgotpassword",
+      "label": "uses forgotPassword",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:718"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-forgotpassword",
+      "to": "rt-post-forgotpassword",
+      "label": "POST /forgotPassword",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:718"
+    },
+    {
+      "from": "scr-auth-forgot-password",
+      "to": "cli-nadi-tarangini-frontend-forgotpasswordcontroller-checkforgotpassword",
+      "label": "uses forgotPasswordController@checkForgotPassword",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/forgotpassword.js:87"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-forgotpasswordcontroller-checkforgotpassword",
+      "to": "rt-post-forgotpassword",
+      "label": "POST /forgotPassword",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/forgotPasswordController.php:51"
+    },
+    {
+      "from": "rt-post-forgotpassword",
+      "to": "ctl-authcontroller-getforgotpassword",
+      "label": "AuthController@getForgotPassword",
+      "source": "Ashoka-World-Backend:routes/api.php:777"
+    },
+    {
+      "from": "ctl-authcontroller-getforgotpassword",
+      "to": "tbl-user-personal-info",
+      "label": "uses user_personal_info",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1646"
+    },
+    {
+      "from": "ctl-authcontroller-getforgotpassword",
+      "to": "cli-nadi-tarangini-app-forgotpassword",
+      "label": "response 404/422/500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1679"
+    }
+  ]
+}

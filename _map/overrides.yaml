@@ -1,0 +1,12 @@
+# overrides.yaml: manual fixes for links the scripts cannot resolve.
+# Human-owned: scripts/link-apis.sh reads it on every run and never changes it.
+# One entry per call site; "source" exactly as listed under "Calls with no page"
+# or "Unresolved" in _map/<client>/api-links.md. Example:
+#   - client: "Nadi-Tarangini-Frontend"
+#     source: "public/js/common.js:120"   # JS call site, PHP call or Dart call
+#     pages:                                # page / screen ids that trigger it
+#       - "auth.login"
+#     path: "/verify-login-otp"             # optional: URL of an unresolved JS call
+#     method: "POST"                        # optional, with path
+#     note: "who checked it, and how"
+links: []

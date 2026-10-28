@@ -1,0 +1,109 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "routes": "POST v2/loginValidation",
+    "name": "seq-AUTH-R01",
+    "title": "AUTH-R01: Log in with username and password"
+  },
+  "kind": "sequence",
+  "name": "seq-AUTH-R01",
+  "title": "AUTH-R01: Log in with username and password",
+  "nodes": [
+    {
+      "id": "scr-auth-login",
+      "label": "auth.login",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/login.js:302; Nadi-Tarangini-Frontend:resources/views/auth/login.blade.php"
+    },
+    {
+      "id": "scr-loginwithusernamescreen",
+      "label": "LoginWithUsernameScreen",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-loginuser",
+      "label": "loginUser",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:357"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-logincontroller-checklogincredentials",
+      "label": "loginController@checkLoginCredentials",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:63"
+    },
+    {
+      "id": "rt-post-v2-loginvalidation",
+      "label": "POST v2/loginValidation",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:1639"
+    },
+    {
+      "id": "ctl-authcontroller-loginvalidation",
+      "label": "AuthController@loginValidation",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:406"
+    },
+    {
+      "id": "tbl-user-personal-info",
+      "label": "user_personal_info",
+      "type": "db",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:406"
+    }
+  ],
+  "edges": [
+    {
+      "from": "scr-loginwithusernamescreen",
+      "to": "cli-nadi-tarangini-app-loginuser",
+      "label": "uses loginUser",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:357"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-loginuser",
+      "to": "rt-post-v2-loginvalidation",
+      "label": "POST /v2/loginValidation",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:357"
+    },
+    {
+      "from": "scr-auth-login",
+      "to": "cli-nadi-tarangini-frontend-logincontroller-checklogincredentials",
+      "label": "uses loginController@checkLoginCredentials",
+      "source": "Nadi-Tarangini-Frontend:public/js/auth/login.js:302"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-logincontroller-checklogincredentials",
+      "to": "rt-post-v2-loginvalidation",
+      "label": "POST /v2/loginValidation",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:63"
+    },
+    {
+      "from": "rt-post-v2-loginvalidation",
+      "to": "ctl-authcontroller-loginvalidation",
+      "label": "AuthController@loginValidation",
+      "source": "Ashoka-World-Backend:routes/api.php:1639"
+    },
+    {
+      "from": "ctl-authcontroller-loginvalidation",
+      "to": "tbl-user-personal-info",
+      "label": "uses user_personal_info",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:406"
+    },
+    {
+      "from": "ctl-authcontroller-loginvalidation",
+      "to": "cli-nadi-tarangini-app-loginuser",
+      "label": "response 400/401/500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:429"
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+{
+  "repo": "Nadi-Tarangini-Frontend",
+  "commit": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d",
+  "note": "file and line numbers only; matched text is never stored",
+  "systems": [
+    {
+      "system": "AWS Lambda / API Gateway",
+      "matches": 14,
+      "files": [
+        {
+          "file": "app/Http/Controllers/NtChatbotProxyController.php",
+          "lines": [
+            14,
+            15,
+            18,
+            19
+          ]
+        },
+        {
+          "file": "config/services.php",
+          "lines": [
+            46,
+            47,
+            48,
+            49
+          ]
+        },
+        {
+          "file": "resources/views/research_dashboard/nadi_analysis_1.blade.php",
+          "lines": [
+            573,
+            726,
+            1039,
+            1224,
+            1225
+          ]
+        },
+        {
+          "file": "resources/views/research_dashboard/researchTestDiet.blade.php",
+          "lines": [
+            1521
+          ]
+        }
+      ]
+    },
+    {
+      "system": "ENACH",
+      "matches": 5,
+      "files": [
+        {
+          "file": "public/json/country-wise-state.json",
+          "lines": [
+            34284,
+            162190,
+            167672,
+            465110,
+            465114
+          ]
+        }
+      ]
+    },
+    {
+      "system": "Firebase",
+      "matches": 18,
+      "files": [
+        {
+          "file": "public/firebase-messaging-sw.js",
+          "lines": [
+            1,
+            2,
+            4,
+            6,
+            12
+          ]
+        },
+        {
+          "file": "resources/views/layouts/main_layout.blade.php",
+          "lines": [
+            110,
+            111,
+            113,
+            114,
+            116,
+            117,
+            118,
+            119,
+            120,
+            123,
+            125,
+            130,
+            132
+          ]
+        }
+      ]
+    },
+    {
+      "system": "Razorpay",
+      "matches": 51,
+      "files": [
+        {
+          "file": "app/Http/Controllers/AdminDashboardController.php",
+          "lines": [
+            1728,
+            1729,
+            1730
+          ]
+        },
+        {
+          "file": "app/Http/Middleware/VerifyCsrfToken.php",
+          "lines": [
+            16
+          ]
+        },
+        {
+          "file": "composer.json",
+          "lines": [
+            15
+          ]
+        },
+        {
+          "file": "config/services.php",
+          "lines": [
+            33,
+            34,
+            35
+          ]
+        },
+        {
+          "file": "resources/views/admin/plan_details.blade.php",
+          "lines": [
+            546,
+            1002,
+            1011,
+            1013,
+            1060,
+            1061,
+            1062,
+            1092
+          ]
+        },
+        {
+          "file": "resources/views/my_account/billing_details.blade.php",
+          "lines": [
+            191,
+            193,
+            198,
+            199,
+            209,
+            215,
+            225,
+            258
+          ]
+        },
+        {
+          "file": "resources/views/payments/samvit_checkout.blade.php",
+          "lines": [
+            296,
+            299,
+            300,
+            302,
+            303,
+            304,
+            321,
+            333,
+            336,
+            341,
+            356,
+            357,
+            358,
+            360,
+            364,
+            369,
+            376
+          ]
+        },
+        {
+          "file": "resources/views/subscription/checkout.blade.php",
+          "lines": [
+            203,
+            205,
+            213,
+            214,
+            233,
+            253,
+            277,
+            356
+          ]
+        },
+        {
+          "file": "routes/api.php",
+          "lines": [
+            22,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "system": "S3",
+      "matches": 91,
+      "files": [
+        {
+          "file": "app/Http/Controllers/Corporate/PatientDashboardManagementController.php",
+          "lines": [
+            67,
+            73,
+            78,
+            83,
+            88,
+            98,
+            104,
+            109,
+            114,
+            119,
+            129,
+            135,
+            140,
+            145,
+            150,
+            160,
+            166,
+            171,
+            176,
+            181,
+            191,
+            197,
+            202,
+            207,
+            212,
+            222,
+            228,
+            233,
+            238,
+            243,
+            253,
+            259,
+            264,
+            269,
+            274,
+            284,
+            290,
+            295,
+            300,
+            305,
+            315,
+            321,
+            326,
+            331,
+            336,
+            346,
+            352,
+            357,
+            362,
+            367,
+            377,
+            383,
+            388,
+            393,
+            398,
+            408,
+            414,
+            419,
+            424,
+            429,
+            439,
+            445,
+            450,
+            455,
+            460,
+            470,
+            476,
+            481,
+            486,
+            491
+          ]
+        },
+        {
+          "file": "app/Http/Controllers/HelpController.php",
+          "lines": [
+            205,
+            213
+          ]
+        },
+        {
+          "file": "app/Http/Controllers/LiveNadiController.php",
+          "lines": [
+            842,
+            843
+          ]
+        },
+        {
+          "file": "app/Services/samplelang.json",
+          "lines": [
+            2
+          ]
+        },
+        {
+          "file": "config/translation.php",
+          "lines": [
+            6,
+            13
+          ]
+        },
+        {
+          "file": "docs/s3-translation-flow.md",
+          "lines": [
+            142
+          ]
+        },
+        {
+          "file": "resources/views/live_nadi/medical_assessment.blade.php",
+          "lines": [
+            167
+          ]
+        },
+        {
+          "file": "resources/views/live_nadi/modal/diet/diet_recommendations.blade.php",
+          "lines": [
+            20
+          ]
+        },
+        {
+          "file": "resources/views/my_account/billing_details.blade.php",
+          "lines": [
+            146
+          ]
+        },
+        {
+          "file": "resources/views/patient-module/dashboard-content/tabs/diet.blade.php",
+          "lines": [
+            78,
+            83,
+            128,
+            133,
+            178,
+            183,
+            228,
+            233,
+            278,
+            283
+          ]
+        }
+      ]
+    },
+    {
+      "system": "Samvit Chakra",
+      "matches": 14,
+      "files": [
+        {
+          "file": "resources/views/payments/samvit_checkout.blade.php",
+          "lines": [
+            261,
+            316,
+            340,
+            348
+          ]
+        },
+        {
+          "file": "resources/views/payments/samvit_checkout_error.blade.php",
+          "lines": [
+            96,
+            97
+          ]
+        },
+        {
+          "file": "resources/views/subscription_plans.blade.php",
+          "lines": [
+            255
+          ]
+        },
+        {
+          "file": "routes/api.php",
+          "lines": [
+            5,
+            22,
+            23
+          ]
+        },
+        {
+          "file": "routes/web.php",
+          "lines": [
+            59,
+            812,
+            813,
+            814
+          ]
+        }
+      ]
+    }
+  ],
+  "other_hosts": [
+    {
+      "host": "atreyaproduction.s3.ap-south-1.amazonaws.com",
+      "count": 85
+    },
+    {
+      "host": "www.youtube.com",
+      "count": 25
+    },
+    {
+      "host": "atreyaproduction.s3.amazonaws.com",
+      "count": 6
+    },
+    {
+      "host": "atreyaproduction.s3.dualstack.ap-south-1.amazonaws.com",
+      "count": 6
+    },
+    {
+      "host": "ieeexplore.ieee.org",
+      "count": 6
+    },
+    {
+      "host": "jsperf.com",
+      "count": 6
+    },
+    {
+      "host": "source.unsplash.com",
+      "count": 6
+    },
+    {
+      "host": "bugs.webkit.org",
+      "count": 4
+    },
+    {
+      "host": "checkout.razorpay.com",
+      "count": 4
+    },
+    {
+      "host": "code.google.com",
+      "count": 4
+    },
+    {
+      "host": "datatables.net",
+      "count": 4
+    },
+    {
+      "host": "ipinfo.io",
+      "count": 4
+    },
+    {
+      "host": "www.datatables.net",
+      "count": 4
+    },
+    {
+      "host": "www.clarity.ms",
+      "count": 3
+    },
+    {
+      "host": "x464l4z7y534zvvbi5rmfuqu7y0pwflv.lambda-url.ap-south-1.on.aws",
+      "count": 3
+    },
+    {
+      "host": "5jtardbv5xei4eo52t6mwh7qha0ejexq.lambda-url.ap-south-1.on.aws",
+      "count": 2
+    },
+    {
+      "host": "b7vjbfa4mvyt7hbbhmyy6fycla0ndhmx.lambda-url.ap-south-1.on.aws",
+      "count": 2
+    },
+    {
+      "host": "cdn.plot.ly",
+      "count": 2
+    },
+    {
+      "host": "doi.org",
+      "count": 2
+    },
+    {
+      "host": "dtbzxzenubcagdgdoon7rk2kby0tzawd.lambda-url.ap-south-1.on.aws",
+      "count": 2
+    },
+    {
+      "host": "en.wikipedia.org",
+      "count": 2
+    },
+    {
+      "host": "flag-gimn.ru",
+      "count": 2
+    },
+    {
+      "host": "jsfiddle.net",
+      "count": 2
+    },
+    {
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "count": 2
+    },
+    {
+      "host": "qzkzqcfg7i2rw6mvq4wygq6rgm0rclfi.lambda-url.ap-south-1.on.aws",
+      "count": 2
+    },
+    {
+      "host": "semver.org",
+      "count": 2
+    },
+    {
+      "host": "www.amrita.edu",
+      "count": 2
+    },
+    {
+      "host": "www.chartjs.org",
+      "count": 2
+    },
+    {
+      "host": "www.google.com",
+      "count": 2
+    },
+    {
+      "host": "www.iamj.in",
+      "count": 2
+    },
+    {
+      "host": "www.karger.com",
+      "count": 2
+    },
+    {
+      "host": "www.robertpenner.com",
+      "count": 2
+    },
+    {
+      "host": "www.sprymedia.co.uk",
+      "count": 2
+    },
+    {
+      "host": "xqicwgldpwmx7hj6d5k6rmgzjq0mhnak.lambda-url.ap-south-1.on.aws",
+      "count": 2
+    },
+    {
+      "host": "632wkthwyabdeo6tqd3zqzz5dm0zjewz.lambda-url.ap-south-1.on.aws",
+      "count": 1
+    },
+    {
+      "host": "ajax.googleapis.com",
+      "count": 1
+    },
+    {
+      "host": "ayush.gov.in",
+      "count": 1
+    },
+    {
+      "host": "ccras.nic.in",
+      "count": 1
+    },
+    {
+      "host": "cdn.datatables.net",
+      "count": 1
+    },
+    {
+      "host": "cdn.who.int",
+      "count": 1
+    },
+    {
+      "host": "code.visualstudio.com",
+      "count": 1
+    },
+    {
+      "host": "ctri.nic.in",
+      "count": 1
+    },
+    {
+      "host": "feathericons.com",
+      "count": 1
+    },
+    {
+      "host": "getbootstrap.com",
+      "count": 1
+    },
+    {
+      "host": "git-scm.com",
+      "count": 1
+    },
+    {
+      "host": "icons.getbootstrap.com",
+      "count": 1
+    },
+    {
+      "host": "patents.google.com",
+      "count": 1
+    },
+    {
+      "host": "play.google.com",
+      "count": 1
+    },
+    {
+      "host": "samvitchakra.com",
+      "count": 1
+    },
+    {
+      "host": "sqs.us-east-1.amazonaws.com",
+      "count": 1
+    },
+    {
+      "host": "www.aiims.edu",
+      "count": 1
+    },
+    {
+      "host": "www.consort-statement.org",
+      "count": 1
+    },
+    {
+      "host": "www.docker.com",
+      "count": 1
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "count": 1
+    },
+    {
+      "host": "www.researchgate.net",
+      "count": 1
+    },
+    {
+      "host": "youtu.be",
+      "count": 1
+    }
+  ]
+}

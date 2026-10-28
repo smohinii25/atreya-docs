@@ -1,0 +1,1162 @@
+{
+  "repo": "Nadi-Tarangini-Frontend",
+  "commit": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d",
+  "kind": "laravel",
+  "closures_and_unresolved": [
+    "GET /",
+    "GET api/user",
+    "GET set-language/{lang}"
+  ],
+  "controllers": [
+    {
+      "controller": "ResearchDashboardController",
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboardController",
+      "file": "app/Http/Controllers/ResearchDashboardController.php",
+      "routes": 69,
+      "uri_prefixes": [
+        "add-aniruddha-rule (1)",
+        "add-rule (1)",
+        "checkResearchLogin (1)",
+        "delete-rule (1)",
+        "edit-aniruddha-rule (1)",
+        "edit-rule (1)",
+        "research-diet (1)",
+        "researchDashboard (46)",
+        "researchDashboard/delete-aniruddha-rule (1)",
+        "researchDashboard/delete-rule (1)",
+        "researchDashboard/deleteCommonJson (1)",
+        "researchDashboard/deleteDayName (1)",
+        "researchDashboard/deleteExerciseCategory (1)",
+        "researchDashboard/deleteExerciseTag (1)",
+        "researchDashboard/deleteMealCategory (1)",
+        "researchDashboard/deleteMusicLibraryData (1)",
+        "researchDashboard/deleteMusicTag (1)",
+        "researchDashboard/deleteRecipeCategory (1)",
+        "researchDashboard/deleteRecipePreference (1)",
+        "researchDashboard/deleteRecipeTag (1)",
+        "researchDashboard/deleteStateName (1)",
+        "researchDashboard/deleteYogaCategory (1)",
+        "researchDashboard/deleteYogaJson (1)",
+        "researchLogin (1)"
+      ],
+      "middleware": [
+        "check_research_auth_token"
+      ],
+      "models": [],
+      "views": [
+        "researchDashboardPages",
+        "research_dashboard"
+      ]
+    },
+    {
+      "controller": "AdminDashboardController",
+      "fqcn": "App\\Http\\Controllers\\AdminDashboardController",
+      "file": "app/Http/Controllers/AdminDashboardController.php",
+      "routes": 31,
+      "uri_prefixes": [
+        "admin (19)",
+        "admin/data-management (1)",
+        "admin/edit-profile (1)",
+        "admin/patient-list (5)",
+        "admin/payment-invoices (1)",
+        "admin/permissions (1)",
+        "admin/report (2)",
+        "admin/update-password (1)"
+      ],
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "models": [],
+      "views": [
+        "admin"
+      ]
+    },
+    {
+      "controller": "DashboardController",
+      "fqcn": "App\\Http\\Controllers\\DashboardController",
+      "file": "app/Http/Controllers/DashboardController.php",
+      "routes": 30,
+      "uri_prefixes": [
+        "add-self-admin (2)",
+        "admin (1)",
+        "api (1)",
+        "api/welcome-tour (1)",
+        "checkout (1)",
+        "dashboard (1)",
+        "delete-account (1)",
+        "freeTrial (1)",
+        "get-all-clinic-list (1)",
+        "get-default-clinic-details (1)",
+        "get-languages-for-reports (1)",
+        "getPlanStatus (1)",
+        "getReleaseDetails (1)",
+        "getUserCurrentSummary (1)",
+        "getUserCustomizeSummary (1)",
+        "getWelcomeTourSteps (1)",
+        "invoice (1)",
+        "linked-device (1)",
+        "member-progress (1)",
+        "member-report (1)",
+        "queries (1)",
+        "savePaymentData (1)",
+        "subscription (1)",
+        "switchToAdmin (1)",
+        "update-report-language (1)",
+        "updateTourData (1)",
+        "update_kyc (1)",
+        "welcome-tour (2)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications",
+        "nt_admin_authentication"
+      ],
+      "models": [],
+      "views": [
+        "add_self_admin",
+        "doctor_dashboard",
+        "errors",
+        "my_account",
+        "subscription",
+        "subscription_plans"
+      ]
+    },
+    {
+      "controller": "AppointmentController",
+      "fqcn": "App\\Http\\Controllers\\AppointmentController",
+      "file": "app/Http/Controllers/AppointmentController.php",
+      "routes": 15,
+      "uri_prefixes": [
+        "add-appointment (1)",
+        "add-patient (1)",
+        "appointment-history (1)",
+        "appointment-list (1)",
+        "currentUserAccessibleUsersWithLocations (1)",
+        "deleteAppointment (1)",
+        "edit-appointment (1)",
+        "fetch-single-appointment (1)",
+        "getAccessUserWisePatientList (1)",
+        "saveNewPatientAppointment (1)",
+        "saveVisitedPatientAppointment (1)",
+        "store-appointment-id (1)",
+        "updateAppointment (1)",
+        "validateAppointment (1)",
+        "view-appointment (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "appointment"
+      ]
+    },
+    {
+      "controller": "HelpController",
+      "fqcn": "App\\Http\\Controllers\\HelpController",
+      "file": "app/Http/Controllers/HelpController.php",
+      "routes": 15,
+      "uri_prefixes": [
+        "help (1)",
+        "help-center (1)",
+        "nt-map (1)",
+        "research-dashboard (12)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "help",
+        "research_dashboard"
+      ]
+    },
+    {
+      "controller": "AdminCustomizeController",
+      "fqcn": "App\\Http\\Controllers\\AdminCustomizeController",
+      "file": "app/Http/Controllers/AdminCustomizeController.php",
+      "routes": 13,
+      "uri_prefixes": [
+        "admin (9)",
+        "admin/customize-report-user-wise (1)",
+        "admin/get-user-wise-category-wise-customize-questions (1)",
+        "admin/get-user-wise-customize-question (1)",
+        "admin/get-user-wise-report-pages (1)"
+      ],
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "models": [],
+      "views": [
+        "customize"
+      ]
+    },
+    {
+      "controller": "loginController",
+      "fqcn": "App\\Http\\Controllers\\loginController",
+      "file": "app/Http/Controllers/loginController.php",
+      "routes": 13,
+      "uri_prefixes": [
+        "checkLoginCredintial (1)",
+        "editFcmToken (1)",
+        "get-all-roles (1)",
+        "getUserDetailsOtpBasedLogin (1)",
+        "login (1)",
+        "logout (2)",
+        "nt-lite (2)",
+        "send-email-login-otp (1)",
+        "send-login-otp (1)",
+        "verify-email-login-otp (1)",
+        "verify-login-otp (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "auth"
+      ]
+    },
+    {
+      "controller": "PatientDashboardController",
+      "fqcn": "App\\Http\\Controllers\\PatientDashboardController",
+      "file": "app/Http/Controllers/PatientDashboardController.php",
+      "routes": 12,
+      "uri_prefixes": [
+        "patient (8)",
+        "patient/daily-diet-lifestyle (1)",
+        "patient/report (3)"
+      ],
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "models": [],
+      "views": [
+        "patient-module"
+      ]
+    },
+    {
+      "controller": "PatientListController",
+      "fqcn": "App\\Http\\Controllers\\PatientListController",
+      "file": "app/Http/Controllers/PatientListController.php",
+      "routes": 12,
+      "uri_prefixes": [
+        "callPatientList (1)",
+        "deletePatient (1)",
+        "getLastVisitInformation (1)",
+        "getLastVisitMandatoryQuesitons (1)",
+        "getLastVisitQuestions (1)",
+        "getMedicalId (1)",
+        "getMedicalIdntlite (1)",
+        "getPatient (1)",
+        "patientlist (1)",
+        "scheduledAppointments (1)",
+        "search-patients (1)",
+        "storePatient (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "patient"
+      ]
+    },
+    {
+      "controller": "MedicalAssessmentV3Controller",
+      "fqcn": "App\\Http\\Controllers\\MedicalAssessmentV3Controller",
+      "file": "app/Http/Controllers/MedicalAssessmentV3Controller.php",
+      "routes": 11,
+      "uri_prefixes": [
+        "medical-assessment-v3 (2)",
+        "medical-assessment-v3/diet (3)",
+        "medical-assessment-v3/yoga (2)",
+        "saveUsbNadiDataV3 (1)",
+        "updateCurrentNadiTaranginiDeviceV3 (1)",
+        "updateNadiCaptureTypeV3 (1)",
+        "updateSessionNadiCaptureType (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "errors",
+        "medical_assessment"
+      ]
+    },
+    {
+      "controller": "PrescriptionController",
+      "fqcn": "App\\Http\\Controllers\\PrescriptionController",
+      "file": "app/Http/Controllers/PrescriptionController.php",
+      "routes": 11,
+      "uri_prefixes": [
+        "addNewPrescriptionIngredient (1)",
+        "deleteMedicine (1)",
+        "editMedicine (1)",
+        "getMedicineNamesRespectToType (1)",
+        "prescription (1)",
+        "savePrescriptionData (1)",
+        "savePrescriptionDataV2 (1)",
+        "savePrescriptionDataV3 (1)",
+        "saveRecommendationData (1)",
+        "updatePrescriptionDataV2 (1)",
+        "updatePrescriptionDataV3 (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "errors"
+      ]
+    },
+    {
+      "controller": "DesignFormController",
+      "fqcn": "App\\Http\\Controllers\\DesignFormController",
+      "file": "app/Http/Controllers/DesignFormController.php",
+      "routes": 10,
+      "uri_prefixes": [
+        "design-form (10)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "design-form"
+      ]
+    },
+    {
+      "controller": "UnauthorizedController",
+      "fqcn": "App\\Http\\Controllers\\UnauthorizedController",
+      "file": "app/Http/Controllers/UnauthorizedController.php",
+      "routes": 10,
+      "uri_prefixes": [
+        "error (1)",
+        "error-400 (1)",
+        "error-401 (1)",
+        "error-403 (1)",
+        "error-404 (1)",
+        "error-500 (1)",
+        "error-503 (1)",
+        "error-504 (1)",
+        "region-restricted (1)",
+        "unauthorized (1)"
+      ],
+      "middleware": [],
+      "models": [],
+      "views": [
+        "errors"
+      ]
+    },
+    {
+      "controller": "NewSignUpController",
+      "fqcn": "App\\Http\\Controllers\\NewSignUpController",
+      "file": "app/Http/Controllers/NewSignUpController.php",
+      "routes": 9,
+      "uri_prefixes": [
+        "checkDoctorMobileNo (1)",
+        "checkDoctorUsername (1)",
+        "checkValidationsLinkDevice (1)",
+        "linkDeviceAfterValidation (1)",
+        "sign-up (1)",
+        "sign-up-admin (1)",
+        "sign-up-college (1)",
+        "signup (1)",
+        "updateSignUpDetails (1)"
+      ],
+      "middleware": [],
+      "models": [],
+      "views": [
+        "auth"
+      ]
+    },
+    {
+      "controller": "NtLiteDashboardController",
+      "fqcn": "App\\Http\\Controllers\\NtLiteDashboardController",
+      "file": "app/Http/Controllers/NtLiteDashboardController.php",
+      "routes": 9,
+      "uri_prefixes": [
+        "nt-lite (8)",
+        "nt-lite/previousVisits (1)"
+      ],
+      "middleware": [
+        "ensure_nt_lite_dashboard_mode",
+        "nt_lite_auth"
+      ],
+      "models": [],
+      "views": [
+        "auth"
+      ]
+    },
+    {
+      "controller": "ReceptionistController",
+      "fqcn": "App\\Http\\Controllers\\ReceptionistController",
+      "file": "app/Http/Controllers/ReceptionistController.php",
+      "routes": 9,
+      "uri_prefixes": [
+        "activeInactiveReception (1)",
+        "add-reception (1)",
+        "createReception (1)",
+        "deleteReceptionist (1)",
+        "edit-reception (1)",
+        "reception (1)",
+        "set-permission (1)",
+        "updatePermission (1)",
+        "updateReceptionist (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "receptionist"
+      ]
+    },
+    {
+      "controller": "ReportController",
+      "fqcn": "App\\Http\\Controllers\\ReportController",
+      "file": "app/Http/Controllers/ReportController.php",
+      "routes": 8,
+      "uri_prefixes": [
+        "arogya-darshika (1)",
+        "nt-report (1)",
+        "report (6)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "allReportView",
+        "visitReportView"
+      ]
+    },
+    {
+      "controller": "DietController",
+      "fqcn": "App\\Http\\Controllers\\DietController",
+      "file": "app/Http/Controllers/DietController.php",
+      "routes": 7,
+      "uri_prefixes": [
+        "diet (1)",
+        "diet-lifestyle (1)",
+        "getVikrutiWiseDiet (1)",
+        "saveDietAndLifestyle (1)",
+        "saveDietAndLifestyleNew (1)",
+        "saveFeesDataAfterDiet (1)",
+        "saveVirutiWiseDietAndLifestyle (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "errors"
+      ]
+    },
+    {
+      "controller": "MedicineController",
+      "fqcn": "App\\Http\\Controllers\\MedicineController",
+      "file": "app/Http/Controllers/MedicineController.php",
+      "routes": 7,
+      "uri_prefixes": [
+        "add-medicine (1)",
+        "deleteMedicineinventory (1)",
+        "edit-medicine (1)",
+        "edit-supplement (1)",
+        "getQuantity (1)",
+        "medicine (1)",
+        "updateMedicine (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "medical_inventory"
+      ]
+    },
+    {
+      "controller": "EditDoctorDetailsController",
+      "fqcn": "App\\Http\\Controllers\\EditDoctorDetailsController",
+      "file": "app/Http/Controllers/EditDoctorDetailsController.php",
+      "routes": 6,
+      "uri_prefixes": [
+        "edit-payment (1)",
+        "editprofile (1)",
+        "profile (1)",
+        "updateKycDetails (1)",
+        "updatePaymentDetails (1)",
+        "updatetDoctorDetails (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "my_account"
+      ]
+    },
+    {
+      "controller": "LiveNadiController",
+      "fqcn": "App\\Http\\Controllers\\LiveNadiController",
+      "file": "app/Http/Controllers/LiveNadiController.php",
+      "routes": 6,
+      "uri_prefixes": [
+        "getManualNadiQuestions (1)",
+        "medical-assessment (1)",
+        "saveDummyUsbNadiData (1)",
+        "saveUsbNadiData (1)",
+        "updateCurrentNadiTaranginiDevice (1)",
+        "updateNadiCaptureType (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "errors",
+        "live_nadi"
+      ]
+    },
+    {
+      "controller": "CompanyController",
+      "fqcn": "App\\Http\\Controllers\\CompanyController",
+      "file": "app/Http/Controllers/CompanyController.php",
+      "routes": 5,
+      "uri_prefixes": [
+        "addCompany (1)",
+        "company (1)",
+        "deleteCompany (1)",
+        "edit-company (1)",
+        "updateCompany (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "medical_inventory"
+      ]
+    },
+    {
+      "controller": "IngredientsController",
+      "fqcn": "App\\Http\\Controllers\\IngredientsController",
+      "file": "app/Http/Controllers/IngredientsController.php",
+      "routes": 5,
+      "uri_prefixes": [
+        "addIngredients (1)",
+        "deleteIngredient (1)",
+        "edit-ingredient (1)",
+        "ingredient (1)",
+        "updateIngredient (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "medical_inventory"
+      ]
+    },
+    {
+      "controller": "PudiController",
+      "fqcn": "App\\Http\\Controllers\\PudiController",
+      "file": "app/Http/Controllers/PudiController.php",
+      "routes": 5,
+      "uri_prefixes": [
+        "add-pudi (1)",
+        "deletePudi (1)",
+        "edit-pudi (1)",
+        "pudi (1)",
+        "update-pudi (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "medical_inventory"
+      ]
+    },
+    {
+      "controller": "VikrutiController",
+      "fqcn": "App\\Http\\Controllers\\VikrutiController",
+      "file": "app/Http/Controllers/VikrutiController.php",
+      "routes": 5,
+      "uri_prefixes": [
+        "getVikrutiData (1)",
+        "previousVisitsSymptomDetails (1)",
+        "saveCategoryWiseVikrutiData (1)",
+        "saveVikrutiDataV2 (1)",
+        "vikruti (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "errors"
+      ]
+    },
+    {
+      "controller": "FeeDetailsController",
+      "fqcn": "App\\Http\\Controllers\\FeeDetailsController",
+      "file": "app/Http/Controllers/FeeDetailsController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "fee-details (2)",
+        "saveFeesData (1)",
+        "saveFeesDataWithNA (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "errors"
+      ]
+    },
+    {
+      "controller": "InventoryController",
+      "fqcn": "App\\Http\\Controllers\\InventoryController",
+      "file": "app/Http/Controllers/InventoryController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "inventory (1)",
+        "medicineuploadfile (1)",
+        "supplementuploadfile (1)",
+        "uploadfile (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "medical_inventory"
+      ]
+    },
+    {
+      "controller": "NtLiteSignUpController",
+      "fqcn": "App\\Http\\Controllers\\NtLiteSignUpController",
+      "file": "app/Http/Controllers/NtLiteSignUpController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "nt-lite (4)"
+      ],
+      "middleware": [],
+      "models": [],
+      "views": [
+        "auth"
+      ]
+    },
+    {
+      "controller": "PrakrutiQuestionsController",
+      "fqcn": "App\\Http\\Controllers\\PrakrutiQuestionsController",
+      "file": "app/Http/Controllers/PrakrutiQuestionsController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "getPrakrutiData (1)",
+        "getPrakrutiDataForNewPatient (1)",
+        "prakruti (1)",
+        "savePrakrutiData (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "errors"
+      ]
+    },
+    {
+      "controller": "PreviousVisitsController",
+      "fqcn": "App\\Http\\Controllers\\PreviousVisitsController",
+      "file": "app/Http/Controllers/PreviousVisitsController.php",
+      "routes": 4,
+      "uri_prefixes": [
+        "deleteReport/{medicalId} (1)",
+        "previousVisits (1)",
+        "resumeVisit (1)",
+        "setCurrentVisitSession (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "patient"
+      ]
+    },
+    {
+      "controller": "AddMemberController",
+      "fqcn": "App\\Http\\Controllers\\AddMemberController",
+      "file": "app/Http/Controllers/AddMemberController.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "add-member (1)",
+        "saveAnonymousData (1)",
+        "saveMemberData (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "errors",
+        "patient"
+      ]
+    },
+    {
+      "controller": "ClinicListController",
+      "fqcn": "App\\Http\\Controllers\\ClinicListController",
+      "file": "app/Http/Controllers/ClinicListController.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "clinic (1)",
+        "deleteClinic (1)",
+        "storeClinic (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "my_account"
+      ]
+    },
+    {
+      "controller": "CustomizeController",
+      "fqcn": "App\\Http\\Controllers\\CustomizeController",
+      "file": "app/Http/Controllers/CustomizeController.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "admin (2)",
+        "customize (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications",
+        "nt_admin_authentication"
+      ],
+      "models": [],
+      "views": [
+        "customize"
+      ]
+    },
+    {
+      "controller": "MarkOnImageController",
+      "fqcn": "App\\Http\\Controllers\\MarkOnImageController",
+      "file": "app/Http/Controllers/MarkOnImageController.php",
+      "routes": 3,
+      "uri_prefixes": [
+        "fetchMarkOnImageData (1)",
+        "nadi-image (1)",
+        "saveMarkOnImageData (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "errors"
+      ]
+    },
+    {
+      "controller": "AddClinicDetailsController",
+      "fqcn": "App\\Http\\Controllers\\AddClinicDetailsController",
+      "file": "app/Http/Controllers/AddClinicDetailsController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "add-clinic (1)",
+        "saveClinicDetails (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "my_account"
+      ]
+    },
+    {
+      "controller": "AddressDetailsController",
+      "fqcn": "App\\Http\\Controllers\\AddressDetailsController",
+      "file": "app/Http/Controllers/AddressDetailsController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "address (2)"
+      ],
+      "middleware": [],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "ChangePasswordController",
+      "fqcn": "App\\Http\\Controllers\\ChangePasswordController",
+      "file": "app/Http/Controllers/ChangePasswordController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "change-password (1)",
+        "updatePassword (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "my_account"
+      ]
+    },
+    {
+      "controller": "EditClinicDetailsController",
+      "fqcn": "App\\Http\\Controllers\\EditClinicDetailsController",
+      "file": "app/Http/Controllers/EditClinicDetailsController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "edit-clinic (1)",
+        "updatedClinicDetails (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "my_account"
+      ]
+    },
+    {
+      "controller": "EditMemberController",
+      "fqcn": "App\\Http\\Controllers\\EditMemberController",
+      "file": "app/Http/Controllers/EditMemberController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "edit-member (1)",
+        "updatetMemberData (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "patient"
+      ]
+    },
+    {
+      "controller": "ExternalNadiController",
+      "fqcn": "App\\Http\\Controllers\\External\\ExternalNadiController",
+      "file": "app/Http/Controllers/External/ExternalNadiController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "analyzeExternalNadiData (1)",
+        "nt-capture (1)"
+      ],
+      "middleware": [],
+      "models": [],
+      "views": [
+        "external"
+      ]
+    },
+    {
+      "controller": "ManualNadiKeywordsController",
+      "fqcn": "App\\Http\\Controllers\\ManualNadiKeywordsController",
+      "file": "app/Http/Controllers/ManualNadiKeywordsController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "nadi-keywords (1)",
+        "saveKeywordsData (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "errors"
+      ]
+    },
+    {
+      "controller": "MedicineTypeController",
+      "fqcn": "App\\Http\\Controllers\\MedicineTypeController",
+      "file": "app/Http/Controllers/MedicineTypeController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "add-medicine-type (1)",
+        "medicine-type (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "medical_inventory"
+      ]
+    },
+    {
+      "controller": "NotificationController",
+      "fqcn": "App\\Http\\Controllers\\NotificationController",
+      "file": "app/Http/Controllers/NotificationController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "notification (1)",
+        "notifications (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "notifications"
+      ]
+    },
+    {
+      "controller": "OtpVerificationController",
+      "fqcn": "App\\Http\\Controllers\\OtpVerificationController",
+      "file": "app/Http/Controllers/OtpVerificationController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "send-verification-otp (1)",
+        "verify-verification-otp (1)"
+      ],
+      "middleware": [],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "PatientDashboardManagementController",
+      "fqcn": "App\\Http\\Controllers\\Corporate\\PatientDashboardManagementController",
+      "file": "app/Http/Controllers/Corporate/PatientDashboardManagementController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "corporate (2)"
+      ],
+      "middleware": [
+        "check_client_auth_token",
+        "corporate_patient_check_auth"
+      ],
+      "models": [],
+      "views": [
+        "corporate-patient-module"
+      ]
+    },
+    {
+      "controller": "PatientVisitController",
+      "fqcn": "App\\Http\\Controllers\\PatientVisitController",
+      "file": "app/Http/Controllers/PatientVisitController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "patient (1)",
+        "patient/deletePatientReport (1)"
+      ],
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "models": [],
+      "views": [
+        "patient-module"
+      ]
+    },
+    {
+      "controller": "forgotPasswordController",
+      "fqcn": "App\\Http\\Controllers\\forgotPasswordController",
+      "file": "app/Http/Controllers/forgotPasswordController.php",
+      "routes": 2,
+      "uri_prefixes": [
+        "checkForgotPassword (1)",
+        "forgotPassword (1)"
+      ],
+      "middleware": [],
+      "models": [],
+      "views": [
+        "auth"
+      ]
+    },
+    {
+      "controller": "DownloadRutucharyaController",
+      "fqcn": "App\\Http\\Controllers\\DownloadRutucharyaController",
+      "file": "app/Http/Controllers/DownloadRutucharyaController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "downloadRutucharya (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "rutucharya"
+      ]
+    },
+    {
+      "controller": "MarkClinicDefaultController",
+      "fqcn": "App\\Http\\Controllers\\MarkClinicDefaultController",
+      "file": "app/Http/Controllers/MarkClinicDefaultController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "makeDefaultClinic (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "NtChatbotProxyController",
+      "fqcn": "App\\Http\\Controllers\\NtChatbotProxyController",
+      "file": "app/Http/Controllers/NtChatbotProxyController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "nt-chatbot (1)"
+      ],
+      "middleware": [],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "NtLiteLiveNadiController",
+      "fqcn": "App\\Http\\Controllers\\NtLiteLiveNadiController",
+      "file": "app/Http/Controllers/NtLiteLiveNadiController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "nt-lite (1)"
+      ],
+      "middleware": [
+        "ensure_nt_lite_dashboard_mode",
+        "nt_lite_auth"
+      ],
+      "models": [],
+      "views": [
+        "auth"
+      ]
+    },
+    {
+      "controller": "RequestAppointmentController",
+      "fqcn": "App\\Http\\Controllers\\RequestAppointmentController",
+      "file": "app/Http/Controllers/RequestAppointmentController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "patient (1)"
+      ],
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "models": [],
+      "views": [
+        "patient-module"
+      ]
+    },
+    {
+      "controller": "ViewMemberController",
+      "fqcn": "App\\Http\\Controllers\\ViewMemberController",
+      "file": "app/Http/Controllers/ViewMemberController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "view-member (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": [
+        "patient"
+      ]
+    },
+    {
+      "controller": "WebErrorReportController",
+      "fqcn": "App\\Http\\Controllers\\WebErrorReportController",
+      "file": "app/Http/Controllers/WebErrorReportController.php",
+      "routes": 1,
+      "uri_prefixes": [
+        "web-error-report (1)"
+      ],
+      "middleware": [
+        "check_auth_token",
+        "ensure_normal_dashboard_mode",
+        "fetch_notifications"
+      ],
+      "models": [],
+      "views": []
+    },
+    {
+      "controller": "SignUpController",
+      "fqcn": "App\\Http\\Controllers\\SignUpController",
+      "file": "app/Http/Controllers/SignUpController.php",
+      "routes": 0,
+      "uri_prefixes": [],
+      "middleware": [],
+      "models": [],
+      "views": []
+    }
+  ]
+}

@@ -1,0 +1,4641 @@
+{
+  "module": {
+    "id": "auth",
+    "name": "Authentication & sign-up",
+    "product": "nt",
+    "critical": false,
+    "owner": "TBD",
+    "doc_status": "none",
+    "in_use": {
+      "dev": "TBD",
+      "staging": "TBD",
+      "production": "TBD"
+    }
+  },
+  "generated": "2026-10-27",
+  "backend": "Ashoka-World-Backend",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "backend_routes": [
+    {
+      "key": "POST checkMobileNumber",
+      "method": "POST",
+      "uri": "checkMobileNumber",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "CheckUserExistOrNotController@checkMobileNumberV2",
+      "source": "Ashoka-World-Backend:routes/api.php:763",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "NewSignUpController@checkDoctorMobileNo",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "NtLiteSignUpController@checkMobileNo",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Phone number is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:229"
+        },
+        {
+          "http": "400",
+          "message": "Phone number must be numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:236"
+        },
+        {
+          "http": "400",
+          "message": "Country code field is required if phone number is provided",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:243"
+        },
+        {
+          "http": "400",
+          "message": "Invalid country code",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:251"
+        },
+        {
+          "http": "400",
+          "message": "Invalid country code",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:264"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:282"
+        },
+        {
+          "http": "400",
+          "message": "Invalid phone number length. The required length is ",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:298"
+        },
+        {
+          "http": "400",
+          "message": "The provided country code is not valid for the given phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:301"
+        },
+        {
+          "http": "400",
+          "message": "Phone number already exists",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:324"
+        },
+        {
+          "http": null,
+          "message": "Valid phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:330"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:337"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:343"
+        }
+      ]
+    },
+    {
+      "key": "POST checkUsername",
+      "method": "POST",
+      "uri": "checkUsername",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "CheckUserExistOrNotController@checkUsername",
+      "source": "Ashoka-World-Backend:routes/api.php:764",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "NewSignUpController@checkDoctorUsername",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "NtLiteSignUpController@checkUsername",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "User name is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:182"
+        },
+        {
+          "http": "400",
+          "message": "User already exists with the same username. Please try with another username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:195"
+        },
+        {
+          "http": null,
+          "message": "Valid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:201"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:209"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:215"
+        }
+      ]
+    },
+    {
+      "key": "GET checkusernameormobileno",
+      "method": "GET",
+      "uri": "checkusernameormobileno",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "CheckUserExistOrNotController@checkMobileNumberOrEmail",
+      "source": "Ashoka-World-Backend:routes/api.php:1426",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": [
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:70"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:76"
+        }
+      ]
+    },
+    {
+      "key": "POST editFcmToken",
+      "method": "POST",
+      "uri": "editFcmToken",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "AuthController@updateFcmToken",
+      "source": "Ashoka-World-Backend:routes/api.php:971",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "updateFCMtokenAshoka",
+          "pages": [
+            "LoginWithOtpScreen",
+            "LoginWithUsernameScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@editFcmToken",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1874"
+        }
+      ]
+    },
+    {
+      "key": "POST forgotPassword",
+      "method": "POST",
+      "uri": "forgotPassword",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "AuthController@getForgotPassword",
+      "source": "Ashoka-World-Backend:routes/api.php:777",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "forgotPassword",
+          "pages": [
+            "ForgotPasswordScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "forgotPasswordController@checkForgotPassword",
+          "pages": [
+            "auth.forgot_password"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "user_name",
+          "rules": "required|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1652"
+        }
+      ],
+      "errors": [
+        {
+          "http": "404",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1679"
+        },
+        {
+          "http": "422",
+          "message": "Password not updated",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1696"
+        },
+        {
+          "http": null,
+          "message": "Forgot password successfully. Password sent to whatsapp/email",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1751"
+        },
+        {
+          "http": null,
+          "message": "Forgot password successfully. Password sent to email but not on whatsapp",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1762"
+        },
+        {
+          "http": null,
+          "message": "Forgot password successfully. Password sent to whatsapp but not on email",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1773"
+        },
+        {
+          "http": null,
+          "message": "No contact information found. Please contact customer care.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1784"
+        },
+        {
+          "http": null,
+          "message": "No contact information found. Please contact customer care.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1795"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1806"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1813"
+        }
+      ]
+    },
+    {
+      "key": "GET getCurrencyType",
+      "method": "GET",
+      "uri": "getCurrencyType",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "SignUpController@getCurrencyType",
+      "source": "Ashoka-World-Backend:routes/api.php:760",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": [
+        {
+          "http": null,
+          "message": "Get currency types",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1130"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1151"
+        }
+      ]
+    },
+    {
+      "key": "POST getCurrencyType",
+      "method": "POST",
+      "uri": "getCurrencyType",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "SignUpController@getCurrencyType",
+      "source": "Ashoka-World-Backend:routes/api.php:760",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "fetchCurrencyType",
+          "pages": [
+            "EditDoctorAccount",
+            "KycScreen"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": null,
+          "message": "Get currency types",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1130"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1151"
+        }
+      ]
+    },
+    {
+      "key": "GET getSalutationTypes",
+      "method": "GET",
+      "uri": "getSalutationTypes",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "SignUpController@salutationTypes",
+      "source": "Ashoka-World-Backend:routes/api.php:759",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": [
+        {
+          "http": null,
+          "message": "Get salutation types",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1353"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1373"
+        }
+      ]
+    },
+    {
+      "key": "POST getSalutationTypes",
+      "method": "POST",
+      "uri": "getSalutationTypes",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "SignUpController@salutationTypes",
+      "source": "Ashoka-World-Backend:routes/api.php:759",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "fetchSalutationTypes",
+          "pages": [
+            "SignUpScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@createUser",
+          "pages": [
+            "admin.create_user"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@addSelfAdmin",
+          "pages": [
+            "add_self_admin"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@updateKycDetails",
+          "pages": [
+            "my_account.update_kyc"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "EditDoctorDetailsController@editDoctorDetails",
+          "pages": [
+            "my_account.myaccount"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "EditDoctorDetailsController@editDoctorProfile",
+          "pages": [
+            "my_account.edit_profile"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "NewSignUpController@doctorSignUp",
+          "pages": [
+            "auth.signup"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": null,
+          "message": "Get salutation types",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1353"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1373"
+        }
+      ]
+    },
+    {
+      "key": "GET getdetailsbymobileno",
+      "method": "GET",
+      "uri": "getdetailsbymobileno",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "CheckUserExistOrNotController@getDetailsByMobileNo",
+      "source": "Ashoka-World-Backend:routes/api.php:1427",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": [
+        {
+          "http": null,
+          "message": "Please provide valid phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/CheckUserExistOrNotController.php:146"
+        }
+      ]
+    },
+    {
+      "key": "POST login",
+      "method": "POST",
+      "uri": "login",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "AuthController@login",
+      "source": "Ashoka-World-Backend:routes/api.php:737",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [
+        {
+          "field": "user_name",
+          "rules": "required|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:50"
+        },
+        {
+          "field": "password",
+          "rules": "required|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:51"
+        }
+      ],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Both username and password are required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:63"
+        },
+        {
+          "http": null,
+          "message": "Username is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:73"
+        },
+        {
+          "http": null,
+          "message": "Password is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:86"
+        },
+        {
+          "http": null,
+          "message": "Both username and password are required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:97"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:110"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:114"
+        },
+        {
+          "http": "401",
+          "message": "User has been blocked",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:118"
+        },
+        {
+          "http": "401",
+          "message": "Invalid password",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:122"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:200"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:212"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:219"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:227"
+        },
+        {
+          "http": "401",
+          "message": "User has been blocked",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:290"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:377"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:392"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:401"
+        }
+      ]
+    },
+    {
+      "key": "POST loginOtpBasedUser",
+      "method": "POST",
+      "uri": "loginOtpBasedUser",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "AuthController@loginOtpBasedUser",
+      "source": "Ashoka-World-Backend:routes/api.php:739",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "loginOtpBasedUser",
+          "pages": [
+            "LoginWithOtpScreen",
+            "LoginWithUsernameScreen",
+            "SplashScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@switchToAdmin",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@switchToDoctor",
+          "pages": [
+            "admin.admin_dashboard",
+            "admin.all_report_view",
+            "admin.create_user",
+            "admin.data_management",
+            "admin.edit_profile",
+            "admin.payment_invoices",
+            "admin.update_password",
+            "admin.user_and_teams",
+            "admin.user_patient_list",
+            "admin.user_permissions",
+            "admin.user_previous_visits",
+            "admin.visit_report_view",
+            "customize.add_question",
+            "customize.add_question_v2",
+            "customize.customize_questionnaire",
+            "customize.customize_report",
+            "customize.user_wise_customize_questionnaire",
+            "customize.user_wise_customize_report"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@updateKycDetails",
+          "pages": [
+            "my_account.update_kyc"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@checkLoginCredentials",
+          "pages": [
+            "auth.login"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@getUserDetailsOtpBasedLogin",
+          "pages": [
+            "auth.login"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:806"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:810"
+        },
+        {
+          "http": "401",
+          "message": "User has been blocked",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:814"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:894"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:906"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:913"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:921"
+        },
+        {
+          "http": "401",
+          "message": "User has been blocked",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:983"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1083"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1115"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1124"
+        }
+      ]
+    },
+    {
+      "key": "POST logout",
+      "method": "POST",
+      "uri": "logout",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "AuthController@logout",
+      "source": "Ashoka-World-Backend:routes/api.php:968",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": []
+    },
+    {
+      "key": "POST otp/send-email-otp",
+      "method": "POST",
+      "uri": "otp/send-email-otp",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "OtpSmsController@sendEmailOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:790",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "sendEmailOtp",
+          "pages": [
+            "LoginWithOtpScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@sendEmailLoginOtp",
+          "pages": [
+            "auth.login"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Email is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:359"
+        },
+        {
+          "http": "400",
+          "message": "Email not registered",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:373"
+        },
+        {
+          "http": "200",
+          "message": "OTP sent successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:384"
+        },
+        {
+          "http": "200",
+          "message": "OTP sent successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:415"
+        },
+        {
+          "http": "500",
+          "message": "OTP not sent. Please check the email",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:420"
+        }
+      ]
+    },
+    {
+      "key": "POST otp/send-otp",
+      "method": "POST",
+      "uri": "otp/send-otp",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "OtpSmsController@sendOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:788",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "sendMobileOtp",
+          "pages": [
+            "LoginWithOtpScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@sendWhatsappLoginOtp",
+          "pages": [
+            "auth.login"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Invalid phone number length",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:54"
+        },
+        {
+          "http": "400",
+          "message": "The provided country code is not valid for the given phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:57"
+        },
+        {
+          "http": "400",
+          "message": "Phone number not registered",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:71"
+        },
+        {
+          "http": "200",
+          "message": "OTP sent successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:82"
+        },
+        {
+          "http": "200",
+          "message": "OTP sent successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:92"
+        },
+        {
+          "http": "500",
+          "message": "OTP not sent. Please check the phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:94"
+        }
+      ]
+    },
+    {
+      "key": "POST otp/send-verification-otp",
+      "method": "POST",
+      "uri": "otp/send-verification-otp",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "OtpSmsController@sendVerificationOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:793",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "sendVerificationOtp",
+          "pages": [
+            "AddClinicScreen",
+            "EditClinicScreen",
+            "EditDoctorAccount",
+            "KycScreen",
+            "SignUpScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "OtpVerificationController@sendVerificationOtpsignup",
+          "pages": [
+            "admin.create_user",
+            "admin.edit_profile",
+            "auth.admin_signUp",
+            "auth.college_signUp",
+            "auth.nt_lite_signup",
+            "auth.signup",
+            "my_account.editClinicDetails",
+            "my_account.update_kyc"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "type",
+          "rules": "required|string|in:email,mobile",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:479"
+        },
+        {
+          "field": "action",
+          "rules": "required|string|in:signup,profile_edit,kyc_update,add_clinic,update_clinic,admin_add_user,admin_update_user",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:480"
+        },
+        {
+          "field": "email",
+          "rules": "required_if:type,email|nullable|email",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:481"
+        },
+        {
+          "field": "country_code",
+          "rules": "required_if:type,mobile|nullable|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:482"
+        },
+        {
+          "field": "mobile_no",
+          "rules": "required_if:type,mobile|nullable|numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:483"
+        }
+      ],
+      "errors": [
+        {
+          "http": null,
+          "message": "OTP sent successfully via {$type} for {$action}.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:500"
+        },
+        {
+          "http": "500",
+          "message": "Failed to send OTP via email.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:564"
+        },
+        {
+          "http": "400",
+          "message": "Invalid phone number length",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:597"
+        },
+        {
+          "http": "400",
+          "message": "The provided country code is not valid for the given phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:600"
+        },
+        {
+          "http": "500",
+          "message": "OTP not sent. Please check the phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:606"
+        },
+        {
+          "http": null,
+          "message": "OTP sent successfully via {$type} for {$action}.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:617"
+        }
+      ]
+    },
+    {
+      "key": "POST otp/verify-email-otp",
+      "method": "POST",
+      "uri": "otp/verify-email-otp",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "OtpSmsController@verifyEmailOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:791",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "verifyEmailOtp",
+          "pages": [
+            "LoginWithOtpScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@verifyEmailLoginOtp",
+          "pages": [
+            "auth.login"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Email is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:433"
+        },
+        {
+          "http": "400",
+          "message": "OTP is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:436"
+        },
+        {
+          "http": "400",
+          "message": "Expired OTP",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:439"
+        },
+        {
+          "http": "200",
+          "message": "OTP verified successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:452"
+        },
+        {
+          "http": "400",
+          "message": "Invalid OTP",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:457"
+        }
+      ]
+    },
+    {
+      "key": "POST otp/verify-otp",
+      "method": "POST",
+      "uri": "otp/verify-otp",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "OtpSmsController@verifyOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:789",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "verifyMobileOtp",
+          "pages": [
+            "LoginWithOtpScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@verifyWhatsappLoginOtp",
+          "pages": [
+            "auth.login"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Invalid phone number length",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:120"
+        },
+        {
+          "http": "400",
+          "message": "The provided country code is not valid for the given phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:123"
+        },
+        {
+          "http": "400",
+          "message": "Invalid OTP",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:127"
+        },
+        {
+          "http": "400",
+          "message": "Expired OTP",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:136"
+        },
+        {
+          "http": null,
+          "message": "OTP verified successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:188"
+        },
+        {
+          "http": "200",
+          "message": "OTP verified successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:197"
+        },
+        {
+          "http": "400",
+          "message": "Invalid OTP",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:199"
+        }
+      ]
+    },
+    {
+      "key": "POST otp/verify-verification-otp",
+      "method": "POST",
+      "uri": "otp/verify-verification-otp",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "OtpSmsController@verifyVerificationOtp",
+      "source": "Ashoka-World-Backend:routes/api.php:794",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "verifyVerificationOtp",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "OtpVerificationController@verifyVerificationOtpsignup",
+          "pages": [
+            "admin.create_user",
+            "admin.edit_profile",
+            "auth.admin_signUp",
+            "auth.college_signUp",
+            "auth.nt_lite_signup",
+            "auth.signup",
+            "my_account.editClinicDetails",
+            "my_account.update_kyc"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "type",
+          "rules": "required|string|in:email,mobile",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:628"
+        },
+        {
+          "field": "action",
+          "rules": "required|string|in:signup,profile_edit,kyc_update,add_clinic,update_clinic,admin_add_user,admin_update_user",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:629"
+        },
+        {
+          "field": "otp",
+          "rules": "required|numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:630"
+        },
+        {
+          "field": "email",
+          "rules": "required_if:type,email|nullable|email",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:631"
+        },
+        {
+          "field": "country_code",
+          "rules": "required_if:type,mobile|nullable|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:632"
+        },
+        {
+          "field": "mobile_no",
+          "rules": "required_if:type,mobile|nullable|numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:633"
+        }
+      ],
+      "errors": [
+        {
+          "http": "422",
+          "message": "The code is invalid or has expired. Please try again.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:656"
+        },
+        {
+          "http": null,
+          "message": "OTP verified successfully.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/OtpSmsController.php:666"
+        }
+      ]
+    },
+    {
+      "key": "POST signup",
+      "method": "POST",
+      "uri": "signup",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "SignUpController@SignUp",
+      "source": "Ashoka-World-Backend:routes/api.php:741",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [
+        {
+          "field": "salutation_type",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:48"
+        },
+        {
+          "field": "user_name",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:49"
+        },
+        {
+          "field": "password",
+          "rules": "required|regex:/[0-9]/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:50"
+        },
+        {
+          "field": "lastname",
+          "rules": "required|regex:/^[a-zA-Z\\s]+$/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:51"
+        },
+        {
+          "field": "middlename",
+          "rules": "nullable|regex:/^[a-zA-Z\\s]+$/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:52"
+        },
+        {
+          "field": "email",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:53"
+        },
+        {
+          "field": "firstname",
+          "rules": "required|regex:/^[a-zA-Z\\s]+$/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:54"
+        },
+        {
+          "field": "gender",
+          "rules": "required|in:M,F,D,N",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:55"
+        },
+        {
+          "field": "dateofbirth",
+          "rules": "required|date_format:Y-m-d",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:56"
+        },
+        {
+          "field": "mobile_no",
+          "rules": "required|numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:57"
+        },
+        {
+          "field": "experience",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:58"
+        },
+        {
+          "field": "profile_picture",
+          "rules": "nullable|image|mimes:jpeg,png,jpg",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:59"
+        },
+        {
+          "field": "clinic_logo",
+          "rules": "nullable|image|mimes:jpeg,png,jpg",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:60"
+        },
+        {
+          "field": "clinic_name",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:61"
+        },
+        {
+          "field": "street",
+          "rules": "nullable",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:63"
+        },
+        {
+          "field": "landmark",
+          "rules": "nullable",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:64"
+        },
+        {
+          "field": "city",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:65"
+        },
+        {
+          "field": "state",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:66"
+        },
+        {
+          "field": "country",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:67"
+        },
+        {
+          "field": "pincode",
+          "rules": "required|numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:68"
+        },
+        {
+          "field": "clinic_phone_no",
+          "rules": "required|numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:69"
+        },
+        {
+          "field": "currency_type",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:74"
+        },
+        {
+          "field": "visit_days",
+          "rules": "nullable",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:75"
+        },
+        {
+          "field": "id_number",
+          "rules": "nullable",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:76"
+        },
+        {
+          "field": "id_type",
+          "rules": "nullable",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:77"
+        },
+        {
+          "field": "maritalstatus",
+          "rules": "nullable",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:78"
+        },
+        {
+          "field": "profile_picture",
+          "rules": "nullable|image|mimes:jpeg,png,jpg",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:79"
+        }
+      ],
+      "errors": [
+        {
+          "http": null,
+          "message": "Provided country code is not valid for the given phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:85"
+        },
+        {
+          "http": null,
+          "message": "Provided clinic country code is not valid for the given clinic number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:107"
+        },
+        {
+          "http": null,
+          "message": "Clinic country code field is required when clinic phone no is present",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:158"
+        },
+        {
+          "http": null,
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:202"
+        },
+        {
+          "http": "400",
+          "message": "User must be at least 18 years old",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:220"
+        },
+        {
+          "http": "400",
+          "message": "User must be younger than 100 years old",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:226"
+        },
+        {
+          "http": "400",
+          "message": "Phone number already exists",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:238"
+        },
+        {
+          "http": "400",
+          "message": "Invalid salutation type",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:245"
+        },
+        {
+          "http": "400",
+          "message": "Please select a valid gender",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:252"
+        },
+        {
+          "http": "400",
+          "message": "Please select a valid gender",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:256"
+        },
+        {
+          "http": "400",
+          "message": "Please select a valid gender",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:261"
+        },
+        {
+          "http": "400",
+          "message": "Id type is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:267"
+        },
+        {
+          "http": "400",
+          "message": "Id number is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:270"
+        },
+        {
+          "http": "400",
+          "message": "Invalid document id type. Please select a valid document id from the list",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:287"
+        },
+        {
+          "http": "400",
+          "message": "Registration number is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:294"
+        },
+        {
+          "http": "400",
+          "message": "Duplicate visit days are not allowed",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:303"
+        },
+        {
+          "http": "400",
+          "message": "Invalid visit days. Please select days between 1 to 7",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:307"
+        },
+        {
+          "http": "400",
+          "message": "Invalid experience. Please select a valid experience from the list",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:326"
+        },
+        {
+          "http": "400",
+          "message": "Invalid currency. Please select a valid currency from the list",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:344"
+        },
+        {
+          "http": "400",
+          "message": "User already exists with same username. Please try with another username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:352"
+        },
+        {
+          "http": "400",
+          "message": "Invalid phone number length",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:385"
+        },
+        {
+          "http": "400",
+          "message": "The provided country code is not valid for the given phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:388"
+        },
+        {
+          "http": "400",
+          "message": "Invalid phone number length",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:424"
+        },
+        {
+          "http": "400",
+          "message": "Provided clinic country code is not valid for the given clinic number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:427"
+        },
+        {
+          "http": "400",
+          "message": "Clinic phone number or country code is missing",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:430"
+        },
+        {
+          "http": "400",
+          "message": "Minimum 6 digits password is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:436"
+        },
+        {
+          "http": null,
+          "message": "Clinic logo shouldn",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:443"
+        },
+        {
+          "http": "400",
+          "message": "Profile picture shouldn",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:451"
+        },
+        {
+          "http": null,
+          "message": "User signup successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:685"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:696"
+        }
+      ]
+    },
+    {
+      "key": "POST signupV2",
+      "method": "POST",
+      "uri": "signupV2",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "SignUpController@SignUpV2",
+      "source": "Ashoka-World-Backend:routes/api.php:744",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "signUp",
+          "pages": [
+            "SignUpScreen"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "salutation_type",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:706"
+        },
+        {
+          "field": "user_name",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:707"
+        },
+        {
+          "field": "password",
+          "rules": "required|regex:/[0-9]/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:708"
+        },
+        {
+          "field": "lastname",
+          "rules": "required|regex:/^[a-zA-Z\\s]+$/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:709"
+        },
+        {
+          "field": "email",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:710"
+        },
+        {
+          "field": "firstname",
+          "rules": "required|regex:/^[a-zA-Z\\s]+$/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:711"
+        },
+        {
+          "field": "gender",
+          "rules": "required|in:M,F,D,N",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:712"
+        },
+        {
+          "field": "mobile_no",
+          "rules": "required|numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:713"
+        },
+        {
+          "field": "profession_type_id",
+          "rules": "nullable|numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:714"
+        },
+        {
+          "field": "ayush_no",
+          "rules": "nullable|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:715"
+        },
+        {
+          "field": "clinic_name",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:716"
+        },
+        {
+          "field": "state",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:719"
+        },
+        {
+          "field": "country",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:720"
+        }
+      ],
+      "errors": [
+        {
+          "http": null,
+          "message": "Provided country code is not valid for the given phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:727"
+        },
+        {
+          "http": null,
+          "message": "Clinic name is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:766"
+        },
+        {
+          "http": null,
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:802"
+        },
+        {
+          "http": "400",
+          "message": "Phone number already exists",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:825"
+        },
+        {
+          "http": "400",
+          "message": "Invalid salutation type",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:832"
+        },
+        {
+          "http": "400",
+          "message": "Please select a valid gender",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:838"
+        },
+        {
+          "http": "400",
+          "message": "Please select a valid gender",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:842"
+        },
+        {
+          "http": "400",
+          "message": "Please select a valid gender",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:847"
+        },
+        {
+          "http": "400",
+          "message": "User already exists with same username. Please try with another username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:858"
+        },
+        {
+          "http": "400",
+          "message": "Invalid phone number length",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:891"
+        },
+        {
+          "http": "400",
+          "message": "The provided country code is not valid for the given phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:894"
+        },
+        {
+          "http": "400",
+          "message": "Minimum 6 digits password is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:908"
+        },
+        {
+          "http": null,
+          "message": "User signup successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1106"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1117"
+        }
+      ]
+    },
+    {
+      "key": "POST updatepassword",
+      "method": "POST",
+      "uri": "updatepassword",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UpdatePasswordController@updatePassword",
+      "source": "Ashoka-World-Backend:routes/api.php:975",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "updatePassword",
+          "pages": [
+            "MyAccountScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "ChangePasswordController@updatePassword",
+          "pages": [
+            "my_account.myaccount"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "current_password",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php:16"
+        }
+      ],
+      "errors": [
+        {
+          "http": null,
+          "message": "New password must contain at least one digit.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php:24"
+        },
+        {
+          "http": "400",
+          "message": "Minimum 6 digits password is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php:38"
+        },
+        {
+          "http": "400",
+          "message": "User not found",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php:51"
+        },
+        {
+          "http": "400",
+          "message": "New password must be different from the old password.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php:56"
+        },
+        {
+          "http": "200",
+          "message": "Password updated successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php:62"
+        },
+        {
+          "http": "400",
+          "message": "Incorrect current password",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/UpdatePasswordController.php:64"
+        }
+      ]
+    },
+    {
+      "key": "POST v2/loginValidation",
+      "method": "POST",
+      "uri": "v2/loginValidation",
+      "name": null,
+      "middleware": [],
+      "controller": "AuthController@loginValidation",
+      "source": "Ashoka-World-Backend:routes/api.php:1639",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "loginUser",
+          "pages": [
+            "LoginWithUsernameScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@checkLoginCredentials",
+          "pages": [
+            "auth.login"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "user_name",
+          "rules": "required|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:415"
+        },
+        {
+          "field": "password",
+          "rules": "required|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:416"
+        }
+      ],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Both username and password are required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:429"
+        },
+        {
+          "http": "400",
+          "message": "Username is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:438"
+        },
+        {
+          "http": "400",
+          "message": "Password is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:447"
+        },
+        {
+          "http": "400",
+          "message": "Both username and password are required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:454"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:466"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:471"
+        },
+        {
+          "http": "401",
+          "message": "User has been blocked",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:476"
+        },
+        {
+          "http": "401",
+          "message": "Invalid password",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:481"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:486"
+        },
+        {
+          "http": null,
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:515"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:528"
+        }
+      ]
+    },
+    {
+      "key": "POST v2/signup",
+      "method": "POST",
+      "uri": "v2/signup",
+      "name": null,
+      "middleware": [],
+      "controller": "SignUpController@SignUpV2",
+      "source": "Ashoka-World-Backend:routes/api.php:1636",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "NewSignUpController@updateSignUpDetails",
+          "pages": [
+            "auth.admin_signUp",
+            "auth.college_signUp",
+            "auth.signup"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "NtLiteSignUpController@submitSignUp",
+          "pages": [
+            "auth.nt_lite_signup"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "salutation_type",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:706"
+        },
+        {
+          "field": "user_name",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:707"
+        },
+        {
+          "field": "password",
+          "rules": "required|regex:/[0-9]/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:708"
+        },
+        {
+          "field": "lastname",
+          "rules": "required|regex:/^[a-zA-Z\\s]+$/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:709"
+        },
+        {
+          "field": "email",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:710"
+        },
+        {
+          "field": "firstname",
+          "rules": "required|regex:/^[a-zA-Z\\s]+$/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:711"
+        },
+        {
+          "field": "gender",
+          "rules": "required|in:M,F,D,N",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:712"
+        },
+        {
+          "field": "mobile_no",
+          "rules": "required|numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:713"
+        },
+        {
+          "field": "profession_type_id",
+          "rules": "nullable|numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:714"
+        },
+        {
+          "field": "ayush_no",
+          "rules": "nullable|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:715"
+        },
+        {
+          "field": "clinic_name",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:716"
+        },
+        {
+          "field": "state",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:719"
+        },
+        {
+          "field": "country",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:720"
+        }
+      ],
+      "errors": [
+        {
+          "http": null,
+          "message": "Provided country code is not valid for the given phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:727"
+        },
+        {
+          "http": null,
+          "message": "Clinic name is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:766"
+        },
+        {
+          "http": null,
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:802"
+        },
+        {
+          "http": "400",
+          "message": "Phone number already exists",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:825"
+        },
+        {
+          "http": "400",
+          "message": "Invalid salutation type",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:832"
+        },
+        {
+          "http": "400",
+          "message": "Please select a valid gender",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:838"
+        },
+        {
+          "http": "400",
+          "message": "Please select a valid gender",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:842"
+        },
+        {
+          "http": "400",
+          "message": "Please select a valid gender",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:847"
+        },
+        {
+          "http": "400",
+          "message": "User already exists with same username. Please try with another username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:858"
+        },
+        {
+          "http": "400",
+          "message": "Invalid phone number length",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:891"
+        },
+        {
+          "http": "400",
+          "message": "The provided country code is not valid for the given phone number",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:894"
+        },
+        {
+          "http": "400",
+          "message": "Minimum 6 digits password is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:908"
+        },
+        {
+          "http": null,
+          "message": "User signup successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1106"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1117"
+        }
+      ]
+    },
+    {
+      "key": "POST validateCorporateCode",
+      "method": "POST",
+      "uri": "validateCorporateCode",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "AuthController@corporateCode",
+      "source": "Ashoka-World-Backend:routes/api.php:972",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": []
+    }
+  ],
+  "not_called": [
+    "GET checkusernameormobileno",
+    "GET getdetailsbymobileno",
+    "POST login",
+    "POST logout",
+    "POST signup",
+    "POST validateCorporateCode"
+  ],
+  "web_routes": [
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST checkDoctorMobileNo",
+      "name": null,
+      "middleware": [],
+      "controller": "NewSignUpController@checkDoctorMobileNo",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:331"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST checkDoctorUsername",
+      "name": null,
+      "middleware": [],
+      "controller": "NewSignUpController@checkDoctorUsername",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:332"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST checkForgotPassword",
+      "name": "check.forgot",
+      "middleware": [],
+      "controller": "forgotPasswordController@checkForgotPassword",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:318"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST checkLoginCredintial",
+      "name": "check.login",
+      "middleware": [],
+      "controller": "loginController@checkLoginCredentials",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:316"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST checkValidationsLinkDevice",
+      "name": null,
+      "middleware": [],
+      "controller": "NewSignUpController@checkValidationsLinkDevice",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:333"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST editFcmToken",
+      "name": "editFcmToken",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "loginController@editFcmToken",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:367"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET forgotPassword",
+      "name": "forgotPassword",
+      "middleware": [],
+      "controller": "forgotPasswordController@forgotPassword",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:317"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET get-all-roles",
+      "name": "getAllRoles",
+      "middleware": [],
+      "controller": "loginController@getAllRoles",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:92"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST getUserDetailsOtpBasedLogin",
+      "name": "getUserDetailsOtpBasedLogin",
+      "middleware": [],
+      "controller": "loginController@getUserDetailsOtpBasedLogin",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:90"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST linkDeviceAfterValidation",
+      "name": null,
+      "middleware": [],
+      "controller": "NewSignUpController@linkDeviceAfterValidation",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:334"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET login",
+      "name": "login",
+      "middleware": [],
+      "controller": "loginController@login",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:313"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET logout",
+      "name": "logout",
+      "middleware": [],
+      "controller": "LoginController@logout",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:342"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST logout",
+      "name": "logout",
+      "middleware": [],
+      "controller": "LoginController@logout",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:342"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET nt-lite/logout",
+      "name": "nt-lite.logout",
+      "middleware": [],
+      "controller": "LoginController@logout",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:341"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST nt-lite/logout",
+      "name": "nt-lite.logout",
+      "middleware": [],
+      "controller": "LoginController@logout",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:341"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST send-email-login-otp",
+      "name": "sendEmailLoginOtp",
+      "middleware": [],
+      "controller": "loginController@sendEmailLoginOtp",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:84"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST send-login-otp",
+      "name": "sendWhatsappLoginOtp",
+      "middleware": [],
+      "controller": "loginController@sendWhatsappLoginOtp",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:82"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST send-verification-otp",
+      "name": null,
+      "middleware": [],
+      "controller": "OtpVerificationController@sendVerificationOtpsignup",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:307"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET sign-up",
+      "name": "doctorSignUp",
+      "middleware": [],
+      "controller": "NewSignUpController@doctorSignUp",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:325"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET sign-up-admin",
+      "name": "adminSignUp",
+      "middleware": [],
+      "controller": "NewSignUpController@adminSignUp",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:329"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET sign-up-college",
+      "name": "collegeSignUp",
+      "middleware": [],
+      "controller": "NewSignUpController@collegeSignUp",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:328"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET signup",
+      "name": "signup",
+      "middleware": [],
+      "controller": "NewSignUpController@signup",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:326"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST updateSignUpDetails",
+      "name": null,
+      "middleware": [],
+      "controller": "NewSignUpController@updateSignUpDetails",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:327"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST verify-email-login-otp",
+      "name": "verifyEmailLoginOtp",
+      "middleware": [],
+      "controller": "loginController@verifyEmailLoginOtp",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:88"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST verify-login-otp",
+      "name": "verifyWhatsappLoginOtp",
+      "middleware": [],
+      "controller": "loginController@verifyWhatsappLoginOtp",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:86"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST verify-verification-otp",
+      "name": null,
+      "middleware": [],
+      "controller": "OtpVerificationController@verifyVerificationOtpsignup",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:308"
+    }
+  ],
+  "screens": [
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "ForgotPasswordScreen",
+      "file": "Nadi-Tarangini-App:lib/common_files/Login/view/forgot_password_screen.dart",
+      "routes": [
+        {
+          "path": "/forgotPasswordScreen",
+          "name": "forgotPasswordScreen",
+          "line": 358
+        }
+      ],
+      "rendered_by": [],
+      "links_to": [
+        {
+          "path": "/loginScreen",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "LoginScreen",
+      "file": "Nadi-Tarangini-App:lib/common_files/Login/view/login_screen.dart",
+      "routes": [
+        {
+          "path": "/loginScreen",
+          "name": "loginScreen",
+          "line": 156
+        }
+      ],
+      "rendered_by": [],
+      "links_to": [
+        {
+          "path": "/signupScreen",
+          "line": 243
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "LoginWithOtpScreen",
+      "file": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart",
+      "routes": [],
+      "rendered_by": [],
+      "links_to": [
+        {
+          "path": "/dashboardScreen",
+          "line": 176
+        },
+        {
+          "path": "/geoRestrictedScreen",
+          "line": 147
+        },
+        {
+          "path": "/kycScreen",
+          "line": 167
+        },
+        {
+          "path": "/reportScreenPatient",
+          "line": 163
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "LoginWithUsernameScreen",
+      "file": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart",
+      "routes": [],
+      "rendered_by": [],
+      "links_to": [
+        {
+          "path": "/dashboardScreen",
+          "line": 92
+        },
+        {
+          "path": "/forgotPasswordScreen",
+          "name": "forgotPasswordScreen",
+          "line": 232
+        },
+        {
+          "path": "/geoRestrictedScreen",
+          "line": 81
+        },
+        {
+          "path": "/kycScreen",
+          "line": 99
+        },
+        {
+          "path": "/reportScreenPatient",
+          "line": 90
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "SignUpScreen",
+      "file": "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart",
+      "routes": [
+        {
+          "path": "/signupScreen",
+          "name": "signupScreen",
+          "line": 279
+        }
+      ],
+      "rendered_by": [],
+      "links_to": [
+        {
+          "path": "/loginScreen",
+          "line": 228
+        },
+        {
+          "path": "/webViewScreen",
+          "line": 1342
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "auth.admin_signUp",
+      "file": "Nadi-Tarangini-Frontend:resources/views/auth/admin_signUp.blade.php",
+      "routes": [
+        "GET sign-up-admin"
+      ],
+      "rendered_by": [
+        "NewSignUpController@adminSignUp"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "auth.college_signUp",
+      "file": "Nadi-Tarangini-Frontend:resources/views/auth/college_signUp.blade.php",
+      "routes": [
+        "GET sign-up-college"
+      ],
+      "rendered_by": [
+        "NewSignUpController@collegeSignUp"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "auth.forgot_password",
+      "file": "Nadi-Tarangini-Frontend:resources/views/auth/forgot_password.blade.php",
+      "routes": [
+        "GET forgotPassword"
+      ],
+      "rendered_by": [
+        "forgotPasswordController@forgotPassword"
+      ],
+      "links_to": [
+        {
+          "route": "GET login",
+          "name": "login",
+          "line": 55
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "auth.login",
+      "file": "Nadi-Tarangini-Frontend:resources/views/auth/login.blade.php",
+      "routes": [
+        "GET login"
+      ],
+      "rendered_by": [
+        "loginController@login"
+      ],
+      "links_to": [
+        {
+          "url": "/images/nt_v2/common/drop-down.svg",
+          "line": 62
+        },
+        {
+          "route": "GET forgotPassword",
+          "name": "forgotPassword",
+          "line": 181
+        },
+        {
+          "route": "GET signup",
+          "name": "signup",
+          "line": 279
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "auth.signup",
+      "file": "Nadi-Tarangini-Frontend:resources/views/auth/signup.blade.php",
+      "routes": [
+        "GET sign-up"
+      ],
+      "rendered_by": [
+        "NewSignUpController@doctorSignUp"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "auth.tabs",
+      "file": "Nadi-Tarangini-Frontend:resources/views/auth/tabs.blade.php",
+      "routes": [
+        "GET signup"
+      ],
+      "rendered_by": [
+        "NewSignUpController@signup"
+      ],
+      "links_to": [
+        {
+          "route": "GET sign-up",
+          "name": "doctorSignUp",
+          "line": 27
+        },
+        {
+          "route": "GET sign-up-admin",
+          "name": "adminSignUp",
+          "line": 53
+        }
+      ]
+    }
+  ],
+  "api_calls": [
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "checkGeoIPValidity",
+      "pages": [
+        "LoginWithOtpScreen",
+        "LoginWithUsernameScreen",
+        "SplashScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/checkGeoIPValidity",
+      "status": "matched",
+      "route": "POST checkGeoIPValidity",
+      "controller": "PublicFunctionsController@checkGeoIPValidity",
+      "tables": [],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2519",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart",
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart",
+        "Nadi-Tarangini-App:lib/splash_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "fetchAllCountriesName",
+      "pages": [
+        "AddClinicScreen",
+        "EditClinicScreen",
+        "MainAssessmentScreen",
+        "SignUpScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getAllCountriesName",
+      "status": "matched",
+      "route": "POST getAllCountriesName",
+      "controller": "DoctorController@getAllCountriesName",
+      "tables": [
+        "all_country_names"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:735",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/add_clinic.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/edit_clinic.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/nadi_flow_new/view/main_assessment_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "fetchCountryList",
+      "pages": [
+        "AddClinicScreen",
+        "AddPatientFromAppointmentScreen",
+        "AddPatientScreen",
+        "EditClinicScreen",
+        "EditDoctorAccount",
+        "EditPatientProfileScreen",
+        "EditPatientScreen",
+        "KycScreen",
+        "LoginScreen",
+        "LoginWithOtpScreen",
+        "SignUpScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/getAllCountries",
+      "status": "matched",
+      "route": "GET getAllCountries",
+      "controller": "PatientDetailsController@getAllCountries",
+      "tables": [],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:202",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_screen.dart",
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart",
+        "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/kyc/view/kyc_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_account/edit_account.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/add_clinic.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/edit_clinic.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/add_patient/add_patient_from_appointment_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/add_patient/add_patient_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/edit_patient/edit_patient_screen.dart",
+        "Nadi-Tarangini-App:lib/patient_module/view/edit_patient_profile_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "fetchCountryWiseState",
+      "pages": [
+        "AddClinicScreen",
+        "AddMedicineScreen",
+        "AddSupplementScreen",
+        "EditClinicScreen",
+        "EditMedicineScreen",
+        "EditSupplementScreen",
+        "MainAssessmentScreen",
+        "SignUpScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getCountryWiseStates",
+      "status": "matched",
+      "route": "POST getCountryWiseStates",
+      "controller": "DoctorController@getCountryWiseStates",
+      "tables": [
+        "country_wise_states"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:773",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/inventory/view/medicine/add_medicine_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/inventory/view/medicine/edit_medicine_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/inventory/view/supplements/add_supplement_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/inventory/view/supplements/edit_supplement_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/add_clinic.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/edit_clinic.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/nadi_flow_new/view/main_assessment_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "fetchCurrencyType",
+      "pages": [
+        "EditDoctorAccount",
+        "KycScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getCurrencyType",
+      "status": "matched",
+      "route": "POST getCurrencyType",
+      "controller": "SignUpController@getCurrencyType",
+      "tables": [
+        "currency_type"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1709",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/kyc/view/kyc_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_account/edit_account.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "fetchSalutationTypes",
+      "pages": [
+        "SignUpScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getSalutationTypes",
+      "status": "matched",
+      "route": "POST getSalutationTypes",
+      "controller": "SignUpController@salutationTypes",
+      "tables": [
+        "salutation_types"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:812",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "fetchTopicsListAshoka",
+      "pages": [
+        "LoginWithOtpScreen",
+        "LoginWithUsernameScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/notification/fetchUserTopics",
+      "status": "matched",
+      "route": "POST notification/fetchUserTopics",
+      "controller": "NotificationController@fetchUserTopics",
+      "tables": [
+        "notification_topics"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:413",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart",
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "forgotPassword",
+      "pages": [
+        "ForgotPasswordScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/forgotPassword",
+      "status": "matched",
+      "route": "POST forgotPassword",
+      "controller": "AuthController@getForgotPassword",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:718",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/forgot_password_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getAllRoles",
+      "pages": [
+        "LoginWithOtpScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/public/allRoles",
+      "status": "matched",
+      "route": "GET public/allRoles",
+      "controller": "UserManagementController@allRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:63",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getAppLanguages",
+      "pages": [
+        "ChangePasswordPatient",
+        "DashboardScreen",
+        "DrawerMenuPatient",
+        "Drawermenu",
+        "ForgotPasswordScreen",
+        "GeoRestrictedScreen",
+        "KycScreen",
+        "LanguageScreen",
+        "LoginScreen",
+        "LoginWithOtpScreen",
+        "LoginWithUsernameScreen",
+        "MyAccountScreen",
+        "PatientDashboard",
+        "ReportScreen",
+        "SignUpScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/getAppLanguages",
+      "status": "matched",
+      "route": "GET getAppLanguages",
+      "controller": "PublicFunctionsController@getNTFrontendAppLanguages",
+      "tables": [
+        "common_data"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2476",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/forgot_password_screen.dart",
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_screen.dart",
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart",
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart",
+        "Nadi-Tarangini-App:lib/common_files/language/language_screen.dart",
+        "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/geo_restricted_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/drawer_menu/view/drawer_menu.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/kyc/view/kyc_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_account_screen.dart",
+        "Nadi-Tarangini-App:lib/patient_module/view/change_password_patient.dart",
+        "Nadi-Tarangini-App:lib/patient_module/view/drawer_menu_patient.dart",
+        "Nadi-Tarangini-App:lib/patient_module/view/patient_dashboard.dart",
+        "Nadi-Tarangini-App:lib/patient_module/view/report_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getAppVersionDetailst",
+      "pages": [
+        "DashboardScreen",
+        "LoginScreen",
+        "OnboardingScreen",
+        "PatientDashboard"
+      ],
+      "method": "GET",
+      "endpoint": "/appVersion/getAppVersionDetails",
+      "status": "matched",
+      "route": "GET appVersion/getAppVersionDetails",
+      "controller": "PublicFunctionsController@getAppVersionDetails",
+      "tables": [
+        "app_versions"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2129",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/on_boarding/on_boarding_screen.dart",
+        "Nadi-Tarangini-App:lib/patient_module/view/patient_dashboard.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getHelpCenterVideo",
+      "pages": [
+        "HelpCenterScreen",
+        "LoginScreen",
+        "SplashScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2151",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/help_center/view/help_center.dart",
+        "Nadi-Tarangini-App:lib/splash_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getPatientData",
+      "pages": [
+        "LoginWithUsernameScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/v2/client/getClientDetails",
+      "status": "matched",
+      "route": "GET v2/client/getClientDetails",
+      "controller": "AuthController@getClientDetails",
+      "tables": [
+        "corporate_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:376",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getPinCodeDetails",
+      "pages": [
+        "AddClinicScreen",
+        "EditClinicScreen",
+        "SignUpScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getAddressUsingPincode",
+      "status": "matched",
+      "route": "POST getAddressUsingPincode",
+      "controller": "PublicFunctionsController@getAddressUsingPincode",
+      "tables": [
+        "postal_codes"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:758",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/add_clinic.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/edit_clinic.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getProfessionType",
+      "pages": [
+        "SignUpScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/getProfessionType",
+      "status": "matched",
+      "route": "GET getProfessionType",
+      "controller": "DoctorController@getProfessionType",
+      "tables": [
+        "profession_type"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:612",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getUserDetailsUsingMobileNumber",
+      "pages": [
+        "LoginWithOtpScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getUserDetailsUsingMobileNumber",
+      "status": "matched",
+      "route": "POST getUserDetailsUsingMobileNumber",
+      "controller": "PublicFunctionsController@getUserDetailsUsingMobileNumber",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:510",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "loginOtpBasedUser",
+      "pages": [
+        "LoginWithOtpScreen",
+        "LoginWithUsernameScreen",
+        "SplashScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:431",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart",
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart",
+        "Nadi-Tarangini-App:lib/splash_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "loginUser",
+      "pages": [
+        "LoginWithUsernameScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/v2/loginValidation",
+      "status": "matched",
+      "route": "POST v2/loginValidation",
+      "controller": "AuthController@loginValidation",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:357",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "sendEmailOtp",
+      "pages": [
+        "LoginWithOtpScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/otp/send-email-otp",
+      "status": "matched",
+      "route": "POST otp/send-email-otp",
+      "controller": "OtpSmsController@sendEmailOtp",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:481",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "sendMobileOtp",
+      "pages": [
+        "LoginWithOtpScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/otp/send-otp",
+      "status": "matched",
+      "route": "POST otp/send-otp",
+      "controller": "OtpSmsController@sendOtp",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:448",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "sendVerificationOtp",
+      "pages": [
+        "AddClinicScreen",
+        "EditClinicScreen",
+        "EditDoctorAccount",
+        "KycScreen",
+        "SignUpScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/otp/send-verification-otp",
+      "status": "matched",
+      "route": "POST otp/send-verification-otp",
+      "controller": "OtpSmsController@sendVerificationOtp",
+      "tables": [],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2486",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/kyc/view/kyc_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_account/edit_account.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/add_clinic.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_clinic/edit_clinic.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "signUp",
+      "pages": [
+        "SignUpScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/signupV2",
+      "status": "matched",
+      "route": "POST signupV2",
+      "controller": "SignUpController@SignUpV2",
+      "tables": [
+        "country_wise_states",
+        "locality_info",
+        "salutation_types",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:675",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "updateFCMtokenAshoka",
+      "pages": [
+        "LoginWithOtpScreen",
+        "LoginWithUsernameScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/editFcmToken",
+      "status": "matched",
+      "route": "POST editFcmToken",
+      "controller": "AuthController@updateFcmToken",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:391",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart",
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "updatePassword",
+      "pages": [
+        "MyAccountScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/updatepassword",
+      "status": "matched",
+      "route": "POST updatepassword",
+      "controller": "UpdatePasswordController@updatePassword",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1316",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_account_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "verifyEmailOtp",
+      "pages": [
+        "LoginWithOtpScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/otp/verify-email-otp",
+      "status": "matched",
+      "route": "POST otp/verify-email-otp",
+      "controller": "OtpSmsController@verifyEmailOtp",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:494",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "verifyMobileOtp",
+      "pages": [
+        "LoginWithOtpScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/otp/verify-otp",
+      "status": "matched",
+      "route": "POST otp/verify-otp",
+      "controller": "OtpSmsController@verifyOtp",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:465",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "verifyVerificationOtp",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/otp/verify-verification-otp",
+      "status": "matched",
+      "route": "POST otp/verify-verification-otp",
+      "controller": "OtpSmsController@verifyVerificationOtp",
+      "tables": [],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2498",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@createUser",
+      "pages": [
+        "admin.create_user"
+      ],
+      "method": "POST",
+      "endpoint": "/getSalutationTypes",
+      "status": "matched",
+      "route": "POST getSalutationTypes",
+      "controller": "SignUpController@salutationTypes",
+      "tables": [
+        "salutation_types"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1200",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "ChangePasswordController@updatePassword",
+      "pages": [
+        "my_account.myaccount"
+      ],
+      "method": "POST",
+      "endpoint": "/updatepassword",
+      "status": "matched",
+      "route": "POST updatepassword",
+      "controller": "UpdatePasswordController@updatePassword",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/ChangePasswordController.php:29",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/myaccount/changePassword.js:170"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@addSelfAdmin",
+      "pages": [
+        "add_self_admin"
+      ],
+      "method": "POST",
+      "endpoint": "/getSalutationTypes",
+      "status": "matched",
+      "route": "POST getSalutationTypes",
+      "controller": "SignUpController@salutationTypes",
+      "tables": [
+        "salutation_types"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1283",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@switchToAdmin",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1374",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@switchToDoctor",
+      "pages": [
+        "admin.admin_dashboard",
+        "admin.all_report_view",
+        "admin.create_user",
+        "admin.data_management",
+        "admin.edit_profile",
+        "admin.payment_invoices",
+        "admin.update_password",
+        "admin.user_and_teams",
+        "admin.user_patient_list",
+        "admin.user_permissions",
+        "admin.user_previous_visits",
+        "admin.visit_report_view",
+        "customize.add_question",
+        "customize.add_question_v2",
+        "customize.customize_questionnaire",
+        "customize.customize_report",
+        "customize.user_wise_customize_questionnaire",
+        "customize.user_wise_customize_report"
+      ],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1404",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:189"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/getSalutationTypes",
+      "status": "matched",
+      "route": "POST getSalutationTypes",
+      "controller": "SignUpController@salutationTypes",
+      "tables": [
+        "salutation_types"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:684",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:667",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "EditDoctorDetailsController@editDoctorDetails",
+      "pages": [
+        "my_account.myaccount"
+      ],
+      "method": "POST",
+      "endpoint": "/getSalutationTypes",
+      "status": "matched",
+      "route": "POST getSalutationTypes",
+      "controller": "SignUpController@salutationTypes",
+      "tables": [
+        "salutation_types"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/EditDoctorDetailsController.php:22",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "EditDoctorDetailsController@editDoctorProfile",
+      "pages": [
+        "my_account.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/getSalutationTypes",
+      "status": "matched",
+      "route": "POST getSalutationTypes",
+      "controller": "SignUpController@salutationTypes",
+      "tables": [
+        "salutation_types"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/EditDoctorDetailsController.php:216",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@adminSignUp",
+      "pages": [
+        "auth.admin_signUp"
+      ],
+      "method": "POST",
+      "endpoint": "/getAllCountries",
+      "status": "matched",
+      "route": "POST getAllCountries",
+      "controller": "PatientDetailsController@getAllCountries",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:333",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@adminSignUp",
+      "pages": [
+        "auth.admin_signUp"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:343",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@checkDoctorMobileNo",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/checkMobileNumber",
+      "status": "matched",
+      "route": "POST checkMobileNumber",
+      "controller": "CheckUserExistOrNotController@checkMobileNumberV2",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:171",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@checkDoctorUsername",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/checkUsername",
+      "status": "matched",
+      "route": "POST checkUsername",
+      "controller": "CheckUserExistOrNotController@checkUsername",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:211",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@checkValidationsLinkDevice",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/validateDeviceWithSerialNo",
+      "status": "matched",
+      "route": "POST validateDeviceWithSerialNo",
+      "controller": "LinkDeviceContoller@validateDeviceWithSerialNo",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:251",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@collegeSignUp",
+      "pages": [
+        "auth.college_signUp"
+      ],
+      "method": "POST",
+      "endpoint": "/getAllCountries",
+      "status": "matched",
+      "route": "POST getAllCountries",
+      "controller": "PatientDetailsController@getAllCountries",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:149",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@doctorSignUp",
+      "pages": [
+        "auth.signup"
+      ],
+      "method": "POST",
+      "endpoint": "/getAllCountries",
+      "status": "matched",
+      "route": "POST getAllCountries",
+      "controller": "PatientDetailsController@getAllCountries",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:29",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@doctorSignUp",
+      "pages": [
+        "auth.signup"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:46",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@doctorSignUp",
+      "pages": [
+        "auth.signup"
+      ],
+      "method": "GET",
+      "endpoint": "/getProfessionType",
+      "status": "matched",
+      "route": "GET getProfessionType",
+      "controller": "DoctorController@getProfessionType",
+      "tables": [
+        "profession_type"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:34",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@doctorSignUp",
+      "pages": [
+        "auth.signup"
+      ],
+      "method": "POST",
+      "endpoint": "/getSalutationTypes",
+      "status": "matched",
+      "route": "POST getSalutationTypes",
+      "controller": "SignUpController@salutationTypes",
+      "tables": [
+        "salutation_types"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:24",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@linkDeviceAfterValidation",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/linkDeviceInHouseV2",
+      "status": "matched",
+      "route": "POST linkDeviceInHouseV2",
+      "controller": "LinkDeviceContoller@linkDeviceInHouseV2",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:295",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NewSignUpController@updateSignUpDetails",
+      "pages": [
+        "auth.admin_signUp",
+        "auth.college_signUp",
+        "auth.signup"
+      ],
+      "method": "POST",
+      "endpoint": "/v2/signup",
+      "status": "matched",
+      "route": "POST v2/signup",
+      "controller": "SignUpController@SignUpV2",
+      "tables": [
+        "country_wise_states",
+        "locality_info",
+        "salutation_types",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:91",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/adminSignup.js:533",
+        "Nadi-Tarangini-Frontend:public/js/college.js:324",
+        "Nadi-Tarangini-Frontend:public/js/signup.js:993"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NtLiteSignUpController@checkMobileNo",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/checkMobileNumber",
+      "status": "matched",
+      "route": "POST checkMobileNumber",
+      "controller": "CheckUserExistOrNotController@checkMobileNumberV2",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NtLiteSignUpController.php:132",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NtLiteSignUpController@checkUsername",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/checkUsername",
+      "status": "matched",
+      "route": "POST checkUsername",
+      "controller": "CheckUserExistOrNotController@checkUsername",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NtLiteSignUpController.php:170",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NtLiteSignUpController@submitSignUp",
+      "pages": [
+        "auth.nt_lite_signup"
+      ],
+      "method": "POST",
+      "endpoint": "/v2/signup",
+      "status": "matched",
+      "route": "POST v2/signup",
+      "controller": "SignUpController@SignUpV2",
+      "tables": [
+        "country_wise_states",
+        "locality_info",
+        "salutation_types",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NtLiteSignUpController.php:77",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/nt_lite_signup.js:647"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "OtpVerificationController@sendVerificationOtpsignup",
+      "pages": [
+        "admin.create_user",
+        "admin.edit_profile",
+        "auth.admin_signUp",
+        "auth.college_signUp",
+        "auth.nt_lite_signup",
+        "auth.signup",
+        "my_account.editClinicDetails",
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/otp/send-verification-otp",
+      "status": "matched",
+      "route": "POST otp/send-verification-otp",
+      "controller": "OtpSmsController@sendVerificationOtp",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/OtpVerificationController.php:33",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:643",
+        "Nadi-Tarangini-Frontend:public/js/common.js:898",
+        "Nadi-Tarangini-Frontend:public/js/nt_lite_signup.js:185"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "OtpVerificationController@verifyVerificationOtpsignup",
+      "pages": [
+        "admin.create_user",
+        "admin.edit_profile",
+        "auth.admin_signUp",
+        "auth.college_signUp",
+        "auth.nt_lite_signup",
+        "auth.signup",
+        "my_account.editClinicDetails",
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/otp/verify-verification-otp",
+      "status": "matched",
+      "route": "POST otp/verify-verification-otp",
+      "controller": "OtpSmsController@verifyVerificationOtp",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/OtpVerificationController.php:77",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:734",
+        "Nadi-Tarangini-Frontend:public/js/common.js:989",
+        "Nadi-Tarangini-Frontend:public/js/nt_lite_signup.js:247"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "forgotPasswordController@checkForgotPassword",
+      "pages": [
+        "auth.forgot_password"
+      ],
+      "method": "POST",
+      "endpoint": "/forgotPassword",
+      "status": "matched",
+      "route": "POST forgotPassword",
+      "controller": "AuthController@getForgotPassword",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/forgotPasswordController.php:51",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/forgotpassword.js:87"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "forgotPasswordController@forgotPassword",
+      "pages": [
+        "auth.forgot_password"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/forgotPasswordController.php:25",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@checkLoginCredentials",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:79",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:302"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@checkLoginCredentials",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:96",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:302"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@checkLoginCredentials",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllFeatureDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllFeatureDetails",
+      "controller": "FeaturesController@getAllFeatureDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:209",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:302"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@checkLoginCredentials",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getEndPoints",
+      "status": "matched",
+      "route": "GET subscriptions/getEndPoints",
+      "controller": "SubscriptionController@getEndPoints",
+      "tables": [
+        "api_endpoints"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:255",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:302"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@checkLoginCredentials",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/v2/client/getClientDetails",
+      "status": "matched",
+      "route": "GET v2/client/getClientDetails",
+      "controller": "AuthController@getClientDetails",
+      "tables": [
+        "corporate_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:94",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:302"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@checkLoginCredentials",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/v2/loginValidation",
+      "status": "matched",
+      "route": "POST v2/loginValidation",
+      "controller": "AuthController@loginValidation",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:63",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:302"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@editFcmToken",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/editFcmToken",
+      "status": "matched",
+      "route": "POST editFcmToken",
+      "controller": "AuthController@updateFcmToken",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:350",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@getAllRoles",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/public/allRoles",
+      "status": "matched",
+      "route": "GET public/allRoles",
+      "controller": "UserManagementController@allRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:728",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:950"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@getUserDetailsOtpBasedLogin",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:446",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:1052"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@getUserDetailsOtpBasedLogin",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:458",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:1052"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@getUserDetailsOtpBasedLogin",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:464",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:1052"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@getUserDetailsOtpBasedLogin",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllFeatureDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllFeatureDetails",
+      "controller": "FeaturesController@getAllFeatureDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:589",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:1052"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@getUserDetailsOtpBasedLogin",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getEndPoints",
+      "status": "matched",
+      "route": "GET subscriptions/getEndPoints",
+      "controller": "SubscriptionController@getEndPoints",
+      "tables": [
+        "api_endpoints"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:635",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:1052"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@login",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/getAllCountries",
+      "status": "matched",
+      "route": "POST getAllCountries",
+      "controller": "PatientDetailsController@getAllCountries",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:30",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@login",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:37",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@sendEmailLoginOtp",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/otp/send-email-otp",
+      "status": "matched",
+      "route": "POST otp/send-email-otp",
+      "controller": "OtpSmsController@sendEmailOtp",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:684",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:581",
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:708"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@sendWhatsappLoginOtp",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/otp/send-otp",
+      "status": "matched",
+      "route": "POST otp/send-otp",
+      "controller": "OtpSmsController@sendOtp",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:319",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:581",
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:708"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@verifyEmailLoginOtp",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/otp/verify-email-otp",
+      "status": "matched",
+      "route": "POST otp/verify-email-otp",
+      "controller": "OtpSmsController@verifyEmailOtp",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:696",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:812"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@verifyWhatsappLoginOtp",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/getUserDetailsUsingMobileNumber",
+      "status": "matched",
+      "route": "POST getUserDetailsUsingMobileNumber",
+      "controller": "PublicFunctionsController@getUserDetailsUsingMobileNumber",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:386",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:812"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@verifyWhatsappLoginOtp",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "POST",
+      "endpoint": "/otp/verify-otp",
+      "status": "matched",
+      "route": "POST otp/verify-otp",
+      "controller": "OtpSmsController@verifyOtp",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:378",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:812"
+      ],
+      "screen_files": []
+    }
+  ],
+  "tables": [
+    {
+      "name": "api_endpoints",
+      "models": [
+        "ApiEndpoints"
+      ],
+      "columns": [
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "is_active",
+          "type": "integer"
+        },
+        {
+          "name": "is_public",
+          "type": "string"
+        },
+        {
+          "name": "is_public_reception",
+          "type": "tinyInteger"
+        },
+        {
+          "name": "method",
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "updated_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "migrations": 3
+    },
+    {
+      "name": "corporate_info",
+      "models": [
+        "CorporateInfo"
+      ],
+      "columns": [
+        {
+          "name": "add_patient_url",
+          "type": "string"
+        },
+        {
+          "name": "city",
+          "type": "string"
+        },
+        {
+          "name": "corp_role_id",
+          "type": "integer"
+        },
+        {
+          "name": "corporate_id",
+          "type": "integer"
+        },
+        {
+          "name": "corporate_type",
+          "type": "string"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "doctors_info",
+          "type": "json"
+        },
+        {
+          "name": "pincode",
+          "type": "string"
+        },
+        {
+          "name": "profile_image",
+          "type": "string"
+        },
+        {
+          "name": "state",
+          "type": "string"
+        }
+      ],
+      "migrations": 3
+    },
+    {
+      "name": "country_wise_states",
+      "models": [
+        "CountryWiseStates"
+      ],
+      "columns": [
+        {
+          "name": "timezone",
+          "type": "string"
+        }
+      ],
+      "migrations": 2
+    },
+    {
+      "name": "currency_type",
+      "models": [
+        "CurrencyType"
+      ],
+      "columns": null,
+      "migrations": 0
+    },
+    {
+      "name": "locality_info",
+      "models": [
+        "LocalityInfo"
+      ],
+      "columns": [
+        {
+          "name": "is_default",
+          "type": "tinyInteger"
+        },
+        {
+          "name": "timezone",
+          "type": "string"
+        }
+      ],
+      "migrations": 2
+    },
+    {
+      "name": "pg_device_mapping",
+      "models": [
+        "PgDeviceMapping"
+      ],
+      "columns": null,
+      "migrations": 0
+    },
+    {
+      "name": "salutation_types",
+      "models": [
+        "SalutationTypes"
+      ],
+      "columns": null,
+      "migrations": 0
+    },
+    {
+      "name": "subscriptions",
+      "models": [
+        "Subscription"
+      ],
+      "columns": [
+        {
+          "name": "api_rules",
+          "type": "json"
+        },
+        {
+          "name": "blocked_api_rules",
+          "type": "json"
+        },
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "duration",
+          "type": "integer"
+        },
+        {
+          "name": "features",
+          "type": "json"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "limits",
+          "type": "json"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "price",
+          "type": "json"
+        },
+        {
+          "name": "status",
+          "type": "boolean"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp"
+        }
+      ],
+      "migrations": 2
+    },
+    {
+      "name": "transactions",
+      "models": [
+        "Transaction"
+      ],
+      "columns": [
+        {
+          "name": "amount",
+          "type": "decimal"
+        },
+        {
+          "name": "comment",
+          "type": "text"
+        },
+        {
+          "name": "coupon_code",
+          "type": "string"
+        },
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "currency",
+          "type": "string"
+        },
+        {
+          "name": "expire_status",
+          "type": "boolean"
+        },
+        {
+          "name": "free_expire_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "invoice_data",
+          "type": "json"
+        },
+        {
+          "name": "is_trial",
+          "type": "string"
+        },
+        {
+          "name": "month",
+          "type": "integer"
+        },
+        {
+          "name": "order_id",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_order_id",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_order_json",
+          "type": "json"
+        },
+        {
+          "name": "pay_gate_payment_id",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_payment_status",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_response_json",
+          "type": "json"
+        },
+        {
+          "name": "pay_gate_signature",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_webhook_json",
+          "type": "json"
+        },
+        {
+          "name": "payment_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "payment_status",
+          "type": "boolean"
+        },
+        {
+          "name": "plan_id",
+          "type": "foreignId"
+        },
+        {
+          "name": "plan_id_v2",
+          "type": "string"
+        },
+        {
+          "name": "report_count",
+          "type": "integer"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "user_id",
+          "type": "integer"
+        }
+      ],
+      "migrations": 5
+    },
+    {
+      "name": "user_nadi_capture_type",
+      "models": [
+        "UserNadiCaptureType"
+      ],
+      "columns": [
+        {
+          "name": "allowed_countries",
+          "type": "string"
+        },
+        {
+          "name": "avoid_device_selection_usb",
+          "type": "integer"
+        },
+        {
+          "name": "can_change_capture_type",
+          "type": "boolean"
+        },
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "expiry_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "free_tier_enrolled",
+          "type": "boolean"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "is_active",
+          "type": "integer"
+        },
+        {
+          "name": "is_star_account",
+          "type": "integer"
+        },
+        {
+          "name": "last_modified_on",
+          "type": "timestamp"
+        },
+        {
+          "name": "nadi_capture_type",
+          "type": "integer"
+        },
+        {
+          "name": "no_of_reports",
+          "type": "integer"
+        },
+        {
+          "name": "plan_type",
+          "type": "string"
+        },
+        {
+          "name": "user_id",
+          "type": "integer"
+        }
+      ],
+      "migrations": 8
+    },
+    {
+      "name": "user_personal_info",
+      "models": [
+        "UserPersonalInfo"
+      ],
+      "columns": [
+        {
+          "name": "allowed_functions",
+          "type": "json"
+        },
+        {
+          "name": "app_language",
+          "type": "string"
+        },
+        {
+          "name": "ayush_no",
+          "type": "string"
+        },
+        {
+          "name": "clinic_id",
+          "type": "integer"
+        },
+        {
+          "name": "external_user_status",
+          "type": "integer"
+        },
+        {
+          "name": "is_parent",
+          "type": "integer"
+        },
+        {
+          "name": "parent_id",
+          "type": "integer"
+        },
+        {
+          "name": "plan_expire_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "plan_id",
+          "type": "foreignId"
+        },
+        {
+          "name": "profession_type_id",
+          "type": "integer"
+        },
+        {
+          "name": "reception_id",
+          "type": "integer"
+        },
+        {
+          "name": "verified_role_id",
+          "type": "integer"
+        },
+        {
+          "name": "welcome_tours_taken",
+          "type": "json"
+        }
+      ],
+      "migrations": 13
+    }
+  ],
+  "external_systems": [
+    {
+      "system": "Firebase",
+      "repo": "Ashoka-World-Backend",
+      "where": [
+        "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:1085"
+      ]
+    },
+    {
+      "system": "Firebase",
+      "repo": "Nadi-Tarangini-App",
+      "where": [
+        "Nadi-Tarangini-App:lib/common_files/Login/controller/login_bloc/login_bloc.dart:5,173,196"
+      ]
+    },
+    {
+      "system": "S3",
+      "repo": "Ashoka-World-Backend",
+      "where": [
+        "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:139,832,1714",
+        "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:491,539,595"
+      ]
+    },
+    {
+      "system": "Samvit Chakra",
+      "repo": "Ashoka-World-Backend",
+      "where": [
+        "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:662"
+      ]
+    }
+  ],
+  "environment": {
+    "source": "atreya-docs/environments.md",
+    "repos": [
+      {
+        "repo": "Ashoka-World-Backend",
+        "columns": [
+          "Env",
+          "Ref",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      },
+      {
+        "repo": "Nadi-Tarangini-App",
+        "columns": [
+          "Env",
+          "Ref",
+          "Build flavor",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      },
+      {
+        "repo": "Nadi-Tarangini-Frontend",
+        "columns": [
+          "Env",
+          "Ref",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "required": [
+      "English",
+      "Marathi",
+      "Hindi",
+      "Czech",
+      "German",
+      "Spanish",
+      "Italian"
+    ],
+    "required_source": "references/qa-scope-rules.md",
+    "files": [
+      "Nadi-Tarangini-Frontend:resources/lang/en/auth.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/pagination.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/passwords.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/validation.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en_patient.json"
+    ]
+  }
+}

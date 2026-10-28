@@ -1,0 +1,91 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "platform": "web"
+  },
+  "kind": "flow",
+  "name": "flow-web",
+  "title": "Authentication & sign-up: screen flow (web)",
+  "nodes": [
+    {
+      "id": "s-auth-admin-signup",
+      "label": "auth.admin_signUp",
+      "sub": "GET sign-up-admin",
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/admin_signUp.blade.php"
+    },
+    {
+      "id": "s-auth-college-signup",
+      "label": "auth.college_signUp",
+      "sub": "GET sign-up-college",
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/college_signUp.blade.php"
+    },
+    {
+      "id": "s-auth-forgot-password",
+      "label": "auth.forgot_password",
+      "sub": "GET forgotPassword",
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/forgot_password.blade.php"
+    },
+    {
+      "id": "s-auth-login",
+      "label": "auth.login",
+      "sub": "GET login",
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/login.blade.php"
+    },
+    {
+      "id": "s-auth-signup",
+      "label": "auth.signup",
+      "sub": "GET sign-up",
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/signup.blade.php"
+    },
+    {
+      "id": "s-auth-tabs",
+      "label": "auth.tabs",
+      "sub": "GET signup",
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/tabs.blade.php"
+    }
+  ],
+  "edges": [
+    {
+      "from": "s-auth-forgot-password",
+      "to": "s-auth-login",
+      "label": "GET login",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/forgot_password.blade.php:55"
+    },
+    {
+      "from": "s-auth-login",
+      "to": "s-auth-forgot-password",
+      "label": "GET forgotPassword",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/login.blade.php:181"
+    },
+    {
+      "from": "s-auth-login",
+      "to": "s-auth-tabs",
+      "label": "GET signup",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/login.blade.php:279"
+    },
+    {
+      "from": "s-auth-tabs",
+      "to": "s-auth-admin-signup",
+      "label": "GET sign-up-admin",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/tabs.blade.php:53"
+    },
+    {
+      "from": "s-auth-tabs",
+      "to": "s-auth-signup",
+      "label": "GET sign-up",
+      "source": "Nadi-Tarangini-Frontend:resources/views/auth/tabs.blade.php:27"
+    }
+  ]
+}

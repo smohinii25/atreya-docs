@@ -1,0 +1,96 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "routes": "POST editFcmToken",
+    "name": "seq-AUTH-R10",
+    "title": "AUTH-R10: Register the device for push notifications"
+  },
+  "kind": "sequence",
+  "name": "seq-AUTH-R10",
+  "title": "AUTH-R10: Register the device for push notifications",
+  "nodes": [
+    {
+      "id": "scr-loginwithotpscreen-loginwithusernamescreen",
+      "label": "2 screens",
+      "sub": "LoginWithOtpScreen, LoginWithUsernameScreen",
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart; Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-updatefcmtokenashoka",
+      "label": "updateFCMtokenAshoka",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:391"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-logincontroller-editfcmtoken",
+      "label": "loginController@editFcmToken",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:350"
+    },
+    {
+      "id": "rt-post-editfcmtoken",
+      "label": "POST editFcmToken",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:971"
+    },
+    {
+      "id": "ctl-authcontroller-updatefcmtoken",
+      "label": "AuthController@updateFcmToken",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1852"
+    },
+    {
+      "id": "tbl-user-personal-info",
+      "label": "user_personal_info",
+      "type": "db",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1852"
+    }
+  ],
+  "edges": [
+    {
+      "from": "scr-loginwithotpscreen-loginwithusernamescreen",
+      "to": "cli-nadi-tarangini-app-updatefcmtokenashoka",
+      "label": "uses updateFCMtokenAshoka",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:391"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-updatefcmtokenashoka",
+      "to": "rt-post-editfcmtoken",
+      "label": "POST /editFcmToken",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:391"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-logincontroller-editfcmtoken",
+      "to": "rt-post-editfcmtoken",
+      "label": "POST /editFcmToken",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:350"
+    },
+    {
+      "from": "rt-post-editfcmtoken",
+      "to": "ctl-authcontroller-updatefcmtoken",
+      "label": "AuthController@updateFcmToken",
+      "source": "Ashoka-World-Backend:routes/api.php:971"
+    },
+    {
+      "from": "ctl-authcontroller-updatefcmtoken",
+      "to": "tbl-user-personal-info",
+      "label": "uses user_personal_info",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1852"
+    },
+    {
+      "from": "ctl-authcontroller-updatefcmtoken",
+      "to": "cli-nadi-tarangini-app-updatefcmtokenashoka",
+      "label": "response 500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:1874"
+    }
+  ]
+}

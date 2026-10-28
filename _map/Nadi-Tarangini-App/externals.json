@@ -1,0 +1,286 @@
+{
+  "repo": "Nadi-Tarangini-App",
+  "commit": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+  "note": "file and line numbers only; matched text is never stored",
+  "systems": [
+    {
+      "system": "AWS Lambda / API Gateway",
+      "matches": 1,
+      "files": [
+        {
+          "file": "lib/common_files/constants/strings_const.dart",
+          "lines": [
+            268
+          ]
+        }
+      ]
+    },
+    {
+      "system": "Firebase",
+      "matches": 74,
+      "files": [
+        {
+          "file": "android/app/src/main/AndroidManifest.xml",
+          "lines": [
+            75
+          ]
+        },
+        {
+          "file": "assets/SHA key/sha-key.txt",
+          "lines": [
+            134,
+            160
+          ]
+        },
+        {
+          "file": "firebase.json",
+          "lines": [
+            5
+          ]
+        },
+        {
+          "file": "lib/common_files/Login/controller/login_bloc/login_bloc.dart",
+          "lines": [
+            5,
+            173,
+            196,
+            416
+          ]
+        },
+        {
+          "file": "lib/common_files/analytics/analytics_route_observer.dart",
+          "lines": [
+            2,
+            6
+          ]
+        },
+        {
+          "file": "lib/common_files/utilities/app_utils.dart",
+          "lines": [
+            1,
+            20,
+            22,
+            39
+          ]
+        },
+        {
+          "file": "lib/doctor_dashboard/notifications/controller/notification_bloc.dart",
+          "lines": [
+            6
+          ]
+        },
+        {
+          "file": "lib/doctor_dashboard/notifications/controller/notification_manager.dart",
+          "lines": [
+            2,
+            17,
+            48,
+            53,
+            57,
+            61,
+            84
+          ]
+        },
+        {
+          "file": "lib/main.dart",
+          "lines": [
+            3,
+            4,
+            25,
+            26,
+            40,
+            41,
+            43,
+            45
+          ]
+        },
+        {
+          "file": "lib/route/router.dart",
+          "lines": [
+            1,
+            136
+          ]
+        },
+        {
+          "file": "public/index.html",
+          "lines": [
+            6,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            24,
+            44,
+            45,
+            46,
+            48,
+            54,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            69,
+            81,
+            84
+          ]
+        },
+        {
+          "file": "pubspec.yaml",
+          "lines": [
+            66,
+            67,
+            68,
+            104
+          ]
+        },
+        {
+          "file": "windows/flutter/generated_plugin_registrant.cc",
+          "lines": [
+            11,
+            12,
+            23,
+            24,
+            25,
+            26
+          ]
+        },
+        {
+          "file": "windows/flutter/generated_plugins.cmake",
+          "lines": [
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "system": "Razorpay",
+      "matches": 14,
+      "files": [
+        {
+          "file": "lib/doctor_dashboard/subscription/utils/launch_payment.dart",
+          "lines": [
+            9,
+            24,
+            56,
+            57,
+            72,
+            77,
+            81,
+            82,
+            111,
+            154,
+            164,
+            171
+          ]
+        },
+        {
+          "file": "lib/main.dart",
+          "lines": [
+            126
+          ]
+        },
+        {
+          "file": "pubspec.yaml",
+          "lines": [
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "system": "S3",
+      "matches": 6,
+      "files": [
+        {
+          "file": "lib/common_files/constants/strings_const.dart",
+          "lines": [
+            271,
+            272,
+            289
+          ]
+        },
+        {
+          "file": "lib/doctor_dashboard/my_account/view/my_clinic/clinic_list_tab.dart",
+          "lines": [
+            191
+          ]
+        },
+        {
+          "file": "lib/doctor_dashboard/subscription/view/billing_tab.dart",
+          "lines": [
+            278
+          ]
+        },
+        {
+          "file": "lib/doctor_dashboard/visit_reports/view/visit_report_list_screen.dart",
+          "lines": [
+            56
+          ]
+        }
+      ]
+    }
+  ],
+  "other_hosts": [
+    {
+      "host": "play.google.com",
+      "count": 4
+    },
+    {
+      "host": "atreyaproduction.s3.amazonaws.com",
+      "count": 3
+    },
+    {
+      "host": "atreyaproduction.s3.ap-south-1.amazonaws.com",
+      "count": 3
+    },
+    {
+      "host": "atreyaproduction.s3.dualstack.ap-south-1.amazonaws.com",
+      "count": 3
+    },
+    {
+      "host": "ipinfo.io",
+      "count": 2
+    },
+    {
+      "host": "aka.ms",
+      "count": 1
+    },
+    {
+      "host": "api.razorpay.com",
+      "count": 1
+    },
+    {
+      "host": "docs.gradle.org",
+      "count": 1
+    },
+    {
+      "host": "firebase.google.com",
+      "count": 1
+    },
+    {
+      "host": "open.er-api.com",
+      "count": 1
+    },
+    {
+      "host": "wiki.gnome.org",
+      "count": 1
+    },
+    {
+      "host": "xqicwgldpwmx7hj6d5k6rmgzjq0mhnak.lambda-url.ap-south-1.on.aws",
+      "count": 1
+    }
+  ]
+}

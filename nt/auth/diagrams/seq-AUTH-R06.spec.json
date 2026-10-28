@@ -1,0 +1,154 @@
+{
+  "module": "auth",
+  "date": "2026-10-27",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "options": {
+    "routes": "POST v2/signup,POST signupV2",
+    "name": "seq-AUTH-R06",
+    "title": "AUTH-R06: Sign up as a new doctor"
+  },
+  "kind": "sequence",
+  "name": "seq-AUTH-R06",
+  "title": "AUTH-R06: Sign up as a new doctor",
+  "nodes": [
+    {
+      "id": "scr-auth-admin-signup-auth-college-signup-auth-signup",
+      "label": "3 screens",
+      "sub": "auth.admin_signUp, auth.college_signUp, auth.signup",
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:public/js/admin/adminSignup.js:533; Nadi-Tarangini-Frontend:public/js/college.js:324; Nadi-Tarangini-Frontend:public/js/signup.js:993; Nadi-Tarangini-Frontend:resources/views/auth/admin_signUp.blade.php; Nadi-Tarangini-Frontend:resources/views/auth/college_signUp.blade.php; Nadi-Tarangini-Frontend:resources/views/auth/signup.blade.php"
+    },
+    {
+      "id": "scr-auth-nt-lite-signup",
+      "label": "auth.nt_lite_signup",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-Frontend:public/js/nt_lite_signup.js:647; Nadi-Tarangini-Frontend:resources/views/auth/nt_lite_signup.blade.php"
+    },
+    {
+      "id": "scr-signupscreen",
+      "label": "SignUpScreen",
+      "sub": null,
+      "type": "screen",
+      "source": "Nadi-Tarangini-App:lib/common_files/signup/view/signup_screen.dart"
+    },
+    {
+      "id": "cli-nadi-tarangini-app-signup",
+      "label": "signUp",
+      "sub": "Nadi-Tarangini-App",
+      "type": "client",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:675"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-newsignupcontroller-updatesignupdetails",
+      "label": "NewSignUpController@updateSignUpDetails",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:91"
+    },
+    {
+      "id": "cli-nadi-tarangini-frontend-ntlitesignupcontroller-submitsignup",
+      "label": "NtLiteSignUpController@submitSignUp",
+      "sub": "Nadi-Tarangini-Frontend",
+      "type": "client",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NtLiteSignUpController.php:77"
+    },
+    {
+      "id": "rt-post-signupv2",
+      "label": "POST signupV2",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:744"
+    },
+    {
+      "id": "rt-post-v2-signup",
+      "label": "POST v2/signup",
+      "type": "route",
+      "source": "Ashoka-World-Backend:routes/api.php:1636"
+    },
+    {
+      "id": "ctl-signupcontroller-signupv2",
+      "label": "SignUpController@SignUpV2",
+      "type": "controller",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:701"
+    },
+    {
+      "id": "tbl-grp-signupcontroller-signupv2",
+      "label": "5 tables",
+      "sub": "country_wise_states, locality_info, salutation_types, user_nadi_capture_type, user_personal_info",
+      "type": "db",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:701"
+    }
+  ],
+  "edges": [
+    {
+      "from": "scr-auth-admin-signup-auth-college-signup-auth-signup",
+      "to": "cli-nadi-tarangini-frontend-newsignupcontroller-updatesignupdetails",
+      "label": "uses NewSignUpController@updateSignUpDetails",
+      "source": "Nadi-Tarangini-Frontend:public/js/admin/adminSignup.js:533; Nadi-Tarangini-Frontend:public/js/college.js:324; Nadi-Tarangini-Frontend:public/js/signup.js:993"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-newsignupcontroller-updatesignupdetails",
+      "to": "rt-post-v2-signup",
+      "label": "POST /v2/signup",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NewSignUpController.php:91"
+    },
+    {
+      "from": "scr-auth-nt-lite-signup",
+      "to": "cli-nadi-tarangini-frontend-ntlitesignupcontroller-submitsignup",
+      "label": "uses NtLiteSignUpController@submitSignUp",
+      "source": "Nadi-Tarangini-Frontend:public/js/nt_lite_signup.js:647"
+    },
+    {
+      "from": "cli-nadi-tarangini-frontend-ntlitesignupcontroller-submitsignup",
+      "to": "rt-post-v2-signup",
+      "label": "POST /v2/signup",
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NtLiteSignUpController.php:77"
+    },
+    {
+      "from": "scr-signupscreen",
+      "to": "cli-nadi-tarangini-app-signup",
+      "label": "uses signUp",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:675"
+    },
+    {
+      "from": "cli-nadi-tarangini-app-signup",
+      "to": "rt-post-signupv2",
+      "label": "POST /signupV2",
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:675"
+    },
+    {
+      "from": "rt-post-v2-signup",
+      "to": "ctl-signupcontroller-signupv2",
+      "label": "SignUpController@SignUpV2",
+      "source": "Ashoka-World-Backend:routes/api.php:1636"
+    },
+    {
+      "from": "ctl-signupcontroller-signupv2",
+      "to": "tbl-grp-signupcontroller-signupv2",
+      "label": "uses 5 tables",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:701"
+    },
+    {
+      "from": "ctl-signupcontroller-signupv2",
+      "to": "cli-nadi-tarangini-frontend-newsignupcontroller-updatesignupdetails",
+      "label": "response 400/500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:825"
+    },
+    {
+      "from": "rt-post-signupv2",
+      "to": "ctl-signupcontroller-signupv2",
+      "label": "SignUpController@SignUpV2",
+      "source": "Ashoka-World-Backend:routes/api.php:744"
+    },
+    {
+      "from": "ctl-signupcontroller-signupv2",
+      "to": "cli-nadi-tarangini-app-signup",
+      "label": "response 400/500",
+      "source": "Ashoka-World-Backend:app/Http/Controllers/SignUpController.php:825"
+    }
+  ]
+}

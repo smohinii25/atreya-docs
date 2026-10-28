@@ -1,0 +1,5130 @@
+{
+  "repo": "Nadi-Tarangini-Frontend",
+  "commit": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d",
+  "counts": {
+    "controllers": 55,
+    "methods": 446,
+    "methods_with_views": 154
+  },
+  "guarded_files": [
+    "app/Http/Controllers/SamvitPaymentBridgeController.php"
+  ],
+  "controllers": [
+    {
+      "fqcn": "App\\Http\\Controllers\\AddClinicDetailsController",
+      "file": "app/Http/Controllers/AddClinicDetailsController.php",
+      "methods": [
+        {
+          "name": "addClinicDetails",
+          "lines": [
+            12,
+            63
+          ],
+          "views": [
+            "my_account.addClinicDetails"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveClinicDetails",
+          "lines": [
+            65,
+            145
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\AddMemberController",
+      "file": "app/Http/Controllers/AddMemberController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            15,
+            105
+          ],
+          "views": [
+            "errors.410",
+            "patient.add-member"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveMemberData",
+          "lines": [
+            107,
+            310
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveAnonymousData",
+          "lines": [
+            312,
+            398
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\AddressDetailsController",
+      "file": "app/Http/Controllers/AddressDetailsController.php",
+      "methods": [
+        {
+          "name": "countries",
+          "lines": [
+            11,
+            24
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "lookupPincode",
+          "lines": [
+            26,
+            46
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\AdminCustomizeController",
+      "file": "app/Http/Controllers/AdminCustomizeController.php",
+      "methods": [
+        {
+          "name": "customizeReport",
+          "lines": [
+            64,
+            87
+          ],
+          "views": [
+            "customize.customize_report"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "customizeQuestion",
+          "lines": [
+            88,
+            154
+          ],
+          "views": [
+            "customize.add_question_v2"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateReportPages",
+          "lines": [
+            157,
+            201
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getCategoryWiseCustomizeQuestions",
+          "lines": [
+            202,
+            223
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateCategory",
+          "lines": [
+            224,
+            262
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getReportPages",
+          "lines": [
+            266,
+            294
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "index",
+          "lines": [
+            295,
+            324
+          ],
+          "views": [
+            "customize.add_question"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "questionstore",
+          "lines": [
+            325,
+            373
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getUserWiseReportPages",
+          "lines": [
+            375,
+            404
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getCustomizeReportUserWise",
+          "lines": [
+            406,
+            484
+          ],
+          "views": [
+            "customize.user_wise_customize_report"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateUserWiseRportPages",
+          "lines": [
+            486,
+            529
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getUserWiseCustomizeQuestion",
+          "lines": [
+            531,
+            610
+          ],
+          "views": [
+            "customize.user_wise_customize_questionnaire"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getUserWiseCategoryWiseCustomizeQuestions",
+          "lines": [
+            612,
+            635
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateUserWiseCategoryQustions",
+          "lines": [
+            637,
+            676
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\AdminDashboardController",
+      "file": "app/Http/Controllers/AdminDashboardController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            15,
+            87
+          ],
+          "views": [
+            "admin.admin_dashboard"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getUsersByRole",
+          "lines": [
+            89,
+            157
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getConsultationTypeCounts",
+          "lines": [
+            159,
+            196
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "userAndTeams",
+          "lines": [
+            198,
+            344
+          ],
+          "views": [
+            "admin.user_and_teams"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "userPatientList",
+          "lines": [
+            346,
+            461
+          ],
+          "views": [
+            "admin.user_patient_list"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchUserPatientList",
+          "lines": [
+            463,
+            503
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "searchUserPatientList",
+          "lines": [
+            505,
+            548
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "userPreviousVisits",
+          "lines": [
+            550,
+            686
+          ],
+          "views": [
+            "admin.user_previous_visits"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "viewAllReport",
+          "lines": [
+            688,
+            772
+          ],
+          "views": [
+            "admin.all_report_view"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "viewVisitReport",
+          "lines": [
+            774,
+            841
+          ],
+          "views": [
+            "admin.visit_report_view"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchUserLastVisitInformation",
+          "lines": [
+            843,
+            884
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "resolveTargetUserAuthToken",
+          "lines": [
+            886,
+            905
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editProfile",
+          "lines": [
+            907,
+            964
+          ],
+          "views": [
+            "admin.edit_profile"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateProfile",
+          "lines": [
+            966,
+            1068
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "dataManagement",
+          "lines": [
+            1070,
+            1163
+          ],
+          "views": [
+            "admin.data_management"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateUserDataManagement",
+          "lines": [
+            1165,
+            1188
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "createUser",
+          "lines": [
+            1190,
+            1273
+          ],
+          "views": [
+            "admin.create_user"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveUser",
+          "lines": [
+            1275,
+            1337
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatePassword",
+          "lines": [
+            1339,
+            1359
+          ],
+          "views": [
+            "admin.update_password"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateUserPassword",
+          "lines": [
+            1361,
+            1386
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editPermissions",
+          "lines": [
+            1388,
+            1469
+          ],
+          "views": [
+            "admin.user_permissions"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatePermissions",
+          "lines": [
+            1471,
+            1501
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "activeInactiveUser",
+          "lines": [
+            1503,
+            1538
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getUserDetails",
+          "lines": [
+            1540,
+            1574
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getUserClinicDetails",
+          "lines": [
+            1576,
+            1603
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getPlanDetails",
+          "lines": [
+            1605,
+            1635
+          ],
+          "views": [
+            "admin.plan_details"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "applyCoupon",
+          "lines": [
+            1637,
+            1668
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "createNtOrder",
+          "lines": [
+            1670,
+            1713
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "verifyTransaction",
+          "lines": [
+            1715,
+            1763
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getPlanStatus",
+          "lines": [
+            1765,
+            1784
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "paymentInvoices",
+          "lines": [
+            1786,
+            1793
+          ],
+          "views": [
+            "admin.payment_invoices"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchPaymentInvoices",
+          "lines": [
+            1795,
+            1828
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\AppointmentController",
+      "file": "app/Http/Controllers/AppointmentController.php",
+      "methods": [
+        {
+          "name": "fetchAppointmentConsultationTypes",
+          "lines": [
+            15,
+            36
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addAppointment",
+          "lines": [
+            38,
+            122
+          ],
+          "views": [
+            "appointment.add-appointment"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "currentUserAccessibleUsersWithLocations",
+          "lines": [
+            124,
+            153
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAccessUserWisePatientList",
+          "lines": [
+            155,
+            188
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveVisitedPatientAppointment",
+          "lines": [
+            190,
+            245
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "appointmentList",
+          "lines": [
+            326,
+            430
+          ],
+          "views": [
+            "appointment.appointment_list"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "validateAppointment",
+          "lines": [
+            431,
+            472
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteAppointment",
+          "lines": [
+            474,
+            512
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "viewAppointment",
+          "lines": [
+            514,
+            576
+          ],
+          "views": [
+            "appointment/view_appointment"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "appointmentHistory",
+          "lines": [
+            578,
+            610
+          ],
+          "views": [
+            "appointment.appointment_history"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editAppointment",
+          "lines": [
+            612,
+            699
+          ],
+          "views": [
+            "appointment/edit_appointment"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchSingleAppointment",
+          "lines": [
+            702,
+            728
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateAppointment",
+          "lines": [
+            731,
+            788
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "registerAppointment",
+          "lines": [
+            790,
+            835
+          ],
+          "views": [
+            "appointment.register_appointment"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addPatientForAppointment",
+          "lines": [
+            837,
+            879
+          ],
+          "views": [
+            "appointment.add_patient_for_appointment"
+          ],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\ChangePasswordController",
+      "file": "app/Http/Controllers/ChangePasswordController.php",
+      "methods": [
+        {
+          "name": "changePassword",
+          "lines": [
+            12,
+            15
+          ],
+          "views": [
+            "my_account/change_password"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatePassword",
+          "lines": [
+            17,
+            58
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\ClinicListController",
+      "file": "app/Http/Controllers/ClinicListController.php",
+      "methods": [
+        {
+          "name": "clinicList",
+          "lines": [
+            12,
+            93
+          ],
+          "views": [
+            "my_account.clinicList"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteClinic",
+          "lines": [
+            95,
+            113
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "storeClinic",
+          "lines": [
+            115,
+            143
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\CompanyController",
+      "file": "app/Http/Controllers/CompanyController.php",
+      "methods": [
+        {
+          "name": "company",
+          "lines": [
+            13,
+            47
+          ],
+          "views": [
+            "medical_inventory.company"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addCompany",
+          "lines": [
+            49,
+            85
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteCompany",
+          "lines": [
+            87,
+            124
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editCompany",
+          "lines": [
+            126,
+            177
+          ],
+          "views": [
+            "medical_inventory.edit_company"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateCompany",
+          "lines": [
+            179,
+            226
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\Corporate\\PatientDashboardManagementController",
+      "file": "app/Http/Controllers/Corporate/PatientDashboardManagementController.php",
+      "methods": [
+        {
+          "name": "corporatePatientDashboard",
+          "lines": [
+            14,
+            498
+          ],
+          "views": [
+            "corporate-patient-module.dashboard"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveCorporatePatientsPrakrutiQuestions",
+          "lines": [
+            500,
+            519
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\CustomizeController",
+      "file": "app/Http/Controllers/CustomizeController.php",
+      "methods": [
+        {
+          "name": "customize",
+          "lines": [
+            13,
+            62
+          ],
+          "views": [
+            "customize.customize"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatereportPages",
+          "lines": [
+            63,
+            107
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getCategoryWiseCustomizeQuestions",
+          "lines": [
+            108,
+            129
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getCategoryWiseCustomizeQuestionsList",
+          "lines": [
+            131,
+            152
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateCategory",
+          "lines": [
+            154,
+            192
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getReportPages",
+          "lines": [
+            196,
+            224
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "index",
+          "lines": [
+            225,
+            254
+          ],
+          "views": [
+            "customize.add_question"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "questionstore",
+          "lines": [
+            255,
+            303
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\DashboardController",
+      "file": "app/Http/Controllers/DashboardController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            16,
+            225
+          ],
+          "views": [
+            "doctor_dashboard.dashboard"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getUserCurrentSummary",
+          "lines": [
+            227,
+            247
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getReleaseDetails",
+          "lines": [
+            249,
+            268
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getUserCustomizeSummary",
+          "lines": [
+            270,
+            314
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getLanguagesForReports",
+          "lines": [
+            316,
+            355
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllClinicList",
+          "lines": [
+            357,
+            384
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getDefaultClinicDetails",
+          "lines": [
+            386,
+            409
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateReportLanguage",
+          "lines": [
+            411,
+            436
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "linkedDevice",
+          "lines": [
+            438,
+            463
+          ],
+          "views": [
+            "link_device"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "patientQueries",
+          "lines": [
+            465,
+            467
+          ],
+          "views": [
+            "patient_queries"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "patientProgress",
+          "lines": [
+            469,
+            471
+          ],
+          "views": [
+            "patient_progress"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "patientReport",
+          "lines": [
+            473,
+            475
+          ],
+          "views": [
+            "patient_report"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getSubscriptionData",
+          "lines": [
+            477,
+            541
+          ],
+          "views": [
+            "subscription_plans"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getPlanStatus",
+          "lines": [
+            543,
+            562
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "freeTrial",
+          "lines": [
+            564,
+            636
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteUserAccount",
+          "lines": [
+            638,
+            658
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateKycDetails",
+          "lines": [
+            660,
+            753
+          ],
+          "views": [
+            "my_account.update_kyc"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateTourData",
+          "lines": [
+            755,
+            821
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getScreenWelcomeTour",
+          "lines": [
+            823,
+            878
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "completeScreenWelcomeTour",
+          "lines": [
+            880,
+            883
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "normalizeWelcomeTourKey",
+          "lines": [
+            885,
+            899
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "isSupportedWelcomeTourKey",
+          "lines": [
+            901,
+            912
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "backendWelcomeTourUrl",
+          "lines": [
+            914,
+            924
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "normalizeWelcomeTourImageUrls",
+          "lines": [
+            926,
+            971
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "normalizeWelcomeTourImageUrl",
+          "lines": [
+            973,
+            1000
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getWelcomeTourSteps",
+          "lines": [
+            1002,
+            1038
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "extractWelcomeTourScreens",
+          "lines": [
+            1040,
+            1086
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkout",
+          "lines": [
+            1088,
+            1154
+          ],
+          "views": [
+            "subscription.checkout"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "invoice",
+          "lines": [
+            1156,
+            1177
+          ],
+          "views": [
+            "errors.404",
+            "profile.invoice"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "savePaymentData",
+          "lines": [
+            1179,
+            1273
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addSelfAdmin",
+          "lines": [
+            1275,
+            1309
+          ],
+          "views": [
+            "add_self_admin"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveSelfAdminData",
+          "lines": [
+            1311,
+            1367
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "switchToAdmin",
+          "lines": [
+            1369,
+            1390
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "switchToDoctor",
+          "lines": [
+            1392,
+            1573
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\DesignFormController",
+      "file": "app/Http/Controllers/DesignFormController.php",
+      "methods": [
+        {
+          "name": "editFormDetails",
+          "lines": [
+            12,
+            17
+          ],
+          "views": [
+            "design-form/edit_form_details"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editForm",
+          "lines": [
+            19,
+            24
+          ],
+          "views": [
+            "design-form/edit_form"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addFormDetails",
+          "lines": [
+            26,
+            51
+          ],
+          "views": [
+            "design-form/add_form_details"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "reorderForm",
+          "lines": [
+            53,
+            57
+          ],
+          "views": [
+            "design-form/reorder_form"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "selectKeywords",
+          "lines": [
+            59,
+            82
+          ],
+          "views": [
+            "design-form/select_keywords"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "customizeTabForm",
+          "lines": [
+            84,
+            87
+          ],
+          "views": [
+            "design-form/customize_tab_form"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getMedicalFormList",
+          "lines": [
+            89,
+            108
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getFormList",
+          "lines": [
+            110,
+            129
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getSymptomInfo",
+          "lines": [
+            131,
+            147
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateKeywordsData",
+          "lines": [
+            149,
+            188
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getReorderData",
+          "lines": [
+            190,
+            233
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateReorderData",
+          "lines": [
+            235,
+            277
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\DietController",
+      "file": "app/Http/Controllers/DietController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            12,
+            52
+          ],
+          "views": [
+            "diet_lifestyle",
+            "errors.expiredMedicalId"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveDietData",
+          "lines": [
+            54,
+            192
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveFeesDataAfterDiet",
+          "lines": [
+            194,
+            316
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getVikrutiWiseDietV2",
+          "lines": [
+            318,
+            349
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "skipDiet",
+          "lines": [
+            384,
+            396
+          ],
+          "views": [
+            "errors.expiredMedicalId",
+            "skip_diet"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveVikrutiWiseDietData",
+          "lines": [
+            398,
+            541
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveDietAndLifestyleNew",
+          "lines": [
+            543,
+            740
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "clearCompletedVisitSessions",
+          "lines": [
+            742,
+            759
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\DownloadRutucharyaController",
+      "file": "app/Http/Controllers/DownloadRutucharyaController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            11,
+            56
+          ],
+          "views": [
+            "rutucharya.download_rutucharya"
+          ],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\EditClinicDetailsController",
+      "file": "app/Http/Controllers/EditClinicDetailsController.php",
+      "methods": [
+        {
+          "name": "editClinicDetails",
+          "lines": [
+            12,
+            97
+          ],
+          "views": [
+            "my_account.editClinicDetails"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatedClinicDetails",
+          "lines": [
+            99,
+            188
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\EditDoctorDetailsController",
+      "file": "app/Http/Controllers/EditDoctorDetailsController.php",
+      "methods": [
+        {
+          "name": "editDoctorDetails",
+          "lines": [
+            12,
+            206
+          ],
+          "views": [
+            "my_account.myaccount"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editDoctorProfile",
+          "lines": [
+            207,
+            406
+          ],
+          "views": [
+            "my_account/edit_profile"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatetDoctorDetails",
+          "lines": [
+            408,
+            550
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editPaymentDetails",
+          "lines": [
+            552,
+            599
+          ],
+          "views": [
+            "my_account.edit_payment"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatePaymentDetails",
+          "lines": [
+            601,
+            677
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\EditMemberController",
+      "file": "app/Http/Controllers/EditMemberController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            13,
+            86
+          ],
+          "views": [
+            "patient.edit_member"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatetMemberData",
+          "lines": [
+            88,
+            201
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\External\\ExternalNadiController",
+      "file": "app/Http/Controllers/External/ExternalNadiController.php",
+      "methods": [
+        {
+          "name": "externalAssessment",
+          "lines": [
+            15,
+            116
+          ],
+          "views": [
+            "external.external_assessment",
+            "external.input_validation",
+            "external.non_external_user",
+            "external.unauthorized"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "analyzeExternalNadiData",
+          "lines": [
+            118,
+            193
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\FeeDetailsController",
+      "file": "app/Http/Controllers/FeeDetailsController.php",
+      "methods": [
+        {
+          "name": "clearMedicalAssessmentStateByMedicalId",
+          "lines": [
+            14,
+            19
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "normalizeShareReportIds",
+          "lines": [
+            21,
+            42
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "currentSiteType",
+          "lines": [
+            44,
+            47
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "filterLanguagesBySiteType",
+          "lines": [
+            49,
+            58
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "index",
+          "lines": [
+            60,
+            105
+          ],
+          "views": [
+            "errors.expiredMedicalId",
+            "fee_details"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getReportWiseLanguages",
+          "lines": [
+            107,
+            160
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveFeesData",
+          "lines": [
+            162,
+            303
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveFeesDataWithNA",
+          "lines": [
+            305,
+            448
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "clearCompletedVisitSessions",
+          "lines": [
+            450,
+            464
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "savePrescriptionDataOnSaveFees",
+          "lines": [
+            466,
+            494
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\HelpController",
+      "file": "app/Http/Controllers/HelpController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            12,
+            34
+          ],
+          "views": [
+            "help"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "helpCenter",
+          "lines": [
+            35,
+            90
+          ],
+          "views": [
+            "help.help"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "nadiTaranginiMap",
+          "lines": [
+            93,
+            96
+          ],
+          "views": [
+            "research_dashboard.nt_map"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "collegeDashboard",
+          "lines": [
+            98,
+            100
+          ],
+          "views": [
+            "research_dashboard.college_dashboard"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "homePage",
+          "lines": [
+            102,
+            104
+          ],
+          "views": [
+            "research_dashboard.home_page"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "nadiAnalysis1",
+          "lines": [
+            106,
+            127
+          ],
+          "views": [
+            "research_dashboard.nadi_analysis_1"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchPatientVisits",
+          "lines": [
+            129,
+            161
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getTenSecondsNadiData",
+          "lines": [
+            163,
+            196
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "downloadNadiFileData",
+          "lines": [
+            198,
+            221
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getLabelUsingMedicalId",
+          "lines": [
+            223,
+            258
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "nadiAnalysis2",
+          "lines": [
+            260,
+            281
+          ],
+          "views": [
+            "research_dashboard.nadi_analysis_2"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getNadiAnalysis2Data",
+          "lines": [
+            283,
+            319
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\IngredientsController",
+      "file": "app/Http/Controllers/IngredientsController.php",
+      "methods": [
+        {
+          "name": "ingredient",
+          "lines": [
+            13,
+            48
+          ],
+          "views": [
+            "medical_inventory.ingredients"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addIngredients",
+          "lines": [
+            50,
+            92
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editIngredient",
+          "lines": [
+            94,
+            147
+          ],
+          "views": [
+            "medical_inventory.edit_ingredient"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateIngredient",
+          "lines": [
+            149,
+            201
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteIngredient",
+          "lines": [
+            203,
+            241
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\InventoryController",
+      "file": "app/Http/Controllers/InventoryController.php",
+      "methods": [
+        {
+          "name": "inventory",
+          "lines": [
+            13,
+            289
+          ],
+          "views": [
+            "medical_inventory.medical-inventory"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "uploadfile",
+          "lines": [
+            290,
+            329
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "medicineuploadfile",
+          "lines": [
+            330,
+            369
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "supplementuploadfile",
+          "lines": [
+            370,
+            408
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\LiveNadiController",
+      "file": "app/Http/Controllers/LiveNadiController.php",
+      "methods": [
+        {
+          "name": "liveNadi",
+          "lines": [
+            17,
+            635
+          ],
+          "views": [
+            "errors.expiredMedicalId",
+            "live_nadi.medical_assessment"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getVikrutiWiseDiet",
+          "lines": [
+            663,
+            697
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveUsbNadiData",
+          "lines": [
+            699,
+            835
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveDummyUsbNadiData",
+          "lines": [
+            837,
+            871
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateCurrentNadiTaranginiDevice",
+          "lines": [
+            873,
+            877
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateNadiCaptureType",
+          "lines": [
+            879,
+            888
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\ManualNadiKeywordsController",
+      "file": "app/Http/Controllers/ManualNadiKeywordsController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            12,
+            50
+          ],
+          "views": [
+            "errors.expiredMedicalId",
+            "manualNadiKeywords"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveKeywordsData",
+          "lines": [
+            52,
+            108
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\MarkClinicDefaultController",
+      "file": "app/Http/Controllers/MarkClinicDefaultController.php",
+      "methods": [
+        {
+          "name": "makeDefaultClinic",
+          "lines": [
+            13,
+            46
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\MarkOnImageController",
+      "file": "app/Http/Controllers/MarkOnImageController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            15,
+            53
+          ],
+          "views": [
+            "errors.expiredMedicalId",
+            "markOnImage"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveMarkOnImageData",
+          "lines": [
+            55,
+            137
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\MedicalAssessmentV3Controller",
+      "file": "app/Http/Controllers/MedicalAssessmentV3Controller.php",
+      "methods": [
+        {
+          "name": "buildNadiReportsData",
+          "lines": [
+            31,
+            93
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAssessmentStateSessionKey",
+          "lines": [
+            95,
+            98
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getDefaultAssessmentState",
+          "lines": [
+            100,
+            103
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllowedCaseStudySections",
+          "lines": [
+            105,
+            151
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "normalizeAssessmentState",
+          "lines": [
+            153,
+            196
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getMedicalAssessmentState",
+          "lines": [
+            198,
+            231
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "clearMedicalAssessmentStateByMedicalId",
+          "lines": [
+            233,
+            239
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getTabCache",
+          "lines": [
+            241,
+            244
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "putTabCache",
+          "lines": [
+            246,
+            249
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "ensureMedicalId",
+          "lines": [
+            251,
+            269
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "ensureMedicalIdLocked",
+          "lines": [
+            271,
+            373
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "liveNadiV3",
+          "lines": [
+            375,
+            1409
+          ],
+          "views": [
+            "errors.expiredMedicalIdV3",
+            "medical_assessment.medical_assesment"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "setMedicalAssessmentV3State",
+          "lines": [
+            1411,
+            1513
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getDietPlannerContext",
+          "lines": [
+            1515,
+            1524
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "decodeDietPlannerPayload",
+          "lines": [
+            1526,
+            1540
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "decodeYogaPlannerPayload",
+          "lines": [
+            1542,
+            1556
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "dietPlannerErrorResponse",
+          "lines": [
+            1558,
+            1564
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getCurrentVisitInputForDietV3",
+          "lines": [
+            1566,
+            1603
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getYogaPlannerContext",
+          "lines": [
+            1605,
+            1614
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "yogaPlannerErrorResponse",
+          "lines": [
+            1616,
+            1622
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getCurrentVisitInputForYogaV3",
+          "lines": [
+            1624,
+            1666
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateWeeklyYogaV3",
+          "lines": [
+            1668,
+            1730
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "generateWeeklyDietV3",
+          "lines": [
+            1732,
+            1768
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateWeeklyDietV3",
+          "lines": [
+            1770,
+            1806
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveUsbNadiDataV3",
+          "lines": [
+            1808,
+            1891
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateCurrentNadiTaranginiDeviceV3",
+          "lines": [
+            1893,
+            1897
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateNadiCaptureTypeV3",
+          "lines": [
+            1899,
+            1911
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateSessionNadiCaptureType",
+          "lines": [
+            1913,
+            1934
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\MedicineController",
+      "file": "app/Http/Controllers/MedicineController.php",
+      "methods": [
+        {
+          "name": "addMedicine",
+          "lines": [
+            13,
+            49
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "medicine",
+          "lines": [
+            51,
+            166
+          ],
+          "views": [
+            "medical_inventory.medicine"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteMedicineinventory",
+          "lines": [
+            168,
+            205
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateMedicine",
+          "lines": [
+            207,
+            255
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editMedicine",
+          "lines": [
+            257,
+            389
+          ],
+          "views": [
+            "medical_inventory/edit_medicine"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editSupplement",
+          "lines": [
+            391,
+            524
+          ],
+          "views": [
+            "medical_inventory/edit_supplement"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getQuantity",
+          "lines": [
+            526,
+            546
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\MedicineTypeController",
+      "file": "app/Http/Controllers/MedicineTypeController.php",
+      "methods": [
+        {
+          "name": "medicineType",
+          "lines": [
+            13,
+            72
+          ],
+          "views": [
+            "medical_inventory.medicine-type"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addMedicineType",
+          "lines": [
+            74,
+            108
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\NewSignUpController",
+      "file": "app/Http/Controllers/NewSignUpController.php",
+      "methods": [
+        {
+          "name": "doctorSignUp",
+          "lines": [
+            14,
+            65
+          ],
+          "views": [
+            "auth.signup"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "signup",
+          "lines": [
+            66,
+            69
+          ],
+          "views": [
+            "auth.tabs"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateSignUpDetails",
+          "lines": [
+            70,
+            137
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "collegeSignUp",
+          "lines": [
+            139,
+            157
+          ],
+          "views": [
+            "auth.college_signUp"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkDoctorMobileNo",
+          "lines": [
+            159,
+            198
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkDoctorUsername",
+          "lines": [
+            199,
+            237
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkValidationsLinkDevice",
+          "lines": [
+            239,
+            278
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "linkDeviceAfterValidation",
+          "lines": [
+            280,
+            321
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "adminSignUp",
+          "lines": [
+            323,
+            360
+          ],
+          "views": [
+            "auth.admin_signUp"
+          ],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\NotificationController",
+      "file": "app/Http/Controllers/NotificationController.php",
+      "methods": [
+        {
+          "name": "notifications",
+          "lines": [
+            13,
+            68
+          ],
+          "views": [
+            "notifications.notification"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "readNotification",
+          "lines": [
+            70,
+            109
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\NtChatbotProxyController",
+      "file": "app/Http/Controllers/NtChatbotProxyController.php",
+      "methods": [
+        {
+          "name": "getApiBaseUrl",
+          "lines": [
+            28,
+            51
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "forward",
+          "lines": [
+            53,
+            73
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\NtLiteDashboardController",
+      "file": "app/Http/Controllers/NtLiteDashboardController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            17,
+            107
+          ],
+          "views": [
+            "auth.nt-lite.nt_lite_dashboard"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "callPatientList",
+          "lines": [
+            109,
+            158
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "searchPatients",
+          "lines": [
+            160,
+            212
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "previousVisits",
+          "lines": [
+            218,
+            300
+          ],
+          "views": [
+            "auth.nt-lite.nt_lite_previous_visits"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getVisitReports",
+          "lines": [
+            305,
+            423
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getVisitPrescription",
+          "lines": [
+            428,
+            495
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "settings",
+          "lines": [
+            497,
+            534
+          ],
+          "views": [
+            "auth.nt-lite.nt_lite_settings"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getPlanStatus",
+          "lines": [
+            540,
+            559
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editPayment",
+          "lines": [
+            561,
+            586
+          ],
+          "views": [
+            "auth.nt-lite.nt_lite_edit_payment"
+          ],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\NtLiteLiveNadiController",
+      "file": "app/Http/Controllers/NtLiteLiveNadiController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            12,
+            159
+          ],
+          "views": [
+            "auth.nt-lite.nt_lite_live_nadi",
+            "auth.nt-lite.nt_lite_patient_report"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchAllowedReportsData",
+          "lines": [
+            161,
+            215
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchPrescriptionPanelData",
+          "lines": [
+            217,
+            302
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "syncAccountSettings",
+          "lines": [
+            304,
+            347
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "resolveCaptureType",
+          "lines": [
+            349,
+            355
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "resolvePressureStatus",
+          "lines": [
+            357,
+            368
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "resolvePatient",
+          "lines": [
+            370,
+            409
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchCurrentVisitInfo",
+          "lines": [
+            411,
+            435
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchLinkedDeviceContext",
+          "lines": [
+            437,
+            488
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\NtLiteSignUpController",
+      "file": "app/Http/Controllers/NtLiteSignUpController.php",
+      "methods": [
+        {
+          "name": "showSignUp",
+          "lines": [
+            27,
+            49
+          ],
+          "views": [
+            "auth.nt_lite_signup"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "submitSignUp",
+          "lines": [
+            55,
+            116
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkMobileNo",
+          "lines": [
+            121,
+            154
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkUsername",
+          "lines": [
+            159,
+            191
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\OtpVerificationController",
+      "file": "app/Http/Controllers/OtpVerificationController.php",
+      "methods": [
+        {
+          "name": "sendVerificationOtpsignup",
+          "lines": [
+            12,
+            54
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "verifyVerificationOtpsignup",
+          "lines": [
+            56,
+            89
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\PatientDashboardController",
+      "file": "app/Http/Controllers/PatientDashboardController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            14,
+            143
+          ],
+          "views": [
+            "patient-module.patient_dashboard"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editProfile",
+          "lines": [
+            145,
+            218
+          ],
+          "views": [
+            "patient-module.edit_profile"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateProfileData",
+          "lines": [
+            220,
+            308
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "askQueries",
+          "lines": [
+            310,
+            344
+          ],
+          "views": [
+            "patient-module.ask_queries"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "SaveQueries",
+          "lines": [
+            346,
+            380
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "dataConsent",
+          "lines": [
+            382,
+            426
+          ],
+          "views": [
+            "patient-module.data_consent"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateConsentData",
+          "lines": [
+            428,
+            469
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteClientAccount",
+          "lines": [
+            471,
+            491
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "patientViewArogyaDarshika",
+          "lines": [
+            493,
+            510
+          ],
+          "views": [
+            "patient-module.patientArogyaDarshikaView"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "patientViewSwasthyaDarshika",
+          "lines": [
+            512,
+            529
+          ],
+          "views": [
+            "patient-module.patientSwasthyaDarshikaView"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "patientViewVisitReport",
+          "lines": [
+            531,
+            552
+          ],
+          "views": [
+            "patient-module.patientVisitReportView"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "patientViewAllReports",
+          "lines": [
+            554,
+            629
+          ],
+          "views": [
+            "patient-module.patientAllReportsView"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "dailyDietLifestyle",
+          "lines": [
+            631,
+            670
+          ],
+          "views": [
+            "patient-module.daily_diet_lifestyle"
+          ],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\PatientListController",
+      "file": "app/Http/Controllers/PatientListController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            16,
+            127
+          ],
+          "views": [
+            "patient.patientlist"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchNewMedicalIdV2",
+          "lines": [
+            129,
+            203
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchNewMedicalIdV2NtLite",
+          "lines": [
+            205,
+            250
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "fetchNewMedicalId",
+          "lines": [
+            253,
+            296
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "callPatientList",
+          "lines": [
+            298,
+            355
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deletePatient",
+          "lines": [
+            357,
+            397
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "storePatient",
+          "lines": [
+            399,
+            431
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "scheduledAppointments",
+          "lines": [
+            433,
+            471
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getPatientListData",
+          "lines": [
+            473,
+            530
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "searchPatients",
+          "lines": [
+            532,
+            587
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "FetchManualNadiKeywords",
+          "lines": [
+            589,
+            615
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getLastVisitQuestions",
+          "lines": [
+            617,
+            649
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getLastVisitInformation",
+          "lines": [
+            651,
+            686
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\PatientVisitController",
+      "file": "app/Http/Controllers/PatientVisitController.php",
+      "methods": [
+        {
+          "name": "visitHistory",
+          "lines": [
+            12,
+            108
+          ],
+          "views": [
+            "patient-module.visit_history"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deletePatientReport",
+          "lines": [
+            110,
+            148
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\PrakrutiQuestionsController",
+      "file": "app/Http/Controllers/PrakrutiQuestionsController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            16,
+            125
+          ],
+          "views": [
+            "errors.expiredMedicalId",
+            "prakrutiScreen"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "savePrakrutiData",
+          "lines": [
+            127,
+            204
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getPrakrutiDataOnList",
+          "lines": [
+            206,
+            292
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getPrakrutiDataForNewPatient",
+          "lines": [
+            293,
+            336
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\PrescriptionController",
+      "file": "app/Http/Controllers/PrescriptionController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            13,
+            102
+          ],
+          "views": [
+            "errors.expiredMedicalId",
+            "prescription"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteMedicine",
+          "lines": [
+            104,
+            127
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editMedicine",
+          "lines": [
+            129,
+            151
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "savePrescriptionData",
+          "lines": [
+            153,
+            284
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "savePrescriptionDataV2",
+          "lines": [
+            286,
+            343
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "savePrescriptionDataV3",
+          "lines": [
+            345,
+            403
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatePrescriptionDataV2",
+          "lines": [
+            405,
+            464
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatePrescriptionDataV3",
+          "lines": [
+            466,
+            525
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getMedicineNamesRespectToType",
+          "lines": [
+            599,
+            623
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewPrescriptionIngredient",
+          "lines": [
+            625,
+            723
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveRecommendationData",
+          "lines": [
+            725,
+            786
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\PreviousVisitsController",
+      "file": "app/Http/Controllers/PreviousVisitsController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            14,
+            148
+          ],
+          "views": [
+            "patient.previousVisits"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteReport",
+          "lines": [
+            150,
+            191
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "setCurrentVisitSession",
+          "lines": [
+            196,
+            211
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "resumeVisit",
+          "lines": [
+            213,
+            257
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\PudiController",
+      "file": "app/Http/Controllers/PudiController.php",
+      "methods": [
+        {
+          "name": "pudi",
+          "lines": [
+            14,
+            48
+          ],
+          "views": [
+            "medical_inventory.pudi"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addPudi",
+          "lines": [
+            50,
+            85
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editPudi",
+          "lines": [
+            87,
+            139
+          ],
+          "views": [
+            "medical_inventory.edit_pudi"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatePudi",
+          "lines": [
+            141,
+            178
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deletePudi",
+          "lines": [
+            179,
+            219
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\ReceptionistController",
+      "file": "app/Http/Controllers/ReceptionistController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            13,
+            69
+          ],
+          "views": [
+            "receptionist.view-receptionist"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addReception",
+          "lines": [
+            71,
+            86
+          ],
+          "views": [
+            "receptionist.add-receptionist"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "createReception",
+          "lines": [
+            88,
+            134
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editReception",
+          "lines": [
+            136,
+            188
+          ],
+          "views": [
+            "receptionist.edit-receptionist"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateReception",
+          "lines": [
+            190,
+            236
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "activeInactiveReception",
+          "lines": [
+            238,
+            275
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "setPermission",
+          "lines": [
+            277,
+            310
+          ],
+          "views": [
+            "receptionist.set-permission"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updatePermission",
+          "lines": [
+            312,
+            338
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\ReportController",
+      "file": "app/Http/Controllers/ReportController.php",
+      "methods": [
+        {
+          "name": "getNtReport",
+          "lines": [
+            12,
+            58
+          ],
+          "views": [
+            "nt_report"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getArogyaDarshika",
+          "lines": [
+            60,
+            95
+          ],
+          "views": [
+            "arogya_darshika_report"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "viewAllReportV2",
+          "lines": [
+            97,
+            186
+          ],
+          "views": [
+            "allReportView"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "viewAllReport",
+          "lines": [
+            188,
+            236
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "viewNTReport",
+          "lines": [
+            238,
+            262
+          ],
+          "views": [
+            "nadiTaranginiView"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "viewArogyaDarshika",
+          "lines": [
+            264,
+            283
+          ],
+          "views": [
+            "arogyaDarshikaView"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "viewVisitReport",
+          "lines": [
+            285,
+            351
+          ],
+          "views": [
+            "visitReportView"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "viewSpaReport",
+          "lines": [
+            353,
+            364
+          ],
+          "views": [
+            "spaReportView"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "viewYogaReport",
+          "lines": [
+            366,
+            377
+          ],
+          "views": [
+            "yogaReportView"
+          ],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\RequestAppointmentController",
+      "file": "app/Http/Controllers/RequestAppointmentController.php",
+      "methods": [
+        {
+          "name": "requestAppointment",
+          "lines": [
+            11,
+            18
+          ],
+          "views": [
+            "patient-module.request_appointment"
+          ],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\ResearchDashboardController",
+      "file": "app/Http/Controllers/ResearchDashboardController.php",
+      "methods": [
+        {
+          "name": "researchLogout",
+          "lines": [
+            23,
+            26
+          ],
+          "views": [
+            "researchDashboardPages.login"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "researchLogin",
+          "lines": [
+            28,
+            37
+          ],
+          "views": [
+            "researchDashboard",
+            "researchDashboardPages.login"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkResearchLoginCredentials",
+          "lines": [
+            39,
+            69
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "researchDashboard",
+          "lines": [
+            71,
+            77
+          ],
+          "views": [
+            "researchDashboard"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllRules",
+          "lines": [
+            79,
+            107
+          ],
+          "views": [
+            "researchDashboardPages.criteriaList"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteRule",
+          "lines": [
+            110,
+            131
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addRule",
+          "lines": [
+            133,
+            168
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editRule",
+          "lines": [
+            170,
+            207
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllAniruddhaRule",
+          "lines": [
+            211,
+            230
+          ],
+          "views": [
+            "researchDashboardPages.aniruddhaList"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteAniruddhaRule",
+          "lines": [
+            232,
+            253
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addAniruddhaRule",
+          "lines": [
+            255,
+            290
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editAniruddhaRule",
+          "lines": [
+            292,
+            329
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllMealsCategory",
+          "lines": [
+            334,
+            353
+          ],
+          "views": [
+            "researchDashboardPages.mealsCategory"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteMealCategory",
+          "lines": [
+            355,
+            377
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewMealCategory",
+          "lines": [
+            379,
+            415
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editMealCategory",
+          "lines": [
+            417,
+            454
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllDayNames",
+          "lines": [
+            458,
+            477
+          ],
+          "views": [
+            "researchDashboardPages.dayNames"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteDayName",
+          "lines": [
+            479,
+            501
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editDayName",
+          "lines": [
+            503,
+            532
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewDayName",
+          "lines": [
+            534,
+            561
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllCommonJsonData",
+          "lines": [
+            566,
+            585
+          ],
+          "views": [
+            "researchDashboardPages.commonJson"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteCommonJson",
+          "lines": [
+            587,
+            609
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editCommonJson",
+          "lines": [
+            611,
+            644
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewCommonJson",
+          "lines": [
+            646,
+            677
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllRecipePreferenceJsonData",
+          "lines": [
+            680,
+            699
+          ],
+          "views": [
+            "researchDashboardPages.recipePreference"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllExerciseCategory",
+          "lines": [
+            703,
+            722
+          ],
+          "views": [
+            "researchDashboardPages.exerciseCategory"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteExerciseCategory",
+          "lines": [
+            724,
+            746
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editExerciseCategory",
+          "lines": [
+            748,
+            776
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewExerciseCategory",
+          "lines": [
+            778,
+            803
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateExerciseData",
+          "lines": [
+            808,
+            843
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewExerciseTag",
+          "lines": [
+            845,
+            876
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteExerciseTag",
+          "lines": [
+            878,
+            900
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteRecipePreference",
+          "lines": [
+            906,
+            928
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editRecipePreference",
+          "lines": [
+            930,
+            959
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewRecipePreference",
+          "lines": [
+            961,
+            988
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllMusicTags",
+          "lines": [
+            992,
+            1011
+          ],
+          "views": [
+            "researchDashboardPages.musicTags"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteMusicTag",
+          "lines": [
+            1013,
+            1035
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editMusicTag",
+          "lines": [
+            1037,
+            1063
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewMusicTag",
+          "lines": [
+            1065,
+            1089
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllYogaCategory",
+          "lines": [
+            1093,
+            1112
+          ],
+          "views": [
+            "researchDashboardPages.yogaCategory"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editYogaCategory",
+          "lines": [
+            1114,
+            1140
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewYogaCategory",
+          "lines": [
+            1142,
+            1166
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteYogaCategory",
+          "lines": [
+            1168,
+            1190
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllRecipeCategory",
+          "lines": [
+            1193,
+            1234
+          ],
+          "views": [
+            "researchDashboardPages.recipeCategory"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAniruddhaRecipeTagging",
+          "lines": [
+            1236,
+            1256
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getRecipeComplementaryData",
+          "lines": [
+            1258,
+            1285
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "handleAniruddhaRecipeTagging",
+          "lines": [
+            1287,
+            1311
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateRecipeCategory",
+          "lines": [
+            1315,
+            1377
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteRecipeCategory",
+          "lines": [
+            1379,
+            1400
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewRecipeCategory",
+          "lines": [
+            1404,
+            1453
+          ],
+          "views": [
+            "researchDashboardPages.recipeCategory"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getTagging",
+          "lines": [
+            1455,
+            1464
+          ],
+          "views": [
+            "researchDashboardPages.tagging"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "statesNames",
+          "lines": [
+            1467,
+            1484
+          ],
+          "views": [
+            "researchDashboardPages.statesNames"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewStateName",
+          "lines": [
+            1486,
+            1509
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editStateName",
+          "lines": [
+            1511,
+            1537
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteStateName",
+          "lines": [
+            1539,
+            1560
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllYogaData",
+          "lines": [
+            1562,
+            1580
+          ],
+          "views": [
+            "researchDashboardPages.yogaData"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewYogaJsonData",
+          "lines": [
+            1582,
+            1614
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateYogaJsonData",
+          "lines": [
+            1618,
+            1661
+          ],
+          "views": [
+            "researchDashboardPages.yogaData"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteYogaJson",
+          "lines": [
+            1663,
+            1684
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllExerciseData",
+          "lines": [
+            1688,
+            1706
+          ],
+          "views": [
+            "researchDashboardPages.exerciseData"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllMusicData",
+          "lines": [
+            1710,
+            1728
+          ],
+          "views": [
+            "researchDashboardPages.musicData"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateMusicData",
+          "lines": [
+            1732,
+            1765
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteMusicLibraryData",
+          "lines": [
+            1767,
+            1788
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewMusicLibraryData",
+          "lines": [
+            1790,
+            1816
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "recipeTags",
+          "lines": [
+            1820,
+            1838
+          ],
+          "views": [
+            "researchDashboardPages.recipeTags"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "deleteRecipeTag",
+          "lines": [
+            1840,
+            1862
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "addNewRecipeTag",
+          "lines": [
+            1864,
+            1890
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editRecipeTag",
+          "lines": [
+            1892,
+            1921
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "researchTestDiet",
+          "lines": [
+            1923,
+            1925
+          ],
+          "views": [
+            "research_dashboard.researchTestDiet"
+          ],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\SignUpController",
+      "file": "app/Http/Controllers/SignUpController.php",
+      "methods": [
+        {
+          "name": "doctorSignUp",
+          "lines": [
+            13,
+            60
+          ],
+          "views": [
+            "signUp"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "updateSignUpDetails",
+          "lines": [
+            62,
+            129
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkDoctorMobileNo",
+          "lines": [
+            131,
+            171
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkDoctorUsername",
+          "lines": [
+            173,
+            212
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkValidationsLinkDevice",
+          "lines": [
+            214,
+            253
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "linkDeviceAfterValidation",
+          "lines": [
+            255,
+            296
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\UnauthorizedController",
+      "file": "app/Http/Controllers/UnauthorizedController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            10,
+            19
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "regionRestricted",
+          "lines": [
+            21,
+            25
+          ],
+          "views": [
+            "errors/regionRestricted"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "error400",
+          "lines": [
+            27,
+            31
+          ],
+          "views": [
+            "errors/400"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "error401",
+          "lines": [
+            33,
+            37
+          ],
+          "views": [
+            "errors/401"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "error403",
+          "lines": [
+            38,
+            42
+          ],
+          "views": [
+            "errors/403"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "error404",
+          "lines": [
+            43,
+            47
+          ],
+          "views": [
+            "errors/404"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "error500",
+          "lines": [
+            48,
+            52
+          ],
+          "views": [
+            "errors/500"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "error503",
+          "lines": [
+            53,
+            57
+          ],
+          "views": [
+            "errors/503"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "error504",
+          "lines": [
+            58,
+            62
+          ],
+          "views": [
+            "errors/504"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "error",
+          "lines": [
+            64,
+            68
+          ],
+          "views": [
+            "errors/expiredMedicalId"
+          ],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\ViewMemberController",
+      "file": "app/Http/Controllers/ViewMemberController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            11,
+            66
+          ],
+          "views": [
+            "patient.view_member"
+          ],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\VikrutiController",
+      "file": "app/Http/Controllers/VikrutiController.php",
+      "methods": [
+        {
+          "name": "index",
+          "lines": [
+            13,
+            108
+          ],
+          "views": [
+            "errors.expiredMedicalId",
+            "errors.limited_access",
+            "vikruti"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getVikrutiData",
+          "lines": [
+            111,
+            170
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getSymptomHistory",
+          "lines": [
+            172,
+            212
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveVikrutiDataV2",
+          "lines": [
+            214,
+            301
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveVikrutiData",
+          "lines": [
+            303,
+            367
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "saveCategoryWiseVikrutiData",
+          "lines": [
+            369,
+            440
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\WebErrorReportController",
+      "file": "app/Http/Controllers/WebErrorReportController.php",
+      "methods": [
+        {
+          "name": "store",
+          "lines": [
+            14,
+            94
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\forgotPasswordController",
+      "file": "app/Http/Controllers/forgotPasswordController.php",
+      "methods": [
+        {
+          "name": "forgotPassword",
+          "lines": [
+            13,
+            43
+          ],
+          "views": [
+            "auth.forgot_password"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkForgotPassword",
+          "lines": [
+            45,
+            83
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    },
+    {
+      "fqcn": "App\\Http\\Controllers\\loginController",
+      "file": "app/Http/Controllers/loginController.php",
+      "methods": [
+        {
+          "name": "login",
+          "lines": [
+            13,
+            55
+          ],
+          "views": [
+            "auth.login"
+          ],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "checkLoginCredentials",
+          "lines": [
+            57,
+            310
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "logout",
+          "lines": [
+            312,
+            315
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "sendWhatsappLoginOtp",
+          "lines": [
+            317,
+            324
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "editFcmToken",
+          "lines": [
+            325,
+            367
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "verifyWhatsappLoginOtp",
+          "lines": [
+            370,
+            411
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getUserDetailsOtpBasedLogin",
+          "lines": [
+            413,
+            678
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "sendEmailLoginOtp",
+          "lines": [
+            680,
+            688
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "verifyEmailLoginOtp",
+          "lines": [
+            690,
+            722
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "getAllRoles",
+          "lines": [
+            724,
+            746
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        },
+        {
+          "name": "normalizeWebWelcomeToursStatus",
+          "lines": [
+            748,
+            753
+          ],
+          "views": [],
+          "models": [],
+          "tables": []
+        }
+      ]
+    }
+  ]
+}
