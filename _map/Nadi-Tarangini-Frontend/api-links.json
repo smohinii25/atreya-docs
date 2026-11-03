@@ -24108,6 +24108,14 @@
       "reason": "url built from variable getPlanStatusUrl"
     },
     {
+      "source": "public/js/dashboard-summary.js:105",
+      "reason": "url built from variable ntDashboardSummaryCurrentUrl"
+    },
+    {
+      "source": "public/js/dashboard-summary.js:343",
+      "reason": "url built from variable ntDashboardSummaryCustomizeUrl"
+    },
+    {
       "source": "public/js/dashboard_nav.js:65",
       "reason": "url built from variable defaultFetchUrl"
     },
@@ -24118,14 +24126,6 @@
     {
       "source": "public/js/dashboard_nav.js:351",
       "reason": "url built from variable fetchUrl"
-    },
-    {
-      "source": "public/js/dashboard-summary.js:105",
-      "reason": "url built from variable ntDashboardSummaryCurrentUrl"
-    },
-    {
-      "source": "public/js/dashboard-summary.js:343",
-      "reason": "url built from variable ntDashboardSummaryCustomizeUrl"
     },
     {
       "source": "public/js/live_nadi/dietPlanner.js:1687",

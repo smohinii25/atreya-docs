@@ -1,0 +1,2952 @@
+{
+  "module": {
+    "id": "dashboard",
+    "name": "Doctor dashboard, onboarding & welcome tour",
+    "product": "nt",
+    "critical": false,
+    "owner": "TBD",
+    "doc_status": "none",
+    "in_use": {
+      "dev": "TBD",
+      "staging": "TBD",
+      "production": "TBD"
+    }
+  },
+  "generated": "2026-11-03",
+  "backend": "Ashoka-World-Backend",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "backend_routes": [
+    {
+      "key": "GET getAccountData",
+      "method": "GET",
+      "uri": "getAccountData",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserStatsController@getUserAccountData",
+      "source": "Ashoka-World-Backend:routes/api.php:958",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/UserStatsController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getAccountData",
+          "pages": [
+            "AddAppointmentScreen",
+            "AddMedicinePrescription",
+            "AddPatientFromAppointmentScreen",
+            "AddPatientScreen",
+            "AppointmentScreen",
+            "DashboardScreen",
+            "Drawermenu",
+            "EditPatientScreen",
+            "FillPrakrutiScreen",
+            "InventoryScreen",
+            "MainAssessmentScreen",
+            "PatientScreen",
+            "RutucharyaScreen",
+            "VisitReportListScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "?@?",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "NtLiteLiveNadiController@syncAccountSettings",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "404",
+          "message": "User not found.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/UserStatsController.php:196"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/UserStatsController.php:359"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/UserStatsController.php:367"
+        }
+      ]
+    },
+    {
+      "key": "POST getUserCurrentSummary",
+      "method": "POST",
+      "uri": "getUserCurrentSummary",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "AuthController@getUserSummaryV2",
+      "source": "Ashoka-World-Backend:routes/api.php:951",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getUserCurrentSummary",
+          "pages": [
+            "DashboardScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@getUserCurrentSummary",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": null,
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:2220"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:2233"
+        }
+      ]
+    },
+    {
+      "key": "POST getUserCustomizeSummary",
+      "method": "POST",
+      "uri": "getUserCustomizeSummary",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "AuthController@getUserCustomizeSummary",
+      "source": "Ashoka-World-Backend:routes/api.php:953",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getUserCustomizeSummary",
+          "pages": [
+            "DashboardScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@getUserCustomizeSummary",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Type must be WEEKLY, MONTHLY or YEARLY",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:2248"
+        },
+        {
+          "http": "404",
+          "message": "Doctor not found",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:2270"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:2353"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:2361"
+        }
+      ]
+    },
+    {
+      "key": "POST getUserStatsData",
+      "method": "POST",
+      "uri": "getUserStatsData",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserStatsController@getUserStatsData",
+      "source": "Ashoka-World-Backend:routes/api.php:955",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/UserStatsController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": []
+    },
+    {
+      "key": "POST getUserSummary",
+      "method": "POST",
+      "uri": "getUserSummary",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "AuthController@getUserSummary",
+      "source": "Ashoka-World-Backend:routes/api.php:949",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getAnanysisDataDashbord",
+          "pages": [
+            "DashboardScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@index",
+          "pages": [
+            "doctor_dashboard.dashboard"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": null,
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:2110"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:2131"
+        }
+      ]
+    },
+    {
+      "key": "GET welcome-tour",
+      "method": "GET",
+      "uri": "welcome-tour",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "WelcomeTourController@getTourSteps",
+      "source": "Ashoka-World-Backend:routes/api.php:1005",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getWelcomeTourDetails",
+          "pages": [
+            "AddPatientFromAppointmentScreen",
+            "AddPatientScreen",
+            "DashboardScreen",
+            "EditPatientScreen",
+            "FillPrakrutiScreen",
+            "InventoryScreen",
+            "MainAssessmentScreen",
+            "PatientScreen",
+            "VisitReportListScreen"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "key",
+          "rules": "required|string|in:dashboard,prakruti_fill,add_patient,visit_report,medical_inventory,nadi_flow,live_nadi",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:23"
+        }
+      ],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Invalid parameters: ",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:30"
+        },
+        {
+          "http": null,
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:42"
+        },
+        {
+          "http": null,
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:53"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:61"
+        }
+      ]
+    },
+    {
+      "key": "POST welcome-tour/complete",
+      "method": "POST",
+      "uri": "welcome-tour/complete",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "WelcomeTourController@completeTour",
+      "source": "Ashoka-World-Backend:routes/api.php:1006",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "completeWelcomeTour",
+          "pages": [
+            "AddPatientScreen",
+            "DashboardScreen",
+            "FillPrakrutiScreen",
+            "InventoryScreen",
+            "MainAssessmentScreen",
+            "VisitReportListScreen"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "key",
+          "rules": "required|string|in:dashboard,prakruti_fill,add_patient,visit_report,medical_inventory,nadi_flow,live_nadi",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:77"
+        },
+        {
+          "field": "platform",
+          "rules": "nullable|string|in:web,mobile",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:78"
+        }
+      ],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Invalid parameters: ",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:85"
+        },
+        {
+          "http": "404",
+          "message": "User not found.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:96"
+        },
+        {
+          "http": "403",
+          "message": "Action not allowed for patient role.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:105"
+        },
+        {
+          "http": null,
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:117"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/WelcomeTourController.php:124"
+        }
+      ]
+    }
+  ],
+  "not_called": [
+    "POST getUserStatsData"
+  ],
+  "web_routes": [
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET add-self-admin",
+      "name": "addSelfAdmin",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@addSelfAdmin",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:397"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST add-self-admin",
+      "name": "saveSelfAdminData",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@saveSelfAdminData",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:399"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/switchToAdminToDoctor",
+      "name": "switchToDoctor",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "DashboardController@switchToDoctor",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:156"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET api/welcome-tour",
+      "name": "welcomeTour.screen",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@getScreenWelcomeTour",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:358"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST api/welcome-tour/complete",
+      "name": "welcomeTour.complete",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@completeScreenWelcomeTour",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:359"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET checkout",
+      "name": "checkout",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@checkout",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:744"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET dashboard",
+      "name": "dashboard",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@index",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:357"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST delete-account",
+      "name": "deleteUserAccount",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@deleteUserAccount",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:702"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST freeTrial",
+      "name": null,
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@freeTrial",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:446"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET get-all-clinic-list",
+      "name": "getAllClinicList",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@getAllClinicList",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:734"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET get-default-clinic-details",
+      "name": "getDefaultClinicDetails",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@getDefaultClinicDetails",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:735"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET get-languages-for-reports",
+      "name": "getLanguagesForReports",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@getLanguagesForReports",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:733"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET getPlanStatus",
+      "name": "dashboard.getPlanStatus",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@getPlanStatus",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:364"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET getReleaseDetails",
+      "name": "dashboard.releaseDetails",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@getReleaseDetails",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:363"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST getUserCurrentSummary",
+      "name": "dashboard.currentSummary",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@getUserCurrentSummary",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:365"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST getUserCustomizeSummary",
+      "name": "dashboard.customizeSummary",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@getUserCustomizeSummary",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:366"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET getWelcomeTourSteps/{page?}",
+      "name": "dashboard.welcomeTourSteps",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@getWelcomeTourSteps",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:362"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET invoice/{invoiceId}",
+      "name": "invoice",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@invoice",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:748"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET linked-device",
+      "name": "linkedDevice",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@linkedDevice",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:737"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET member-progress",
+      "name": "patientProgress",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@patientProgress",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:731"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET member-report",
+      "name": "patientReport",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@patientReport",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:732"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET queries",
+      "name": "patientQueries",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@patientQueries",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:738"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST savePaymentData",
+      "name": null,
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@savePaymentData",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:746"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET subscription",
+      "name": "getSubscriptionData",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@getSubscriptionData",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:421"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET switchToAdmin",
+      "name": "switchToAdmin",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@switchToAdmin",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:392"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST update-report-language",
+      "name": "updateReportLanguage",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@updateReportLanguage",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:736"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST updateTourData",
+      "name": null,
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@updateTourData",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:740"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET update_kyc",
+      "name": "update_kyc",
+      "middleware": [],
+      "controller": "DashboardController@updateKycDetails",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:304"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET welcome-tour",
+      "name": "welcomeTour.screen.alias",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@getScreenWelcomeTour",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:360"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST welcome-tour/complete",
+      "name": "welcomeTour.complete.alias",
+      "middleware": [
+        "check_auth_token",
+        "fetch_notifications",
+        "ensure_normal_dashboard_mode"
+      ],
+      "controller": "DashboardController@completeScreenWelcomeTour",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:361"
+    }
+  ],
+  "screens": [
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "DashboardScreen",
+      "file": "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+      "routes": [
+        {
+          "path": "/dashboardScreen",
+          "name": "dashboardScreen",
+          "line": 204
+        }
+      ],
+      "rendered_by": [],
+      "links_to": [
+        {
+          "path": "/addAppointmentScreen",
+          "line": 907
+        },
+        {
+          "path": "/addPatientScreen",
+          "line": 1164
+        },
+        {
+          "path": "/appointmentListScreen",
+          "line": 764
+        },
+        {
+          "path": "/assessmentScreen",
+          "line": 1118
+        },
+        {
+          "path": "/drawerMenu",
+          "line": 371
+        },
+        {
+          "path": "/notificationScreen",
+          "line": 446
+        },
+        {
+          "path": "/patientScreen",
+          "line": 952
+        },
+        {
+          "path": "/reportScreen",
+          "name": "reportScreen",
+          "line": 1024
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "GeoRestrictedScreen",
+      "file": "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/geo_restricted_screen.dart",
+      "routes": [
+        {
+          "path": "/geoRestrictedScreen",
+          "name": "geoRestrictedScreen",
+          "line": 1020
+        }
+      ],
+      "rendered_by": [],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "OnboardingScreen",
+      "file": "Nadi-Tarangini-App:lib/on_boarding/on_boarding_screen.dart",
+      "routes": [
+        {
+          "path": "/onBoardingScreen",
+          "name": "onBoardingScreen",
+          "line": 673
+        }
+      ],
+      "rendered_by": [],
+      "links_to": [
+        {
+          "path": "/loginScreen",
+          "name": "loginScreen",
+          "line": 107
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "SplashScreen",
+      "file": "Nadi-Tarangini-App:lib/splash_screen.dart",
+      "routes": [
+        {
+          "path": "/",
+          "name": "splash",
+          "line": 150
+        }
+      ],
+      "rendered_by": [],
+      "links_to": [
+        {
+          "path": "/dashboardScreen",
+          "line": 85
+        },
+        {
+          "path": "/geoRestrictedScreen",
+          "line": 70
+        },
+        {
+          "path": "/kycScreen",
+          "line": 83
+        },
+        {
+          "path": "/languageScreen",
+          "line": 48
+        },
+        {
+          "path": "/loginScreen",
+          "line": 55
+        },
+        {
+          "path": "/onBoardingScreen",
+          "line": 51
+        },
+        {
+          "path": "/reportScreenPatient",
+          "line": 63
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "add_self_admin",
+      "file": "Nadi-Tarangini-Frontend:resources/views/add_self_admin.blade.php",
+      "routes": [
+        "GET add-self-admin"
+      ],
+      "rendered_by": [
+        "DashboardController@addSelfAdmin"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "doctor_dashboard.dashboard",
+      "file": "Nadi-Tarangini-Frontend:resources/views/doctor_dashboard/dashboard.blade.php",
+      "routes": [
+        "GET dashboard"
+      ],
+      "rendered_by": [
+        "DashboardController@index"
+      ],
+      "links_to": [
+        {
+          "route": "GET add-appointment",
+          "name": "addAppointment",
+          "line": 359
+        },
+        {
+          "route": "GET add-member",
+          "name": "addMember",
+          "line": 561
+        },
+        {
+          "route": "GET appointment-list",
+          "name": "appointmentList",
+          "line": 358
+        },
+        {
+          "route": "GET edit-member/{id}",
+          "name": "editMember",
+          "line": 609
+        },
+        {
+          "route": "GET patientlist",
+          "name": "patientlist",
+          "line": 560
+        },
+        {
+          "route": "GET previousVisits/{id}",
+          "name": "previousVisits",
+          "line": 601
+        },
+        {
+          "route": "POST getUserCurrentSummary",
+          "name": "dashboard.currentSummary",
+          "line": 160
+        },
+        {
+          "route": "POST getUserCustomizeSummary",
+          "name": "dashboard.customizeSummary",
+          "line": 161
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "errors.404",
+      "file": "Nadi-Tarangini-Frontend:resources/views/errors/404.blade.php",
+      "routes": [
+        "GET error-404",
+        "GET invoice/{invoiceId}"
+      ],
+      "rendered_by": [
+        "DashboardController@invoice",
+        "UnauthorizedController@error404"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "my_account.update_kyc",
+      "file": "Nadi-Tarangini-Frontend:resources/views/my_account/update_kyc.blade.php",
+      "routes": [
+        "GET update_kyc"
+      ],
+      "rendered_by": [
+        "DashboardController@updateKycDetails"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "subscription.checkout",
+      "file": "Nadi-Tarangini-Frontend:resources/views/subscription/checkout.blade.php",
+      "routes": [
+        "GET checkout"
+      ],
+      "rendered_by": [
+        "DashboardController@checkout"
+      ],
+      "links_to": [
+        {
+          "url": "/",
+          "line": 206
+        },
+        {
+          "route": "GET checkout",
+          "name": "checkout",
+          "line": 12
+        },
+        {
+          "route": "GET subscription",
+          "name": "getSubscriptionData",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "subscription_plans",
+      "file": "Nadi-Tarangini-Frontend:resources/views/subscription_plans.blade.php",
+      "routes": [
+        "GET subscription"
+      ],
+      "rendered_by": [
+        "DashboardController@getSubscriptionData"
+      ],
+      "links_to": []
+    }
+  ],
+  "api_calls": [
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "completeWelcomeTour",
+      "pages": [
+        "AddPatientScreen",
+        "DashboardScreen",
+        "FillPrakrutiScreen",
+        "InventoryScreen",
+        "MainAssessmentScreen",
+        "VisitReportListScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/welcome-tour/complete",
+      "status": "matched",
+      "route": "POST welcome-tour/complete",
+      "controller": "WelcomeTourController@completeTour",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2537",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/inventory/view/inventory_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/nadi_flow_new/view/fill_prakruti_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/nadi_flow_new/view/main_assessment_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/add_patient/add_patient_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/visit_reports/view/visit_report_list_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "dashboardPatientList",
+      "pages": [
+        "DashboardScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getLimitedActivePatients",
+      "status": "matched",
+      "route": "POST getLimitedActivePatients",
+      "controller": "PatientDetailsController@getLimitedActivePatients",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:563",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "fetchNotificationsData",
+      "pages": [
+        "DashboardScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/notification/fetchAllNotifications",
+      "status": "matched",
+      "route": "POST notification/fetchAllNotifications",
+      "controller": "NotificationController@fetchAllNotifications",
+      "tables": [
+        "all_notifications_info",
+        "user_notifications_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1926",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "fetchReportFormLanguages",
+      "pages": [
+        "DashboardScreen",
+        "EditDoctorAccount",
+        "KycScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/getLanguages",
+      "status": "matched",
+      "route": "GET getLanguages",
+      "controller": "DoctorController@getLanguages",
+      "tables": [
+        "languages",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1206",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/kyc/view/kyc_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_account/edit_account.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getAccountData",
+      "pages": [
+        "AddAppointmentScreen",
+        "AddMedicinePrescription",
+        "AddPatientFromAppointmentScreen",
+        "AddPatientScreen",
+        "AppointmentScreen",
+        "DashboardScreen",
+        "Drawermenu",
+        "EditPatientScreen",
+        "FillPrakrutiScreen",
+        "InventoryScreen",
+        "MainAssessmentScreen",
+        "PatientScreen",
+        "RutucharyaScreen",
+        "VisitReportListScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/getAccountData",
+      "status": "matched",
+      "route": "GET getAccountData",
+      "controller": "UserStatsController@getUserAccountData",
+      "tables": [
+        "languages",
+        "locality_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:545",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/appointments/view/add_appointment.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/appointments/view/appointment_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/drawer_menu/view/drawer_menu.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/inventory/view/inventory_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/nadi_flow_new/view/fill_prakruti_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/nadi_flow_new/view/main_assessment_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/nadi_flow_new/view/tabs/treatment/add_medicine_prescription.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/add_patient/add_patient_from_appointment_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/add_patient/add_patient_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/edit_patient/edit_patient_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/patient_list/patient_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/rutucharya/view/rutucharya_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/visit_reports/view/visit_report_list_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getAllUserClinic",
+      "pages": [
+        "DashboardScreen",
+        "MyAccountScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getAllUserClinics",
+      "status": "matched",
+      "route": "POST getAllUserClinics",
+      "controller": "ClinicController@getAllUserClinics",
+      "tables": [
+        "locality_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2209",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_account_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getAnanysisDataDashbord",
+      "pages": [
+        "DashboardScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getUserSummary",
+      "status": "matched",
+      "route": "POST getUserSummary",
+      "controller": "AuthController@getUserSummary",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:527",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getDateWiseAppointment",
+      "pages": [
+        "DashboardScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/appointment/dateWiseAppointment",
+      "status": "matched",
+      "route": "POST appointment/dateWiseAppointment",
+      "controller": "AppointmentController@dateWiseAppointment",
+      "tables": [
+        "calendar_events",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:573",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getDateWisePatientAppointments",
+      "pages": [
+        "DashboardScreen",
+        "PatientScreen",
+        "VisitReportListScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/appointment/dateWisePatientAppointment",
+      "status": "matched",
+      "route": "POST appointment/dateWisePatientAppointment",
+      "controller": "AppointmentController@dateWisePatientAppointment",
+      "tables": [
+        "calendar_events",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:344",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/patient_list/patient_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/visit_reports/view/visit_report_list_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getUserCurrentSummary",
+      "pages": [
+        "DashboardScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getUserCurrentSummary",
+      "status": "matched",
+      "route": "POST getUserCurrentSummary",
+      "controller": "AuthController@getUserSummaryV2",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2227",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getUserCustomizeSummary",
+      "pages": [
+        "DashboardScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/getUserCustomizeSummary",
+      "status": "matched",
+      "route": "POST getUserCustomizeSummary",
+      "controller": "AuthController@getUserCustomizeSummary",
+      "tables": [
+        "locality_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2236",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getUserDefaultClinicDetails",
+      "pages": [
+        "DashboardScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/getUserDefaultClinicDetails",
+      "status": "matched",
+      "route": "GET getUserDefaultClinicDetails",
+      "controller": "ClinicController@getUserDefaultClinicDetails",
+      "tables": [
+        "locality_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2218",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getWelcomeTourDetails",
+      "pages": [
+        "AddPatientFromAppointmentScreen",
+        "AddPatientScreen",
+        "DashboardScreen",
+        "EditPatientScreen",
+        "FillPrakrutiScreen",
+        "InventoryScreen",
+        "MainAssessmentScreen",
+        "PatientScreen",
+        "VisitReportListScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/welcome-tour",
+      "status": "matched",
+      "route": "GET welcome-tour",
+      "controller": "WelcomeTourController@getTourSteps",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2528",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/inventory/view/inventory_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/nadi_flow_new/view/fill_prakruti_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/nadi_flow_new/view/main_assessment_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/add_patient/add_patient_from_appointment_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/add_patient/add_patient_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/edit_patient/edit_patient_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/patient_list/patient_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/visit_reports/view/visit_report_list_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "linkDeviceInHouseV2",
+      "pages": [
+        "DashboardScreen",
+        "MyDevicesScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/linkDeviceInHouseV2",
+      "status": "matched",
+      "route": "POST linkDeviceInHouseV2",
+      "controller": "LinkDeviceContoller@linkDeviceInHouseV2",
+      "tables": [],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2115",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_device_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "markClinicAsDefault",
+      "pages": [
+        "DashboardScreen",
+        "MyAccountScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/markClinicAsDefault",
+      "status": "matched",
+      "route": "POST markClinicAsDefault",
+      "controller": "ClinicController@markClinicAsDefault",
+      "tables": [
+        "locality_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1341",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_account_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "saveReportLanguages",
+      "pages": [
+        "DashboardScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/v2/updateReportLanguage",
+      "status": "matched",
+      "route": "POST v2/updateReportLanguage",
+      "controller": "DoctorController@updateReportLanguage",
+      "tables": [
+        "languages",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1225",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "validateDeviceWithSerialNo",
+      "pages": [
+        "DashboardScreen",
+        "MyDevicesScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/validateDeviceWithSerialNo",
+      "status": "matched",
+      "route": "POST validateDeviceWithSerialNo",
+      "controller": "LinkDeviceContoller@validateDeviceWithSerialNo",
+      "tables": [],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2102",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/my_account/view/my_device_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "?@?",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/getAccountData",
+      "status": "matched",
+      "route": "GET getAccountData",
+      "controller": "UserStatsController@getUserAccountData",
+      "tables": [
+        "languages",
+        "locality_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Middleware/CheckAuthToken.php:79",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "?@?",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/getAccountData",
+      "status": "matched",
+      "route": "GET getAccountData",
+      "controller": "UserStatsController@getUserAccountData",
+      "tables": [
+        "languages",
+        "locality_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Middleware/NtLiteAuthMiddleware.php:38",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@addSelfAdmin",
+      "pages": [
+        "add_self_admin"
+      ],
+      "method": "POST",
+      "endpoint": "/getAllCountries",
+      "status": "matched",
+      "route": "POST getAllCountries",
+      "controller": "PatientDetailsController@getAllCountries",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1288",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@addSelfAdmin",
+      "pages": [
+        "add_self_admin"
+      ],
+      "method": "GET",
+      "endpoint": "/getProfessionType",
+      "status": "matched",
+      "route": "GET getProfessionType",
+      "controller": "DoctorController@getProfessionType",
+      "tables": [
+        "profession_type"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1293",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@addSelfAdmin",
+      "pages": [
+        "add_self_admin"
+      ],
+      "method": "POST",
+      "endpoint": "/getSalutationTypes",
+      "status": "matched",
+      "route": "POST getSalutationTypes",
+      "controller": "SignUpController@salutationTypes",
+      "tables": [
+        "salutation_types"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1283",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@checkout",
+      "pages": [
+        "subscription.checkout"
+      ],
+      "method": "POST",
+      "endpoint": "/fetchUserInfo",
+      "status": "matched",
+      "route": "POST fetchUserInfo",
+      "controller": "DoctorController@fetchUserInfo",
+      "tables": [
+        "languages",
+        "profession_type",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1107",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@checkout",
+      "pages": [
+        "subscription.checkout"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getPlans",
+      "status": "matched",
+      "route": "GET subscriptions/getPlans",
+      "controller": "SubscriptionController@getAllPlans",
+      "tables": [
+        "subscriptions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1128",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@deleteUserAccount",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/deleteUserAccount",
+      "status": "matched",
+      "route": "POST deleteUserAccount",
+      "controller": "AuthController@deleteUserAccount",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:646",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@freeTrial",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/subscriptions/getEndPoints",
+      "status": "matched",
+      "route": "GET subscriptions/getEndPoints",
+      "controller": "SubscriptionController@getEndPoints",
+      "tables": [
+        "api_endpoints"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:586",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@freeTrial",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/subscriptions/getPlans",
+      "status": "matched",
+      "route": "GET subscriptions/getPlans",
+      "controller": "SubscriptionController@getAllPlans",
+      "tables": [
+        "subscriptions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:593",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@freeTrial",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/subscriptions/startTrial",
+      "status": "matched",
+      "route": "POST subscriptions/startTrial",
+      "controller": "SubscriptionController@startTrial",
+      "tables": [
+        "subscriptions",
+        "transactions",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:573",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getAllClinicList",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/getAllUserClinics",
+      "status": "matched",
+      "route": "POST getAllUserClinics",
+      "controller": "ClinicController@getAllUserClinics",
+      "tables": [
+        "locality_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:365",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getDefaultClinicDetails",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/getUserDefaultClinicDetails",
+      "status": "matched",
+      "route": "GET getUserDefaultClinicDetails",
+      "controller": "ClinicController@getUserDefaultClinicDetails",
+      "tables": [
+        "locality_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:394",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getLanguagesForReports",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/getLanguages",
+      "status": "matched",
+      "route": "POST getLanguages",
+      "controller": "DoctorController@getLanguages",
+      "tables": [
+        "languages",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:325",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getPlanStatus",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/planStatus",
+      "status": "matched",
+      "route": "GET planStatus",
+      "controller": "NtTransactionController@getPlanStatus",
+      "tables": [
+        "user_nadi_capture_type"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:552",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getReleaseDetails",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/getReleaseDetails",
+      "status": "matched",
+      "route": "GET getReleaseDetails",
+      "controller": "DoctorController@getReleaseDetails",
+      "tables": [
+        "master_contents"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:259",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getSubscriptionData",
+      "pages": [
+        "subscription_plans"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getPlans",
+      "status": "matched",
+      "route": "GET subscriptions/getPlans",
+      "controller": "SubscriptionController@getAllPlans",
+      "tables": [
+        "subscriptions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:486",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getUserCurrentSummary",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/getUserCurrentSummary",
+      "status": "matched",
+      "route": "POST getUserCurrentSummary",
+      "controller": "AuthController@getUserSummaryV2",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:237",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getUserCustomizeSummary",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/getUserCustomizeSummary",
+      "status": "matched",
+      "route": "POST getUserCustomizeSummary",
+      "controller": "AuthController@getUserCustomizeSummary",
+      "tables": [
+        "locality_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:293",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getUserCustomizeSummary",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/getUserCustomizeSummary",
+      "status": "matched",
+      "route": "POST getUserCustomizeSummary",
+      "controller": "AuthController@getUserCustomizeSummary",
+      "tables": [
+        "locality_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:301",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@index",
+      "pages": [
+        "doctor_dashboard.dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/appointment/dateWiseAppointment",
+      "status": "matched",
+      "route": "POST appointment/dateWiseAppointment",
+      "controller": "AppointmentController@dateWiseAppointment",
+      "tables": [
+        "calendar_events",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:140",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@index",
+      "pages": [
+        "doctor_dashboard.dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/appointment/dateWiseAppointment",
+      "status": "matched",
+      "route": "POST appointment/dateWiseAppointment",
+      "controller": "AppointmentController@dateWiseAppointment",
+      "tables": [
+        "calendar_events",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:98",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@index",
+      "pages": [
+        "doctor_dashboard.dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/getAssociationsCount",
+      "status": "matched",
+      "route": "POST getAssociationsCount",
+      "controller": "PatientDetailsController@getAssociationsCount",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:177",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@index",
+      "pages": [
+        "doctor_dashboard.dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/getLimitedActivePatients",
+      "status": "matched",
+      "route": "POST getLimitedActivePatients",
+      "controller": "PatientDetailsController@getLimitedActivePatients",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:86",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@index",
+      "pages": [
+        "doctor_dashboard.dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:158",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@index",
+      "pages": [
+        "doctor_dashboard.dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/getUserSummary",
+      "status": "matched",
+      "route": "POST getUserSummary",
+      "controller": "AuthController@getUserSummary",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:131",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@index",
+      "pages": [
+        "doctor_dashboard.dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/patient/getBannerList",
+      "status": "matched",
+      "route": "POST patient/getBannerList",
+      "controller": "PatientDetailsController@getBannerList",
+      "tables": [
+        "banners_data"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:56",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@index",
+      "pages": [
+        "doctor_dashboard.dashboard"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getUserPlan",
+      "status": "matched",
+      "route": "GET subscriptions/getUserPlan",
+      "controller": "SubscriptionController@getUserPlan",
+      "tables": [
+        "subscriptions",
+        "transactions",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:123",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@index",
+      "pages": [
+        "doctor_dashboard.dashboard"
+      ],
+      "method": "GET",
+      "endpoint": "/v2/getSeasonalTips",
+      "status": "matched",
+      "route": "GET v2/getSeasonalTips",
+      "controller": "PublicFunctionsController@getSeasonalTips",
+      "tables": [
+        "locality_info",
+        "master_contents"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:151",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@linkedDevice",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/getLinkDevice",
+      "status": "matched",
+      "route": "POST getLinkDevice",
+      "controller": "LinkDeviceContoller@getLinkDevice",
+      "tables": [
+        "pg_device_list",
+        "pg_device_mapping",
+        "user_nadi_capture_type"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:446",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@savePaymentData",
+      "pages": [
+        "subscription.checkout"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getEndPoints",
+      "status": "matched",
+      "route": "GET subscriptions/getEndPoints",
+      "controller": "SubscriptionController@getEndPoints",
+      "tables": [
+        "api_endpoints"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1210",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/subscription/checkout.blade.php:270"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@savePaymentData",
+      "pages": [
+        "subscription.checkout"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getPlans",
+      "status": "matched",
+      "route": "GET subscriptions/getPlans",
+      "controller": "SubscriptionController@getAllPlans",
+      "tables": [
+        "subscriptions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1217",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/subscription/checkout.blade.php:270"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@savePaymentData",
+      "pages": [
+        "subscription.checkout"
+      ],
+      "method": "POST",
+      "endpoint": "/subscriptions/purchasePlan",
+      "status": "matched",
+      "route": "POST subscriptions/purchasePlan",
+      "controller": "SubscriptionController@purchasePlan",
+      "tables": [
+        "locality_info",
+        "subscriptions",
+        "transactions",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1191",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/subscription/checkout.blade.php:270"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@saveSelfAdminData",
+      "pages": [
+        "add_self_admin"
+      ],
+      "method": "POST",
+      "endpoint": "/add-self-admin",
+      "status": "matched",
+      "route": "POST add-self-admin",
+      "controller": "AdminManagementController@addSelfAdmin",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1326",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/add_self_admin.js:222"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@switchToAdmin",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1374",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@switchToDoctor",
+      "pages": [
+        "admin.admin_dashboard",
+        "admin.all_report_view",
+        "admin.create_user",
+        "admin.data_management",
+        "admin.edit_profile",
+        "admin.payment_invoices",
+        "admin.update_password",
+        "admin.user_and_teams",
+        "admin.user_patient_list",
+        "admin.user_permissions",
+        "admin.user_previous_visits",
+        "admin.visit_report_view",
+        "customize.add_question",
+        "customize.add_question_v2",
+        "customize.customize_questionnaire",
+        "customize.customize_report",
+        "customize.user_wise_customize_questionnaire",
+        "customize.user_wise_customize_report"
+      ],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1404",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:189"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@switchToDoctor",
+      "pages": [
+        "admin.admin_dashboard",
+        "admin.all_report_view",
+        "admin.create_user",
+        "admin.data_management",
+        "admin.edit_profile",
+        "admin.payment_invoices",
+        "admin.update_password",
+        "admin.user_and_teams",
+        "admin.user_patient_list",
+        "admin.user_permissions",
+        "admin.user_previous_visits",
+        "admin.visit_report_view",
+        "customize.add_question",
+        "customize.add_question_v2",
+        "customize.customize_questionnaire",
+        "customize.customize_report",
+        "customize.user_wise_customize_questionnaire",
+        "customize.user_wise_customize_report"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllFeatureDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllFeatureDetails",
+      "controller": "FeaturesController@getAllFeatureDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1499",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:189"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@switchToDoctor",
+      "pages": [
+        "admin.admin_dashboard",
+        "admin.all_report_view",
+        "admin.create_user",
+        "admin.data_management",
+        "admin.edit_profile",
+        "admin.payment_invoices",
+        "admin.update_password",
+        "admin.user_and_teams",
+        "admin.user_patient_list",
+        "admin.user_permissions",
+        "admin.user_previous_visits",
+        "admin.visit_report_view",
+        "customize.add_question",
+        "customize.add_question_v2",
+        "customize.customize_questionnaire",
+        "customize.customize_report",
+        "customize.user_wise_customize_questionnaire",
+        "customize.user_wise_customize_report"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getEndPoints",
+      "status": "matched",
+      "route": "GET subscriptions/getEndPoints",
+      "controller": "SubscriptionController@getEndPoints",
+      "tables": [
+        "api_endpoints"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1545",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:189"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/fetchUserInfo",
+      "status": "matched",
+      "route": "POST fetchUserInfo",
+      "controller": "DoctorController@fetchUserInfo",
+      "tables": [
+        "languages",
+        "profession_type",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:724",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/getAllCountries",
+      "status": "matched",
+      "route": "POST getAllCountries",
+      "controller": "PatientDetailsController@getAllCountries",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:714",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/getCurrencyTypes",
+      "status": "matched",
+      "route": "POST getCurrencyTypes",
+      "controller": "AuthController@currencyTypes",
+      "tables": [
+        "currency_type"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:699",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/getDocumentTypes",
+      "status": "matched",
+      "route": "POST getDocumentTypes",
+      "controller": "DoctorController@getDocumentTypes",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:719",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/getExperienceList",
+      "status": "matched",
+      "route": "POST getExperienceList",
+      "controller": "DoctorController@getExperienceList",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:694",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/getFormLanguages",
+      "status": "matched",
+      "route": "POST getFormLanguages",
+      "controller": "DoctorController@getFormLanguages",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:709",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/getLanguages",
+      "status": "matched",
+      "route": "POST getLanguages",
+      "controller": "DoctorController@getLanguages",
+      "tables": [
+        "languages",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:704",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/getMaritialList",
+      "status": "matched",
+      "route": "POST getMaritialList",
+      "controller": "DoctorController@getMaritialList",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:689",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/getSalutationTypes",
+      "status": "matched",
+      "route": "POST getSalutationTypes",
+      "controller": "SignUpController@salutationTypes",
+      "tables": [
+        "salutation_types"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:684",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateKycDetails",
+      "pages": [
+        "my_account.update_kyc"
+      ],
+      "method": "POST",
+      "endpoint": "/loginOtpBasedUser",
+      "status": "matched",
+      "route": "POST loginOtpBasedUser",
+      "controller": "AuthController@loginOtpBasedUser",
+      "tables": [
+        "api_endpoints",
+        "corporate_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:667",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateReportLanguage",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/v2/updateReportLanguage",
+      "status": "matched",
+      "route": "POST v2/updateReportLanguage",
+      "controller": "DoctorController@updateReportLanguage",
+      "tables": [
+        "languages",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:424",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@updateTourData",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/updateWelcomeTour",
+      "status": "matched",
+      "route": "POST updateWelcomeTour",
+      "controller": "DoctorController@updateWelcomeTour",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:808",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NtLiteLiveNadiController@syncAccountSettings",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/getAccountData",
+      "status": "matched",
+      "route": "GET getAccountData",
+      "controller": "UserStatsController@getUserAccountData",
+      "tables": [
+        "languages",
+        "locality_info",
+        "pg_device_mapping",
+        "subscriptions",
+        "transactions",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NtLiteLiveNadiController.php:314",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getSubscriptionData",
+      "pages": [
+        "subscription_plans"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getAllFeature",
+      "status": "no-route",
+      "route": null,
+      "controller": null,
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:515",
+      "page_via": [],
+      "screen_files": []
+    }
+  ],
+  "tables": [
+    {
+      "name": "languages",
+      "models": [
+        "Languages"
+      ],
+      "columns": null,
+      "migrations": 0
+    },
+    {
+      "name": "locality_info",
+      "models": [
+        "LocalityInfo"
+      ],
+      "columns": [
+        {
+          "name": "is_default",
+          "type": "tinyInteger"
+        },
+        {
+          "name": "timezone",
+          "type": "string"
+        }
+      ],
+      "migrations": 2
+    },
+    {
+      "name": "medical_report",
+      "models": [
+        "MedicalReport"
+      ],
+      "columns": [
+        {
+          "name": "city",
+          "type": "string"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "external_visit_id",
+          "type": "string"
+        },
+        {
+          "name": "field_id_1",
+          "type": "string"
+        },
+        {
+          "name": "ip_address",
+          "type": "string"
+        },
+        {
+          "name": "mark_on_image_url",
+          "type": "string"
+        },
+        {
+          "name": "panchakarma_recom",
+          "type": "text"
+        },
+        {
+          "name": "reception_id",
+          "type": "integer"
+        },
+        {
+          "name": "recommendations",
+          "type": "json"
+        },
+        {
+          "name": "state",
+          "type": "string"
+        },
+        {
+          "name": "try_count",
+          "type": "unsignedInteger"
+        },
+        {
+          "name": "user_nadi_capture_type",
+          "type": "integer"
+        },
+        {
+          "name": "yoga_recom",
+          "type": "text"
+        }
+      ],
+      "migrations": 10
+    },
+    {
+      "name": "nadi_report",
+      "models": [
+        "NadiReport"
+      ],
+      "columns": null,
+      "migrations": 0
+    },
+    {
+      "name": "pg_device_mapping",
+      "models": [
+        "PgDeviceMapping"
+      ],
+      "columns": null,
+      "migrations": 0
+    },
+    {
+      "name": "subscriptions",
+      "models": [
+        "Subscription"
+      ],
+      "columns": [
+        {
+          "name": "api_rules",
+          "type": "json"
+        },
+        {
+          "name": "blocked_api_rules",
+          "type": "json"
+        },
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "duration",
+          "type": "integer"
+        },
+        {
+          "name": "features",
+          "type": "json"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "limits",
+          "type": "json"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "price",
+          "type": "json"
+        },
+        {
+          "name": "status",
+          "type": "boolean"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp"
+        }
+      ],
+      "migrations": 2
+    },
+    {
+      "name": "transactions",
+      "models": [
+        "Transaction"
+      ],
+      "columns": [
+        {
+          "name": "amount",
+          "type": "decimal"
+        },
+        {
+          "name": "comment",
+          "type": "text"
+        },
+        {
+          "name": "coupon_code",
+          "type": "string"
+        },
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "currency",
+          "type": "string"
+        },
+        {
+          "name": "expire_status",
+          "type": "boolean"
+        },
+        {
+          "name": "free_expire_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "invoice_data",
+          "type": "json"
+        },
+        {
+          "name": "is_trial",
+          "type": "string"
+        },
+        {
+          "name": "month",
+          "type": "integer"
+        },
+        {
+          "name": "order_id",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_order_id",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_order_json",
+          "type": "json"
+        },
+        {
+          "name": "pay_gate_payment_id",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_payment_status",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_response_json",
+          "type": "json"
+        },
+        {
+          "name": "pay_gate_signature",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_webhook_json",
+          "type": "json"
+        },
+        {
+          "name": "payment_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "payment_status",
+          "type": "boolean"
+        },
+        {
+          "name": "plan_id",
+          "type": "foreignId"
+        },
+        {
+          "name": "plan_id_v2",
+          "type": "string"
+        },
+        {
+          "name": "report_count",
+          "type": "integer"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "user_id",
+          "type": "integer"
+        }
+      ],
+      "migrations": 5
+    },
+    {
+      "name": "user_nadi_capture_type",
+      "models": [
+        "UserNadiCaptureType"
+      ],
+      "columns": [
+        {
+          "name": "allowed_countries",
+          "type": "string"
+        },
+        {
+          "name": "avoid_device_selection_usb",
+          "type": "integer"
+        },
+        {
+          "name": "can_change_capture_type",
+          "type": "boolean"
+        },
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "expiry_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "free_tier_enrolled",
+          "type": "boolean"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "is_active",
+          "type": "integer"
+        },
+        {
+          "name": "is_star_account",
+          "type": "integer"
+        },
+        {
+          "name": "last_modified_on",
+          "type": "timestamp"
+        },
+        {
+          "name": "nadi_capture_type",
+          "type": "integer"
+        },
+        {
+          "name": "no_of_reports",
+          "type": "integer"
+        },
+        {
+          "name": "plan_type",
+          "type": "string"
+        },
+        {
+          "name": "user_id",
+          "type": "integer"
+        }
+      ],
+      "migrations": 8
+    },
+    {
+      "name": "user_personal_info",
+      "models": [
+        "UserPersonalInfo"
+      ],
+      "columns": [
+        {
+          "name": "allowed_functions",
+          "type": "json"
+        },
+        {
+          "name": "app_language",
+          "type": "string"
+        },
+        {
+          "name": "ayush_no",
+          "type": "string"
+        },
+        {
+          "name": "clinic_id",
+          "type": "integer"
+        },
+        {
+          "name": "external_user_status",
+          "type": "integer"
+        },
+        {
+          "name": "is_parent",
+          "type": "integer"
+        },
+        {
+          "name": "parent_id",
+          "type": "integer"
+        },
+        {
+          "name": "plan_expire_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "plan_id",
+          "type": "foreignId"
+        },
+        {
+          "name": "profession_type_id",
+          "type": "integer"
+        },
+        {
+          "name": "reception_id",
+          "type": "integer"
+        },
+        {
+          "name": "verified_role_id",
+          "type": "integer"
+        },
+        {
+          "name": "welcome_tours_taken",
+          "type": "json"
+        }
+      ],
+      "migrations": 13
+    }
+  ],
+  "external_systems": [],
+  "environment": {
+    "source": "atreya-docs/environments.md",
+    "repos": [
+      {
+        "repo": "Ashoka-World-Backend",
+        "columns": [
+          "Env",
+          "Ref",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      },
+      {
+        "repo": "Nadi-Tarangini-App",
+        "columns": [
+          "Env",
+          "Ref",
+          "Build flavor",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      },
+      {
+        "repo": "Nadi-Tarangini-Frontend",
+        "columns": [
+          "Env",
+          "Ref",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "required": [
+      "English",
+      "Marathi",
+      "Hindi",
+      "Czech",
+      "German",
+      "Spanish",
+      "Italian"
+    ],
+    "required_source": "references/qa-scope-rules.md",
+    "files": [
+      "Nadi-Tarangini-Frontend:resources/lang/en/auth.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/pagination.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/passwords.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/validation.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en_patient.json"
+    ]
+  }
+}

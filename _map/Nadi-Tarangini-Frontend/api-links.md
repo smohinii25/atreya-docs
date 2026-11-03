@@ -893,11 +893,11 @@ Dynamic or concatenated URLs; give the URL and pages in `_map/overrides.yaml` (p
 - `public/js/admin/adminCommon.js:26`: url built from variable getPlanStatusUrl
 - `public/js/appointment.js:292`: url built from variable visitedClinicFetchUrl
 - `public/js/common.js:96`: url built from variable getPlanStatusUrl
+- `public/js/dashboard-summary.js:105`: url built from variable ntDashboardSummaryCurrentUrl
+- `public/js/dashboard-summary.js:343`: url built from variable ntDashboardSummaryCustomizeUrl
 - `public/js/dashboard_nav.js:65`: url built from variable defaultFetchUrl
 - `public/js/dashboard_nav.js:149`: url built from variable fetchUrl
 - `public/js/dashboard_nav.js:351`: url built from variable fetchUrl
-- `public/js/dashboard-summary.js:105`: url built from variable ntDashboardSummaryCurrentUrl
-- `public/js/dashboard-summary.js:343`: url built from variable ntDashboardSummaryCustomizeUrl
 - `public/js/live_nadi/dietPlanner.js:1687`: url built from variable url
 - `public/js/live_nadi/feeDetails.js:104`: url built from variable reportWiseLanguagesUrl
 - `public/js/live_nadi/yogaPlanner.js:1536`: url built from variable url

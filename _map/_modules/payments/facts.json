@@ -1,0 +1,2307 @@
+{
+  "module": {
+    "id": "payments",
+    "name": "Subscriptions & payments (Razorpay)",
+    "product": "nt",
+    "critical": true,
+    "owner": "TBD",
+    "doc_status": "none",
+    "in_use": {
+      "dev": "TBD",
+      "staging": "TBD",
+      "production": "TBD"
+    }
+  },
+  "generated": "2026-11-03",
+  "backend": "Ashoka-World-Backend",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "backend_routes": [
+    {
+      "key": "POST calculatePlanPrice",
+      "method": "POST",
+      "uri": "calculatePlanPrice",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "NtTransactionController@calculatePlanPrice",
+      "source": "Ashoka-World-Backend:routes/api.php:1418",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@applyCoupon",
+          "pages": [
+            "admin.plan_details"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Plan id is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1111"
+        },
+        {
+          "http": "400",
+          "message": "Invalid Plan ID",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1138"
+        },
+        {
+          "http": "400",
+          "message": "Invalid coupon code",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1152"
+        },
+        {
+          "http": "400",
+          "message": "Invalid coupon code",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1168"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1186"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1196"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1205"
+        }
+      ]
+    },
+    {
+      "key": "POST createNtOrder",
+      "method": "POST",
+      "uri": "createNtOrder",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "NtTransactionController@createNtOrder",
+      "source": "Ashoka-World-Backend:routes/api.php:1415",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@createNtOrder",
+          "pages": [
+            "admin.plan_details"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "month",
+          "rules": "required|integer",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:50"
+        },
+        {
+          "field": "report_count",
+          "rules": "required|integer",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:51"
+        },
+        {
+          "field": "final_amount",
+          "rules": "required|numeric|min:1",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:52"
+        },
+        {
+          "field": "coupon_code",
+          "rules": "nullable|string|max:50",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:53"
+        },
+        {
+          "field": "gst_no",
+          "rules": "nullable|string|max:50",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:54"
+        },
+        {
+          "field": "billing_state",
+          "rules": "nullable|string|max:100",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:55"
+        },
+        {
+          "field": "tax_type",
+          "rules": "nullable|in:CGST_SGST,IGST",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:56"
+        },
+        {
+          "field": "taxable_amount",
+          "rules": "nullable|numeric|min:0",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:57"
+        },
+        {
+          "field": "gst_rate",
+          "rules": "nullable|numeric|min:0",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:58"
+        },
+        {
+          "field": "total_gst",
+          "rules": "nullable|numeric|min:0",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:59"
+        },
+        {
+          "field": "cgst_amount",
+          "rules": "nullable|numeric|min:0",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:60"
+        },
+        {
+          "field": "sgst_amount",
+          "rules": "nullable|numeric|min:0",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:61"
+        },
+        {
+          "field": "igst_amount",
+          "rules": "nullable|numeric|min:0",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:62"
+        }
+      ],
+      "errors": [
+        {
+          "http": null,
+          "message": "IGST amount cannot be negative",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:94"
+        },
+        {
+          "http": "400",
+          "message": "Razorpay order creation failed",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:215"
+        },
+        {
+          "http": null,
+          "message": "Order created successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:231"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:245"
+        }
+      ]
+    },
+    {
+      "key": "POST getSinglePlan",
+      "method": "POST",
+      "uri": "getSinglePlan",
+      "name": null,
+      "middleware": [],
+      "controller": "SubscriptionController@getSinglePlanDetails",
+      "source": "Ashoka-World-Backend:routes/api.php:729",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Plan id is required.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:983"
+        },
+        {
+          "http": "400",
+          "message": "Invalid Plan ID",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:992"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:1005"
+        }
+      ]
+    },
+    {
+      "key": "GET payment-invoices",
+      "method": "GET",
+      "uri": "payment-invoices",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "NtTransactionController@getPaymentInvoices",
+      "source": "Ashoka-World-Backend:routes/api.php:1417",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@fetchPaymentInvoices",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "User ID header is missing",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:769"
+        },
+        {
+          "http": "200",
+          "message": "Payment invoices fetched successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:884"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:897"
+        }
+      ]
+    },
+    {
+      "key": "GET planStatus",
+      "method": "GET",
+      "uri": "planStatus",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "NtTransactionController@getPlanStatus",
+      "source": "Ashoka-World-Backend:routes/api.php:960",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getPlanStatus",
+          "pages": [
+            "AddAppointmentScreen",
+            "AppointmentScreen",
+            "DashboardScreen",
+            "PatientScreen",
+            "VisitReportListScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "?@?",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@getPlanStatus",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@getPlanStatus",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "NtLiteDashboardController@getPlanStatus",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "User ID header is missing",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1224"
+        },
+        {
+          "http": null,
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1259"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1277"
+        }
+      ]
+    },
+    {
+      "key": "GET subscriptions/checkSubscriptionStatus",
+      "method": "GET",
+      "uri": "subscriptions/checkSubscriptionStatus",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "SubscriptionController@checkSubscriptionStatus",
+      "source": "Ashoka-World-Backend:routes/api.php:1346",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "checkActiveSubscription",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "Plan already active",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:1027"
+        },
+        {
+          "http": "200",
+          "message": "Star account",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:1033"
+        },
+        {
+          "http": "200",
+          "message": "No active plan found",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:1039"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:1046"
+        }
+      ]
+    },
+    {
+      "key": "GET subscriptions/getAllTransactions",
+      "method": "GET",
+      "uri": "subscriptions/getAllTransactions",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "SubscriptionController@getAllTransactions",
+      "source": "Ashoka-World-Backend:routes/api.php:1345",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getTransactionHistory",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "EditDoctorDetailsController@editDoctorDetails",
+          "pages": [
+            "my_account.myaccount"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "EditDoctorDetailsController@editDoctorProfile",
+          "pages": [
+            "my_account.edit_profile"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:940"
+        }
+      ]
+    },
+    {
+      "key": "GET subscriptions/getEndPoints",
+      "method": "GET",
+      "uri": "subscriptions/getEndPoints",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "SubscriptionController@getEndPoints",
+      "source": "Ashoka-World-Backend:routes/api.php:1341",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "?@?",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@freeTrial",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@savePaymentData",
+          "pages": [
+            "subscription.checkout"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@switchToDoctor",
+          "pages": [
+            "admin.admin_dashboard",
+            "admin.all_report_view",
+            "admin.create_user",
+            "admin.data_management",
+            "admin.edit_profile",
+            "admin.payment_invoices",
+            "admin.update_password",
+            "admin.user_and_teams",
+            "admin.user_patient_list",
+            "admin.user_permissions",
+            "admin.user_previous_visits",
+            "admin.visit_report_view",
+            "customize.add_question",
+            "customize.add_question_v2",
+            "customize.customize_questionnaire",
+            "customize.customize_report",
+            "customize.user_wise_customize_questionnaire",
+            "customize.user_wise_customize_report"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@checkLoginCredentials",
+          "pages": [
+            "auth.login"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@getUserDetailsOtpBasedLogin",
+          "pages": [
+            "auth.login"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:59"
+        }
+      ]
+    },
+    {
+      "key": "GET subscriptions/getPlans",
+      "method": "GET",
+      "uri": "subscriptions/getPlans",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "SubscriptionController@getAllPlans",
+      "source": "Ashoka-World-Backend:routes/api.php:1340",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getAllPlanInfo",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@checkout",
+          "pages": [
+            "subscription.checkout"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@freeTrial",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@getSubscriptionData",
+          "pages": [
+            "subscription_plans"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@savePaymentData",
+          "pages": [
+            "subscription.checkout"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:41"
+        }
+      ]
+    },
+    {
+      "key": "POST subscriptions/getReportWisePlans",
+      "method": "POST",
+      "uri": "subscriptions/getReportWisePlans",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "SubscriptionController@getReportWisePlans",
+      "source": "Ashoka-World-Backend:routes/api.php:1348",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@getPlanDetails",
+          "pages": [
+            "admin.plan_details"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "404",
+          "message": "No subscription plans found",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:1062"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:1077"
+        }
+      ]
+    },
+    {
+      "key": "GET subscriptions/getUserPlan",
+      "method": "GET",
+      "uri": "subscriptions/getUserPlan",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "SubscriptionController@getUserPlan",
+      "source": "Ashoka-World-Backend:routes/api.php:1344",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getUserPlan",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "?@?",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@index",
+          "pages": [
+            "doctor_dashboard.dashboard"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "EditDoctorDetailsController@editDoctorProfile",
+          "pages": [
+            "my_account.edit_profile"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Plan not found",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:144"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:169"
+        }
+      ]
+    },
+    {
+      "key": "POST subscriptions/purchasePlan",
+      "method": "POST",
+      "uri": "subscriptions/purchasePlan",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "SubscriptionController@purchasePlan",
+      "source": "Ashoka-World-Backend:routes/api.php:1343",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "purchasePlan",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@savePaymentData",
+          "pages": [
+            "subscription.checkout"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "plan_id",
+          "rules": "required|integer|exists:subscriptions,id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:313"
+        },
+        {
+          "field": "order_id",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:314"
+        },
+        {
+          "field": "amount",
+          "rules": "required|numeric",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:315"
+        },
+        {
+          "field": "invoice_data",
+          "rules": "required|array",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:316"
+        },
+        {
+          "field": "currency",
+          "rules": "required|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:317"
+        },
+        {
+          "field": "plan_month",
+          "rules": "required|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:318"
+        }
+      ],
+      "errors": [
+        {
+          "http": null,
+          "message": "Plan month is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:329"
+        },
+        {
+          "http": null,
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:355"
+        },
+        {
+          "http": "400",
+          "message": "No trial for free plan.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:365"
+        },
+        {
+          "http": "400",
+          "message": "Invalid plan month",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:380"
+        },
+        {
+          "http": "400",
+          "message": "Invalid currency. Available currencies: ",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:389"
+        },
+        {
+          "http": "400",
+          "message": "You already have an active subscription for this plan.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:410"
+        },
+        {
+          "http": null,
+          "message": "Plan purchased successfully.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:560"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:565"
+        }
+      ]
+    },
+    {
+      "key": "POST subscriptions/startTrial",
+      "method": "POST",
+      "uri": "subscriptions/startTrial",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "SubscriptionController@startTrial",
+      "source": "Ashoka-World-Backend:routes/api.php:1342",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "startFreeTrial",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@freeTrial",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "You have already used your trial.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:220"
+        },
+        {
+          "http": "400",
+          "message": "You already have an active subscription for this plan.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:229"
+        },
+        {
+          "http": "400",
+          "message": "Plan id is required.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:234"
+        },
+        {
+          "http": "400",
+          "message": "No trial for free plan.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:236"
+        },
+        {
+          "http": "400",
+          "message": "plan not found.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:241"
+        },
+        {
+          "http": null,
+          "message": "Trial started successfully.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:298"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:303"
+        }
+      ]
+    },
+    {
+      "key": "POST test-generate-invoice",
+      "method": "POST",
+      "uri": "test-generate-invoice",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "NtTransactionController@testGenerateInvoice",
+      "source": "Ashoka-World-Backend:routes/api.php:1419",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [
+        {
+          "field": "transaction_id",
+          "rules": "required|integer|exists:transactions,id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:527"
+        }
+      ],
+      "errors": [
+        {
+          "http": "403",
+          "message": "This API is only available in local or staging environment",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:522"
+        },
+        {
+          "http": "500",
+          "message": "Invoice generation failed",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:579"
+        }
+      ]
+    },
+    {
+      "key": "POST verifyTransaction",
+      "method": "POST",
+      "uri": "verifyTransaction",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "NtTransactionController@verifyTransaction",
+      "source": "Ashoka-World-Backend:routes/api.php:1416",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@verifyTransaction",
+          "pages": [
+            "admin.plan_details"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "razorpay_payment_id",
+          "rules": "required|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:260"
+        },
+        {
+          "field": "razorpay_order_id",
+          "rules": "required|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:261"
+        },
+        {
+          "field": "razorpay_signature",
+          "rules": "required|string",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:262"
+        }
+      ],
+      "errors": [
+        {
+          "http": null,
+          "message": "Signature required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:267"
+        },
+        {
+          "http": "400",
+          "message": "Invalid transaction verification request",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:274"
+        },
+        {
+          "http": "400",
+          "message": "Transaction record not found",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:291"
+        },
+        {
+          "http": null,
+          "message": "Transaction already verified",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:328"
+        },
+        {
+          "http": "400",
+          "message": "Invalid transaction signature",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:353"
+        },
+        {
+          "http": "400",
+          "message": "Unable to fetch transaction from Razorpay",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:367"
+        },
+        {
+          "http": "400",
+          "message": "Order id mismatch",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:382"
+        },
+        {
+          "http": "400",
+          "message": "Transaction capture failed",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:400"
+        },
+        {
+          "http": "400",
+          "message": "Transaction not captured",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:424"
+        },
+        {
+          "http": null,
+          "message": "Transaction processed successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:496"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:510"
+        }
+      ]
+    },
+    {
+      "key": "POST webhook/razorpay/nadi",
+      "method": "POST",
+      "uri": "webhook/razorpay/nadi",
+      "name": null,
+      "middleware": [],
+      "controller": "NtTransactionController@razorpayWebhook",
+      "source": "Ashoka-World-Backend:routes/api.php:1934",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Missing signature",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:939"
+        },
+        {
+          "http": "400",
+          "message": "Invalid webhook signature",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:945"
+        },
+        {
+          "http": "400",
+          "message": "Malformed payload",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:954"
+        },
+        {
+          "http": "404",
+          "message": "Transaction not found",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:973"
+        },
+        {
+          "http": "200",
+          "message": "Processed",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1030"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:1038"
+        }
+      ]
+    }
+  ],
+  "not_called": [
+    "POST getSinglePlan",
+    "POST test-generate-invoice",
+    "POST webhook/razorpay/nadi"
+  ],
+  "web_routes": [
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST api/webhooks/razorpay/sc",
+      "name": null,
+      "middleware": [],
+      "controller": "SamvitPaymentBridgeController@handleRazorpayWebhook",
+      "source": "Nadi-Tarangini-Frontend:routes/api.php:23"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET sc-checkout",
+      "name": "samvit.checkout",
+      "middleware": [],
+      "controller": "SamvitPaymentBridgeController@showCheckout",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:813"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST sc-checkout/callback",
+      "name": "samvit.callback",
+      "middleware": [],
+      "controller": "SamvitPaymentBridgeController@processPaymentCallback",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:814"
+    }
+  ],
+  "screens": [
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "CheckOutScreen",
+      "file": "Nadi-Tarangini-App:lib/doctor_dashboard/subscription/view/checkout_screen.dart",
+      "routes": [
+        {
+          "path": "/checkoutScreen",
+          "name": "checkoutScreen",
+          "line": 793
+        }
+      ],
+      "rendered_by": [],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "InvoicePdfScreen",
+      "file": "Nadi-Tarangini-App:lib/doctor_dashboard/subscription/view/invoice_screen.dart",
+      "routes": [
+        {
+          "path": "/invoiceScreen",
+          "name": "invoiceScreen",
+          "line": 767
+        }
+      ],
+      "rendered_by": [],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "PricingPlanScreen",
+      "file": "Nadi-Tarangini-App:lib/doctor_dashboard/subscription/view/pricing_plan_screen.dart",
+      "routes": [
+        {
+          "path": "/pricingPlanScreen",
+          "name": "pricingPlanScreen",
+          "line": 778
+        }
+      ],
+      "rendered_by": [],
+      "links_to": []
+    }
+  ],
+  "api_calls": [
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "checkActiveSubscription",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/subscriptions/checkSubscriptionStatus",
+      "status": "matched",
+      "route": "GET subscriptions/checkSubscriptionStatus",
+      "controller": "SubscriptionController@checkSubscriptionStatus",
+      "tables": [
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1820",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getAllPlanInfo",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/subscriptions/getPlans",
+      "status": "matched",
+      "route": "GET subscriptions/getPlans",
+      "controller": "SubscriptionController@getAllPlans",
+      "tables": [
+        "subscriptions"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1838",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getPlanStatus",
+      "pages": [
+        "AddAppointmentScreen",
+        "AppointmentScreen",
+        "DashboardScreen",
+        "PatientScreen",
+        "VisitReportListScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/planStatus",
+      "status": "matched",
+      "route": "GET planStatus",
+      "controller": "NtTransactionController@getPlanStatus",
+      "tables": [
+        "user_nadi_capture_type"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2510",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/appointments/view/add_appointment.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/appointments/view/appointment_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/dashboard/view/dashboard_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/patient_list/patient_screen.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/visit_reports/view/visit_report_list_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getTransactionHistory",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/subscriptions/getAllTransactions",
+      "status": "matched",
+      "route": "GET subscriptions/getAllTransactions",
+      "controller": "SubscriptionController@getAllTransactions",
+      "tables": [
+        "transactions"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1829",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getUserPlan",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/subscriptions/getUserPlan",
+      "status": "matched",
+      "route": "GET subscriptions/getUserPlan",
+      "controller": "SubscriptionController@getUserPlan",
+      "tables": [
+        "subscriptions",
+        "transactions",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1811",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "purchasePlan",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/subscriptions/purchasePlan",
+      "status": "matched",
+      "route": "POST subscriptions/purchasePlan",
+      "controller": "SubscriptionController@purchasePlan",
+      "tables": [
+        "locality_info",
+        "subscriptions",
+        "transactions",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1871",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "startFreeTrial",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/subscriptions/startTrial",
+      "status": "matched",
+      "route": "POST subscriptions/startTrial",
+      "controller": "SubscriptionController@startTrial",
+      "tables": [
+        "subscriptions",
+        "transactions",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1847",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "?@?",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/planStatus",
+      "status": "matched",
+      "route": "GET planStatus",
+      "controller": "NtTransactionController@getPlanStatus",
+      "tables": [
+        "user_nadi_capture_type"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Middleware/CheckAuthToken.php:218",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "?@?",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/subscriptions/getEndPoints",
+      "status": "matched",
+      "route": "GET subscriptions/getEndPoints",
+      "controller": "SubscriptionController@getEndPoints",
+      "tables": [
+        "api_endpoints"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Services/SubscriptionService.php:37",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "?@?",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/subscriptions/getUserPlan",
+      "status": "matched",
+      "route": "GET subscriptions/getUserPlan",
+      "controller": "SubscriptionController@getUserPlan",
+      "tables": [
+        "subscriptions",
+        "transactions",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Services/SubscriptionService.php:25",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@applyCoupon",
+      "pages": [
+        "admin.plan_details"
+      ],
+      "method": "POST",
+      "endpoint": "/calculatePlanPrice",
+      "status": "matched",
+      "route": "POST calculatePlanPrice",
+      "controller": "NtTransactionController@calculatePlanPrice",
+      "tables": [
+        "master_contents",
+        "nt_coupons"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1650",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/admin/plan_details.blade.php:790"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@createNtOrder",
+      "pages": [
+        "admin.plan_details"
+      ],
+      "method": "POST",
+      "endpoint": "/createNtOrder",
+      "status": "matched",
+      "route": "POST createNtOrder",
+      "controller": "NtTransactionController@createNtOrder",
+      "tables": [
+        "master_contents",
+        "nt_coupons",
+        "transactions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1699",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/admin/plan_details.blade.php:971"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@fetchPaymentInvoices",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/payment-invoices",
+      "status": "matched",
+      "route": "GET payment-invoices",
+      "controller": "NtTransactionController@getPaymentInvoices",
+      "tables": [
+        "transactions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1808",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@getPlanDetails",
+      "pages": [
+        "admin.plan_details"
+      ],
+      "method": "POST",
+      "endpoint": "/subscriptions/getReportWisePlans",
+      "status": "matched",
+      "route": "POST subscriptions/getReportWisePlans",
+      "controller": "SubscriptionController@getReportWisePlans",
+      "tables": [
+        "master_contents"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1619",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@getPlanStatus",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/planStatus",
+      "status": "matched",
+      "route": "GET planStatus",
+      "controller": "NtTransactionController@getPlanStatus",
+      "tables": [
+        "user_nadi_capture_type"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1774",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@verifyTransaction",
+      "pages": [
+        "admin.plan_details"
+      ],
+      "method": "POST",
+      "endpoint": "/verifyTransaction",
+      "status": "matched",
+      "route": "POST verifyTransaction",
+      "controller": "NtTransactionController@verifyTransaction",
+      "tables": [
+        "transactions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1727",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/admin/plan_details.blade.php:1053"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@checkout",
+      "pages": [
+        "subscription.checkout"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getPlans",
+      "status": "matched",
+      "route": "GET subscriptions/getPlans",
+      "controller": "SubscriptionController@getAllPlans",
+      "tables": [
+        "subscriptions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1128",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@freeTrial",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/subscriptions/getEndPoints",
+      "status": "matched",
+      "route": "GET subscriptions/getEndPoints",
+      "controller": "SubscriptionController@getEndPoints",
+      "tables": [
+        "api_endpoints"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:586",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@freeTrial",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/subscriptions/getPlans",
+      "status": "matched",
+      "route": "GET subscriptions/getPlans",
+      "controller": "SubscriptionController@getAllPlans",
+      "tables": [
+        "subscriptions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:593",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@freeTrial",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/subscriptions/startTrial",
+      "status": "matched",
+      "route": "POST subscriptions/startTrial",
+      "controller": "SubscriptionController@startTrial",
+      "tables": [
+        "subscriptions",
+        "transactions",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:573",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getPlanStatus",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/planStatus",
+      "status": "matched",
+      "route": "GET planStatus",
+      "controller": "NtTransactionController@getPlanStatus",
+      "tables": [
+        "user_nadi_capture_type"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:552",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@getSubscriptionData",
+      "pages": [
+        "subscription_plans"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getPlans",
+      "status": "matched",
+      "route": "GET subscriptions/getPlans",
+      "controller": "SubscriptionController@getAllPlans",
+      "tables": [
+        "subscriptions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:486",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@index",
+      "pages": [
+        "doctor_dashboard.dashboard"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getUserPlan",
+      "status": "matched",
+      "route": "GET subscriptions/getUserPlan",
+      "controller": "SubscriptionController@getUserPlan",
+      "tables": [
+        "subscriptions",
+        "transactions",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:123",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@savePaymentData",
+      "pages": [
+        "subscription.checkout"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getEndPoints",
+      "status": "matched",
+      "route": "GET subscriptions/getEndPoints",
+      "controller": "SubscriptionController@getEndPoints",
+      "tables": [
+        "api_endpoints"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1210",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/subscription/checkout.blade.php:270"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@savePaymentData",
+      "pages": [
+        "subscription.checkout"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getPlans",
+      "status": "matched",
+      "route": "GET subscriptions/getPlans",
+      "controller": "SubscriptionController@getAllPlans",
+      "tables": [
+        "subscriptions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1217",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/subscription/checkout.blade.php:270"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@savePaymentData",
+      "pages": [
+        "subscription.checkout"
+      ],
+      "method": "POST",
+      "endpoint": "/subscriptions/purchasePlan",
+      "status": "matched",
+      "route": "POST subscriptions/purchasePlan",
+      "controller": "SubscriptionController@purchasePlan",
+      "tables": [
+        "locality_info",
+        "subscriptions",
+        "transactions",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1191",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/subscription/checkout.blade.php:270"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@switchToDoctor",
+      "pages": [
+        "admin.admin_dashboard",
+        "admin.all_report_view",
+        "admin.create_user",
+        "admin.data_management",
+        "admin.edit_profile",
+        "admin.payment_invoices",
+        "admin.update_password",
+        "admin.user_and_teams",
+        "admin.user_patient_list",
+        "admin.user_permissions",
+        "admin.user_previous_visits",
+        "admin.visit_report_view",
+        "customize.add_question",
+        "customize.add_question_v2",
+        "customize.customize_questionnaire",
+        "customize.customize_report",
+        "customize.user_wise_customize_questionnaire",
+        "customize.user_wise_customize_report"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getEndPoints",
+      "status": "matched",
+      "route": "GET subscriptions/getEndPoints",
+      "controller": "SubscriptionController@getEndPoints",
+      "tables": [
+        "api_endpoints"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1545",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:189"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "EditDoctorDetailsController@editDoctorDetails",
+      "pages": [
+        "my_account.myaccount"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getAllTransactions",
+      "status": "matched",
+      "route": "GET subscriptions/getAllTransactions",
+      "controller": "SubscriptionController@getAllTransactions",
+      "tables": [
+        "transactions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/EditDoctorDetailsController.php:123",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "EditDoctorDetailsController@editDoctorProfile",
+      "pages": [
+        "my_account.edit_profile"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getAllTransactions",
+      "status": "matched",
+      "route": "GET subscriptions/getAllTransactions",
+      "controller": "SubscriptionController@getAllTransactions",
+      "tables": [
+        "transactions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/EditDoctorDetailsController.php:332",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "EditDoctorDetailsController@editDoctorProfile",
+      "pages": [
+        "my_account.edit_profile"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getUserPlan",
+      "status": "matched",
+      "route": "GET subscriptions/getUserPlan",
+      "controller": "SubscriptionController@getUserPlan",
+      "tables": [
+        "subscriptions",
+        "transactions",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/EditDoctorDetailsController.php:352",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "NtLiteDashboardController@getPlanStatus",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/planStatus",
+      "status": "matched",
+      "route": "GET planStatus",
+      "controller": "NtTransactionController@getPlanStatus",
+      "tables": [
+        "user_nadi_capture_type"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/NtLiteDashboardController.php:549",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@checkLoginCredentials",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getEndPoints",
+      "status": "matched",
+      "route": "GET subscriptions/getEndPoints",
+      "controller": "SubscriptionController@getEndPoints",
+      "tables": [
+        "api_endpoints"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:255",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:302"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@getUserDetailsOtpBasedLogin",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/subscriptions/getEndPoints",
+      "status": "matched",
+      "route": "GET subscriptions/getEndPoints",
+      "controller": "SubscriptionController@getEndPoints",
+      "tables": [
+        "api_endpoints"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:635",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:1052"
+      ],
+      "screen_files": []
+    }
+  ],
+  "tables": [
+    {
+      "name": "api_endpoints",
+      "models": [
+        "ApiEndpoints"
+      ],
+      "columns": [
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "is_active",
+          "type": "integer"
+        },
+        {
+          "name": "is_public",
+          "type": "string"
+        },
+        {
+          "name": "is_public_reception",
+          "type": "tinyInteger"
+        },
+        {
+          "name": "method",
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "updated_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "migrations": 3
+    },
+    {
+      "name": "locality_info",
+      "models": [
+        "LocalityInfo"
+      ],
+      "columns": [
+        {
+          "name": "is_default",
+          "type": "tinyInteger"
+        },
+        {
+          "name": "timezone",
+          "type": "string"
+        }
+      ],
+      "migrations": 2
+    },
+    {
+      "name": "master_contents",
+      "models": [
+        "MasterContents"
+      ],
+      "columns": [
+        {
+          "name": "content",
+          "type": "text"
+        },
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "is_active",
+          "type": "tinyInteger"
+        },
+        {
+          "name": "last_modified_on",
+          "type": "timestamp"
+        },
+        {
+          "name": "month_number",
+          "type": "tinyInteger"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "enum"
+        },
+        {
+          "name": "week_number",
+          "type": "tinyInteger"
+        }
+      ],
+      "migrations": 2
+    },
+    {
+      "name": "nt_coupons",
+      "models": [
+        "NtCoupons"
+      ],
+      "columns": [
+        {
+          "name": "coupon_code",
+          "type": "string"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "discount",
+          "type": "integer"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "status",
+          "type": "tinyInteger"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "user_id",
+          "type": "unsignedBigInteger"
+        },
+        {
+          "name": "valid_from",
+          "type": "date"
+        },
+        {
+          "name": "valid_until",
+          "type": "date"
+        }
+      ],
+      "migrations": 1
+    },
+    {
+      "name": "subscriptions",
+      "models": [
+        "Subscription"
+      ],
+      "columns": [
+        {
+          "name": "api_rules",
+          "type": "json"
+        },
+        {
+          "name": "blocked_api_rules",
+          "type": "json"
+        },
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "duration",
+          "type": "integer"
+        },
+        {
+          "name": "features",
+          "type": "json"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "limits",
+          "type": "json"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "price",
+          "type": "json"
+        },
+        {
+          "name": "status",
+          "type": "boolean"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp"
+        }
+      ],
+      "migrations": 2
+    },
+    {
+      "name": "transactions",
+      "models": [
+        "Transaction"
+      ],
+      "columns": [
+        {
+          "name": "amount",
+          "type": "decimal"
+        },
+        {
+          "name": "comment",
+          "type": "text"
+        },
+        {
+          "name": "coupon_code",
+          "type": "string"
+        },
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "currency",
+          "type": "string"
+        },
+        {
+          "name": "expire_status",
+          "type": "boolean"
+        },
+        {
+          "name": "free_expire_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "invoice_data",
+          "type": "json"
+        },
+        {
+          "name": "is_trial",
+          "type": "string"
+        },
+        {
+          "name": "month",
+          "type": "integer"
+        },
+        {
+          "name": "order_id",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_order_id",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_order_json",
+          "type": "json"
+        },
+        {
+          "name": "pay_gate_payment_id",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_payment_status",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_response_json",
+          "type": "json"
+        },
+        {
+          "name": "pay_gate_signature",
+          "type": "string"
+        },
+        {
+          "name": "pay_gate_webhook_json",
+          "type": "json"
+        },
+        {
+          "name": "payment_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "payment_status",
+          "type": "boolean"
+        },
+        {
+          "name": "plan_id",
+          "type": "foreignId"
+        },
+        {
+          "name": "plan_id_v2",
+          "type": "string"
+        },
+        {
+          "name": "report_count",
+          "type": "integer"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "user_id",
+          "type": "integer"
+        }
+      ],
+      "migrations": 5
+    },
+    {
+      "name": "user_nadi_capture_type",
+      "models": [
+        "UserNadiCaptureType"
+      ],
+      "columns": [
+        {
+          "name": "allowed_countries",
+          "type": "string"
+        },
+        {
+          "name": "avoid_device_selection_usb",
+          "type": "integer"
+        },
+        {
+          "name": "can_change_capture_type",
+          "type": "boolean"
+        },
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "expiry_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "free_tier_enrolled",
+          "type": "boolean"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "is_active",
+          "type": "integer"
+        },
+        {
+          "name": "is_star_account",
+          "type": "integer"
+        },
+        {
+          "name": "last_modified_on",
+          "type": "timestamp"
+        },
+        {
+          "name": "nadi_capture_type",
+          "type": "integer"
+        },
+        {
+          "name": "no_of_reports",
+          "type": "integer"
+        },
+        {
+          "name": "plan_type",
+          "type": "string"
+        },
+        {
+          "name": "user_id",
+          "type": "integer"
+        }
+      ],
+      "migrations": 8
+    },
+    {
+      "name": "user_personal_info",
+      "models": [
+        "UserPersonalInfo"
+      ],
+      "columns": [
+        {
+          "name": "allowed_functions",
+          "type": "json"
+        },
+        {
+          "name": "app_language",
+          "type": "string"
+        },
+        {
+          "name": "ayush_no",
+          "type": "string"
+        },
+        {
+          "name": "clinic_id",
+          "type": "integer"
+        },
+        {
+          "name": "external_user_status",
+          "type": "integer"
+        },
+        {
+          "name": "is_parent",
+          "type": "integer"
+        },
+        {
+          "name": "parent_id",
+          "type": "integer"
+        },
+        {
+          "name": "plan_expire_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "plan_id",
+          "type": "foreignId"
+        },
+        {
+          "name": "profession_type_id",
+          "type": "integer"
+        },
+        {
+          "name": "reception_id",
+          "type": "integer"
+        },
+        {
+          "name": "verified_role_id",
+          "type": "integer"
+        },
+        {
+          "name": "welcome_tours_taken",
+          "type": "json"
+        }
+      ],
+      "migrations": 13
+    }
+  ],
+  "external_systems": [
+    {
+      "system": "Razorpay",
+      "repo": "Ashoka-World-Backend",
+      "where": [
+        "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:197,198,201"
+      ]
+    },
+    {
+      "system": "Razorpay",
+      "repo": "Nadi-Tarangini-App",
+      "where": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/subscription/utils/launch_payment.dart:9,24,56"
+      ]
+    },
+    {
+      "system": "S3",
+      "repo": "Ashoka-World-Backend",
+      "where": [
+        "Ashoka-World-Backend:app/Http/Controllers/NtTransactionController.php:679",
+        "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:552"
+      ]
+    },
+    {
+      "system": "S3",
+      "repo": "Nadi-Tarangini-App",
+      "where": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/subscription/view/billing_tab.dart:278"
+      ]
+    },
+    {
+      "system": "Samvit Chakra",
+      "repo": "Ashoka-World-Backend",
+      "where": [
+        "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:450,452"
+      ]
+    },
+    {
+      "system": "ZeptoMail",
+      "repo": "Ashoka-World-Backend",
+      "where": [
+        "Ashoka-World-Backend:app/Http/Controllers/SubscriptionController.php:512"
+      ]
+    }
+  ],
+  "environment": {
+    "source": "atreya-docs/environments.md",
+    "repos": [
+      {
+        "repo": "Ashoka-World-Backend",
+        "columns": [
+          "Env",
+          "Ref",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      },
+      {
+        "repo": "Nadi-Tarangini-App",
+        "columns": [
+          "Env",
+          "Ref",
+          "Build flavor",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      },
+      {
+        "repo": "Nadi-Tarangini-Frontend",
+        "columns": [
+          "Env",
+          "Ref",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "required": [
+      "English",
+      "Marathi",
+      "Hindi",
+      "Czech",
+      "German",
+      "Spanish",
+      "Italian"
+    ],
+    "required_source": "references/qa-scope-rules.md",
+    "files": [
+      "Nadi-Tarangini-Frontend:resources/lang/en/auth.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/pagination.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/passwords.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/validation.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en_patient.json"
+    ]
+  }
+}

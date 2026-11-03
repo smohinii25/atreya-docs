@@ -1,12 +1,13 @@
 # atreya modules (single source of truth). Written by /atreya:map --merge.
 # Edit by hand only in this strict format: references/modules-schema.md
 version: "1"
-generated: "2026-10-26"
+generated: "2026-11-03"
 backend: "Ashoka-World-Backend"
 commits:
   Ashoka-World-Backend: "8dfbb37db7d71a400b3656bd50fbed6173908a24"
   Nadi-Tarangini-App: "0b7deec6de2b0b8b4f05eab4be8c8430523829bf"
   Nadi-Tarangini-Frontend: "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  _modules: "null"
 modules:
   - id: "auth"
     name: "Authentication & sign-up"
@@ -300,8 +301,7 @@ modules:
       - "transactions"
       - "user_nadi_capture_type"
       - "user_personal_info"
-    external_systems:
-      - "Firebase"
+    external_systems: []
     in_use:
       dev: "TBD"
       staging: "TBD"
@@ -1721,7 +1721,6 @@ modules:
       - "user_nadi_capture_type"
       - "user_personal_info"
     external_systems:
-      - "Firebase"
       - "S3"
       - "Samvit Chakra"
     in_use:
@@ -2059,7 +2058,6 @@ modules:
     models:
       - "App\\Models\\MasterContents"
       - "App\\Models\\MedicalReport"
-      - "App\\Models\\User"
       - "App\\Models\\UserPersonalInfo"
     tables:
       - "calendar_events"
@@ -2067,7 +2065,6 @@ modules:
       - "master_contents"
       - "medical_report"
       - "user_personal_info"
-      - "users"
     external_systems:
       - "Firebase"
       - "Razorpay"
@@ -2629,7 +2626,6 @@ modules:
       - "App\\Models\\LocalityInfo"
       - "App\\Models\\MasterContents"
       - "App\\Models\\PostalCode"
-      - "App\\Models\\Transaction"
       - "App\\Models\\UserPersonalInfo"
       - "App\\Models\\UserRole"
     tables:
@@ -2639,7 +2635,6 @@ modules:
       - "locality_info"
       - "master_contents"
       - "postal_codes"
-      - "transactions"
       - "user_personal_info"
       - "user_role"
     external_systems:
