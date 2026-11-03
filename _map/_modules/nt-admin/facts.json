@@ -1,0 +1,4566 @@
+{
+  "module": {
+    "id": "nt-admin",
+    "name": "NT admin panel (users, access, data management, customise by user)",
+    "product": "nt",
+    "critical": false,
+    "owner": "TBD",
+    "doc_status": "none",
+    "in_use": {
+      "dev": "TBD",
+      "staging": "TBD",
+      "production": "TBD"
+    }
+  },
+  "generated": "2026-11-03",
+  "backend": "Ashoka-World-Backend",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "backend_routes": [
+    {
+      "key": "POST add-self-admin",
+      "method": "POST",
+      "uri": "add-self-admin",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "AdminManagementController@addSelfAdmin",
+      "source": "Ashoka-World-Backend:routes/api.php:1356",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTUser/AdminManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@saveSelfAdminData",
+          "pages": [
+            "add_self_admin"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTUser/AdminManagementController.php:27"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTUser/AdminManagementController.php:47"
+        }
+      ]
+    },
+    {
+      "key": "GET currentUserAccessibleUsers",
+      "method": "GET",
+      "uri": "currentUserAccessibleUsers",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "DataManagementController@getCurrentUserDataAccess",
+      "source": "Ashoka-World-Backend:routes/api.php:1041",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php:84"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php:93"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php:102"
+        }
+      ]
+    },
+    {
+      "key": "GET currentUserAccessibleUsersWithLocations",
+      "method": "GET",
+      "uri": "currentUserAccessibleUsersWithLocations",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "DataManagementController@getCurrentAccessibleUsersWithClinics",
+      "source": "Ashoka-World-Backend:routes/api.php:1043",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "currentUserAccessibleUsersWithLocations",
+          "pages": [
+            "AddAppointmentScreen",
+            "AddPatientScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AppointmentController@currentUserAccessibleUsersWithLocations",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php:117"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php:126"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php:133"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/access-management/addUser",
+      "method": "POST",
+      "uri": "nt-admin/access-management/addUser",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@addUser",
+      "source": "Ashoka-World-Backend:routes/api.php:1364",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@saveUser",
+          "pages": [
+            "admin.create_user"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:46"
+        },
+        {
+          "http": "200",
+          "message": "User signup successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:84"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/access-management/consultationTypeCounts",
+      "method": "POST",
+      "uri": "nt-admin/access-management/consultationTypeCounts",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@getConsultationTypeCounts",
+      "source": "Ashoka-World-Backend:routes/api.php:1380",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@getConsultationTypeCounts",
+          "pages": [
+            "admin.admin_dashboard"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Validation failed",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:565"
+        },
+        {
+          "http": null,
+          "message": "Consultation type counts fetched successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:676"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:696"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/access-management/editProfile",
+      "method": "POST",
+      "uri": "nt-admin/access-management/editProfile",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@editProfile",
+      "source": "Ashoka-World-Backend:routes/api.php:1374",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@updateProfile",
+          "pages": [
+            "admin.edit_profile"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:314"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:323"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/access-management/editUserProfile",
+      "method": "POST",
+      "uri": "nt-admin/access-management/editUserProfile",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@editUserProfile",
+      "source": "Ashoka-World-Backend:routes/api.php:1376",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@updateProfile",
+          "pages": [
+            "admin.edit_profile"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:471"
+        },
+        {
+          "http": "401",
+          "message": "User id is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:481"
+        },
+        {
+          "http": "200",
+          "message": "User details update successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:498"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/access-management/features",
+      "method": "POST",
+      "uri": "nt-admin/access-management/features",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "FeaturesController@getFeatures",
+      "source": "Ashoka-World-Backend:routes/api.php:1361",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@editPermissions",
+          "pages": [
+            "admin.user_permissions"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:32"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:40"
+        }
+      ]
+    },
+    {
+      "key": "GET nt-admin/access-management/getActiveUserDetails",
+      "method": "GET",
+      "uri": "nt-admin/access-management/getActiveUserDetails",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@getActiveUserDetails",
+      "source": "Ashoka-World-Backend:routes/api.php:1367",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@createUser",
+          "pages": [
+            "admin.create_user"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@dataManagement",
+          "pages": [
+            "admin.data_management"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@userAndTeams",
+          "pages": [
+            "admin.user_and_teams"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@userPatientList",
+          "pages": [
+            "admin.user_patient_list"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@userPreviousVisits",
+          "pages": [
+            "admin.user_previous_visits"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:99"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:108"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:116"
+        }
+      ]
+    },
+    {
+      "key": "GET nt-admin/access-management/getAllFeatureDetails",
+      "method": "GET",
+      "uri": "nt-admin/access-management/getAllFeatureDetails",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "FeaturesController@getAllFeatureDetails",
+      "source": "Ashoka-World-Backend:routes/api.php:1360",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@userAndTeams",
+          "pages": [
+            "admin.user_and_teams"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "DashboardController@switchToDoctor",
+          "pages": [
+            "admin.admin_dashboard",
+            "admin.all_report_view",
+            "admin.create_user",
+            "admin.data_management",
+            "admin.edit_profile",
+            "admin.payment_invoices",
+            "admin.update_password",
+            "admin.user_and_teams",
+            "admin.user_patient_list",
+            "admin.user_permissions",
+            "admin.user_previous_visits",
+            "admin.visit_report_view",
+            "customize.add_question",
+            "customize.add_question_v2",
+            "customize.customize_questionnaire",
+            "customize.customize_report",
+            "customize.user_wise_customize_questionnaire",
+            "customize.user_wise_customize_report"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@checkLoginCredentials",
+          "pages": [
+            "auth.login"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@getUserDetailsOtpBasedLogin",
+          "pages": [
+            "auth.login"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:88"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:97"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:105"
+        }
+      ]
+    },
+    {
+      "key": "GET nt-admin/access-management/getAllRoles",
+      "method": "GET",
+      "uri": "nt-admin/access-management/getAllRoles",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@getAllRoles",
+      "source": "Ashoka-World-Backend:routes/api.php:1371",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminCustomizeController@getCustomizeReportUserWise",
+          "pages": [
+            "customize.user_wise_customize_report"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminCustomizeController@getUserWiseCustomizeQuestion",
+          "pages": [
+            "customize.user_wise_customize_questionnaire"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@createUser",
+          "pages": [
+            "admin.create_user"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@dataManagement",
+          "pages": [
+            "admin.data_management"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@editPermissions",
+          "pages": [
+            "admin.user_permissions"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@userAndTeams",
+          "pages": [
+            "admin.user_and_teams"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@userPatientList",
+          "pages": [
+            "admin.user_patient_list"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@userPreviousVisits",
+          "pages": [
+            "admin.user_previous_visits"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:169"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:177"
+        }
+      ]
+    },
+    {
+      "key": "GET nt-admin/access-management/getChildRole",
+      "method": "GET",
+      "uri": "nt-admin/access-management/getChildRole",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@getChildRole",
+      "source": "Ashoka-World-Backend:routes/api.php:1372",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@index",
+          "pages": [
+            "admin.admin_dashboard"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@userAndTeams",
+          "pages": [
+            "admin.user_and_teams"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:226"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:243"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:251"
+        }
+      ]
+    },
+    {
+      "key": "GET nt-admin/access-management/getCurrentUserDetails",
+      "method": "GET",
+      "uri": "nt-admin/access-management/getCurrentUserDetails",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@getCurrentUserDetails",
+      "source": "Ashoka-World-Backend:routes/api.php:1366",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@editProfile",
+          "pages": [
+            "admin.edit_profile"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@getUserDetails",
+          "pages": [
+            "add_self_admin"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@getUsersByRole",
+          "pages": [
+            "admin.admin_dashboard"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@index",
+          "pages": [
+            "admin.admin_dashboard"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:382"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:416"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:424"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/access-management/getUserDetails",
+      "method": "POST",
+      "uri": "nt-admin/access-management/getUserDetails",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@getUserDetails",
+      "source": "Ashoka-World-Backend:routes/api.php:1368",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminCustomizeController@getCustomizeReportUserWise",
+          "pages": [
+            "customize.user_wise_customize_report"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminCustomizeController@getUserWiseCustomizeQuestion",
+          "pages": [
+            "customize.user_wise_customize_questionnaire"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@dataManagement",
+          "pages": [
+            "admin.data_management"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@editPermissions",
+          "pages": [
+            "admin.user_permissions"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@editProfile",
+          "pages": [
+            "admin.edit_profile"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@getUserDetails",
+          "pages": [
+            "add_self_admin"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@resolveTargetUserAuthToken",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@updatePassword",
+          "pages": [
+            "admin.update_password"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@userPatientList",
+          "pages": [
+            "admin.user_patient_list"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@userPreviousVisits",
+          "pages": [
+            "admin.user_previous_visits"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:276"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:284"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/access-management/getUserWiseActiveClinicDetails",
+      "method": "POST",
+      "uri": "nt-admin/access-management/getUserWiseActiveClinicDetails",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@getUserWiseActiveClinicDetails",
+      "source": "Ashoka-World-Backend:routes/api.php:1369",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@getUserClinicDetails",
+          "pages": [
+            "admin.create_user"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:449"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:457"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/access-management/getUsersByRole",
+      "method": "POST",
+      "uri": "nt-admin/access-management/getUsersByRole",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@getUsersByRole",
+      "source": "Ashoka-World-Backend:routes/api.php:1378",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@getUsersByRole",
+          "pages": [
+            "admin.admin_dashboard"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:513"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:535"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:543"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/access-management/updateFeatures",
+      "method": "POST",
+      "uri": "nt-admin/access-management/updateFeatures",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "FeaturesController@updateUserWiseFeatures",
+      "source": "Ashoka-World-Backend:routes/api.php:1362",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@updatePermissions",
+          "pages": [
+            "admin.user_permissions"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:66"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:73"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/access-management/updateUserPassword",
+      "method": "POST",
+      "uri": "nt-admin/access-management/updateUserPassword",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@updateUserPassword",
+      "source": "Ashoka-World-Backend:routes/api.php:1375",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@updateUserPassword",
+          "pages": [
+            "admin.update_password"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:339"
+        },
+        {
+          "http": "200",
+          "message": "Password updated successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:359"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:367"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/access-management/updateUserStatus",
+      "method": "POST",
+      "uri": "nt-admin/access-management/updateUserStatus",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "UserManagementController@updateUserStatus",
+      "source": "Ashoka-World-Backend:routes/api.php:1365",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@activeInactiveUser",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:139"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:146"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/data-management/updateUserWiseDataAccess",
+      "method": "POST",
+      "uri": "nt-admin/data-management/updateUserWiseDataAccess",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "DataManagementController@updateUserWiseDataAccess",
+      "source": "Ashoka-World-Backend:routes/api.php:1386",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@updateUserDataManagement",
+          "pages": [
+            "admin.data_management"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php:63"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php:69"
+        }
+      ]
+    },
+    {
+      "key": "POST nt-admin/data-management/userWiseDataAccess",
+      "method": "POST",
+      "uri": "nt-admin/data-management/userWiseDataAccess",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "DataManagementController@getDataAccess",
+      "source": "Ashoka-World-Backend:routes/api.php:1384",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "AdminDashboardController@dataManagement",
+          "pages": [
+            "admin.data_management"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php:27"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/DataManagementController.php:36"
+        }
+      ]
+    },
+    {
+      "key": "GET public/allRoles",
+      "method": "GET",
+      "uri": "public/allRoles",
+      "name": null,
+      "middleware": [
+        "api"
+      ],
+      "controller": "UserManagementController@allRoles",
+      "source": "Ashoka-World-Backend:routes/api.php:903",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getAllRoles",
+          "pages": [
+            "LoginWithOtpScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@getAllRoles",
+          "pages": [
+            "auth.login"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:201"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:209"
+        }
+      ]
+    },
+    {
+      "key": "POST report/getTypeWiseFeatureDetails",
+      "method": "POST",
+      "uri": "report/getTypeWiseFeatureDetails",
+      "name": null,
+      "middleware": [
+        "api",
+        "auth.token"
+      ],
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "source": "Ashoka-World-Backend:routes/api.php:1208",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getTypeWiseFeatureDetails",
+          "pages": []
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "MedicalAssessmentV3Controller@liveNadiV3",
+          "pages": [
+            "errors.expiredMedicalIdV3",
+            "medical_assessment.medical_assesment"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Type is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:122"
+        },
+        {
+          "http": "400",
+          "message": "Patient id is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:130"
+        },
+        {
+          "http": "400",
+          "message": "Invalid patient id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:138"
+        },
+        {
+          "http": "400",
+          "message": "Invalid patient id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:157"
+        },
+        {
+          "http": "400",
+          "message": "Invalid medical id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:170"
+        },
+        {
+          "http": "400",
+          "message": "Invalid medical report",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:182"
+        },
+        {
+          "http": "404",
+          "message": "Invalid type",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:202"
+        },
+        {
+          "http": null,
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:226"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/FeaturesController.php:236"
+        }
+      ]
+    }
+  ],
+  "not_called": [
+    "GET currentUserAccessibleUsers"
+  ],
+  "web_routes": [
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/activeInactiveUser",
+      "name": "activeInactiveUser",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@activeInactiveUser",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:134"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/add-question",
+      "name": "addquestion",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@index",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:138"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/apply-coupon",
+      "name": "applyCoupon",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@applyCoupon",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:159"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/consultation-type-counts",
+      "name": "admin.getConsultationTypeCounts",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@getConsultationTypeCounts",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:113"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/create-order",
+      "name": "createNtOrder",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@createNtOrder",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:160"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/create-user",
+      "name": "createUser",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@createUser",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:128"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/customize-question",
+      "name": "customizequestion",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@customizeQuestion",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:144"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/customize-report",
+      "name": "customizereport",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@customizeReport",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:143"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/customize-report-user-wise/{id}",
+      "name": "customizeReportUserWise",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@getCustomizeReportUserWise",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:149"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/dashboard",
+      "name": "admin.dashboard",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@index",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:111"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/data-management/{id}",
+      "name": "dataManagement",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@dataManagement",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:117"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/edit-profile/{id}",
+      "name": "editNtAdminProfile",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@editProfile",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:115"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/get-report-pages",
+      "name": null,
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@getReportPages",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:140"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/get-user-wise-category-wise-customize-questions/{id}",
+      "name": null,
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@getUserWiseCategoryWiseCustomizeQuestions",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:153"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/get-user-wise-customize-question/{id}",
+      "name": "getUserWiseCategoryWiseCustomizeQuestions",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@getUserWiseCustomizeQuestion",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:152"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/get-user-wise-report-pages/{id}",
+      "name": null,
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@getUserWiseReportPages",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:148"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/get-users-by-role",
+      "name": "admin.getUsersByRole",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@getUsersByRole",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:112"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/getPlanDetails",
+      "name": "getPlanDetails",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@getPlanDetails",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:158"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/getPlanStatus",
+      "name": "getPlanStatus",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@getPlanStatus",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:162"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/getUserClinicDetails",
+      "name": "getUserClinicDetails",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@getUserClinicDetails",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:136"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/getUserDetails",
+      "name": "getUserDetails",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@getUserDetails",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:135"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/patient-list/{id}",
+      "name": "admin.userPatientList",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@userPatientList",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:118"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/patient-list/{id}/fetch",
+      "name": "admin.userPatientList.fetch",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@fetchUserPatientList",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:119"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/patient-list/{id}/last-visit-info",
+      "name": "admin.userPatientList.lastVisitInfo",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@fetchUserLastVisitInformation",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:121"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/patient-list/{id}/previous-visits/{patientId}",
+      "name": "admin.userPreviousVisits",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@userPreviousVisits",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:122"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/patient-list/{id}/search",
+      "name": "admin.userPatientList.search",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@searchUserPatientList",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:120"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/payment-invoices",
+      "name": "paymentInvoices",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@paymentInvoices",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:163"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/payment-invoices/list",
+      "name": "paymentInvoices.fetch",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@fetchPaymentInvoices",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:164"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/permissions/{id}",
+      "name": "editPermissions",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@editPermissions",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:132"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/questionstore",
+      "name": "addquestionstore",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@questionstore",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:139"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/report/viewAllReport",
+      "name": "admin.report.viewAllReport",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@viewAllReport",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:124"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/report/viewVisitReport",
+      "name": "admin.report.viewVisitReport",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@viewVisitReport",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:125"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/saveUser",
+      "name": "saveUser",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@saveUser",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:129"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/update-password/{id}",
+      "name": "updateUserPasswordForm",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@updatePassword",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:130"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/updateCategory",
+      "name": null,
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@updateCategory",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:141"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/updatePermissions",
+      "name": "updatePermissions",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@updatePermissions",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:133"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/updateProfile",
+      "name": "updateProfile",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@updateProfile",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:116"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/updateReportPages",
+      "name": null,
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@updateReportPages",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:142"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/updateUserDataManagement",
+      "name": "updateUserDataManagement",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@updateUserDataManagement",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:127"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/updateUserPassword",
+      "name": "updateUserPassword",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@updateUserPassword",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:131"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/updateUserWiseCategoryQustions",
+      "name": null,
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@updateUserWiseCategoryQustions",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:154"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/updateUserWiseRportPages",
+      "name": null,
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminCustomizeController@updateUserWiseRportPages",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:150"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET admin/user-and-teams",
+      "name": "userAndTeams",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@userAndTeams",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:114"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST admin/verifyTransaction",
+      "name": "verifyTransaction",
+      "middleware": [
+        "nt_admin_authentication"
+      ],
+      "controller": "AdminDashboardController@verifyTransaction",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:161"
+    }
+  ],
+  "screens": [
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.admin_dashboard",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/admin_dashboard.blade.php",
+      "routes": [
+        "GET admin/dashboard"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@index"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.all_report_view",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/all_report_view.blade.php",
+      "routes": [
+        "POST admin/report/viewAllReport"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@viewAllReport"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/patient-list/{id}/previous-visits/{patientId}",
+          "name": "admin.userPreviousVisits",
+          "line": 14
+        },
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.create_user",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/create_user.blade.php",
+      "routes": [
+        "GET admin/create-user"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@createUser"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.data_management",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/data_management.blade.php",
+      "routes": [
+        "GET admin/data-management/{id}"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@dataManagement"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.edit_profile",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/edit_profile.blade.php",
+      "routes": [
+        "GET admin/edit-profile/{id}"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@editProfile"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.payment_invoices",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/payment_invoices.blade.php",
+      "routes": [
+        "GET admin/payment-invoices"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@paymentInvoices"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/getPlanDetails",
+          "name": "getPlanDetails",
+          "line": 332
+        },
+        {
+          "route": "GET admin/payment-invoices/list",
+          "name": "paymentInvoices.fetch",
+          "line": 360
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.plan_details",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/plan_details.blade.php",
+      "routes": [
+        "GET admin/getPlanDetails"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@getPlanDetails"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/payment-invoices",
+          "name": "paymentInvoices",
+          "line": 413
+        },
+        {
+          "route": "POST admin/apply-coupon",
+          "name": "applyCoupon",
+          "line": 790
+        },
+        {
+          "route": "POST admin/create-order",
+          "name": "createNtOrder",
+          "line": 971
+        },
+        {
+          "route": "POST admin/verifyTransaction",
+          "name": "verifyTransaction",
+          "line": 1053
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.update_password",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/update_password.blade.php",
+      "routes": [
+        "GET admin/update-password/{id}"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@updatePassword"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.user_and_teams",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/user_and_teams.blade.php",
+      "routes": [
+        "GET admin/user-and-teams"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@userAndTeams"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/create-user",
+          "name": "createUser",
+          "line": 11
+        },
+        {
+          "route": "GET admin/customize-report-user-wise/{id}",
+          "name": "customizeReportUserWise",
+          "line": 186
+        },
+        {
+          "route": "GET admin/data-management/{id}",
+          "name": "dataManagement",
+          "line": 201
+        },
+        {
+          "route": "GET admin/edit-profile/{id}",
+          "name": "editNtAdminProfile",
+          "line": 135
+        },
+        {
+          "route": "GET admin/get-user-wise-customize-question/{id}",
+          "name": "getUserWiseCategoryWiseCustomizeQuestions",
+          "line": 194
+        },
+        {
+          "route": "GET admin/patient-list/{id}",
+          "name": "admin.userPatientList",
+          "line": 168
+        },
+        {
+          "route": "GET admin/permissions/{id}",
+          "name": "editPermissions",
+          "line": 177
+        },
+        {
+          "route": "GET admin/update-password/{id}",
+          "name": "updateUserPasswordForm",
+          "line": 142
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.user_patient_list",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/user_patient_list.blade.php",
+      "routes": [
+        "GET admin/patient-list/{id}"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@userPatientList"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.user_permissions",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/user_permissions.blade.php",
+      "routes": [
+        "GET admin/permissions/{id}"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@editPermissions"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.user_previous_visits",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/user_previous_visits.blade.php",
+      "routes": [
+        "GET admin/patient-list/{id}/previous-visits/{patientId}"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@userPreviousVisits"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/patient-list/{id}",
+          "name": "admin.userPatientList",
+          "line": 13
+        },
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 11
+        },
+        {
+          "route": "POST admin/report/viewAllReport",
+          "name": "admin.report.viewAllReport",
+          "line": 136
+        },
+        {
+          "route": "POST admin/report/viewVisitReport",
+          "name": "admin.report.viewVisitReport",
+          "line": 119
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "admin.visit_report_view",
+      "file": "Nadi-Tarangini-Frontend:resources/views/admin/visit_report_view.blade.php",
+      "routes": [
+        "POST admin/report/viewVisitReport"
+      ],
+      "rendered_by": [
+        "AdminDashboardController@viewVisitReport"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/patient-list/{id}/previous-visits/{patientId}",
+          "name": "admin.userPreviousVisits",
+          "line": 14
+        },
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "customize.add_question",
+      "file": "Nadi-Tarangini-Frontend:resources/views/customize/add_question.blade.php",
+      "routes": [
+        "GET admin/add-question"
+      ],
+      "rendered_by": [
+        "AdminCustomizeController@index",
+        "CustomizeController@index"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/customize-question",
+          "name": "customizequestion",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "customize.add_question_v2",
+      "file": "Nadi-Tarangini-Frontend:resources/views/customize/add_question_v2.blade.php",
+      "routes": [
+        "GET admin/customize-question"
+      ],
+      "rendered_by": [
+        "AdminCustomizeController@customizeQuestion"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "customize.customize_report",
+      "file": "Nadi-Tarangini-Frontend:resources/views/customize/customize_report.blade.php",
+      "routes": [
+        "GET admin/customize-report"
+      ],
+      "rendered_by": [
+        "AdminCustomizeController@customizeReport"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "customize.user_wise_customize_questionnaire",
+      "file": "Nadi-Tarangini-Frontend:resources/views/customize/user_wise_customize_questionnaire.blade.php",
+      "routes": [
+        "GET admin/get-user-wise-customize-question/{id}"
+      ],
+      "rendered_by": [
+        "AdminCustomizeController@getUserWiseCustomizeQuestion"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/customize-question",
+          "name": "customizequestion",
+          "line": 88
+        },
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "customize.user_wise_customize_report",
+      "file": "Nadi-Tarangini-Frontend:resources/views/customize/user_wise_customize_report.blade.php",
+      "routes": [
+        "GET admin/customize-report-user-wise/{id}"
+      ],
+      "rendered_by": [
+        "AdminCustomizeController@getCustomizeReportUserWise"
+      ],
+      "links_to": [
+        {
+          "route": "GET admin/user-and-teams",
+          "name": "userAndTeams",
+          "line": 11
+        }
+      ]
+    }
+  ],
+  "api_calls": [
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "currentUserAccessibleUsersWithLocations",
+      "pages": [
+        "AddAppointmentScreen",
+        "AddPatientScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/currentUserAccessibleUsersWithLocations",
+      "status": "matched",
+      "route": "GET currentUserAccessibleUsersWithLocations",
+      "controller": "DataManagementController@getCurrentAccessibleUsersWithClinics",
+      "tables": [],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2396",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/doctor_dashboard/appointments/view/add_appointment.dart",
+        "Nadi-Tarangini-App:lib/doctor_dashboard/patient/view/add_patient/add_patient_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getAllRoles",
+      "pages": [
+        "LoginWithOtpScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/public/allRoles",
+      "status": "matched",
+      "route": "GET public/allRoles",
+      "controller": "UserManagementController@allRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:63",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_otp.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getTypeWiseFeatureDetails",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/report/getTypeWiseFeatureDetails",
+      "status": "matched",
+      "route": "POST report/getTypeWiseFeatureDetails",
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "tables": [
+        "master_contents",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2038",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@customizeQuestion",
+      "pages": [
+        "customize.add_question_v2"
+      ],
+      "method": "POST",
+      "endpoint": "/getAnswerTypes",
+      "status": "matched",
+      "route": "POST getAnswerTypes",
+      "controller": "CustomizeDetailsController@getAnswerTypes",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:112",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@customizeQuestion",
+      "pages": [
+        "customize.add_question_v2"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:136",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@customizeQuestion",
+      "pages": [
+        "customize.add_question_v2"
+      ],
+      "method": "POST",
+      "endpoint": "/medicalForm/getFormCategories",
+      "status": "matched",
+      "route": "POST medicalForm/getFormCategories",
+      "controller": "CustomizeDetailsController@getDefaultFormCategories",
+      "tables": [
+        "symptom_category"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:123",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@customizeQuestion",
+      "pages": [
+        "customize.add_question_v2"
+      ],
+      "method": "POST",
+      "endpoint": "/medicalForm/getFormCategories",
+      "status": "matched",
+      "route": "POST medicalForm/getFormCategories",
+      "controller": "CustomizeDetailsController@getDefaultFormCategories",
+      "tables": [
+        "symptom_category"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:99",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@customizeReport",
+      "pages": [
+        "customize.customize_report"
+      ],
+      "method": "POST",
+      "endpoint": "/reportManagement/getReportWiseNoOfPages",
+      "status": "matched",
+      "route": "POST reportManagement/getReportWiseNoOfPages",
+      "controller": "CustomizeDetailsController@getReportWiseNoOfPages",
+      "tables": [
+        "resource_name_master",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:75",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@getCustomizeReportUserWise",
+      "pages": [
+        "customize.user_wise_customize_report"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:462",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@getCustomizeReportUserWise",
+      "pages": [
+        "customize.user_wise_customize_report"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllRoles",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllRoles",
+      "controller": "UserManagementController@getAllRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:440",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@getCustomizeReportUserWise",
+      "pages": [
+        "customize.user_wise_customize_report"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserDetails",
+      "controller": "UserManagementController@getUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:426",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@getCustomizeReportUserWise",
+      "pages": [
+        "customize.user_wise_customize_report"
+      ],
+      "method": "POST",
+      "endpoint": "/reportManagement/getReportWiseNoOfPages",
+      "status": "matched",
+      "route": "POST reportManagement/getReportWiseNoOfPages",
+      "controller": "CustomizeDetailsController@getReportWiseNoOfPages",
+      "tables": [
+        "resource_name_master",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:417",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@getReportPages",
+      "pages": [
+        "customize.customize",
+        "customize.customize_report",
+        "customize.customize_tabs"
+      ],
+      "method": "POST",
+      "endpoint": "/reportManagement/getReportPages",
+      "status": "matched",
+      "route": "POST reportManagement/getReportPages",
+      "controller": "CustomizeDetailsController@getReportPages",
+      "tables": [
+        "common_data",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:275",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/customize/customize_report.js:438"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@getUserWiseCategoryWiseCustomizeQuestions",
+      "pages": [
+        "customize.user_wise_customize_questionnaire"
+      ],
+      "method": "POST",
+      "endpoint": "/medicalForm/getCateogoryWiseQuestionsForSingleUser",
+      "status": "matched",
+      "route": "POST medicalForm/getCateogoryWiseQuestionsForSingleUser",
+      "controller": "CustomizeDetailsController@getCateogoryWiseQuestionsForSingleUser",
+      "tables": [
+        "doctor_form_details",
+        "symptom_category",
+        "symptoms"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:621",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/customize/user_wise_customize_questionnaire.js:41"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@getUserWiseCustomizeQuestion",
+      "pages": [
+        "customize.user_wise_customize_questionnaire"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:588",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@getUserWiseCustomizeQuestion",
+      "pages": [
+        "customize.user_wise_customize_questionnaire"
+      ],
+      "method": "POST",
+      "endpoint": "/medicalForm/getFormCategories",
+      "status": "matched",
+      "route": "POST medicalForm/getFormCategories",
+      "controller": "CustomizeDetailsController@getDefaultFormCategories",
+      "tables": [
+        "symptom_category"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:542",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@getUserWiseCustomizeQuestion",
+      "pages": [
+        "customize.user_wise_customize_questionnaire"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllRoles",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllRoles",
+      "controller": "UserManagementController@getAllRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:566",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@getUserWiseCustomizeQuestion",
+      "pages": [
+        "customize.user_wise_customize_questionnaire"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserDetails",
+      "controller": "UserManagementController@getUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:551",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@getUserWiseReportPages",
+      "pages": [
+        "customize.user_wise_customize_report"
+      ],
+      "method": "POST",
+      "endpoint": "/reportManagement/fetchSingleUserWiseReportPages",
+      "status": "matched",
+      "route": "POST reportManagement/fetchSingleUserWiseReportPages",
+      "controller": "CustomizeDetailsController@fetchSingleUserWiseReportPages",
+      "tables": [
+        "common_data",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:384",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/customize/user_wise_customize_report.js:66"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@index",
+      "pages": [
+        "customize.add_question"
+      ],
+      "method": "POST",
+      "endpoint": "/getAnswerTypes",
+      "status": "matched",
+      "route": "POST getAnswerTypes",
+      "controller": "CustomizeDetailsController@getAnswerTypes",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:304",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@index",
+      "pages": [
+        "customize.add_question"
+      ],
+      "method": "POST",
+      "endpoint": "/medicalForm/getFormCategories",
+      "status": "matched",
+      "route": "POST medicalForm/getFormCategories",
+      "controller": "CustomizeDetailsController@getDefaultFormCategories",
+      "tables": [
+        "symptom_category"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:315",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@questionstore",
+      "pages": [
+        "customize.add_question",
+        "customize.add_question_v2"
+      ],
+      "method": "POST",
+      "endpoint": "/addnewDetails",
+      "status": "matched",
+      "route": "POST addnewDetails",
+      "controller": "CustomizeDetailsController@addnewDetails",
+      "tables": [
+        "symptom_category",
+        "symptoms",
+        "symptoms_dropdown_item"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:351",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/customize/customize_questionnaire.js:747"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@updateCategory",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/medicalForm/updateCateogoryWiseQuestions",
+      "status": "matched",
+      "route": "POST medicalForm/updateCateogoryWiseQuestions",
+      "controller": "CustomizeDetailsController@updateCateogoryWiseQuestions",
+      "tables": [
+        "doctor_form_details",
+        "symptom_category",
+        "symptoms"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:234",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@updateReportPages",
+      "pages": [
+        "customize.customize",
+        "customize.customize_report",
+        "customize.customize_tabs"
+      ],
+      "method": "POST",
+      "endpoint": "/reportManagement/customizeReportPages",
+      "status": "matched",
+      "route": "POST reportManagement/customizeReportPages",
+      "controller": "CustomizeDetailsController@updateUserReportPages",
+      "tables": [
+        "resource_name_master",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:170",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/customize/customize_report.js:505"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@updateUserWiseCategoryQustions",
+      "pages": [
+        "customize.user_wise_customize_questionnaire"
+      ],
+      "method": "POST",
+      "endpoint": "/medicalForm/updateCateogoryWiseQuestionsForSingleUser",
+      "status": "matched",
+      "route": "POST medicalForm/updateCateogoryWiseQuestionsForSingleUser",
+      "controller": "CustomizeDetailsController@updateCateogoryWiseQuestionsForSingleUser",
+      "tables": [
+        "doctor_form_details",
+        "symptom_category",
+        "symptoms"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:647",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/customize/user_wise_customize_questionnaire.js:118"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminCustomizeController@updateUserWiseRportPages",
+      "pages": [
+        "customize.user_wise_customize_report"
+      ],
+      "method": "POST",
+      "endpoint": "/reportManagement/customizeSingleUserReportPages",
+      "status": "matched",
+      "route": "POST reportManagement/customizeSingleUserReportPages",
+      "controller": "CustomizeDetailsController@updateSingleUserWiseReportPages",
+      "tables": [
+        "resource_name_master",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminCustomizeController.php:502",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/customize/user_wise_customize_report.js:145"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@activeInactiveUser",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/updateUserStatus",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/updateUserStatus",
+      "controller": "UserManagementController@updateUserStatus",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1515",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@applyCoupon",
+      "pages": [
+        "admin.plan_details"
+      ],
+      "method": "POST",
+      "endpoint": "/calculatePlanPrice",
+      "status": "matched",
+      "route": "POST calculatePlanPrice",
+      "controller": "NtTransactionController@calculatePlanPrice",
+      "tables": [
+        "master_contents",
+        "nt_coupons"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1650",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/admin/plan_details.blade.php:790"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@createNtOrder",
+      "pages": [
+        "admin.plan_details"
+      ],
+      "method": "POST",
+      "endpoint": "/createNtOrder",
+      "status": "matched",
+      "route": "POST createNtOrder",
+      "controller": "NtTransactionController@createNtOrder",
+      "tables": [
+        "master_contents",
+        "nt_coupons",
+        "transactions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1699",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/admin/plan_details.blade.php:971"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@createUser",
+      "pages": [
+        "admin.create_user"
+      ],
+      "method": "POST",
+      "endpoint": "/getAllCountries",
+      "status": "matched",
+      "route": "POST getAllCountries",
+      "controller": "PatientDetailsController@getAllCountries",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1205",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@createUser",
+      "pages": [
+        "admin.create_user"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1233",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@createUser",
+      "pages": [
+        "admin.create_user"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1256",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@createUser",
+      "pages": [
+        "admin.create_user"
+      ],
+      "method": "GET",
+      "endpoint": "/getProfessionType",
+      "status": "matched",
+      "route": "GET getProfessionType",
+      "controller": "DoctorController@getProfessionType",
+      "tables": [
+        "profession_type"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1210",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@createUser",
+      "pages": [
+        "admin.create_user"
+      ],
+      "method": "POST",
+      "endpoint": "/getSalutationTypes",
+      "status": "matched",
+      "route": "POST getSalutationTypes",
+      "controller": "SignUpController@salutationTypes",
+      "tables": [
+        "salutation_types"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1200",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@createUser",
+      "pages": [
+        "admin.create_user"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getActiveUserDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getActiveUserDetails",
+      "controller": "UserManagementController@getActiveUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1220",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@createUser",
+      "pages": [
+        "admin.create_user"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllRoles",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllRoles",
+      "controller": "UserManagementController@getAllRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1215",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@dataManagement",
+      "pages": [
+        "admin.data_management"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1140",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@dataManagement",
+      "pages": [
+        "admin.data_management"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getActiveUserDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getActiveUserDetails",
+      "controller": "UserManagementController@getActiveUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1093",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@dataManagement",
+      "pages": [
+        "admin.data_management"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllRoles",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllRoles",
+      "controller": "UserManagementController@getAllRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1104",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@dataManagement",
+      "pages": [
+        "admin.data_management"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserDetails",
+      "controller": "UserManagementController@getUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1112",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@dataManagement",
+      "pages": [
+        "admin.data_management"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/data-management/userWiseDataAccess",
+      "status": "matched",
+      "route": "POST nt-admin/data-management/userWiseDataAccess",
+      "controller": "DataManagementController@getDataAccess",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1079",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@editPermissions",
+      "pages": [
+        "admin.user_permissions"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1453",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@editPermissions",
+      "pages": [
+        "admin.user_permissions"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/features",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/features",
+      "controller": "FeaturesController@getFeatures",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1397",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@editPermissions",
+      "pages": [
+        "admin.user_permissions"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllRoles",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllRoles",
+      "controller": "UserManagementController@getAllRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1431",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@editPermissions",
+      "pages": [
+        "admin.user_permissions"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserDetails",
+      "controller": "UserManagementController@getUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1417",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@editProfile",
+      "pages": [
+        "admin.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/getAllCountries",
+      "status": "matched",
+      "route": "POST getAllCountries",
+      "controller": "PatientDetailsController@getAllCountries",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:916",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@editProfile",
+      "pages": [
+        "admin.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:947",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@editProfile",
+      "pages": [
+        "admin.edit_profile"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getCurrentUserDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getCurrentUserDetails",
+      "controller": "UserManagementController@getCurrentUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:926",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@editProfile",
+      "pages": [
+        "admin.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserDetails",
+      "controller": "UserManagementController@getUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:931",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@fetchPaymentInvoices",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/payment-invoices",
+      "status": "matched",
+      "route": "GET payment-invoices",
+      "controller": "NtTransactionController@getPaymentInvoices",
+      "tables": [
+        "transactions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1808",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@fetchUserLastVisitInformation",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "POST",
+      "endpoint": "/v2/report/getLastVisitInformation",
+      "status": "matched",
+      "route": "POST v2/report/getLastVisitInformation",
+      "controller": "MedicalReportSaveController@getLastVisitInformation",
+      "tables": [
+        "calendar_events",
+        "medical_report",
+        "medical_report_prescription",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:855",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/userPatientList.js:114"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@fetchUserLastVisitInformation",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "POST",
+      "endpoint": "/v2/report/getLastVisitInformation",
+      "status": "matched",
+      "route": "POST v2/report/getLastVisitInformation",
+      "controller": "MedicalReportSaveController@getLastVisitInformation",
+      "tables": [
+        "calendar_events",
+        "medical_report",
+        "medical_report_prescription",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:864",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/userPatientList.js:114"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@fetchUserPatientList",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "POST",
+      "endpoint": "/infinitePatientList",
+      "status": "matched",
+      "route": "POST infinitePatientList",
+      "controller": "PatientDetailsController@infinitePatientList",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:476",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/userPatientList.js:238"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@fetchUserPatientList",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "POST",
+      "endpoint": "/infinitePatientList",
+      "status": "matched",
+      "route": "POST infinitePatientList",
+      "controller": "PatientDetailsController@infinitePatientList",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:485",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/userPatientList.js:238"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@getConsultationTypeCounts",
+      "pages": [
+        "admin.admin_dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/consultationTypeCounts",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/consultationTypeCounts",
+      "controller": "UserManagementController@getConsultationTypeCounts",
+      "tables": [
+        "calendar_events",
+        "common_data",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:186",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/dashboard.js:656"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@getPlanDetails",
+      "pages": [
+        "admin.plan_details"
+      ],
+      "method": "POST",
+      "endpoint": "/subscriptions/getReportWisePlans",
+      "status": "matched",
+      "route": "POST subscriptions/getReportWisePlans",
+      "controller": "SubscriptionController@getReportWisePlans",
+      "tables": [
+        "master_contents"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1619",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@getPlanStatus",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/planStatus",
+      "status": "matched",
+      "route": "GET planStatus",
+      "controller": "NtTransactionController@getPlanStatus",
+      "tables": [
+        "user_nadi_capture_type"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1774",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@getUserClinicDetails",
+      "pages": [
+        "admin.create_user"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserWiseActiveClinicDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserWiseActiveClinicDetails",
+      "controller": "UserManagementController@getUserWiseActiveClinicDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1591",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/createUser.js:850"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@getUserDetails",
+      "pages": [
+        "add_self_admin"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getCurrentUserDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getCurrentUserDetails",
+      "controller": "UserManagementController@getCurrentUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1556",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/add_self_admin.js:418"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@getUserDetails",
+      "pages": [
+        "add_self_admin"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserDetails",
+      "controller": "UserManagementController@getUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1561",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/add_self_admin.js:418"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@getUsersByRole",
+      "pages": [
+        "admin.admin_dashboard"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getCurrentUserDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getCurrentUserDetails",
+      "controller": "UserManagementController@getCurrentUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:114",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/dashboard.js:608"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@getUsersByRole",
+      "pages": [
+        "admin.admin_dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUsersByRole",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUsersByRole",
+      "controller": "UserManagementController@getUsersByRole",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:147",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/dashboard.js:608"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@index",
+      "pages": [
+        "admin.admin_dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:64",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@index",
+      "pages": [
+        "admin.admin_dashboard"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getChildRole",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getChildRole",
+      "controller": "UserManagementController@getChildRole",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:24",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@index",
+      "pages": [
+        "admin.admin_dashboard"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getCurrentUserDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getCurrentUserDetails",
+      "controller": "UserManagementController@getCurrentUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:41",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@resolveTargetUserAuthToken",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserDetails",
+      "controller": "UserManagementController@getUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:893",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@saveUser",
+      "pages": [
+        "admin.create_user"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/addUser",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/addUser",
+      "controller": "UserManagementController@addUser",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1290",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/createUser.js:656"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@searchUserPatientList",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "POST",
+      "endpoint": "/searchPatientUsingName",
+      "status": "matched",
+      "route": "POST searchPatientUsingName",
+      "controller": "PatientDetailsController@searchPatientUsingName",
+      "tables": [
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:519",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/userPatientList.js:280"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@searchUserPatientList",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "POST",
+      "endpoint": "/searchPatientUsingName",
+      "status": "matched",
+      "route": "POST searchPatientUsingName",
+      "controller": "PatientDetailsController@searchPatientUsingName",
+      "tables": [
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:529",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/userPatientList.js:280"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@updatePassword",
+      "pages": [
+        "admin.update_password"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserDetails",
+      "controller": "UserManagementController@getUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1348",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@updatePermissions",
+      "pages": [
+        "admin.user_permissions"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/updateFeatures",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/updateFeatures",
+      "controller": "FeaturesController@updateUserWiseFeatures",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1485",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/permission.js:32"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@updateProfile",
+      "pages": [
+        "admin.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/editProfile",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/editProfile",
+      "controller": "UserManagementController@editProfile",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1002",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/editProfile.js:362"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@updateProfile",
+      "pages": [
+        "admin.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/editProfile",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/editProfile",
+      "controller": "UserManagementController@editProfile",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1019",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/editProfile.js:362"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@updateProfile",
+      "pages": [
+        "admin.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/editUserProfile",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/editUserProfile",
+      "controller": "UserManagementController@editUserProfile",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1037",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/editProfile.js:362"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@updateUserDataManagement",
+      "pages": [
+        "admin.data_management"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/data-management/updateUserWiseDataAccess",
+      "status": "matched",
+      "route": "POST nt-admin/data-management/updateUserWiseDataAccess",
+      "controller": "DataManagementController@updateUserWiseDataAccess",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1176",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/dataManage.js:16"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@updateUserPassword",
+      "pages": [
+        "admin.update_password"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/updateUserPassword",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/updateUserPassword",
+      "controller": "UserManagementController@updateUserPassword",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1371",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/updatePassword.js:34"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userAndTeams",
+      "pages": [
+        "admin.user_and_teams"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:327",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userAndTeams",
+      "pages": [
+        "admin.user_and_teams"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getActiveUserDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getActiveUserDetails",
+      "controller": "UserManagementController@getActiveUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:207",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userAndTeams",
+      "pages": [
+        "admin.user_and_teams"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllFeatureDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllFeatureDetails",
+      "controller": "FeaturesController@getAllFeatureDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:218",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userAndTeams",
+      "pages": [
+        "admin.user_and_teams"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllRoles",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllRoles",
+      "controller": "UserManagementController@getAllRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:258",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userAndTeams",
+      "pages": [
+        "admin.user_and_teams"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getChildRole",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getChildRole",
+      "controller": "UserManagementController@getChildRole",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:269",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPatientList",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:438",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPatientList",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "POST",
+      "endpoint": "/infinitePatientList",
+      "status": "matched",
+      "route": "POST infinitePatientList",
+      "controller": "PatientDetailsController@infinitePatientList",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:358",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPatientList",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "POST",
+      "endpoint": "/infinitePatientList",
+      "status": "matched",
+      "route": "POST infinitePatientList",
+      "controller": "PatientDetailsController@infinitePatientList",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:365",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPatientList",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getActiveUserDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getActiveUserDetails",
+      "controller": "UserManagementController@getActiveUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:391",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPatientList",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllRoles",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllRoles",
+      "controller": "UserManagementController@getAllRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:402",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPatientList",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserDetails",
+      "controller": "UserManagementController@getUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:380",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPatientList",
+      "pages": [
+        "admin.user_patient_list"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserDetails",
+      "controller": "UserManagementController@getUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:410",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPreviousVisits",
+      "pages": [
+        "admin.user_previous_visits"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:662",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPreviousVisits",
+      "pages": [
+        "admin.user_previous_visits"
+      ],
+      "method": "POST",
+      "endpoint": "/infinitePatientList",
+      "status": "matched",
+      "route": "POST infinitePatientList",
+      "controller": "PatientDetailsController@infinitePatientList",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:568",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPreviousVisits",
+      "pages": [
+        "admin.user_previous_visits"
+      ],
+      "method": "POST",
+      "endpoint": "/infinitePatientList",
+      "status": "matched",
+      "route": "POST infinitePatientList",
+      "controller": "PatientDetailsController@infinitePatientList",
+      "tables": [
+        "locality_info",
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:576",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPreviousVisits",
+      "pages": [
+        "admin.user_previous_visits"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getActiveUserDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getActiveUserDetails",
+      "controller": "UserManagementController@getActiveUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:630",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPreviousVisits",
+      "pages": [
+        "admin.user_previous_visits"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllRoles",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllRoles",
+      "controller": "UserManagementController@getAllRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:636",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPreviousVisits",
+      "pages": [
+        "admin.user_previous_visits"
+      ],
+      "method": "POST",
+      "endpoint": "/nt-admin/access-management/getUserDetails",
+      "status": "matched",
+      "route": "POST nt-admin/access-management/getUserDetails",
+      "controller": "UserManagementController@getUserDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:642",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPreviousVisits",
+      "pages": [
+        "admin.user_previous_visits"
+      ],
+      "method": "POST",
+      "endpoint": "/v2/patient/patientPreviousVisit",
+      "status": "matched",
+      "route": "POST v2/patient/patientPreviousVisit",
+      "controller": "PatientDetailsController@patientPreviousVisitV2",
+      "tables": [
+        "calendar_events",
+        "locality_info",
+        "medical_report",
+        "medical_report_diet",
+        "medical_report_prescription",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "other_report_data",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:600",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@userPreviousVisits",
+      "pages": [
+        "admin.user_previous_visits"
+      ],
+      "method": "POST",
+      "endpoint": "/v2/patient/patientPreviousVisit",
+      "status": "matched",
+      "route": "POST v2/patient/patientPreviousVisit",
+      "controller": "PatientDetailsController@patientPreviousVisitV2",
+      "tables": [
+        "calendar_events",
+        "locality_info",
+        "medical_report",
+        "medical_report_diet",
+        "medical_report_prescription",
+        "medical_report_symptom_details_1",
+        "nadi_report",
+        "other_report_data",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:608",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@verifyTransaction",
+      "pages": [
+        "admin.plan_details"
+      ],
+      "method": "POST",
+      "endpoint": "/verifyTransaction",
+      "status": "matched",
+      "route": "POST verifyTransaction",
+      "controller": "NtTransactionController@verifyTransaction",
+      "tables": [
+        "transactions"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1727",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:resources/views/admin/plan_details.blade.php:1053"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@viewAllReport",
+      "pages": [
+        "admin.all_report_view",
+        "admin.user_previous_visits"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:748",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@viewAllReport",
+      "pages": [
+        "admin.all_report_view",
+        "admin.user_previous_visits"
+      ],
+      "method": "POST",
+      "endpoint": "/report/visitWiseAllowedReports",
+      "status": "matched",
+      "route": "POST report/visitWiseAllowedReports",
+      "controller": "MedicalReportSaveController@visitWiseAllowedReports",
+      "tables": [
+        "medical_report",
+        "nadi_report",
+        "other_report_data",
+        "pg_device_mapping",
+        "resource_name_master",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:710",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@viewVisitReport",
+      "pages": [
+        "admin.user_previous_visits",
+        "admin.visit_report_view"
+      ],
+      "method": null,
+      "endpoint": "/careServicesReport",
+      "status": "matched",
+      "route": "GET careServicesReport",
+      "controller": "ReportsWebController@careServicesReport",
+      "tables": [
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:804",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@viewVisitReport",
+      "pages": [
+        "admin.user_previous_visits",
+        "admin.visit_report_view"
+      ],
+      "method": null,
+      "endpoint": "/dietReport",
+      "status": "matched",
+      "route": "GET dietReport",
+      "controller": "ReportsWebController@dietAndLifestylereport",
+      "tables": [
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:800",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@viewVisitReport",
+      "pages": [
+        "admin.user_previous_visits",
+        "admin.visit_report_view"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:812",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@viewVisitReport",
+      "pages": [
+        "admin.user_previous_visits",
+        "admin.visit_report_view"
+      ],
+      "method": null,
+      "endpoint": "/medicalVisitReport",
+      "status": "matched",
+      "route": "GET medicalVisitReport",
+      "controller": "ReportsWebController@medicalVisitReport",
+      "tables": [
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:797",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@viewVisitReport",
+      "pages": [
+        "admin.user_previous_visits",
+        "admin.visit_report_view"
+      ],
+      "method": null,
+      "endpoint": "/medicalVisitReportV2",
+      "status": "matched",
+      "route": "GET medicalVisitReportV2",
+      "controller": "ReportsWebController@medicalVisitReportV2",
+      "tables": [
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:798",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AdminDashboardController@viewVisitReport",
+      "pages": [
+        "admin.user_previous_visits",
+        "admin.visit_report_view"
+      ],
+      "method": null,
+      "endpoint": "/prescriptionReport",
+      "status": "matched",
+      "route": "GET prescriptionReport",
+      "controller": "ReportsWebController@prescriptionReport",
+      "tables": [
+        "medical_report",
+        "medical_report_prescription",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:799",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "AppointmentController@currentUserAccessibleUsersWithLocations",
+      "pages": [],
+      "method": "GET",
+      "endpoint": "/currentUserAccessibleUsersWithLocations",
+      "status": "matched",
+      "route": "GET currentUserAccessibleUsersWithLocations",
+      "controller": "DataManagementController@getCurrentAccessibleUsersWithClinics",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/AppointmentController.php:133",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@saveSelfAdminData",
+      "pages": [
+        "add_self_admin"
+      ],
+      "method": "POST",
+      "endpoint": "/add-self-admin",
+      "status": "matched",
+      "route": "POST add-self-admin",
+      "controller": "AdminManagementController@addSelfAdmin",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1326",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/add_self_admin.js:222"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "DashboardController@switchToDoctor",
+      "pages": [
+        "admin.admin_dashboard",
+        "admin.all_report_view",
+        "admin.create_user",
+        "admin.data_management",
+        "admin.edit_profile",
+        "admin.payment_invoices",
+        "admin.update_password",
+        "admin.user_and_teams",
+        "admin.user_patient_list",
+        "admin.user_permissions",
+        "admin.user_previous_visits",
+        "admin.visit_report_view",
+        "customize.add_question",
+        "customize.add_question_v2",
+        "customize.customize_questionnaire",
+        "customize.customize_report",
+        "customize.user_wise_customize_questionnaire",
+        "customize.user_wise_customize_report"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllFeatureDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllFeatureDetails",
+      "controller": "FeaturesController@getAllFeatureDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/DashboardController.php:1499",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/admin/adminCommon.js:189"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "MedicalAssessmentV3Controller@liveNadiV3",
+      "pages": [
+        "errors.expiredMedicalIdV3",
+        "medical_assessment.medical_assesment"
+      ],
+      "method": "POST",
+      "endpoint": "/report/getTypeWiseFeatureDetails",
+      "status": "matched",
+      "route": "POST report/getTypeWiseFeatureDetails",
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "tables": [
+        "master_contents",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/MedicalAssessmentV3Controller.php:1261",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "MedicalAssessmentV3Controller@liveNadiV3",
+      "pages": [
+        "errors.expiredMedicalIdV3",
+        "medical_assessment.medical_assesment"
+      ],
+      "method": "POST",
+      "endpoint": "/report/getTypeWiseFeatureDetails",
+      "status": "matched",
+      "route": "POST report/getTypeWiseFeatureDetails",
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "tables": [
+        "master_contents",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/MedicalAssessmentV3Controller.php:1273",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "MedicalAssessmentV3Controller@liveNadiV3",
+      "pages": [
+        "errors.expiredMedicalIdV3",
+        "medical_assessment.medical_assesment"
+      ],
+      "method": "POST",
+      "endpoint": "/report/getTypeWiseFeatureDetails",
+      "status": "matched",
+      "route": "POST report/getTypeWiseFeatureDetails",
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "tables": [
+        "master_contents",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/MedicalAssessmentV3Controller.php:1285",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "MedicalAssessmentV3Controller@liveNadiV3",
+      "pages": [
+        "errors.expiredMedicalIdV3",
+        "medical_assessment.medical_assesment"
+      ],
+      "method": "POST",
+      "endpoint": "/report/getTypeWiseFeatureDetails",
+      "status": "matched",
+      "route": "POST report/getTypeWiseFeatureDetails",
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "tables": [
+        "master_contents",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/MedicalAssessmentV3Controller.php:1297",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "MedicalAssessmentV3Controller@liveNadiV3",
+      "pages": [
+        "errors.expiredMedicalIdV3",
+        "medical_assessment.medical_assesment"
+      ],
+      "method": "POST",
+      "endpoint": "/report/getTypeWiseFeatureDetails",
+      "status": "matched",
+      "route": "POST report/getTypeWiseFeatureDetails",
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "tables": [
+        "master_contents",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/MedicalAssessmentV3Controller.php:1309",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "MedicalAssessmentV3Controller@liveNadiV3",
+      "pages": [
+        "errors.expiredMedicalIdV3",
+        "medical_assessment.medical_assesment"
+      ],
+      "method": "POST",
+      "endpoint": "/report/getTypeWiseFeatureDetails",
+      "status": "matched",
+      "route": "POST report/getTypeWiseFeatureDetails",
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "tables": [
+        "master_contents",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/MedicalAssessmentV3Controller.php:850",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "MedicalAssessmentV3Controller@liveNadiV3",
+      "pages": [
+        "errors.expiredMedicalIdV3",
+        "medical_assessment.medical_assesment"
+      ],
+      "method": "POST",
+      "endpoint": "/report/getTypeWiseFeatureDetails",
+      "status": "matched",
+      "route": "POST report/getTypeWiseFeatureDetails",
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "tables": [
+        "master_contents",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/MedicalAssessmentV3Controller.php:857",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "MedicalAssessmentV3Controller@liveNadiV3",
+      "pages": [
+        "errors.expiredMedicalIdV3",
+        "medical_assessment.medical_assesment"
+      ],
+      "method": "POST",
+      "endpoint": "/report/getTypeWiseFeatureDetails",
+      "status": "matched",
+      "route": "POST report/getTypeWiseFeatureDetails",
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "tables": [
+        "master_contents",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/MedicalAssessmentV3Controller.php:864",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "MedicalAssessmentV3Controller@liveNadiV3",
+      "pages": [
+        "errors.expiredMedicalIdV3",
+        "medical_assessment.medical_assesment"
+      ],
+      "method": "POST",
+      "endpoint": "/report/getTypeWiseFeatureDetails",
+      "status": "matched",
+      "route": "POST report/getTypeWiseFeatureDetails",
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "tables": [
+        "master_contents",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/MedicalAssessmentV3Controller.php:871",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "MedicalAssessmentV3Controller@liveNadiV3",
+      "pages": [
+        "errors.expiredMedicalIdV3",
+        "medical_assessment.medical_assesment"
+      ],
+      "method": "POST",
+      "endpoint": "/report/getTypeWiseFeatureDetails",
+      "status": "matched",
+      "route": "POST report/getTypeWiseFeatureDetails",
+      "controller": "FeaturesController@getTypeWiseFeatureDetails",
+      "tables": [
+        "master_contents",
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/MedicalAssessmentV3Controller.php:878",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@checkLoginCredentials",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllFeatureDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllFeatureDetails",
+      "controller": "FeaturesController@getAllFeatureDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:209",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:302"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@getAllRoles",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/public/allRoles",
+      "status": "matched",
+      "route": "GET public/allRoles",
+      "controller": "UserManagementController@allRoles",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:728",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:950"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@getUserDetailsOtpBasedLogin",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/nt-admin/access-management/getAllFeatureDetails",
+      "status": "matched",
+      "route": "GET nt-admin/access-management/getAllFeatureDetails",
+      "controller": "FeaturesController@getAllFeatureDetails",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:589",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:1052"
+      ],
+      "screen_files": []
+    }
+  ],
+  "tables": [
+    {
+      "name": "calendar_events",
+      "models": [
+        "CalendarEvent"
+      ],
+      "columns": [
+        {
+          "name": "clinic_id",
+          "type": "integer"
+        },
+        {
+          "name": "consultation_type",
+          "type": "integer"
+        },
+        {
+          "name": "reception_id",
+          "type": "integer"
+        }
+      ],
+      "migrations": 4
+    },
+    {
+      "name": "common_data",
+      "models": [
+        "CommonData"
+      ],
+      "columns": [
+        {
+          "name": "created_at",
+          "type": "timestamp"
+        },
+        {
+          "name": "data",
+          "type": "json"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp"
+        }
+      ],
+      "migrations": 1
+    },
+    {
+      "name": "master_contents",
+      "models": [
+        "MasterContents"
+      ],
+      "columns": [
+        {
+          "name": "content",
+          "type": "text"
+        },
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "is_active",
+          "type": "tinyInteger"
+        },
+        {
+          "name": "last_modified_on",
+          "type": "timestamp"
+        },
+        {
+          "name": "month_number",
+          "type": "tinyInteger"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "enum"
+        },
+        {
+          "name": "week_number",
+          "type": "tinyInteger"
+        }
+      ],
+      "migrations": 2
+    },
+    {
+      "name": "medical_report",
+      "models": [
+        "MedicalReport"
+      ],
+      "columns": [
+        {
+          "name": "city",
+          "type": "string"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "external_visit_id",
+          "type": "string"
+        },
+        {
+          "name": "field_id_1",
+          "type": "string"
+        },
+        {
+          "name": "ip_address",
+          "type": "string"
+        },
+        {
+          "name": "mark_on_image_url",
+          "type": "string"
+        },
+        {
+          "name": "panchakarma_recom",
+          "type": "text"
+        },
+        {
+          "name": "reception_id",
+          "type": "integer"
+        },
+        {
+          "name": "recommendations",
+          "type": "json"
+        },
+        {
+          "name": "state",
+          "type": "string"
+        },
+        {
+          "name": "try_count",
+          "type": "unsignedInteger"
+        },
+        {
+          "name": "user_nadi_capture_type",
+          "type": "integer"
+        },
+        {
+          "name": "yoga_recom",
+          "type": "text"
+        }
+      ],
+      "migrations": 10
+    },
+    {
+      "name": "user_personal_info",
+      "models": [
+        "UserPersonalInfo"
+      ],
+      "columns": [
+        {
+          "name": "allowed_functions",
+          "type": "json"
+        },
+        {
+          "name": "app_language",
+          "type": "string"
+        },
+        {
+          "name": "ayush_no",
+          "type": "string"
+        },
+        {
+          "name": "clinic_id",
+          "type": "integer"
+        },
+        {
+          "name": "external_user_status",
+          "type": "integer"
+        },
+        {
+          "name": "is_parent",
+          "type": "integer"
+        },
+        {
+          "name": "parent_id",
+          "type": "integer"
+        },
+        {
+          "name": "plan_expire_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "plan_id",
+          "type": "foreignId"
+        },
+        {
+          "name": "profession_type_id",
+          "type": "integer"
+        },
+        {
+          "name": "reception_id",
+          "type": "integer"
+        },
+        {
+          "name": "verified_role_id",
+          "type": "integer"
+        },
+        {
+          "name": "welcome_tours_taken",
+          "type": "json"
+        }
+      ],
+      "migrations": 13
+    }
+  ],
+  "external_systems": [
+    {
+      "system": "Firebase",
+      "repo": "Ashoka-World-Backend",
+      "where": [
+        "Ashoka-World-Backend:app/Http/Controllers/NTAdmin/UserManagementController.php:67"
+      ]
+    },
+    {
+      "system": "Razorpay",
+      "repo": "Nadi-Tarangini-Frontend",
+      "where": [
+        "Nadi-Tarangini-Frontend:app/Http/Controllers/AdminDashboardController.php:1728,1729,1730"
+      ]
+    }
+  ],
+  "environment": {
+    "source": "atreya-docs/environments.md",
+    "repos": [
+      {
+        "repo": "Ashoka-World-Backend",
+        "columns": [
+          "Env",
+          "Ref",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      },
+      {
+        "repo": "Nadi-Tarangini-Frontend",
+        "columns": [
+          "Env",
+          "Ref",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "required": [
+      "English",
+      "Marathi",
+      "Hindi",
+      "Czech",
+      "German",
+      "Spanish",
+      "Italian"
+    ],
+    "required_source": "references/qa-scope-rules.md",
+    "files": [
+      "Nadi-Tarangini-Frontend:resources/lang/en/auth.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/pagination.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/passwords.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/validation.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en_patient.json"
+    ]
+  }
+}

@@ -1,0 +1,2708 @@
+{
+  "module": {
+    "id": "patient-portal",
+    "name": "Patient portal (client login, reports, questions, consent)",
+    "product": "nt",
+    "critical": false,
+    "owner": "TBD",
+    "doc_status": "none",
+    "in_use": {
+      "dev": "TBD",
+      "staging": "TBD",
+      "production": "TBD"
+    }
+  },
+  "generated": "2026-11-03",
+  "backend": "Ashoka-World-Backend",
+  "commits": {
+    "Ashoka-World-Backend": "8dfbb37db7d71a400b3656bd50fbed6173908a24",
+    "Nadi-Tarangini-App": "0b7deec6de2b0b8b4f05eab4be8c8430523829bf",
+    "Nadi-Tarangini-Frontend": "e8a9742b97e5be6d87452a6fdcfae67ee42ecb6d"
+  },
+  "backend_routes": [
+    {
+      "key": "POST client/askQuery",
+      "method": "POST",
+      "uri": "client/askQuery",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "AskQuestionController@askQuestion",
+      "source": "Ashoka-World-Backend:routes/api.php:1451",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Query is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:33"
+        },
+        {
+          "http": "400",
+          "message": "Query not added",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:42"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:58"
+        },
+        {
+          "http": "400",
+          "message": "Query not added",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:61"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:67"
+        }
+      ]
+    },
+    {
+      "key": "POST client/changePassword",
+      "method": "POST",
+      "uri": "client/changePassword",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "AccountManagementController@changePassword",
+      "source": "Ashoka-World-Backend:routes/api.php:1465",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "updatePasswordPatient",
+          "pages": [
+            "ChangePasswordPatient"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "current_password",
+          "rules": "required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:286"
+        }
+      ],
+      "errors": [
+        {
+          "http": null,
+          "message": "New password must contain at least one digit",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:294"
+        },
+        {
+          "http": "400",
+          "message": "Client not found",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:317"
+        },
+        {
+          "http": "400",
+          "message": "New password must be different from the old password.",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:321"
+        },
+        {
+          "http": "200",
+          "message": "Password updated successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:326"
+        },
+        {
+          "http": "400",
+          "message": "Incorrect current password",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:328"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:334"
+        }
+      ]
+    },
+    {
+      "key": "POST client/clientDetails",
+      "method": "POST",
+      "uri": "client/clientDetails",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "EditProfileController@clientDetails",
+      "source": "Ashoka-World-Backend:routes/api.php:1462",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "fetchClientDetails",
+          "pages": [
+            "DrawerMenuPatient",
+            "EditPatientProfileScreen",
+            "PatientDashboard",
+            "ReportScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientDashboardController@editProfile",
+          "pages": [
+            "patient-module.edit_profile"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientDashboardController@index",
+          "pages": [
+            "patient-module.patient_dashboard"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientDashboardManagementController@corporatePatientDashboard",
+          "pages": [
+            "corporate-patient-module.dashboard"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientVisitController@visitHistory",
+          "pages": [
+            "patient-module.visit_history"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:248"
+        }
+      ]
+    },
+    {
+      "key": "POST client/clientEditProfile",
+      "method": "POST",
+      "uri": "client/clientEditProfile",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "EditProfileController@clientEditProfile",
+      "source": "Ashoka-World-Backend:routes/api.php:1450",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "editPatientPrifile",
+          "pages": [
+            "EditPatientProfileScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientDashboardController@updateProfileData",
+          "pages": [
+            "patient-module.edit_profile"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Invalid client id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:34"
+        },
+        {
+          "http": "400",
+          "message": "Phone number already exists",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:78"
+        },
+        {
+          "http": "400",
+          "message": "Image shouldn",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:93"
+        },
+        {
+          "http": "500",
+          "message": "An error occurred while uploading the file",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:107"
+        },
+        {
+          "http": "400",
+          "message": "Invalid phone number length1",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:140"
+        },
+        {
+          "http": "400",
+          "message": "The provided country code is not valid for the given phone number2",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:143"
+        },
+        {
+          "http": "200",
+          "message": "Client profile updated successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:174"
+        },
+        {
+          "http": "400",
+          "message": "Client profile not updated",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:177"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:183"
+        }
+      ]
+    },
+    {
+      "key": "POST client/clientRemainingFees",
+      "method": "POST",
+      "uri": "client/clientRemainingFees",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "EditProfileController@clientRemainingFees",
+      "source": "Ashoka-World-Backend:routes/api.php:1463",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientVisitController@visitHistory",
+          "pages": [
+            "patient-module.visit_history"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "404",
+          "message": "Client not found",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:263"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:294"
+        }
+      ]
+    },
+    {
+      "key": "POST client/deleteClientAccount",
+      "method": "POST",
+      "uri": "client/deleteClientAccount",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "AccountManagementController@deleteClientAccount",
+      "source": "Ashoka-World-Backend:routes/api.php:1468",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "deletePatientAccount",
+          "pages": [
+            "DrawerMenuPatient"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientDashboardController@deleteClientAccount",
+          "pages": [
+            "my_account.myaccount",
+            "patient-module.daily_diet_lifestyle",
+            "patient-module.data_consent",
+            "patient-module.edit_profile",
+            "patient-module.patientAllReportsView",
+            "patient-module.patientArogyaDarshikaView",
+            "patient-module.patientSwasthyaDarshikaView",
+            "patient-module.patientVisitReportView",
+            "patient-module.patient_dashboard",
+            "patient-module.visit_history"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "401",
+          "message": "Unauthorized",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:34"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:45"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:51"
+        }
+      ]
+    },
+    {
+      "key": "POST client/deleteQuery",
+      "method": "POST",
+      "uri": "client/deleteQuery",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "AskQuestionController@deleteQuestion",
+      "source": "Ashoka-World-Backend:routes/api.php:1458",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Query id is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:161"
+        },
+        {
+          "http": "400",
+          "message": "Enter valid query id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:165"
+        },
+        {
+          "http": "400",
+          "message": "Enter valid query id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:175"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:181"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:187"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:194"
+        }
+      ]
+    },
+    {
+      "key": "POST client/deleteReport",
+      "method": "POST",
+      "uri": "client/deleteReport",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "VisitManagementController@deleteReport",
+      "source": "Ashoka-World-Backend:routes/api.php:1469",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "deletePatientReport",
+          "pages": [
+            "ReportScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientVisitController@deletePatientReport",
+          "pages": []
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Medical id is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:139"
+        },
+        {
+          "http": "400",
+          "message": "Invalid medical id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:143"
+        },
+        {
+          "http": "404",
+          "message": "Enter valid medical id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:151"
+        },
+        {
+          "http": "200",
+          "message": "Report deleted successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:159"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:165"
+        }
+      ]
+    },
+    {
+      "key": "POST client/fetchAskedQueriesList",
+      "method": "POST",
+      "uri": "client/fetchAskedQueriesList",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "AskQuestionController@askQuestionList",
+      "source": "Ashoka-World-Backend:routes/api.php:1452",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Question list not found",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:84"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:95"
+        }
+      ]
+    },
+    {
+      "key": "POST client/getBannerList",
+      "method": "POST",
+      "uri": "client/getBannerList",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "AccountManagementController@getBannerList",
+      "source": "Ashoka-World-Backend:routes/api.php:1464",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientDashboardController@index",
+          "pages": [
+            "patient-module.patient_dashboard"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": null,
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:268"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:276"
+        }
+      ]
+    },
+    {
+      "key": "POST client/getDataConsent",
+      "method": "POST",
+      "uri": "client/getDataConsent",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "DataConsentController@getDataConsent",
+      "source": "Ashoka-World-Backend:routes/api.php:1448",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getDataConsent",
+          "pages": [
+            "UpdateDataConsentScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientDashboardController@dataConsent",
+          "pages": [
+            "patient-module.data_consent"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Invalid client id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php:25"
+        },
+        {
+          "http": "200",
+          "message": "Get consent data",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php:33"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php:38"
+        }
+      ]
+    },
+    {
+      "key": "POST client/getNadiParametersData",
+      "method": "POST",
+      "uri": "client/getNadiParametersData",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "AccountManagementController@getNadiParametersData",
+      "source": "Ashoka-World-Backend:routes/api.php:1472",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getNadiParametersData",
+          "pages": [
+            "PatientDashboard"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientDashboardController@index",
+          "pages": [
+            "patient-module.patient_dashboard"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:227"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AccountManagementController.php:234"
+        }
+      ]
+    },
+    {
+      "key": "POST client/getPreviousVisits",
+      "method": "POST",
+      "uri": "client/getPreviousVisits",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "VisitManagementController@getPreviousVisits",
+      "source": "Ashoka-World-Backend:routes/api.php:1447",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getPreviousVisitsforPatient",
+          "pages": [
+            "ReportScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientDashboardManagementController@corporatePatientDashboard",
+          "pages": [
+            "corporate-patient-module.dashboard"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientVisitController@visitHistory",
+          "pages": [
+            "patient-module.visit_history"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:82"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:89"
+        }
+      ]
+    },
+    {
+      "key": "POST client/updateDataConsent",
+      "method": "POST",
+      "uri": "client/updateDataConsent",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "DataConsentController@updateDataConsent",
+      "source": "Ashoka-World-Backend:routes/api.php:1449",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "updateDataConsent",
+          "pages": [
+            "UpdateDataConsentScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientDashboardController@updateConsentData",
+          "pages": [
+            "patient-module.data_consent"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "field": "nadi_consent",
+          "rules": "required|regex:/^[01]$/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php:52"
+        },
+        {
+          "field": "report_consent",
+          "rules": "required|regex:/^[01]$/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php:53"
+        },
+        {
+          "field": "share_report_consent",
+          "rules": "required|regex:/^[01]$/",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php:54"
+        }
+      ],
+      "errors": [
+        {
+          "http": null,
+          "message": "Invalid share report consent",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php:62"
+        },
+        {
+          "http": "404",
+          "message": "User not found",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php:77"
+        },
+        {
+          "http": "200",
+          "message": "Data updated successfully",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php:86"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/DataConsentController.php:92"
+        }
+      ]
+    },
+    {
+      "key": "POST client/updateQuery",
+      "method": "POST",
+      "uri": "client/updateQuery",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "AskQuestionController@updateQuestion",
+      "source": "Ashoka-World-Backend:routes/api.php:1457",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php",
+      "controller_status": "found",
+      "called_by": [],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Query id is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:109"
+        },
+        {
+          "http": "400",
+          "message": "Enter valid query id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:113"
+        },
+        {
+          "http": "400",
+          "message": "Query is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:116"
+        },
+        {
+          "http": "400",
+          "message": "Enter valid query id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:126"
+        },
+        {
+          "http": "400",
+          "message": "This query is already answered",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:130"
+        },
+        {
+          "http": "200",
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:136"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:142"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/AskQuestionController.php:149"
+        }
+      ]
+    },
+    {
+      "key": "POST client/visitWiseReports",
+      "method": "POST",
+      "uri": "client/visitWiseReports",
+      "name": null,
+      "middleware": [
+        "api",
+        "client.authentication"
+      ],
+      "controller": "VisitManagementController@visitWiseReports",
+      "source": "Ashoka-World-Backend:routes/api.php:1460",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "visitWiseReportsPatientDashboard",
+          "pages": [
+            "AllReportScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "PatientDashboardController@patientViewAllReports",
+          "pages": [
+            "patient-module.patientAllReportsView",
+            "patient-module.visit_history"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Medical id is required",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:176"
+        },
+        {
+          "http": "400",
+          "message": "Invalid medical id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:180"
+        },
+        {
+          "http": "404",
+          "message": "Enter valid medical id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:188"
+        },
+        {
+          "http": null,
+          "message": "Success",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:229"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/Client/VisitManagementController.php:240"
+        }
+      ]
+    },
+    {
+      "key": "GET v2/client/getClientDetails",
+      "method": "GET",
+      "uri": "v2/client/getClientDetails",
+      "name": null,
+      "middleware": [
+        "client.authentication"
+      ],
+      "controller": "AuthController@getClientDetails",
+      "source": "Ashoka-World-Backend:routes/api.php:1674",
+      "controller_source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php",
+      "controller_status": "found",
+      "called_by": [
+        {
+          "client": "Nadi-Tarangini-App",
+          "caller": "getPatientData",
+          "pages": [
+            "LoginWithUsernameScreen"
+          ]
+        },
+        {
+          "client": "Nadi-Tarangini-Frontend",
+          "caller": "loginController@checkLoginCredentials",
+          "pages": [
+            "auth.login"
+          ]
+        }
+      ],
+      "validation": [],
+      "errors": [
+        {
+          "http": "400",
+          "message": "Invalid client id",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:713"
+        },
+        {
+          "http": "401",
+          "message": "Invalid username",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:757"
+        },
+        {
+          "http": "500",
+          "message": "Internal server error",
+          "source": "Ashoka-World-Backend:app/Http/Controllers/AuthController.php:789"
+        }
+      ]
+    }
+  ],
+  "not_called": [
+    "POST client/askQuery",
+    "POST client/deleteQuery",
+    "POST client/fetchAskedQueriesList",
+    "POST client/updateQuery"
+  ],
+  "web_routes": [
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET patient/ask-queries",
+      "name": "askQueries",
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@askQueries",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:784"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET patient/daily-diet-lifestyle/{parameterName}",
+      "name": "dailyDietLifestyle",
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@dailyDietLifestyle",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:794"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET patient/dashboard",
+      "name": "patientDashboard",
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@index",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:780"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET patient/data-consent",
+      "name": "dataConsent",
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@dataConsent",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:790"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST patient/delete-account",
+      "name": "deleteClientAccount",
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@deleteClientAccount",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:793"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "DELETE patient/deletePatientReport/{id}",
+      "name": "deletePatientReport",
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientVisitController@deletePatientReport",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:782"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET patient/edit",
+      "name": "editProfile",
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@editProfile",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:787"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST patient/report/viewAllReports",
+      "name": null,
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@patientViewAllReports",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:800"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST patient/report/viewSwasthyaDarshika",
+      "name": null,
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@patientViewSwasthyaDarshika",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:798"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST patient/report/viewVisitReport",
+      "name": null,
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@patientViewVisitReport",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:799"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET patient/request-appointment",
+      "name": "requestAppointment",
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "RequestAppointmentController@requestAppointment",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:783"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST patient/saveQueries",
+      "name": null,
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@saveQueries",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:785"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST patient/updateConsentData",
+      "name": null,
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@updateConsentData",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:791"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "POST patient/updateProfileData",
+      "name": null,
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientDashboardController@updateProfileData",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:788"
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "key": "GET patient/visits",
+      "name": "visitHistory",
+      "middleware": [
+        "check_client_auth_token"
+      ],
+      "controller": "PatientVisitController@visitHistory",
+      "source": "Nadi-Tarangini-Frontend:routes/web.php:781"
+    }
+  ],
+  "screens": [
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "AllReportScreen",
+      "file": "Nadi-Tarangini-App:lib/patient_module/view/all_report_screen.dart",
+      "routes": [],
+      "rendered_by": [],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "ComingSoonPage",
+      "file": "Nadi-Tarangini-App:lib/patient_module/view/comming_soon_page.dart",
+      "routes": [],
+      "rendered_by": [],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "ContactScreen",
+      "file": "Nadi-Tarangini-App:lib/patient_module/view/contact_screen.dart",
+      "routes": [],
+      "rendered_by": [],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "DietScreen",
+      "file": "Nadi-Tarangini-App:lib/patient_module/view/diet_screen.dart",
+      "routes": [
+        {
+          "path": "/dietScreen",
+          "name": "dietScreen",
+          "line": 996
+        }
+      ],
+      "rendered_by": [],
+      "links_to": [
+        {
+          "path": "/patientDashboard",
+          "line": 179
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "EditPatientProfileScreen",
+      "file": "Nadi-Tarangini-App:lib/patient_module/view/edit_patient_profile_screen.dart",
+      "routes": [
+        {
+          "path": "/editPatientProfile",
+          "name": "editPatientProfile",
+          "line": 985
+        }
+      ],
+      "rendered_by": [],
+      "links_to": [
+        {
+          "path": "/drawerMenuPatient",
+          "line": 150
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "ReportScreen",
+      "file": "Nadi-Tarangini-App:lib/patient_module/view/report_screen.dart",
+      "routes": [
+        {
+          "path": "/reportScreenPatient",
+          "name": "reportScreenPatient",
+          "line": 1008
+        }
+      ],
+      "rendered_by": [],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-App",
+      "id": "UpdateDataConsentScreen",
+      "file": "Nadi-Tarangini-App:lib/patient_module/view/update_data_consent_screen.dart",
+      "routes": [
+        {
+          "path": "/updateDataConsentScreen",
+          "name": "updateDataConsentScreen",
+          "line": 974
+        }
+      ],
+      "rendered_by": [],
+      "links_to": [
+        {
+          "path": "/drawerMenuPatient",
+          "line": 62
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "patient-module.ask_queries",
+      "file": "Nadi-Tarangini-Frontend:resources/views/patient-module/ask_queries.blade.php",
+      "routes": [
+        "GET patient/ask-queries"
+      ],
+      "rendered_by": [
+        "PatientDashboardController@askQueries"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "patient-module.daily_diet_lifestyle",
+      "file": "Nadi-Tarangini-Frontend:resources/views/patient-module/daily_diet_lifestyle.blade.php",
+      "routes": [
+        "GET patient/daily-diet-lifestyle/{parameterName}"
+      ],
+      "rendered_by": [
+        "PatientDashboardController@dailyDietLifestyle"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "patient-module.data_consent",
+      "file": "Nadi-Tarangini-Frontend:resources/views/patient-module/data_consent.blade.php",
+      "routes": [
+        "GET patient/data-consent"
+      ],
+      "rendered_by": [
+        "PatientDashboardController@dataConsent"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "patient-module.edit_profile",
+      "file": "Nadi-Tarangini-Frontend:resources/views/patient-module/edit_profile.blade.php",
+      "routes": [
+        "GET patient/edit"
+      ],
+      "rendered_by": [
+        "PatientDashboardController@editProfile"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "patient-module.patientAllReportsView",
+      "file": "Nadi-Tarangini-Frontend:resources/views/patient-module/patientAllReportsView.blade.php",
+      "routes": [
+        "POST patient/report/viewAllReports"
+      ],
+      "rendered_by": [
+        "PatientDashboardController@patientViewAllReports"
+      ],
+      "links_to": [
+        {
+          "route": "GET patient/visits",
+          "name": "visitHistory",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "patient-module.patientArogyaDarshikaView",
+      "file": "Nadi-Tarangini-Frontend:resources/views/patient-module/patientArogyaDarshikaView.blade.php",
+      "routes": [],
+      "rendered_by": [
+        "PatientDashboardController@patientViewArogyaDarshika"
+      ],
+      "links_to": [
+        {
+          "route": "GET patient/visits",
+          "name": "visitHistory",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "patient-module.patientSwasthyaDarshikaView",
+      "file": "Nadi-Tarangini-Frontend:resources/views/patient-module/patientSwasthyaDarshikaView.blade.php",
+      "routes": [
+        "POST patient/report/viewSwasthyaDarshika"
+      ],
+      "rendered_by": [
+        "PatientDashboardController@patientViewSwasthyaDarshika"
+      ],
+      "links_to": [
+        {
+          "route": "GET patient/visits",
+          "name": "visitHistory",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "patient-module.patientVisitReportView",
+      "file": "Nadi-Tarangini-Frontend:resources/views/patient-module/patientVisitReportView.blade.php",
+      "routes": [
+        "POST patient/report/viewVisitReport"
+      ],
+      "rendered_by": [
+        "PatientDashboardController@patientViewVisitReport"
+      ],
+      "links_to": [
+        {
+          "route": "GET patient/visits",
+          "name": "visitHistory",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "patient-module.patient_dashboard",
+      "file": "Nadi-Tarangini-Frontend:resources/views/patient-module/patient_dashboard.blade.php",
+      "routes": [
+        "GET patient/dashboard"
+      ],
+      "rendered_by": [
+        "PatientDashboardController@index"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "patient-module.request_appointment",
+      "file": "Nadi-Tarangini-Frontend:resources/views/patient-module/request_appointment.blade.php",
+      "routes": [
+        "GET patient/request-appointment"
+      ],
+      "rendered_by": [
+        "RequestAppointmentController@requestAppointment"
+      ],
+      "links_to": []
+    },
+    {
+      "repo": "Nadi-Tarangini-Frontend",
+      "id": "patient-module.visit_history",
+      "file": "Nadi-Tarangini-Frontend:resources/views/patient-module/visit_history.blade.php",
+      "routes": [
+        "GET patient/visits"
+      ],
+      "rendered_by": [
+        "PatientVisitController@visitHistory"
+      ],
+      "links_to": []
+    }
+  ],
+  "api_calls": [
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "deletePatientAccount",
+      "pages": [
+        "DrawerMenuPatient"
+      ],
+      "method": "POST",
+      "endpoint": "/client/deleteClientAccount",
+      "status": "matched",
+      "route": "POST client/deleteClientAccount",
+      "controller": "AccountManagementController@deleteClientAccount",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2591",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/drawer_menu_patient.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "deletePatientReport",
+      "pages": [
+        "ReportScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/client/deleteReport",
+      "status": "matched",
+      "route": "POST client/deleteReport",
+      "controller": "VisitManagementController@deleteReport",
+      "tables": [
+        "medical_report"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2656",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/report_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "deleteReportForDoctor",
+      "pages": [
+        "ReportScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/patient/deleteReport",
+      "status": "matched",
+      "route": "POST patient/deleteReport",
+      "controller": "PatientDetailsController@deleteVisitReport",
+      "tables": [
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1893",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/report_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "deleteReportForDoctor",
+      "pages": [
+        "ReportScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/report/visitWiseAllowedReports",
+      "status": "matched",
+      "route": "POST report/visitWiseAllowedReports",
+      "controller": "MedicalReportSaveController@visitWiseAllowedReports",
+      "tables": [
+        "medical_report",
+        "nadi_report",
+        "other_report_data",
+        "pg_device_mapping",
+        "resource_name_master",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:1907",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/report_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "dietAndLifeStyleForPatient",
+      "pages": [
+        "DietScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/client/turyaa/homeData",
+      "status": "matched",
+      "route": "POST client/turyaa/homeData",
+      "controller": "DietManagementController@homeData",
+      "tables": [
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2574",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/diet_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "editPatientPrifile",
+      "pages": [
+        "EditPatientProfileScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/client/clientEditProfile",
+      "status": "matched",
+      "route": "POST client/clientEditProfile",
+      "controller": "EditProfileController@clientEditProfile",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2643",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/edit_patient_profile_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "fetchClientDetails",
+      "pages": [
+        "DrawerMenuPatient",
+        "EditPatientProfileScreen",
+        "PatientDashboard",
+        "ReportScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/client/clientDetails",
+      "status": "matched",
+      "route": "POST client/clientDetails",
+      "controller": "EditProfileController@clientDetails",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2548",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/drawer_menu_patient.dart",
+        "Nadi-Tarangini-App:lib/patient_module/view/edit_patient_profile_screen.dart",
+        "Nadi-Tarangini-App:lib/patient_module/view/patient_dashboard.dart",
+        "Nadi-Tarangini-App:lib/patient_module/view/report_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getDataConsent",
+      "pages": [
+        "UpdateDataConsentScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/client/getDataConsent",
+      "status": "matched",
+      "route": "POST client/getDataConsent",
+      "controller": "DataConsentController@getDataConsent",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2612",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/update_data_consent_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getNadiParametersData",
+      "pages": [
+        "PatientDashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/client/getNadiParametersData",
+      "status": "matched",
+      "route": "POST client/getNadiParametersData",
+      "controller": "AccountManagementController@getNadiParametersData",
+      "tables": [
+        "arogya_darshika_saved_data",
+        "medical_report",
+        "nadi_report",
+        "user_personal_info",
+        "user_report"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2558",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/patient_dashboard.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getPatientData",
+      "pages": [
+        "LoginWithUsernameScreen"
+      ],
+      "method": "GET",
+      "endpoint": "/v2/client/getClientDetails",
+      "status": "matched",
+      "route": "GET v2/client/getClientDetails",
+      "controller": "AuthController@getClientDetails",
+      "tables": [
+        "corporate_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:376",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/common_files/Login/view/login_with_username_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "getPreviousVisitsforPatient",
+      "pages": [
+        "ReportScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/client/getPreviousVisits",
+      "status": "matched",
+      "route": "POST client/getPreviousVisits",
+      "controller": "VisitManagementController@getPreviousVisits",
+      "tables": [
+        "medical_report",
+        "medical_report_diet",
+        "medical_report_prescription",
+        "medical_report_symptom_details_1"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2622",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/report_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "updateDataConsent",
+      "pages": [
+        "UpdateDataConsentScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/client/updateDataConsent",
+      "status": "matched",
+      "route": "POST client/updateDataConsent",
+      "controller": "DataConsentController@updateDataConsent",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2632",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/update_data_consent_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "updatePasswordPatient",
+      "pages": [
+        "ChangePasswordPatient"
+      ],
+      "method": "POST",
+      "endpoint": "/client/changePassword",
+      "status": "matched",
+      "route": "POST client/changePassword",
+      "controller": "AccountManagementController@changePassword",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2601",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/change_password_patient.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-App",
+      "caller": "visitWiseReportsPatientDashboard",
+      "pages": [
+        "AllReportScreen"
+      ],
+      "method": "POST",
+      "endpoint": "/client/visitWiseReports",
+      "status": "matched",
+      "route": "POST client/visitWiseReports",
+      "controller": "VisitManagementController@visitWiseReports",
+      "tables": [
+        "medical_report",
+        "resource_name_master"
+      ],
+      "source": "Nadi-Tarangini-App:lib/common_files/api_services/api_repository.dart:2671",
+      "page_via": [],
+      "screen_files": [
+        "Nadi-Tarangini-App:lib/patient_module/view/all_report_screen.dart"
+      ]
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@dailyDietLifestyle",
+      "pages": [
+        "patient-module.daily_diet_lifestyle"
+      ],
+      "method": "POST",
+      "endpoint": "/client/turyaa/homeData",
+      "status": "matched",
+      "route": "POST client/turyaa/homeData",
+      "controller": "DietManagementController@homeData",
+      "tables": [
+        "medical_report",
+        "medical_report_symptom_details_1",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:642",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@dataConsent",
+      "pages": [
+        "patient-module.data_consent"
+      ],
+      "method": "POST",
+      "endpoint": "/client/getDataConsent",
+      "status": "matched",
+      "route": "POST client/getDataConsent",
+      "controller": "DataConsentController@getDataConsent",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:390",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@dataConsent",
+      "pages": [
+        "patient-module.data_consent"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:408",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@deleteClientAccount",
+      "pages": [
+        "my_account.myaccount",
+        "patient-module.daily_diet_lifestyle",
+        "patient-module.data_consent",
+        "patient-module.edit_profile",
+        "patient-module.patientAllReportsView",
+        "patient-module.patientArogyaDarshikaView",
+        "patient-module.patientSwasthyaDarshikaView",
+        "patient-module.patientVisitReportView",
+        "patient-module.patient_dashboard",
+        "patient-module.visit_history"
+      ],
+      "method": "POST",
+      "endpoint": "/client/deleteClientAccount",
+      "status": "matched",
+      "route": "POST client/deleteClientAccount",
+      "controller": "AccountManagementController@deleteClientAccount",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:479",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/common.js:641"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@editProfile",
+      "pages": [
+        "patient-module.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/client/clientDetails",
+      "status": "matched",
+      "route": "POST client/clientDetails",
+      "controller": "EditProfileController@clientDetails",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:172",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@editProfile",
+      "pages": [
+        "patient-module.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/getAllCountries",
+      "status": "matched",
+      "route": "POST getAllCountries",
+      "controller": "PatientDetailsController@getAllCountries",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:154",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@editProfile",
+      "pages": [
+        "patient-module.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:200",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@index",
+      "pages": [
+        "patient-module.patient_dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/client/clientDetails",
+      "status": "matched",
+      "route": "POST client/clientDetails",
+      "controller": "EditProfileController@clientDetails",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:29",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@index",
+      "pages": [
+        "patient-module.patient_dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/client/getBannerList",
+      "status": "matched",
+      "route": "POST client/getBannerList",
+      "controller": "AccountManagementController@getBannerList",
+      "tables": [
+        "banners_data"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:103",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@index",
+      "pages": [
+        "patient-module.patient_dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/client/getNadiParametersData",
+      "status": "matched",
+      "route": "POST client/getNadiParametersData",
+      "controller": "AccountManagementController@getNadiParametersData",
+      "tables": [
+        "arogya_darshika_saved_data",
+        "medical_report",
+        "nadi_report",
+        "user_personal_info",
+        "user_report"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:54",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@index",
+      "pages": [
+        "patient-module.patient_dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:126",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@patientViewAllReports",
+      "pages": [
+        "patient-module.patientAllReportsView",
+        "patient-module.visit_history"
+      ],
+      "method": "POST",
+      "endpoint": "/client/visitWiseReports",
+      "status": "matched",
+      "route": "POST client/visitWiseReports",
+      "controller": "VisitManagementController@visitWiseReports",
+      "tables": [
+        "medical_report",
+        "resource_name_master"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:581",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@patientViewAllReports",
+      "pages": [
+        "patient-module.patientAllReportsView",
+        "patient-module.visit_history"
+      ],
+      "method": null,
+      "endpoint": "/medicalVisitReportV2",
+      "status": "matched",
+      "route": "GET medicalVisitReportV2",
+      "controller": "ReportsWebController@medicalVisitReportV2",
+      "tables": [
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:613",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@patientViewAllReports",
+      "pages": [
+        "patient-module.patientAllReportsView",
+        "patient-module.visit_history"
+      ],
+      "method": null,
+      "endpoint": "/prescriptionReport",
+      "status": "matched",
+      "route": "GET prescriptionReport",
+      "controller": "ReportsWebController@prescriptionReport",
+      "tables": [
+        "medical_report",
+        "medical_report_prescription",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:614",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@patientViewAllReports",
+      "pages": [
+        "patient-module.patientAllReportsView",
+        "patient-module.visit_history"
+      ],
+      "method": null,
+      "endpoint": "/swasthyaDarshikaReport",
+      "status": "matched",
+      "route": "GET swasthyaDarshikaReport",
+      "controller": "ReportsWebController@swasthyaDarshikaReportV2",
+      "tables": [
+        "arogya_darshika_saved_data",
+        "master_contents",
+        "medical_report",
+        "pg_device_mapping",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:615",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@patientViewSwasthyaDarshika",
+      "pages": [
+        "patient-module.patientSwasthyaDarshikaView",
+        "patient-module.visit_history"
+      ],
+      "method": null,
+      "endpoint": "/swasthyaDarshikaReport",
+      "status": "matched",
+      "route": "GET swasthyaDarshikaReport",
+      "controller": "ReportsWebController@swasthyaDarshikaReportV2",
+      "tables": [
+        "arogya_darshika_saved_data",
+        "master_contents",
+        "medical_report",
+        "pg_device_mapping",
+        "user_nadi_capture_type",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:526",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@patientViewVisitReport",
+      "pages": [
+        "patient-module.patientVisitReportView",
+        "patient-module.visit_history"
+      ],
+      "method": null,
+      "endpoint": "/medicalVisitReportV2",
+      "status": "matched",
+      "route": "GET medicalVisitReportV2",
+      "controller": "ReportsWebController@medicalVisitReportV2",
+      "tables": [
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:545",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@patientViewVisitReport",
+      "pages": [
+        "patient-module.patientVisitReportView",
+        "patient-module.visit_history"
+      ],
+      "method": null,
+      "endpoint": "/prescriptionReport",
+      "status": "matched",
+      "route": "GET prescriptionReport",
+      "controller": "ReportsWebController@prescriptionReport",
+      "tables": [
+        "medical_report",
+        "medical_report_prescription",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:546",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@updateConsentData",
+      "pages": [
+        "patient-module.data_consent"
+      ],
+      "method": "POST",
+      "endpoint": "/client/updateDataConsent",
+      "status": "matched",
+      "route": "POST client/updateDataConsent",
+      "controller": "DataConsentController@updateDataConsent",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:440",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/patinet-module/visit_history.js:76"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@updateProfileData",
+      "pages": [
+        "patient-module.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/client/clientEditProfile",
+      "status": "matched",
+      "route": "POST client/clientEditProfile",
+      "controller": "EditProfileController@clientEditProfile",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:245",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/patinet-module/edit_profile.js:201"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@updateProfileData",
+      "pages": [
+        "patient-module.edit_profile"
+      ],
+      "method": "POST",
+      "endpoint": "/client/clientEditProfile",
+      "status": "matched",
+      "route": "POST client/clientEditProfile",
+      "controller": "EditProfileController@clientEditProfile",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:260",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/patinet-module/edit_profile.js:201"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardManagementController@corporatePatientDashboard",
+      "pages": [
+        "corporate-patient-module.dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/client/clientDetails",
+      "status": "matched",
+      "route": "POST client/clientDetails",
+      "controller": "EditProfileController@clientDetails",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/Corporate/PatientDashboardManagementController.php:38",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardManagementController@corporatePatientDashboard",
+      "pages": [
+        "corporate-patient-module.dashboard"
+      ],
+      "method": "POST",
+      "endpoint": "/client/getPreviousVisits",
+      "status": "matched",
+      "route": "POST client/getPreviousVisits",
+      "controller": "VisitManagementController@getPreviousVisits",
+      "tables": [
+        "medical_report",
+        "medical_report_diet",
+        "medical_report_prescription",
+        "medical_report_symptom_details_1"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/Corporate/PatientDashboardManagementController.php:22",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientVisitController@deletePatientReport",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/client/deleteReport",
+      "status": "matched",
+      "route": "POST client/deleteReport",
+      "controller": "VisitManagementController@deleteReport",
+      "tables": [
+        "medical_report"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientVisitController.php:120",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientVisitController@visitHistory",
+      "pages": [
+        "patient-module.visit_history"
+      ],
+      "method": "POST",
+      "endpoint": "/client/clientDetails",
+      "status": "matched",
+      "route": "POST client/clientDetails",
+      "controller": "EditProfileController@clientDetails",
+      "tables": [
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientVisitController.php:37",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientVisitController@visitHistory",
+      "pages": [
+        "patient-module.visit_history"
+      ],
+      "method": "POST",
+      "endpoint": "/client/clientRemainingFees",
+      "status": "matched",
+      "route": "POST client/clientRemainingFees",
+      "controller": "EditProfileController@clientRemainingFees",
+      "tables": [
+        "medical_report",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientVisitController.php:63",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientVisitController@visitHistory",
+      "pages": [
+        "patient-module.visit_history"
+      ],
+      "method": "POST",
+      "endpoint": "/client/getPreviousVisits",
+      "status": "matched",
+      "route": "POST client/getPreviousVisits",
+      "controller": "VisitManagementController@getPreviousVisits",
+      "tables": [
+        "medical_report",
+        "medical_report_diet",
+        "medical_report_prescription",
+        "medical_report_symptom_details_1"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientVisitController.php:21",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientVisitController@visitHistory",
+      "pages": [
+        "patient-module.visit_history"
+      ],
+      "method": "POST",
+      "endpoint": "/getNtHelpVideos",
+      "status": "matched",
+      "route": "POST getNtHelpVideos",
+      "controller": "HelpController@getHelpVideosJson",
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientVisitController.php:90",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "loginController@checkLoginCredentials",
+      "pages": [
+        "auth.login"
+      ],
+      "method": "GET",
+      "endpoint": "/v2/client/getClientDetails",
+      "status": "matched",
+      "route": "GET v2/client/getClientDetails",
+      "controller": "AuthController@getClientDetails",
+      "tables": [
+        "corporate_info",
+        "user_personal_info"
+      ],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/loginController.php:94",
+      "page_via": [
+        "Nadi-Tarangini-Frontend:public/js/auth/login.js:302"
+      ],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@SaveQueries",
+      "pages": [],
+      "method": "POST",
+      "endpoint": "/client/askQuestion",
+      "status": "no-route",
+      "route": null,
+      "controller": null,
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:357",
+      "page_via": [],
+      "screen_files": []
+    },
+    {
+      "client": "Nadi-Tarangini-Frontend",
+      "caller": "PatientDashboardController@askQueries",
+      "pages": [
+        "patient-module.ask_queries"
+      ],
+      "method": "POST",
+      "endpoint": "/client/askQuestionList",
+      "status": "no-route",
+      "route": null,
+      "controller": null,
+      "tables": [],
+      "source": "Nadi-Tarangini-Frontend:app/Http/Controllers/PatientDashboardController.php:320",
+      "page_via": [],
+      "screen_files": []
+    }
+  ],
+  "tables": [
+    {
+      "name": "arogya_darshika_saved_data",
+      "models": [
+        "ArogyaDarshikaSavedData"
+      ],
+      "columns": [
+        {
+          "name": "lang_prakriti",
+          "type": "text"
+        },
+        {
+          "name": "lang_swasthya",
+          "type": "text"
+        }
+      ],
+      "migrations": 2
+    },
+    {
+      "name": "banners_data",
+      "models": [
+        "BannersData"
+      ],
+      "columns": [
+        {
+          "name": "accessibility",
+          "type": "string"
+        },
+        {
+          "name": "mobile_url",
+          "type": "string"
+        }
+      ],
+      "migrations": 1
+    },
+    {
+      "name": "corporate_info",
+      "models": [
+        "CorporateInfo"
+      ],
+      "columns": [
+        {
+          "name": "add_patient_url",
+          "type": "string"
+        },
+        {
+          "name": "city",
+          "type": "string"
+        },
+        {
+          "name": "corp_role_id",
+          "type": "integer"
+        },
+        {
+          "name": "corporate_id",
+          "type": "integer"
+        },
+        {
+          "name": "corporate_type",
+          "type": "string"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "doctors_info",
+          "type": "json"
+        },
+        {
+          "name": "pincode",
+          "type": "string"
+        },
+        {
+          "name": "profile_image",
+          "type": "string"
+        },
+        {
+          "name": "state",
+          "type": "string"
+        }
+      ],
+      "migrations": 3
+    },
+    {
+      "name": "medical_report",
+      "models": [
+        "MedicalReport"
+      ],
+      "columns": [
+        {
+          "name": "city",
+          "type": "string"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "external_visit_id",
+          "type": "string"
+        },
+        {
+          "name": "field_id_1",
+          "type": "string"
+        },
+        {
+          "name": "ip_address",
+          "type": "string"
+        },
+        {
+          "name": "mark_on_image_url",
+          "type": "string"
+        },
+        {
+          "name": "panchakarma_recom",
+          "type": "text"
+        },
+        {
+          "name": "reception_id",
+          "type": "integer"
+        },
+        {
+          "name": "recommendations",
+          "type": "json"
+        },
+        {
+          "name": "state",
+          "type": "string"
+        },
+        {
+          "name": "try_count",
+          "type": "unsignedInteger"
+        },
+        {
+          "name": "user_nadi_capture_type",
+          "type": "integer"
+        },
+        {
+          "name": "yoga_recom",
+          "type": "text"
+        }
+      ],
+      "migrations": 10
+    },
+    {
+      "name": "medical_report_diet",
+      "models": [
+        "MedicalReportDiet"
+      ],
+      "columns": [
+        {
+          "name": "create_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "diet",
+          "type": "json"
+        },
+        {
+          "name": "doctor_id",
+          "type": "integer"
+        },
+        {
+          "name": "id",
+          "type": "id"
+        },
+        {
+          "name": "is_active",
+          "type": "string"
+        },
+        {
+          "name": "last_modified_on",
+          "type": "timestamp"
+        },
+        {
+          "name": "medical_id",
+          "type": "integer"
+        },
+        {
+          "name": "patient_id",
+          "type": "integer"
+        },
+        {
+          "name": "vikruti_type",
+          "type": "string"
+        }
+      ],
+      "migrations": 3
+    },
+    {
+      "name": "medical_report_prescription",
+      "models": [
+        "MedicalReportPrescription"
+      ],
+      "columns": [
+        {
+          "name": "is_active",
+          "type": "integer"
+        },
+        {
+          "name": "other_details",
+          "type": "json"
+        },
+        {
+          "name": "total_quantity",
+          "type": "string"
+        }
+      ],
+      "migrations": 3
+    },
+    {
+      "name": "medical_report_symptom_details_1",
+      "models": [
+        "MedicalReportSymptomDetail"
+      ],
+      "columns": [
+        {
+          "name": "symptom_value",
+          "type": "text"
+        }
+      ],
+      "migrations": 1
+    },
+    {
+      "name": "nadi_report",
+      "models": [
+        "NadiReport"
+      ],
+      "columns": null,
+      "migrations": 0
+    },
+    {
+      "name": "patient_question_answer",
+      "models": [
+        "PatientQuestionAnswer"
+      ],
+      "columns": [
+        {
+          "name": "delete_by_doctor",
+          "type": "integer"
+        },
+        {
+          "name": "delete_by_patient",
+          "type": "integer"
+        },
+        {
+          "name": "is_active",
+          "type": "integer"
+        }
+      ],
+      "migrations": 1
+    },
+    {
+      "name": "resource_name_master",
+      "models": [
+        "ResourceNameMaster"
+      ],
+      "columns": [
+        {
+          "name": "endpoint",
+          "type": "string"
+        },
+        {
+          "name": "is_default",
+          "type": "tinyInteger"
+        },
+        {
+          "name": "no_of_pages",
+          "type": "integer"
+        },
+        {
+          "name": "order_by",
+          "type": "integer"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ],
+      "migrations": 3
+    },
+    {
+      "name": "user_personal_info",
+      "models": [
+        "UserPersonalInfo"
+      ],
+      "columns": [
+        {
+          "name": "allowed_functions",
+          "type": "json"
+        },
+        {
+          "name": "app_language",
+          "type": "string"
+        },
+        {
+          "name": "ayush_no",
+          "type": "string"
+        },
+        {
+          "name": "clinic_id",
+          "type": "integer"
+        },
+        {
+          "name": "external_user_status",
+          "type": "integer"
+        },
+        {
+          "name": "is_parent",
+          "type": "integer"
+        },
+        {
+          "name": "parent_id",
+          "type": "integer"
+        },
+        {
+          "name": "plan_expire_date",
+          "type": "timestamp"
+        },
+        {
+          "name": "plan_id",
+          "type": "foreignId"
+        },
+        {
+          "name": "profession_type_id",
+          "type": "integer"
+        },
+        {
+          "name": "reception_id",
+          "type": "integer"
+        },
+        {
+          "name": "verified_role_id",
+          "type": "integer"
+        },
+        {
+          "name": "welcome_tours_taken",
+          "type": "json"
+        }
+      ],
+      "migrations": 13
+    },
+    {
+      "name": "user_report",
+      "models": [
+        "UserReport"
+      ],
+      "columns": [
+        {
+          "name": "symptom_prediction",
+          "type": "mediumText"
+        }
+      ],
+      "migrations": 1
+    }
+  ],
+  "external_systems": [
+    {
+      "system": "S3",
+      "repo": "Ashoka-World-Backend",
+      "where": [
+        "Ashoka-World-Backend:app/Http/Controllers/Client/EditProfileController.php:84,98"
+      ]
+    }
+  ],
+  "environment": {
+    "source": "atreya-docs/environments.md",
+    "repos": [
+      {
+        "repo": "Ashoka-World-Backend",
+        "columns": [
+          "Env",
+          "Ref",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      },
+      {
+        "repo": "Nadi-Tarangini-App",
+        "columns": [
+          "Env",
+          "Ref",
+          "Build flavor",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      },
+      {
+        "repo": "Nadi-Tarangini-Frontend",
+        "columns": [
+          "Env",
+          "Ref",
+          "Host",
+          "Feature flags",
+          "Integration mode"
+        ],
+        "rows": [
+          [
+            "dev",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "staging",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ],
+          [
+            "production",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL",
+            "TO FILL"
+          ]
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "required": [
+      "English",
+      "Marathi",
+      "Hindi",
+      "Czech",
+      "German",
+      "Spanish",
+      "Italian"
+    ],
+    "required_source": "references/qa-scope-rules.md",
+    "files": [
+      "Nadi-Tarangini-Frontend:resources/lang/en/auth.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/pagination.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/passwords.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en/validation.php",
+      "Nadi-Tarangini-Frontend:resources/lang/en_patient.json"
+    ]
+  }
+}
